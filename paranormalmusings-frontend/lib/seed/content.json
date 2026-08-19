@@ -1,0 +1,2058 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18T00:00:00.000Z",
+  "site": {
+    "name": "Paranormal Musings",
+    "tagline": "Notes from beyond the veil",
+    "author": "Praveen Saanker",
+    "description": "Paranormal explorations and perspectives on life after death from Indian (Eastern) and Western viewpoints — by Praveen Saanker, paranormal investigator for over twenty-five years.",
+    "address": [
+      "AP, 676 H Block, 15th Street, Annanagar,",
+      "Chennai 600040 (TN), India"
+    ],
+    "phone": {
+      "label": "(+91) 98400 14586",
+      "href": "tel:+919840014586"
+    },
+    "email": {
+      "label": "support@vedicology.com",
+      "href": "mailto:support@vedicology.com"
+    },
+    "authorImage": ""
+  },
+  "categories": [
+    {
+      "key": "eastern",
+      "label": "Eastern Views",
+      "title": "Paranormal Eastern Views",
+      "href": "/eastern-views",
+      "count": 29,
+      "seed": "pm-journeysoul",
+      "art": "art-3",
+      "blurb": "Death, rebirth and the journey of the soul through Hindu and Vedic teaching.",
+      "lede": "Death, rebirth and the journey of the soul, read through Hindu and Vedic teaching — the tradition I was raised inside and still return to.",
+      "layout": "archive",
+      "published": true,
+      "hub": {
+        "pillar": null,
+        "clusters": [],
+        "questions": []
+      },
+      "image": ""
+    },
+    {
+      "key": "western",
+      "label": "Western Views",
+      "title": "Paranormal Western Views",
+      "href": "/western-views",
+      "count": 40,
+      "seed": "pm-protect",
+      "art": "art-2",
+      "blurb": "Protection, possession, hauntings and the spirit world as the West understands it.",
+      "lede": "Protection, possession, hauntings and the spirit world as the West has come to understand it — what holds up in the field, and what only looks like it does.",
+      "layout": "hub",
+      "published": true,
+      "hub": {
+        "pillar": "how-to-protect-yourself-from-ghosts-and-bad-spirits",
+        "clusters": [
+          {
+            "title": "Understanding possession",
+            "blurb": "What possession is, how it presents in the body, and what sustained possession does to a person over time.",
+            "slugs": [
+              "what-is-possession",
+              "symptoms-of-spirit-possession",
+              "ghost-possession-effects",
+              "what-is-an-addicted-ghost"
+            ]
+          },
+          {
+            "title": "Protection and clearing",
+            "blurb": "Strengthening your own defences, clearing a house room by room, and what depossession actually involves.",
+            "slugs": [
+              "how-to-protect-yourself-from-ghosts-and-bad-spirits",
+              "how-to-get-rid-of-spirits-in-your-house",
+              "what-is-depossession-therapy"
+            ]
+          },
+          {
+            "title": "Making contact",
+            "blurb": "How to approach a spirit without provoking it, what to ask, and the way guidance actually tends to arrive.",
+            "slugs": [
+              "how-to-talk-to-a-ghost",
+              "how-to-connect-with-your-spirit-guides"
+            ]
+          },
+          {
+            "title": "Why spirits remain",
+            "blurb": "Attachment, confusion, unfinished business, vengeance — the reasons the dead stay earthbound.",
+            "slugs": [
+              "why-do-spirits-remain-among-us",
+              "is-a-ghost-real",
+              "signs-of-a-haunted-house"
+            ]
+          }
+        ],
+        "questions": [
+          {
+            "question": "What is possession?",
+            "slug": "what-is-possession"
+          },
+          {
+            "question": "What are the physical symptoms of spirit possession?",
+            "slug": "symptoms-of-spirit-possession"
+          },
+          {
+            "question": "How do I protect myself from ghosts and bad spirits?",
+            "slug": "how-to-protect-yourself-from-ghosts-and-bad-spirits"
+          },
+          {
+            "question": "How do I get rid of spirits in my house?",
+            "slug": "how-to-get-rid-of-spirits-in-your-house"
+          },
+          {
+            "question": "How should I talk to a ghost?",
+            "slug": "how-to-talk-to-a-ghost"
+          },
+          {
+            "question": "Why do spirits remain among us?",
+            "slug": "why-do-spirits-remain-among-us"
+          }
+        ]
+      },
+      "image": ""
+    },
+    {
+      "key": "investigation",
+      "label": "Investigation",
+      "title": "Paranormal Investigation",
+      "href": "/investigation",
+      "count": 51,
+      "seed": "pm-evidence",
+      "art": "art-4",
+      "blurb": "Method, equipment and evidence — how a real investigation is actually run.",
+      "lede": "Method, equipment and evidence. How an investigation is actually run, what the instruments can and cannot tell you, and how to sieve footage for the genuine anomaly.",
+      "layout": "archive",
+      "published": true,
+      "hub": {
+        "pillar": null,
+        "clusters": [],
+        "questions": []
+      },
+      "image": ""
+    },
+    {
+      "key": "cases",
+      "label": "Case Studies",
+      "title": "Paranormal Case Studies",
+      "href": "/case-studies",
+      "count": 4,
+      "seed": "pm-anamika",
+      "art": "art-1",
+      "blurb": "Complete records from the field, written up case by case.",
+      "lede": "Complete records from the field, written up case by case — the onset, the investigation, the resolution, and what followed afterwards.",
+      "layout": "archive",
+      "published": true,
+      "hub": {
+        "pillar": null,
+        "clusters": [],
+        "questions": []
+      },
+      "image": ""
+    }
+  ],
+  "posts": [
+    {
+      "slug": "how-to-protect-yourself-from-ghosts-and-bad-spirits",
+      "title": "How to Protect Yourself From Ghosts and Bad Spirits?",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-protect",
+      "date": "April 1, 2021",
+      "readTime": "7 min read",
+      "kicker": "",
+      "excerpt": "I am pretty sure the question of how to protect yourself from ghosts and bad spirits has crossed everyone’s mind. In this excerpt you will learn the practical measures that work — and the ones that only look like they do.",
+      "dek": "Possession can be compared to a physical illness like the flu. According to the paranormal investigators in Chennai, India, no one immediately realizes that they were under possession. It feels as if all your actions and feelings are not under your control.",
+      "tags": [
+        "How to Protect Yourself From Bad Spirits",
+        "How to Protect Yourself From Ghosts",
+        "Paranormal Investigator in Chennai",
+        "Paranormal Investigator in India"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "I am pretty sure that the question of how to protect yourself from ghosts and bad spirits has come to everyone’s mind. Well, in this excerpt, you will learn how to protect yourself from ghosts and bad spirits from the paranormal investigators in Chennai, India."
+        },
+        {
+          "type": "p",
+          "text": "When it comes to how to protect yourself from ghosts and bad spirits or possessions, there are many things to do. In many ways, you can avoid the spirits from possessing you. Let us look at some of them."
+        },
+        {
+          "type": "h2",
+          "text": "How to Protect Yourself From Ghosts and Bad Spirits?"
+        },
+        {
+          "type": "p",
+          "text": "Possession can be compared to a physical illness like the flu. According to the paranormal investigators in Chennai, India, no one immediately realizes that they were under possession. It feels as if all your actions and feelings are not under your control. You cannot consult a doctor because there is no medical diagnosis like the flu or cancer. In fact, they will not realize it until they consult a paranormal investigator in Chennai, India."
+        },
+        {
+          "type": "p",
+          "text": "If you want to protect yourself from ghosts, bad spirits, and possession, the idea is to have a strong aura. Just like the virus of the flu is everywhere, similarly, the world is resplendent with both good and bad aura. If you have an aura that is vibrating at a higher frequency then you will stay away from anything bad alike. Certain gifted people, clairvoyants, are able to see spirits in the aura, as well as “read” your state of health, emotions, and a great deal more about you from the aura’s shape and colour."
+        },
+        {
+          "type": "p",
+          "text": "The key to protecting yourself from ghosts, bad spirits and possession are to understand more about your aura. If you have a healthy aura, you will definitely stay away from all the bad things present on this earth. One of the techniques used to strengthen your aura is to use the White Light Technique."
+        },
+        {
+          "type": "h2",
+          "text": "White Light Technique to Protect Yourself From Ghosts and Bad Spirits"
+        },
+        {
+          "type": "p",
+          "text": "The White Light Technique is very beneficial in strengthening one’s aura. One should ideally practice it two times a day. The two ideal times to practice are early morning – just when you are about to get out of bed. Or at night – just before you go to sleep. The more rigidly you practice the white light technique, the stronger is the chance of your aura strengthening."
+        },
+        {
+          "type": "p",
+          "text": "As a paranormal investigator and psychotherapist in Chennai, India, I often teach my clients the white light technique during the first session. Since it takes only a few seconds to perform, there is no harm in doing it. So let us start! Using your imagination, imagine a miniature sun just like one in the solar system. Feel that the sun is radiating through every cell and tissue in your body. The light is so bright that you can feel it everywhere – on your fingertips, on top of your head and in your sole of the feet. This white light has formed a layer around you, protecting you from any harm and negativity."
+        },
+        {
+          "type": "h2",
+          "text": "Benefits of Using the White Light Technique"
+        },
+        {
+          "type": "p",
+          "text": "The white light technique definitely helps to protect from ghosts and spirits. Once you have familiarized yourself with the White Light technique, you can use it with just a thought — an intention — and instantly you’ll be protected. Think of turning on a light by flicking a switch; you can turn on the inner sun and let it shine through you like a light bulb, just as easily and quickly. It is extremely important to have a total conviction that you are safe within your White Light aura. Your thoughts, either negative or positive, are powerful."
+        },
+        {
+          "type": "p",
+          "text": "The vibrations of your aura vary constantly. They reflect your general state of being — your physical, mental, emotional and spiritual health. You should use the White Light technique when necessary. If you are confronted with any situation or person involving negativity, surround yourself with the White Light. For example, if someone is furious at you, shouts at you or berates you, this is an excellent time to throw extra protection around yourself. Besides creating a barrier from angry and negative vibrations, you are preventing your aura from slowing down, which could leave you vulnerable to possession."
+        },
+        {
+          "type": "h2",
+          "text": "The Importance of Positive Attitude to Protect Yourself from Ghosts and Bad Spirits"
+        },
+        {
+          "type": "p",
+          "text": "Pessimism and negativity are what negative entities look for. They feed on it. Therefore the importance of having a positive attitude increases substantially. If you are upset, depressed, fearful, jealous, or envious, then you are breeding negativity. All these emotions are what the spirits look for because these make the colour of your aura dismal. In addition, it often becomes unpleasant and weak."
+        },
+        {
+          "type": "quote",
+          "text": "The stronger the negative emotions, the weaker your protection!"
+        },
+        {
+          "type": "p",
+          "text": "Therefore, to protect yourself from the negative spirits the most important aspect is to have a positive state of mind. Do not get undermined by the various difficulties that life throws at you. A positive outlook is important for a balanced life and a strong aura."
+        },
+        {
+          "type": "h2",
+          "text": "Abstain From Drug and Alcohol Consumption"
+        },
+        {
+          "type": "p",
+          "text": "We have already established that alcohol consumption or drug usage can lead to spirits possessing you. Therefore, to protect yourself from ghosts and bad spirits, avoid using “recreational” drugs and alcohol. This not only weakens your aura but also results in possession."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "how-to-talk-to-a-ghost",
+      "title": "How to Talk to a Ghost?",
+      "category": "western",
+      "alsoIn": [
+        "investigation"
+      ],
+      "seed": "pm-talk",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "",
+      "excerpt": "Contact is rarely the dramatic exchange people expect. It is slower, quieter and far easier to misread.",
+      "dek": "There is a correct way to talk to a ghost. You have to be polite. The important thing to remember is not to provoke. In many paranormal shows, you may have seen the paranormal investigators provoking the ghosts. This is a completely wrong thing to do.",
+      "tags": [
+        "How to talk to a ghost",
+        "How to talk to ghosts",
+        "Paranormal",
+        "Paranormal Investigation"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "How to talk to a ghost? In this excerpt, we will discuss an important topic for paranormal investigation – how to talk to ghosts? How can you communicate with a spirit easily? Read on to find out!"
+        },
+        {
+          "type": "h2",
+          "text": "How to Talk to a Ghost?"
+        },
+        {
+          "type": "p",
+          "text": "There is a correct way to talk to a ghost. You have to be polite. The important thing to remember is not to provoke. In many paranormal shows, you may have seen the paranormal investigators provoking the ghosts. This is a completely wrong thing to do. Being respectful is the key. Understanding that they too were human and treating them in the correct way is essential. Begin by asking simple but direct questions without using any provocation. We have already discussed the kind of questions to ask to talk to ghosts in previous blogs. I find that when you ask them politely and there’s a ghost there who requires help or guidance, they’re going to get something through to me. However, sometimes you may sense more than you hear."
+        },
+        {
+          "type": "p",
+          "text": "It might take you a while to talk to a ghost or hear them since they have to compile enough energy. It is very tough to do anything in relatively short order. So give them some time to reply. Plus, they’re trying to figure you out to talk to you as well. In other words, before they’re going to waste a lot of their time and energy to get through to you, they want to make sure there’s something in it for them. So while the grumpier ghosts want to scare you away and usually begin quickly by making some rather aggressive sounds, the ‘normal’ spirits are going to evaluate whether you’re worth the effort it takes to get through."
+        },
+        {
+          "type": "h2",
+          "text": "Be Patient"
+        },
+        {
+          "type": "p",
+          "text": "Again, the important thing is to be a little patient if you wish to talk to a ghost. Take batteries or plugin some electronics to give them an energy boost, and listen. Even better, take in a ghost box, white noise machine, KII Meters, or any machine they can manipulate. We have already talked about the type of ghost hunting equipment you may require. That way, it will be easier for them to communicate with you. Since it requires far less energy on their part, their responses will be bolder and quicker."
+        },
+        {
+          "type": "p",
+          "text": "Start by introducing yourself. Again, remember to be polite. Also, start with the questions in a nice tone. You always want to start with yes/no questions. The types of questions that you wish to ask depending upon the place where the paranormal investigation is going on. We should always remember that the spirit we are talking to was once a human and, so we should communicate with the same respect. Don’t just ask anything for the sake of it. Ask relevant and reasonable questions and repeat them several times throughout the vigil. Frame polite questions and keep in mind that the spirit has emotional energy."
+        },
+        {
+          "type": "p",
+          "text": "Explain why you are here if you wish to talk to a ghost in the paranormal investigation. Ask questions to which they can easily give one or two-word answers. Below are some great electronic voice phenomena or EVP Questions that you can ask depending upon the history of the place:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Is there anyone here that would like to talk to us?",
+            "Can you tell us your name, please?",
+            "How old are you?",
+            "Are you male or female?",
+            "Why are you here?",
+            "Are you alone?",
+            "How many of you are here?",
+            "Are there any children here?",
+            "Is there anyone with you?",
+            "What are their names?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "So on and so forth!"
+        },
+        {
+          "type": "h2",
+          "text": "Devise a Signal That You Like to Talk to Ghosts"
+        },
+        {
+          "type": "p",
+          "text": "So to communicate better, it is essential that you devise a signal. Like a “switch off this flashlight” or something on those lines. Ask them for a signal and then wait for a few minutes. Ask them if they need your help. You ask for a knock to verify it, you’ve saved all the energy they would have had to expend on the name, and they can use what energy they’ve accumulated for the knock instead, the verifier. Make this easy and it gets easy."
+        },
+        {
+          "type": "p",
+          "text": "Many are also extremely concerned about their family’s well-being. In fact, it’s been my experience that many souls after passing remain for days, weeks, and sometimes months just in order to help their loved ones adjust. Occasionally, you’ll even encounter a spirit who’s made the journey to the other side and returned very quickly in order to help their families adjust. It’s very rare on a ghost hunt though to find one who has transitioned already and come back because they normally have no desire to speak with you. Unless, and this is a big one, they want to set the record straight about their death, or need you to help their families somehow. Maybe relay a message."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "how-to-get-rid-of-spirits-in-your-house",
+      "title": "How to Get Rid of Spirits in Your House?",
+      "category": "western",
+      "alsoIn": [
+        "investigation"
+      ],
+      "seed": "pm-getrid",
+      "date": "April 1, 2021",
+      "readTime": "8 min read",
+      "kicker": "",
+      "excerpt": "Clearing a house is a sequence, not a single act. Skipping a step is why so many clearings do not hold.",
+      "dek": "In order to avoid possession, it is important to clear your house or any place of living. So, how to get rid of spirits in your house? In this blog, we will discuss how to get rid of paranormal activity. Read on!",
+      "tags": [
+        "How to Get Rid of Spirits",
+        "How to Get Rid of Spirits in Your House",
+        "Paranormal",
+        "Paranormal Activity"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "In order to avoid possession, it is important to clear your house or any place of living. So, how to get rid of spirits in your house? In this blog, we will discuss how to get rid of paranormal activity. Read on!"
+        },
+        {
+          "type": "h2",
+          "text": "How to Get Rid of Spirits in Your House?"
+        },
+        {
+          "type": "p",
+          "text": "If you have had a spirit or spirits in your house for quite a long time, who just want to make their presence known and are not a big nuisance, then I suggest you can talk to them. So the idea is to put forward your view clearly and respectfully. Explain to them that they are dead and they do not belong here. Tell them that their presence is creating problems for you. Let them know that they need to go where they belong, i.e., the spirit world. Tell them that you will help them pass on and bless them when they are in the process of walking in the white light."
+        },
+        {
+          "type": "p",
+          "text": "A client of mine had a benevolent spirit in his house for several years. He did not have a problem with it until he got married. His wife was getting spooked despite the fact that the spirit was causing no harm. Therefore, I told him how to get rid of the spirits from his/her house. He explained that the house was his and it was time that the spirit left. There was nothing left for him here. He had died a long time back and his being here was creating trouble for his wife. The spirit finally left after understanding the situation."
+        },
+        {
+          "type": "h2",
+          "text": "What to Say and Do If you Wish to Get Rid of Spirits in Your House?"
+        },
+        {
+          "type": "p",
+          "text": "I have designed a transcript for anyone who wishes to get rid of spirits causing paranormal activity. This is a basic outline of the things to do and the procedure to follow. You can use your own words and formulate your own sentences. The one I have designed is for general use. If you know-or suspect-who the entity is, tailor your own recording to fit the circumstances. For example, if you know how the person died, include that in your “talk” to him or her. If you have an idea of who would come from the spirit world to help-a parent, spouse, or sibling, etc., call attention to that loved one."
+        },
+        {
+          "type": "h2",
+          "text": "Generalized Transcript for Clearing a Residence"
+        },
+        {
+          "type": "p",
+          "text": "To get rid of spirits from your home, start by mentioning – You are here in this home as an earthbound spirit. Do you remember when you were in your own body? You can take a pause now. Let them know that their bodies have perished long back. And also make them realize their state. That they are not dead and they will never die. When your body died, you should have gone immediately into the spirit world. In fact, your loved ones came at that time to help you. If you had gone then, all of this time you would have been living a wonderful, happy life. You would have been with your loved ones-family and friends. You would never have been alone."
+        },
+        {
+          "type": "p",
+          "text": "Let them know that they remained here in the physical world without a bodily form. And that they had to leave but they did not. Since they do not any longer exist in a bodily form, people cannot see or hear them. Tell them -you are an invisible spirit. It must have been very confusing and lonely for you all this time. To get rid of spirits from your house, let the spirit know that you are going to help them. Make them aware of the presence of the loved ones of the spirits. – Notice who’s here! Your loved ones. Take a pause so that they can see them. Then continue – they are overjoyed to see you because they have been very worried about you."
+        },
+        {
+          "type": "h2",
+          "text": "Let Them Know That They Can Reunite With Their Families and Loved Ones"
+        },
+        {
+          "type": "p",
+          "text": "To get rid of spirits from your home, you have to make them go with their loved ones. Therefore, make them realize their presence. You thought you would never see them again when they went through the death process. But here they are, very much alive. They came to help you. They are smiling at you. Now they are putting their arms around you holding you. (Take a pause) You can feel their love. (Pause.) They are holding your hand-and will stay with you. You no longer will be alone. Tell them to feel their hands which are reaching out for them. Let the spirit know that his/her loved ones are in their spirit bodies. Tell them the benefits of being in a spirit body that it will never age or die. It will be a youthful, attractive body."
+        },
+        {
+          "type": "p",
+          "text": "Let them know of the white light. To get rid of spirits in your house, you need to make them walk through the white light. Let them know that the loved ones of the spirit are waiting in the white light. And that they can reconcile once and for all if the spirit walks towards the light. Take a pause and you will feel the heaviness go away. If the spirit decides to walk towards the white light them there will be this sudden light feeling in the air. The moment you enter the Light, you will be in your perfect, youthful body. Then you all will go together into the spirit world. Let them know that they can have everything they want in your new life. Whether it is love, food or happiness, they will get everything. They can have fun. It’s a very real world! Your loved ones are going to tell you about it now."
+        },
+        {
+          "type": "h2",
+          "text": "To Get Rid of Spirits from Your House Tell Them That There is No Hell"
+        },
+        {
+          "type": "p",
+          "text": "Many spirits are afraid of judgment. They are afraid that they will go to hell. It may be because they have done bad things in their lifetime. Therefore, in their spiritual life, they are afraid and hence they never leave. They stay and often cause paranormal activity. So, let them know that there is no such place as hell! Let them know that the worst is behind them. And a wonderful, peaceful, beautiful life is ahead of them. There are more loved ones and helpers here now. They are going to show you how to go to the Light. And that the spirit will not be alone because their loved ones will go with them. They will stay with you. You will not be alone."
+        },
+        {
+          "type": "p",
+          "text": "The next thing that I do is very important to get rid of spirits from your house. Let them know that you forgive them for any harm they have done here in this home. Say that you are sending them to their new life with blessings and love. Finally, read a prayer, do the blessing and ask them to depart. I generally do the blessing at the end but it depends upon your comfort. It is not essential. Basically, I believe it raises the vibrations and adds positivity. You may use any blessing that seems appropriate. The recording may be played at any time, or as many times as you feel is necessary. Like in therapy, sometimes it takes some time for a spirit to understand the message or to overcome fear or indecision."
+        },
+        {
+          "type": "h2",
+          "text": "What If The Spirit Does Not Leave?"
+        },
+        {
+          "type": "p",
+          "text": "If you feel that even after this, you are unable to get rid of spirits from your house because they do not want to leave, you may have to look for a medium to come and help you. In such a scenario, it is good to consult a paranormal expert as well. A clairvoyant can come to your home and make contact with the spirits causing paranormal activity easily. He or she will usually be able to convince the spirits to leave. If this doesn’t work at first, try again with other psychics."
+        },
+        {
+          "type": "p",
+          "text": "Dowsers may also prove very helpful, not only to ascertain if there are spirits and if so, how many, but what intentions they have and why they are there. Some talented dowsers, besides being able to clear the home and property, even claim to be able to create a protective wall around the formerly afflicted property."
+        },
+        {
+          "type": "h2",
+          "text": "To Wrap it Up"
+        },
+        {
+          "type": "p",
+          "text": "Many of my clients and their acquaintances vouch for this method. They have been successful in getting rid of spirits and paranormal activity using this technique. Sometimes even when they order and command the spirit to leave, they get excellent results. Especially if they find them at the foot of their beds after waking up at night. They command them to leave in the name of God. They also calm themselves by reciting the Prayer and invoking the white light technique."
+        },
+        {
+          "type": "p",
+          "text": "One point to note here is that this will not help you in case a spirit is possessing you. Although it will definitely help you get rid of spirits present in your house or any other paranormal activity. You can achieve the desired results in this sort of situation. Perhaps the spirits leave because they are shocked by the response of the person, or because they realize they have badly frightened someone. It may solve the immediate problem, but it will not help the entity to go into the spirit world, which should be your ultimate goal. In essence, this is how you can get rid of any unwanted paranormal activity."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "symptoms-of-spirit-possession",
+      "title": "Symptoms of Spirit Possession: Physical Spirit Possession Symptoms",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-symptoms",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "",
+      "excerpt": "The physical signs that recur across cases — and the ordinary explanations that must be ruled out first.",
+      "dek": "Physical spirit possession symptoms affect the body. They can be anything ranging from fatigue to exhaustion. People also experience body pain and grogginess in many cases.",
+      "tags": [
+        "Paranormal Expert in Chennai",
+        "Paranormal Expert in India",
+        "Spirit Possession Symptoms",
+        "Symptoms of Spirit Possession"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "Possession comes with a variety of symptoms. You can never say that there are no signs shown by a possessed person. The symptoms can be physical as well as mental. In this excerpt, we will look at the physical symptoms of spirit possession and what the paranormal experts in Chennai, India has to say about it."
+        },
+        {
+          "type": "h2",
+          "text": "Physical Symptoms of Spirit Possession"
+        },
+        {
+          "type": "p",
+          "text": "Physical spirit possession symptoms affect the body. They can be anything ranging from fatigue to exhaustion. People also experience body pain and grogginess in many cases. We can say that a person loses his/her’s physical balance after being possessed. The body begins to slow down over a short period of time and there always a presence of tiredness."
+        },
+        {
+          "type": "p",
+          "text": "Another physical symptom of spirit possession is weakness. I have seen people lose their energy levels to an extent to which they don’t even want to work anymore. And I do have a theory for this. A spirit has a very weak energy system. This is the reason why it is in search of a host and has possessed someone. So when a spirit possesses a human then it uses the energy of the person to gain energy and feel powerful. This process ends up draining the person and gives him the feeling of fatigue. The spirit does not have a shape or form. It does not have a physical form. It’s just a bubble of energy. But this bubble being, requires a lot of energy. It is due to this reason the spirit sucks your energy to function. They also bring an effect on the physical bodies of the people they possess."
+        },
+        {
+          "type": "h2",
+          "text": "Spirit Possession can Cause Multiple Physical Issues"
+        },
+        {
+          "type": "p",
+          "text": "Physical symptoms of spirit possession can also cause multiple physical issues as per paranormal experts in Chennai, India. These include – headaches, PMS, cramps, obesity, asthma, and hypertension. Lack of energy is the chief problem of many patients out there. I have seen my patients complain about being depressed and not wanting to wake up in the morning. Some of my patients also complain about not being able to sleep at night."
+        },
+        {
+          "type": "p",
+          "text": "To demonstrate an example of the symptoms of spirit possession, here is a quick story. A male patient suffered from profuse sweating at night. When he went to sleep, he could not as he was sweating too much. He had to change his night suit and sheets several times because of the constant sweating. Even worse, he had to stop sleeping with his wife as there was a lot of heat around him."
+        },
+        {
+          "type": "p",
+          "text": "We, fortunately, discovered that he had picked up a spirit. The spirit left after some doing on our part. But the interesting part is that the person was free from the symptoms he previously had and was completely normal after that. Another male patient said that he was free from sinus from which he suffered for more than ten years, after a depossession. However, the credentials of the spirit were not identified, therefore we can assume that the spirit had sinusitis."
+        },
+        {
+          "type": "h2",
+          "text": "The feeling of Being Drunk – Symptoms of Spirit Possession"
+        },
+        {
+          "type": "p",
+          "text": "There are also patients who complain about the feeling of being drunk or hungover without any reason. One patient of mine complained that he felt like being stoned without consuming any narcotics or alcohol. After a successful depossession, it was later discovered who was really responsible for that."
+        },
+        {
+          "type": "p",
+          "text": "Furthermore, if a person is possessed by a spirit who died at an old age then symptoms such as body pain, bad vision, and weak memory are rampant. One man in his thirties had sought medical treatment for more than 4 years due to unchecked headaches. He was not able to get relief from this until my team performed a depossession. The spirit who possessed him was the past landlord of his home. He died in his room, an old man, due to a brain tumour."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence as a paranormal investigator, you should advise your clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious, spiritual or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "ghost-possession-effects",
+      "title": "Ghost Possession: Effects of Ghost Possession",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-ghostposs",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "",
+      "excerpt": "What sustained possession does to a person, and why the effects outlast the event itself.",
+      "dek": "Ghost or Spirit possession can certainly have effects that can be very difficult to deal with. The idea of being controlled by another entity is called possession.",
+      "tags": [
+        "Ghost Possession",
+        "Is Possession Real",
+        "Paranormal Expert in Chennai",
+        "Paranormal Expert in India"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "Ghost or Spirit possession can certainly have effects that can be very difficult to deal with. The idea of being controlled by another entity is called possession. Anyone can get possessed. However, it’s the people who have a negative mindset that are more prone to being possessed by a spirit. A spirit uses loopholes in your personality to enter your body. In this excerpt, we will determine if possession is real and also try to understand the effects of possession as discussed by paranormal experts in Chennai, India."
+        },
+        {
+          "type": "p",
+          "text": "In possession, after entering your body, the ghost controls you in a way that makes it very difficult for you to have a judgment of your own. You no longer have control over your actions. Basically, you are nothing short of a puppet. Possession can also lead to long-term issues such as mental issues. You are also prone to get hurt physically. Since you don’t have any control, you might also end up hurting someone around you."
+        },
+        {
+          "type": "h2",
+          "text": "Ghost Possession"
+        },
+        {
+          "type": "p",
+          "text": "A negative ghost is always on the search for vulnerable people for possession. So yes, it is as real as it can be. They look for individuals who are going through a tough phase in life and have their guards down. Your aura is your guard. Take for example the earth’s atmosphere. It is nothing but a blanket of air surrounding our planet from interstellar objects such as meteors. The atmosphere burns bigger meteors into smaller pieces of rock before they crash on the earth rendering them harmless to us. Just like that, the aura is also like a blanket around you protecting you from any outside entity."
+        },
+        {
+          "type": "p",
+          "text": "Spirits do not have the capability to think about you or anyone. Here I am talking about a negative spirit. They can not look beyond their own hunger of finding the satisfaction of their choice. They can not think about you. If you are possessed, chances are that you might not even know."
+        },
+        {
+          "type": "h2",
+          "text": "Degree or Extent of Ghost Possession"
+        },
+        {
+          "type": "p",
+          "text": "There are different stages of possession. A person can have a minor influence and in extreme cases, it can also result in the personality of the person being completely changed. The most important factor deciding the degree of possession is the personality of the person. If the person has a negative personality then he/she is more prone to being possessed. By this I mean, if a person has habits or conditions that weaken their ability to take prudent decisions then they are more prone to possession. For example, people who do drugs or consume alcohol have weaker auras around them. They have a higher risk of being breached by a negative entity."
+        },
+        {
+          "type": "p",
+          "text": "Hence, if you let your guard down then you are at a high risk of being under ghost possession. There are several cases of possession in which the person has no account of being under the influence. It is all a haze. Also in some cases, there have been instances of violence. But the mental ramifications of being possessed is also something that needs to be addressed."
+        },
+        {
+          "type": "p",
+          "text": "A person does not feel anything when he is under possession by a ghost. But, there is another picture to this. In longer spans, this can seriously cause a person mental disbalance as he will not be able to keep track of the things he has said or done. Dealing with other people also becomes a letdown because you no longer feel like yourself. This results in depression and other brain-related issues."
+        },
+        {
+          "type": "h2",
+          "text": "Age During Ghost Possession"
+        },
+        {
+          "type": "p",
+          "text": "This is another very important factor that a person needs to understand about possession. The statistics show us that age has a very close relationship with possession. It is the children that seem to be most affected by this. I have also seen that a lot of my clients are children. But what is the reason behind this? We can trace this to children who had frequent bouts of illnesses and hospitalizations due to illnesses. Due to the different frequent illness, the human aura becomes very week and the external entity or spirit finds it easier to tap into the opportunity of getting inside the aura of the child. Hence the best preventive strategy is to keep the child physically and emotionally healthy. This ensures that the aura is strong and prevents unwanted entities from sneaking into the aura."
+        },
+        {
+          "type": "p",
+          "text": "Children pick up spirits at a tender age and then live with them. Again, showing how real ghost possession can be. Some people have lived with spirits inside them all their lives. These people often don’t like the idea of letting these spirits go from their bodies. They fear loneliness and also start having an identity crisis. The more the aura is breached, the more are the chances of possession. My research has lead me to believe that the people who are under possession in childhood are often the same in their adulthood. This is due to the aura becoming weak. If your aura is weak then there are high chances of this happening to you."
+        },
+        {
+          "type": "p",
+          "text": "On the other hand, there are also people who are under ghost possession at a later phase of their lives. In this type of possession, the findings are rather intriguing. These people make statements like “That’s not me”, “I have never been the same after my treatment”. Common statements include “I can not do such things”, “I can never say that”, “I am bipolar”, or, “I think there are 2 people living inside me”. However, in most cases, there is a combination of different personalities in one person. The soul of the victim becomes a melting pot of different behaviours and the way the person behaves can be perplexing at times."
+        },
+        {
+          "type": "h2",
+          "text": "By Spirits of Opposite Sex"
+        },
+        {
+          "type": "p",
+          "text": "This is also a very interesting type of possession as per paranormal expert in Chennai, India. Yes, interesting! For us, the paranormal investigators’ possession is something that always teaches us something. It is also very important from a research point of view. Different cases of possession help us to learn more about the phenomenon. It also helps young and aspiring researchers to grasp more about the same. When a person is possessed by an entity who is of the opposite sex, they undergo significant changes in their hormones. These changes are negative in nature and cause a lot of distress to the patient or the victim."
+        },
+        {
+          "type": "p",
+          "text": "In addition, there are cases when patients experience a diminished sex drive if under ghost possession. This happens in both men and women. It also causes distress between couples as couples start disliking their partners. I have seen couples hate each other due to this kind of possession. Hence, the dislike between partners is one of the most common aspects of this. In one of my cases, the husband under the possession of an angry female spirit. This was a very serious case of possession. The husband became very hostile with his wife and even hit her in one or two instances. After that, their relationship kept on going downhill resulting in separation."
+        },
+        {
+          "type": "p",
+          "text": "We need to keep in mind that the possessed think that what they are feeling is their own. They cannot separate themselves and the spirit from their thoughts. Hence, the action represents violence and abuse. The unexpected behaviour which follows after that destroys the relationships. Confusion is also something that is a big aspect of possession. People often feel confused about their sexuality due to this. I am not saying that this happens all the time. What I want to tell you here is that these things happen. They don’t happen to everyone. But, they happen to some people."
+        },
+        {
+          "type": "h2",
+          "text": "Conclusion"
+        },
+        {
+          "type": "p",
+          "text": "Ghost Possession is something paranormal experts in Chennai, India or even across the world love talking about. But this a topic about which people don’t talk a lot. Movies have certainly created an imprint on the common people’s minds regarding possession. I, however, believe in the process. And my process is to analyze different aspects of possession and then decide what is what."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "why-do-spirits-remain-among-us",
+      "title": "Spirit Haunting: Why Spirits Remain Among Us?",
+      "category": "western",
+      "alsoIn": [
+        "investigation"
+      ],
+      "seed": "pm-remainamong",
+      "date": "April 1, 2021",
+      "readTime": "13 min read",
+      "kicker": "",
+      "excerpt": "Attachment, unfinished business, or simple confusion about one’s own state — the reasons are rarely dramatic.",
+      "dek": "Often during sessions with my clients, through hypnosis, I have come across various reasons for why the spirits chose to remain. The most common reasons are ignorance, confusion, fear, obsessive attachments to living persons or places, or addictions to drugs, alcohol, smoking, food, or sex.",
+      "tags": [
+        "Are Spirits Real",
+        "Paranormal Expert in Chennai",
+        "Paranormal Expert in India",
+        "Spirit Haunting"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "From my experience as a paranormal expert and psychotherapist in Chennai, India, I have found several basic explanations for why spirit haunting happens and if it’s real or not. So, why do spirits remain among us? Why is it that they don’t leave for their heavenly abode? Why is it that they don’t complete their transition to the spiritual world? Well, in this excerpt we will try to understand the reason behind spirit haunting. We will also try to determine the reason behind the stay of certain entities on earth from the perspective of paranormal experts in Chennai, India."
+        },
+        {
+          "type": "h2",
+          "text": "Spirit Haunting: Why Spirits Remain Among Us?"
+        },
+        {
+          "type": "p",
+          "text": "Often during sessions with my clients, through hypnosis, I have come across various reasons for why the spirits chose to remain. The most common reasons are ignorance, confusion, fear, obsessive attachments to living persons or places, or addictions to drugs, alcohol, smoking, food, or sex. In fact, at times, some unfinished business or the determination to get revenge can also be among the probable causes."
+        },
+        {
+          "type": "p",
+          "text": "At times, spirit haunting took place because the spirit drifted aimlessly. The reason being that they were in a state of deep confusion and ignorance that often lasted for years. In my sessions as a paranormal expert in Chennai, India, I have often questioned them in this regard. Many times the spirits possessing my clients denied any knowledge of their death. If under hypnosis I managed to get them to look at their circumstances of death, they totally refused. At times, some spirits even claimed that the person was not them."
+        },
+        {
+          "type": "h2",
+          "text": "An Example"
+        },
+        {
+          "type": "p",
+          "text": "To give you an example of such a spirit haunting, let me tell you of a girl who possessed my client. This spirit was particularly stubborn in the sense that. I managed to regress her to her time of death which she outrightly discarded. This is what she quoted – “I’m sleeping … I’m sleeping on a satin bed. Not dead, you know! I’m not! I can’t-won’t-see any more!” On seeing her dead husband and relative, she stated, “You’re not going to tell me I’m dead. I’m not dead! There’s Radha. She’s dead. She wants me to go to her house. But I can’t go with her, because she’s dead. Radha’s screaming at me, ‘You’re dead! You’re dead!’ But, no! I am not dead!” Somehow I managed to convince her through my sessions of her passing. And then she willingly departed with her husband and Radha, her best friend."
+        },
+        {
+          "type": "h2",
+          "text": "Spirit Haunting Because of Drug and Alcohol Addiction"
+        },
+        {
+          "type": "p",
+          "text": "One of the strongest reasons why spirits remain in the physical world was an addiction. Yes, the addiction to drugs, alcohol, sex or food, does not go away even in death. The spirit wants to experience it once again. In order to do so and sustain their cravings, they possess people to fulfil their compulsions. Therefore, in such cases, the overwhelming need was felt immediately after death."
+        },
+        {
+          "type": "p",
+          "text": "In my years as a paranormal investigator in Chennai, India, I have come across many addicted spirits responsible for haunting. Spirit addicts tended to cluster around living addicts and the places they frequented. Their attempt is to experience again what was once the dominant theme of their lives. They experience it by possessing an individual. Thus, fulfilling their addiction whenever they wanted it!"
+        },
+        {
+          "type": "p",
+          "text": "Let us now see an example of a spirit haunting due to addiction. I once worked with a forty-four-year-old female who was a recovered alcoholic. She was sober for almost four years. But still, she was suffering from deep depression and anxiety. In my sessions, I was able to determine the cause – which was 18 alcoholic spirits possessing her. And the shocking part was that some of them had been with her since she was ten years old! Such people get possessed either because they themselves are addicts or were at the wrong place at the wrong time."
+        },
+        {
+          "type": "h2",
+          "text": "Spirit Haunting Because of Some Unfinished Work"
+        },
+        {
+          "type": "p",
+          "text": "The spirits might remain here because they have some job which they want to finish. It can be anything like seeing their daughter get married, or their son getting a job. They remain here as they are not able to break free from the bindings of their living being and want to be present in the critical events of their family’s lives."
+        },
+        {
+          "type": "p",
+          "text": "When an important project is not completed, there is often a compulsion to finish it. This can continue after death, frequently tying spirits to the material world. Thwarted in their vain attempts to bring closure to their work, these entities may eventually possess others to live-and work-vicariously through them. Then the possessed feel inexplicable compulsions to do things they had no former interest in."
+        },
+        {
+          "type": "h2",
+          "text": "Sometimes Ghosts Lacks the Knowledge of Their Passing"
+        },
+        {
+          "type": "p",
+          "text": "Spirit Haunting also happens in cases when the deceased didn’t realize that they were dead. If the person had a sudden death, then the spirit of that person might not even be aware of their demise. They might be feeling as if they are in a dream, and soon they will wake up, and things will fall back in the right place. In many cases of accidents or untimely deaths, the spirits of such people mostly remain. One of the prominent reasons is that they never found closure."
+        },
+        {
+          "type": "p",
+          "text": "In some cases of haunting, the spirit was in such a profound state of confusion when they died that they simply didn’t realize they were dead. This was particularly true of suicides. Many of them, though not all, wandered about without direction, making futile attempts to communicate with the living. This was the case with the person mentioned earlier who killed himself by jumping off a bridge. That spirit could see his body lying in the sand, but the fact of his own death did not make an impression on him. Later, he could not understand why people on the beach did not respond to him."
+        },
+        {
+          "type": "p",
+          "text": "I have seen cases of suicides where people did experience a normal death process. Regardless, it appears that when they commit suicide, they are only postponing the working out of their lessons and retarding their spiritual progress, for they will have to find themselves in another test situation with suicide as a strong option in some future life."
+        },
+        {
+          "type": "h2",
+          "text": "Being there for their family"
+        },
+        {
+          "type": "p",
+          "text": "In this case of haunting, the spirit is aware that they have passed away and make a choice to comfort and take care of their family and loved ones even after their death. Therefore, they decide to make their home their only heavenly abode."
+        },
+        {
+          "type": "p",
+          "text": "At other times, spirit haunting happens because they develop an obsessive attachment to the living. This compelled them to remain earthbound. In the case of early deaths, the parents stayed to “help” their children as they grew up. In addition, the deceased spouse stayed back out of loving concern for their partners. But don’t think of this as a sweet gesture. Paranormal expert in Chennai, India believe that reason does not matter. A spirit staying where it does not belong can cause serious problems."
+        },
+        {
+          "type": "p",
+          "text": "An overprotective parent causing spirit haunting can retard the growth of their children. Because they infused them with their fears. Oftentimes, in the case of spouses, when the partners got remarried, the spirit was upset. This often resulted in deliberate havoc with serious damages."
+        },
+        {
+          "type": "p",
+          "text": "In one case, the spirit of a young man stayed near his younger brother who had idolized him in order to “help” him. Because the entity had been a marijuana addict, the living brother began using that drug-and was soon using others as well."
+        },
+        {
+          "type": "h2",
+          "text": "Emotional Connect to Experience Life Once Again"
+        },
+        {
+          "type": "p",
+          "text": "The spirit might just not want to let go of their family as it shared a profound bond with them. In this scenario, the very idea of leaving family and passing on to the other side where they can’t see them anymore haunts them, and the spirit is yet not ready to accept that reality. Espelliany young children, when they pass on, they want to be in the comfort of their parents. Therefore, children’s spirits don’t leave."
+        },
+        {
+          "type": "p",
+          "text": "A particularly fascinating case involved a compassionate surgeon who, dying suddenly in a car accident, returned to his own hospital and was drawn to the body of an infant still in the womb and about to be born prematurely. He commented:"
+        },
+        {
+          "type": "quote",
+          "text": "This little soul was to be born so early-seven- and one-half months and only two- and one-half kgs-that she needed more. She was too weak to survive by herself. I could give her more; I could give her the strength she needed until she could go on by herself. She was tiny, so tiny! She needed me and I needed her. I still needed to experience things; with her, I could experience what I hadn’t and wanted to."
+        },
+        {
+          "type": "p",
+          "text": "After he departed-more than twenty years, later the client said, “He was kind, but it seems that he had taken over so much that it didn’t give me a chance to grow.”"
+        },
+        {
+          "type": "p",
+          "text": "Another spirit, a mother whose daughter had died, was reluctant to leave my patient, a seventeen-year-old girl, because the girl reminded her of her own lost daughter."
+        },
+        {
+          "type": "h2",
+          "text": "If a Ghost died by someone else’s misconduct"
+        },
+        {
+          "type": "p",
+          "text": "The spirit might want to stay if there was something wrong committed against him that lead to their death. Mostly when it was a violent death or a crime. It might have a strong sense to stay back and explore what lead to its end. In my experience with an ouija board during my early years, I encountered one such spirit when I was in my late teens. The spirit told me the exact details of her death and wanted her family to get closure. She told me where to find her remains. And all of it was true!"
+        },
+        {
+          "type": "h2",
+          "text": "For Vengeance"
+        },
+        {
+          "type": "p",
+          "text": "The ghost or the spirit might want to stay back to seek revenge for their death. In this case, the spirit might be knowing who caused their death and then want to seek retribution for their death. This kind of spirit is called a vengeful spirit, and they have the capability to make their foe’s life a living hell. They use fear as their most prominent tool to intimidate and hurt the person whom they think is their enemy. One should be careful around the vengeful spirit as it can cause severe mental and physical damage to a person."
+        },
+        {
+          "type": "p",
+          "text": "But motives of possessing entities were not always benign they often were malicious-even vengeful! Several of my patients were plagued by the spirits of people who had been hostile to them while alive. Many had been besieged by vicious entities whom they never knew. Some actually were harassed by spirits who hated the other spirits already possessing the patients!"
+        },
+        {
+          "type": "h2",
+          "text": "Examples of Spirit Haunting Due to Vengeance"
+        },
+        {
+          "type": "p",
+          "text": "A middle-aged female patient was possessed by several entities, among them two sisters. It became clear that the older sister was inhabiting my patient simply because she was following her sister in an obsessive effort to continue controlling her. When the younger sister departed with her loved ones, the entity finally left, much to my patient’s relief."
+        },
+        {
+          "type": "p",
+          "text": "Just as there are individuals whose lives revolve around getting revenge, there are similarly minded spirits. If they had been murdered or felt they had been wronged, they stayed after death to deliberately hurt their “malefactors.”"
+        },
+        {
+          "type": "p",
+          "text": "As living people, their vibrations were lower than most and, like criminals and addicts, it was easy for them to remain earthbound. Some were even intent upon killing the person they possessed."
+        },
+        {
+          "type": "h2",
+          "text": "Ghost fear the verdict of GOD"
+        },
+        {
+          "type": "p",
+          "text": "This means that the ghost might have done some wrong things in their life, and now they are scared. That God or any other entity that is more powerful than him might make him pay for the mistakes, he made. The feeling of being judged makes them scared to pass on to the other side."
+        },
+        {
+          "type": "h2",
+          "text": "Anxiety and Nervousness"
+        },
+        {
+          "type": "p",
+          "text": "Another reason could be that they were not mentally well at the time of death, so they have no other option but to stay as they under confusion and are anxious. Even when they become paranormal being. A mentally sound person at the time of his demise does not find it difficult to pass on to the other side. It just happens every day because people die every day."
+        },
+        {
+          "type": "h2",
+          "text": "Spirit Haunting In Cases of Sudden, Unexpected Deaths"
+        },
+        {
+          "type": "p",
+          "text": "Confusion was also common among people who experienced sudden, unexpected death. Some stayed where they died for hours, months-in some cases even years. One young man who died in a car accident never left the scene. He was watching medics put his body into a plastic body bag, without understanding the significance of what was happening. Then-feeling lonely-he drifted to the motel lounge where he used to perform as a musician. On going there, he got a shock since people there couldn’t see him and didn’t talk to him. In relating this to me, he joked, “I felt like Caspar the friendly ghost!”"
+        },
+        {
+          "type": "p",
+          "text": "Another man who also died in a car crash stayed at the accident site in a daze for over twenty-four hours simply staring at the spot where his car had run off the road into a river, before somehow returning to his home, where he unsuccessfully tried to communicate with his family."
+        },
+        {
+          "type": "p",
+          "text": "A teenager who was shot in the face couldn’t bring himself to leave his disfigured body. He recalled, “I was confused. Therefore didn’t know what was happening. I was lost and didn’t know where to go. I remember that the person who shot me just drove away and left me there.”"
+        },
+        {
+          "type": "h2",
+          "text": "Spirit Haunting Because They are Ashamed Of Their Past Deeds"
+        },
+        {
+          "type": "p",
+          "text": "Other entities confessed to being so ashamed of the former deeds that they didn’t want to see their spirit loved ones. Often those with a strong religious background were fearful of going to hell. These frightened spirits often desperately resisted the helpers who appeared at the time of their deaths. Paranormal experts in Chennai, India, believe that shame plays an important role."
+        },
+        {
+          "type": "p",
+          "text": "One spirit refused–on numerous occasions-to go with his mother to the spirit world because he felt horribly remorseful about his earlier practice of devil worship. He was under the impression that she would never forgive him, since she was a staunch Catholic. The depossession was successful only when his mother finally was able to convince him that she forgave him completely."
+        },
+        {
+          "type": "p",
+          "text": "Another possessing spirit, a young war veteran, and drug addict who had committed suicide, at first refused to leave with his mother and aunt who came for him. “They are good and I can’t go where they are, because I did bad things like drink and steal and roll people,” he confided."
+        },
+        {
+          "type": "p",
+          "text": "A young girl who strongly believed hell was her punishment for committing suicide shied away from helping spirits. She finally left when her mother literally dragged her away."
+        },
+        {
+          "type": "h2",
+          "text": "Spirit Haunting Happens When the Deceased is Obsessed With a Particular Place"
+        },
+        {
+          "type": "p",
+          "text": "Spirits also frequently remain on the earth plane because they were under obsession with a place, usually their former home or land. In one puzzling case, a female entity was possessing my patient as a very young girl. She did this when her family was building their house on land that was the site of the spirit’s former home over eighty years earlier. This vengeful entity had initially tried to vent her anger on the girl’s father and mother. But because the parents’ auras were too strong my client, then a seven-year-old child, became her victim. From the time of the possession on, the girl’s personality drastically changed; she became extremely shy and especially afraid of public speaking."
+        },
+        {
+          "type": "p",
+          "text": "In her regression, we found that the possessing entity was a victim of public prosecution. She was publicly hanged as a murderess before a jeering crowd. Her last memory was of “a sea of hostile faces.” This miserable spirit had carried the emotions of that traumatic experience into the child she possessed. When she finally left, my client was immediately under the relief of her crippling, long-standing fear and gave a lecture in her church without any anxiety."
+        },
+        {
+          "type": "h2",
+          "text": "In Conclusion"
+        },
+        {
+          "type": "p",
+          "text": "The corroboration that we presently have supports the reasons that I wrote above, but then there are other ways to look at it. The analysis and the past explorations also suggest that most of the spirits that remain here were sad and confused. This means that happy souls don’t tend to hang around just because they can. We have very rarely seen a cheerful ghost or a spirit. Most of them are either sad or unhappy."
+        },
+        {
+          "type": "p",
+          "text": "So what did we learn? We learned that there are spirits who tend to remain here. The reasons for their extended stay can be numerous. It can be a personal reason or just that they are too fearful to leave. There are investigations still taking place to help answer more regarding the afterlife and the story after death. Until then, all we can do is try from our front and use our best judgment to learn more about them without any bias or any previous beliefs."
+        },
+        {
+          "type": "p",
+          "text": "To answer the question – are spirits real – yes, spirits are real. Spirits are around us in the form of their aura or soul. The soul is something that is never dying and immortal. Our body has matter in its composition, and it becomes matter after our death. The soul, however, is something that remains."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "what-is-depossession-therapy",
+      "title": "What is Depossession Therapy?",
+      "category": "western",
+      "alsoIn": [
+        "investigation"
+      ],
+      "seed": "pm-deposstherapy",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "",
+      "excerpt": "The therapeutic frame around depossession, and where it sits alongside conventional care.",
+      "dek": "I think that you can get rid of any possession spirits by making use of some simple depossession techniques or the procedures stated in a few of the blogs on this website. A lot of my clients have tested these metaphors and have had favourable results.",
+      "tags": [
+        "Depossession",
+        "Paranormal Expert",
+        "Paranormal Expert in Chennai",
+        "What is Depossession"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "I think that you can get rid of any possession spirits by making use of some simple depossession techniques or the procedures stated in a few of the blogs on this website. A lot of my clients have tested these metaphors and have had favourable results. These techniques are fairly easy and don’t require any prerequisite knowledge of the same. So, if you are someone who thinks that they are possessed by a spirit or you no longer feel like yourself then, you can surely try these techniques and get yourself free from any possession entities. In the next few blogs, we will look at what is depossession therapy and how does a professional paranormal consultant and psychotherapist carries it out."
+        },
+        {
+          "type": "h2",
+          "text": "What is Depossession?"
+        },
+        {
+          "type": "p",
+          "text": "First, I would also like to assure you that there is no harm involved when you practice these techniques. There are high chances that the spirit will leave after you do these. And at worst, they can become disturbed and might continue to be where they are. So, I don’t think that there is any chance of physical harm brought to you, is anyone around you when you perform the techniques mentioned. Again, I would like to clarify that depossession does not attract any spirits but it helps us to release the spirits from their current position or place of residence."
+        },
+        {
+          "type": "p",
+          "text": "However, it is highly imperative that you have some basic idea of the process before you jump right into it. Spirits are nothing but lost souls. They wander through our realm from one place to another and they just flow like the wind. One always needs to keep in mind that the spirits are usually under distress and are confused most of the time. Wandering spirits have failed to enter into the light after their death or have refused to pass onto the other side."
+        },
+        {
+          "type": "h2",
+          "text": "Spirits Need Help"
+        },
+        {
+          "type": "p",
+          "text": "According to my belief, it is the spirits who need help and not the clients who come to see me. Hence, I request all my readers to not think of depossession as “kicking away” the spirit and to always have a positive outlook towards the process. Remember, that you are helping an entity by making them pass on to the other side. You are helping them to find peace and that is the greatest thing a person can do for anyone. This is a noble cause and a noble act as well."
+        },
+        {
+          "type": "p",
+          "text": "When the spirits are roaming around, they have no hope. By guiding them to move on to the other side, you are ensuring that they find peace. The main idea that lies when you want to want to free a spirit is that it begins by convincing them that there is a realm that is for them. A place where every soul on this planet is supposed to go after they have left their bodies. Once you are able to convince them about this truth then it becomes relatively easier to perform a depossession."
+        },
+        {
+          "type": "h2",
+          "text": "Depossession Therapy Helps the Client and the Spirit"
+        },
+        {
+          "type": "p",
+          "text": "I always tell my clients that if I was to forcibly extract the entities from their bodies then there would be no guarantee that the spirit would pass on to the other side. It can lead to creating a huge problem for the spirit as it would still not have an idea about where to go. It might again possess someone else and create the same problems for someone else. So, this is not the way to go moving forward. Also, there is no guarantee that the spirits would not again end up possessing someone else. Therefore, using force to remove the spirits is not the best alternative."
+        },
+        {
+          "type": "p",
+          "text": "Another very important thing that needs to be addressed here is the attitude you have while dealing with these entities during depossession. Attitude is very important according to the best paranormal expert in India or across the world. It gets even more difficult and complicated when there is suffering involved. So, the attitude you have becomes really important when you deal with your clients as well as the possessing entity. The first step is to remain calm and not jump to conclusions. Be extremely understanding of the situation and no matter what be honest. The spirit has the ability to sense falsehood so say only what you believe in."
+        },
+        {
+          "type": "h2",
+          "text": "A Person Who is Possessed is Mostly Unaware"
+        },
+        {
+          "type": "p",
+          "text": "Most of the time the person who is possessed is not aware of the possession and does not have the idea that they are being used by another soul. However, there are instances where the person has the sense that someone else is indeed inside them. This usually happens when the said person is possessed by a loved one from the family. Depossession is very helpful in such cases."
+        },
+        {
+          "type": "p",
+          "text": "The reason why a loved one possesses a person is due to their dependence on them. They can be connected emotionally to an extent that possession occurs. After death, the connection stays and people get possessed. Hence, it is very important that you have the will to let go if something like this happens. Saying strong and having willpower will help you. If you stay weak and emotionally dependent on the deceased then the job becomes even harder."
+        },
+        {
+          "type": "p",
+          "text": "There are cases where some people have also asked the spirits of their loved ones to stay after their demise. Depossession therapy can help even such cases if a skilled paranormal expert or an experienced psychotherapist is carrying it out. A lot of my clients told me that they have had their parents, siblings, and spouses stay with them for years. They even have expressed to me that the spirits of their loved ones were a constant source of support and love. The spirits have also helped them in taking important decisions and making the right choices. However, I am of the belief that the spirits don’t belong here on the earth after they have died. There is a separate world for them where everyone is supposed to go and find peace."
+        },
+        {
+          "type": "h2",
+          "text": "To Wrap it Up"
+        },
+        {
+          "type": "p",
+          "text": "On earth, the interaction between humans and spirits leads to causing more damage than anything good. The spirits are confused and sad. They desire peace which is nowhere to be found on this planet and they end up possessing a human being who then suffers because of the same. There are also a lot of other factors involved in this. Not only humans but the spirits also suffer due to the same."
+        },
+        {
+          "type": "p",
+          "text": "Possession should not go on after the person possessed is aware of the same. Paranormal experts across the world believe that it is never a good idea. It does not matter how close the person is to the spirit."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "what-is-possession",
+      "title": "What is Possession? How Can an Expert Help?",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-possession",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "",
+      "excerpt": "A working definition, the spectrum it covers, and what a practitioner can realistically do about it.",
+      "dek": "Possession is a kind of haunting. When a negative or hostile entity enters the body of a human being and controls it to a point that the person loses all touch with themselves, is when a possession happens. It becomes almost impossible for the person to act according to his wit and actions.",
+      "tags": [
+        "Paranormal Expert in Chennai",
+        "Paranormal Expert in India",
+        "Possession",
+        "What is Possession"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "Most of us have seen people getting possessed by spirits in movies. But what does possession signify? As per paranormal experts in Chennai, India, possession is the process by which an inhuman spirit enters the soul of a living human making the human act in a way the spirit desires. Having said that, in this excerpt, we will discover what is possession and the type."
+        },
+        {
+          "type": "h2",
+          "text": "What is Possession?"
+        },
+        {
+          "type": "p",
+          "text": "Possession is a kind of haunting. When a negative or hostile entity enters the body of a human being and controls it to a point that the person loses all touch with themselves, is when a possession happens. It becomes almost impossible for the person to act according to his wit and actions. It is because the spirit residing inside his soul rules his emotions. The person is entirely under the influence of the spirit and behaves just as the spirit wants."
+        },
+        {
+          "type": "p",
+          "text": "This kind of possession is considered one of the worst as it can cause mental and physical injury to the person as well as people around him. In most cases, the spirit that has entered a human’s body is destructive; hence it becomes challenging for the person to defeat such a massive negative entity. Another widespread occurrence of possession types of haunting is depression. A person might not even know that he is possessed. This kind of possession is usually followed by pessimistic feelings and, in extreme cases, suicidal tendencies. There are also cases of people being possessed by their latent mind and indulging in things beyond their control. This type of situation also looks like possession, but it is not the same."
+        },
+        {
+          "type": "h2",
+          "text": "What I Have Understood While Working With Possessed People"
+        },
+        {
+          "type": "p",
+          "text": "Before I tell you about my experience as a paranormal expert in Chennai, India, let me tell you what was the guiding force behind forming these opinions. I will recount two different possession stories of my clients. For privacy purposes, the names that I am using are imaginary. Hypnoanalytic sessions with my client Sid had pointed in directions which gave me reasons to believe that he was not alone. After four years of therapy, I was able to make out who was residing inside him. It took me a lot of patience and effort to talk to the spirit possessing him, but I managed to succeed."
+        },
+        {
+          "type": "p",
+          "text": "I conversed with him like a friend. All I could hear was an angry guttural voice from inside Sid. The spirit was that of Alby. He told me this when he was a bit calm. After a few sessions, he reluctantly left to his heavenly abode. Before this incident, Sid always had unexplained problems. Loss of appetite was one of them. Therefore, losing a lot of weight. After the spirit left Sid, I met him. He was absolutely normal. In addition, he had a huge smile and no recollection of anything. Though he said one thing, which I will never forget, “I really feel encouraged that I will get rid of these last ninety pounds-and once and for all end my battle of the bulge.”"
+        },
+        {
+          "type": "h2",
+          "text": "Pain and Possession"
+        },
+        {
+          "type": "p",
+          "text": "The next story is that of Sara, a woman in her mid-twenties. Sara had often complained of pains throughout her body. Despite consulting numerous medical specialists, her problem never completely went away. So somehow she decided to go for therapy and was introduced to me as a client. It is then we can make out the reason behind her pain. Let me remind you that all these are true accounts of people. But, the names are imaginary, again for privacy purposes."
+        },
+        {
+          "type": "p",
+          "text": "Under hypnotherapy, Sara went on a talking spree. She recalled the death of her dear friend and how deeply it had an effect upon her. Her friend was a victim of a fatal car crash that left her crushed to death. She decided to visit her friend one last time in the hospital. At the hospital, what she saw, changed her life forever. On the hospital bed, she could see her friend, all bandaged. But still, she was able to make out her distorted face. At the moment, she just somehow wanted to help her friend."
+        },
+        {
+          "type": "p",
+          "text": "All this while, Sara had convulsions going on in her body. She was twisting and turning with no control. I felt the need to intervene at that moment. Therefore, I tried to calm her down and in doing so, I was talking to the spirit of her friend residing inside her. Note that as a paranormal expert in Chennai, India, I have often come across such cases."
+        },
+        {
+          "type": "h2",
+          "text": "How Are These Cases of Possession Different?"
+        },
+        {
+          "type": "p",
+          "text": "The two cases were quite stark. In the former, it was the spirit who did not want to leave. But in the former, it was the person who was not letting the spirit depart. These are just two cases that I recounted. As a paranormal expert in Chennai, India, I have treated numerous clients with the help of therapy. And it has been quite helpful for every single one of them. Possession is quite a relative condition. In some of these cases, there was always a battle. Who is the one controlling things here! This ultimately resulted in a lot of pain for the patient."
+        },
+        {
+          "type": "h2",
+          "text": "To Wrap It Up"
+        },
+        {
+          "type": "p",
+          "text": "One should not confuse a mental health issue with real possession. Hence, it is vital for a paranormal expert in Chennai, India or a registered exorcist to first read the person’s psychiatric report before following their protocols. You can also use an EM meter from a safe distance to form a more substantial and more concrete opinion if the person is possessed or not. Please remember, professional medical care of a registered medical practitioner is what any person should first look for in case of any discomfort. That is the first step. A good paranormal investigator should be a sceptic. After all, you identify a paranormal event only when you rule out all scientific possibilities and explanations the universe can provide us."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "how-to-connect-with-your-spirit-guides",
+      "title": "How to Connect With Your Spirit Guides?",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-guides",
+      "date": "April 1, 2021",
+      "readTime": "7 min read",
+      "kicker": "",
+      "excerpt": "Guidance arrives far more often as a nudge than as a voice. Learning to notice it is the whole practice.",
+      "dek": "Know the Right Way",
+      "tags": [
+        "How to Connect with Spirit Guides",
+        "How to Connect With Your Spirit Guides"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "Have you ever had an issue or trouble dealing with a situation and needed guidance? Maybe there was something that material things could not solve. At that point, all you needed was some comfort and warmth. Well, just know that your spirit guide is there and is guiding you. The only person coming between you and your spirit guide is you, yourself. Either you are not observant enough, or you are just not open for transmission. In any case, all you need to do is to notice the day-to-day changes around you and be ready to embrace the messages your spirit guide is trying to impart. In this blog, we will discuss how to connect with your spirit guides."
+        },
+        {
+          "type": "h2",
+          "text": "How to Connect With Your Spirit Guides?"
+        },
+        {
+          "type": "h3",
+          "text": "Try to be Observant In General Day-to-Day Life."
+        },
+        {
+          "type": "p",
+          "text": "To connect with your spirit guides, you must be observant. This essentially means that you should be ready to decipher the messages sent by your spirit guide in the paranormal. You can only do this by being in the moment and making some free time when your mind is not pre-occupied with varied thoughts. Try to be composed in your everyday routine, and you will be able to understand the messages by your Spirit guide. You can also practice meditation if you have problems concentrating or if you have a fickle mind."
+        },
+        {
+          "type": "h3",
+          "text": "Ask For Help When You Need it."
+        },
+        {
+          "type": "p",
+          "text": "Seldom in life are situations when things are not in your control, and you can not do anything to make things right. In such cases, you should be open to connect and ask for help from your spirit guides. You should practice this in such situations when you don’t know where things are going, and you can not do anything to make it right for you. For example – After a job interview, you can not do anything to make your selection possible. You have already done what you could do. In such times, just ask your guardian spirit to take care of things for you. Whenever I have asked for their help, they have been there. In fact, it’s because of them that I never got into any serious troubles with hostile energy."
+        },
+        {
+          "type": "h3",
+          "text": "Always look out for signals and signs."
+        },
+        {
+          "type": "p",
+          "text": "It would be best if you were always looking out for signals and messages to understand and decode what the Spirit Guide is trying to say. The ability of your guide to send you messages is also dependant on your awareness to grasp what they are trying to tell you. So, you should always be ready to listen if you want to hear."
+        },
+        {
+          "type": "h3",
+          "text": "Give Them A Name You Like."
+        },
+        {
+          "type": "p",
+          "text": "To establish a connection with your spirit guides, give them a name. By giving your spirit guide a name, you make them feel more wanted and real. This motivates them to try to communicate even more with you. It also gives them the impression that you know of their existence, and they are welcome in your life. A benevolent spirit is always attracted to positive energy as it is also in the form of energy. So make them feel wanted and appreciate their being in a manner that heartens them to communicate more."
+        },
+        {
+          "type": "h3",
+          "text": "Try to understand more about Spirit Guides."
+        },
+        {
+          "type": "p",
+          "text": "You should always be willing to learn more about spirits and spirit guides if you want to connect with them. Reading material online or watching videos will make you understand things better. So, whenever you find the time, just try and read about them. Knowing more will improve your knowledge and help increase your awareness. That way, you will look at things from a different perspective."
+        },
+        {
+          "type": "h3",
+          "text": "Talk to them in your mind."
+        },
+        {
+          "type": "p",
+          "text": "This means that you should also try to make a small conversation with your guiding spirit in your mind. Suppose you have an issue that you find challenging to deal with. You can simply state your issue to your guiding spirit in your thought. You can do this like a prayer we often make to religious deities. Just say what you want to and then see if that question is answered in some form. But remember to be extremely vigilant and aware of any response from your friend, your guiding spirit."
+        },
+        {
+          "type": "h3",
+          "text": "Keep a record of your experiences with your Spirit Guide."
+        },
+        {
+          "type": "p",
+          "text": "By keeping a record of your experiences, I mean you can either hold a diary in which you can jot down the important events in your journey to communicate and connect with your spirit guide, or you can also type it on your computer. Writing your experiences down is recommended because then you are able to look back and see for yourself what impact certain events have had on your life. It is also a great way to keep your faith intact on your spirit guide and helps you keep track of when they have helped you."
+        },
+        {
+          "type": "h3",
+          "text": "Work On Your Instincts."
+        },
+        {
+          "type": "p",
+          "text": "Working on your instincts also helps to connect with your spirit guides. We all have basic human instincts that help us live and lead a life in this universe. However, these basic human instincts are not enough to understand and decode the messages sent by the departed. You need to improve your intuition by practice and with knowledge."
+        },
+        {
+          "type": "p",
+          "text": "The knowledge to connect with your spirit guides is available in the form of text in many books and journals written by people who were lucky enough to witness something supernatural in their life-span. The rest is on the web, which is very easily accessible. But, it is tough to work on the natural part of it, which is your instinct. See, you can improve your intuition in only one way, i.e., practice. “Practice makes a man perfect” is a prevalent idiom. This is true even in the case of the overall development of your Instinct and Intuition."
+        },
+        {
+          "type": "h3",
+          "text": "Indulge In The Spiritual Way Of Living."
+        },
+        {
+          "type": "p",
+          "text": "By indulging in the spiritual way of living, I mean that you should practice certain things that make you closer to a spirit and render you more open to supernatural experiences. A supernatural experience is also a form of spiritual experience. It all depends upon how you perceive things."
+        },
+        {
+          "type": "p",
+          "text": "Now what you can do is indulge in activities such as yoga or indulge in other rituals that will help create intimacy between you and your Spirit Guide. These experiences also help in making your mind more calm and relaxed. A spirit is attracted towards a non-cluttered, cheerful and optimistic soul."
+        },
+        {
+          "type": "p",
+          "text": "Spiritual life is a life lived to its fullest. You cannot even begin to understand the world without being still, and in order to be still, your mind has to be clear. So, you can make a routine that suits you and work on it. Keep in mind that you have to be regular and self-motivated. The spiritual journey is a long one, but there is light at the end of the tunnel."
+        },
+        {
+          "type": "h3",
+          "text": "You can also use specific tools to communicate with your Spirit Guides."
+        },
+        {
+          "type": "p",
+          "text": "We have been using specific tools, namely divination tools to communicate with the spirits. The tools include – Tarot cards, Norse runes, tea leaves, Pendulums, Old Books, etc. These materials can harness certain energies and help us communicate with the other side. We all have seen card readers in movies trying to communicate with the deceased. Well, it is just like that, only it’s not acting."
+        },
+        {
+          "type": "p",
+          "text": "Another crucial thing to note here is that usage of such tools involves specific protocols. Take a few moments with the divination and urge your spirit guide to be helpful. You should also pray for all the help he can give and be extremely grateful for you. Have your own Spirit Guide to help you and get you through tough negotiations of life."
+        },
+        {
+          "type": "h2",
+          "text": "To Wrap Up"
+        },
+        {
+          "type": "p",
+          "text": "These were some of the ways by which you can open the doors of communication and connect with your Spirit Guides. The thing you need to keep in mind regarding communicating is that it is a process. And you need to be vigilant and aware if you want to understand your spirit guide. Another thing to keep in mind is that sometimes we tend to rush in order to get the desired results. Trust me when I say this, this attitude won’t work here. You need to be extremely patient and forbearing if you want to find results in this path. It can take days, months, or years before you can finally see the desired results."
+        },
+        {
+          "type": "p",
+          "text": "In case you feel cut off or isolated from your spirit guides, then don’t worry. Once you connect with your spirit guides, then it is always there. This connection will stay even after you die and meet your guide in the afterlife. So don’t be anxious. The spirits are always working to help you and communicate with you. In your worst moments, the spirit wants to help, but since you are going through a challenging phase, you are not able to comprehend the messages designed by the spirit. Remember, your Spirit guide is always there for you. Helping you, protecting you, taking care of you, and always watching you. All you need to do is just to open yourself to it."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "what-is-an-addicted-ghost",
+      "title": "What is Addicted Ghost?",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-addicted",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "",
+      "excerpt": "Appetites do not always end with the body. The addicted ghost is one of the more common attachments.",
+      "dek": "What does Addicted Ghost Look For?",
+      "tags": [
+        "Addicted Ghost",
+        "Paranormal",
+        "Paranormal Expert",
+        "What is Addicted Ghost"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "Addicted ghost is quite usual. As per the paranormal experts, they are really easy to come across and are among the most spotted types of ghosts out there. These are the spirits who have not yet left the planet after their death and are prepared to cling to their surroundings till the end of time. Just like humans, Ghosts too can have a habit of people, material objects, and places. The only thing which separates them from us is their dependence on such things after their death."
+        },
+        {
+          "type": "h2",
+          "text": "What is an Addicted Ghost?"
+        },
+        {
+          "type": "p",
+          "text": "These are the types of spirits or ghosts who find it really difficult to leave the bonds they have made during their lifetime and pass to the other side. They have chosen a path that makes them lead their afterlife on this planet. Again I would like to reiterate that their being here is a choice that they make. Their emotions and feelings are more like humans. Hence, they don’t entirely leave once they die."
+        },
+        {
+          "type": "p",
+          "text": "For example, if they were a doctor in their most recent life and still want to treat people as it gives them a noble feeling, such a ghost is more prone to frequent a hospital. Another example is an addicted ghost clinging on to alcoholic people who regularly visit a bar or a wine shop."
+        },
+        {
+          "type": "h2",
+          "text": "What does an Addicted Ghost Look For?"
+        },
+        {
+          "type": "p",
+          "text": "A person can pick up such entities even after going out for just one night. The issue is that when you are high, your aura becomes frail. This is the opportunity they crave for and want you to be at your weakest when they make their move on you. I am sure you have heard the word ‘aura,’ but what does it signify?"
+        },
+        {
+          "type": "p",
+          "text": "To start, let me tell you that aura is a real thing. It is the energy coming out of our bodies that surrounds us. You will notice that when someone comes too close to your body, you get the feeling of that person being too close. This phenomenon happens because they trespassed your energy field or your aura."
+        },
+        {
+          "type": "p",
+          "text": "Human energy is strong and vigorous in normal conditions. It is enough to protect you from most of the negative energies and entities out there. If you do not disturb your energy levels by indulging in activities that make them weak, then you are safe. But if you let your guard down and happen to be unlucky at the same time, then it might lead to a debacle of sorts. So, when you are drunk or high, your ability to fortify yourself against humans as well as ghosts takes a toll."
+        },
+        {
+          "type": "p",
+          "text": "Generally speaking, our brain often makes terrible choices when our mental equilibrium is compromised. When our brain becomes weak, our body also loses strength. This causes our whole energy fence to decline. So when an addicted spirit wants to cling to you so that he can feel alive again, you do not have the energy and the mental brawn to counter that."
+        },
+        {
+          "type": "h2",
+          "text": "Where is an Addicted Ghost Mostly present?"
+        },
+        {
+          "type": "p",
+          "text": "Regrettably, this means that a lot of addicted ghosts are present near hotels and bars just to take advantage of a drunk or a sensitive person. If you are someone who likes to drink and is exposed, the chances of this happening to you are more. This is also applicable to a ghost who was addicted to food, drugs, or sex, for that matter. The vice does not matter. Their presence does."
+        },
+        {
+          "type": "p",
+          "text": "I’ve met people who have told me that sometimes they feel altogether out of control of their actions. They feel as if someone inside them is pushing them to indulge in an act. There is a fragile line between addiction and someone inside telling you to indulge in any vice. If you feel like you are suffering from addiction, then you should take help from a psychiatrist."
+        },
+        {
+          "type": "h2",
+          "text": "To Wrap it Up"
+        },
+        {
+          "type": "p",
+          "text": "One of my most significant issues with such a ghost is that they are violators and raiders. They cast their inauspicious influence and devour you of all your energy. An addicted ghost does not have regard for anything except for satisfying themselves. They don’t care if they hurt you physically or destroy your body. The end is very dismal. People end up losing their job, relationships, and in extreme cases, their lives."
+        },
+        {
+          "type": "p",
+          "text": "I want to add that with an addicted spirit; you will most probably not experience anything like an actual haunting. It is a different experience. There are no manifestations or any activity where you feel as if your surrounding is haunted. You don’t feel scared or terrified as you are too caught up in satisfying your cravings. Another thing is that such a ghost is also not aware of your health physically or mentally. They don’t care about you. They are too caught up in their pursuit to get what they want. But the good news is that they are comparatively easy to fight off."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "is-a-ghost-real",
+      "title": "Is Ghost Real: Why Do Ghosts Remain?",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-earthbound",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "",
+      "excerpt": "The earthbound state, described plainly, without the theatre that usually surrounds the question.",
+      "dek": "Are Ghosts Real?",
+      "tags": [
+        "Are Ghost Real",
+        "Is Ghost real",
+        "Paranormal"
+      ],
+      "body": [
+        {
+          "type": "p",
+          "text": "To answer the first question – are ghost real – yes, a ghost is real. But why do the paranormal remain on Earth? Some spirits cannot or don’t want to travel to the other side after their demise. It is not very clear if that’s their choice or they do not have any other option. There is no evidence supporting or negating either of these events. But, if we want to understand why some of them tend to remain in this universe in the form of spirits or ghosts, we need to assume that they are here and around us."
+        },
+        {
+          "type": "p",
+          "text": "Spirits are around us in the form of their aura or soul. The soul is something that is never dying and immortal. Our body is made of matter, and it becomes matter after our death. The soul, however, is something that remains. Now let us look at some of the reasons why some of these spirits stay earthbound:"
+        },
+        {
+          "type": "h2",
+          "text": "Spirits or Ghosts Have Some Unfinished Work"
+        },
+        {
+          "type": "p",
+          "text": "The spirits might remain here because they have some job which they want to finish. It can be anything like seeing their daughter get married, or their son gets a job. They remain here as they are not able to break free from the bindings of their living being and want to be present in the critical events of their family’s lives."
+        },
+        {
+          "type": "h2",
+          "text": "A Ghost Lacks the Knowledge of Their Passing"
+        },
+        {
+          "type": "p",
+          "text": "If the person had a sudden death, then the spirit of that person might not even be aware of their demise. They might be feeling as if they are in a dream, and soon they will wake up, and things will fall back in the right place. In many cases of accidents or untimely deaths, the spirits of such people mostly remain. One of the prominent reasons is that they never found closure."
+        },
+        {
+          "type": "h2",
+          "text": "Being there for their family"
+        },
+        {
+          "type": "p",
+          "text": "In this case, the spirit is aware that they have passed away and makes a choice to comfort and take care of their family and loved ones even after their death. Therefore, they decide to make their home their only heavenly abode."
+        },
+        {
+          "type": "h2",
+          "text": "Emotional Connect with loved ones"
+        },
+        {
+          "type": "p",
+          "text": "The spirit might just not want to let go of their family as it shared a profound bond with them. In this scenario, the very idea of leaving family and passing on to the other side where they can’t see them anymore haunts them, and the spirit is yet not ready to accept that reality. Espelliany young children, when they pass on, they want to be in the comfort of their parents. Therefore, children’s spirits don’t leave."
+        },
+        {
+          "type": "h2",
+          "text": "If a Ghost died by someone else’s misconduct"
+        },
+        {
+          "type": "p",
+          "text": "The spirit might want to stay if there was something wrong committed against him that lead to their death. Mostly when it was a violent death or a crime. It might have a strong sense to stay back and explore what lead to its end. In my experience with an ouija board, I encountered one such spirit when I was in my late teens. The spirit told me the exact details of her death and wanted her family to get closure. She told me where to find her remains. And all of it was true!"
+        },
+        {
+          "type": "h2",
+          "text": "For Vengeance"
+        },
+        {
+          "type": "p",
+          "text": "The ghost or the spirit might want to stay back to seek revenge for their death. In this case, the spirit might be knowing who caused their death and then want to seek retribution for their death. This kind of spirit is called a vengeful spirit, and they have the capability to make their foe’s life a living hell. They use fear as their most prominent tool to intimidate and hurt the person whom they think is their enemy. One should be careful around the vengeful spirit as they can cause severe mental and physical damage to a person."
+        },
+        {
+          "type": "h2",
+          "text": "Ghost fear the verdict of GOD"
+        },
+        {
+          "type": "p",
+          "text": "This means that the ghost might have done some wrong things in their life, and now they are scared. That God or any other entity that is more powerful than him might make him pay for the mistakes, he made. The feeling of being judged makes them scared to pass on to the other side."
+        },
+        {
+          "type": "h2",
+          "text": "Anxiety and Nervousness"
+        },
+        {
+          "type": "p",
+          "text": "Another reason could be that they were not mentally well at the time of death, so they have no other option but to stay as they are confused and anxious. Even when they become paranormal being. A mentally sound person at the time of his demise does not find it difficult to pass on to the other side. It just happens every day because people die every day."
+        },
+        {
+          "type": "h2",
+          "text": "In Conclusion"
+        },
+        {
+          "type": "p",
+          "text": "The corroboration that we presently have supports the reasons that I wrote above, but then there are other ways to look at it. The analysis and the past explorations also suggest that most of the spirits that remain here were sad and confused. This means that happy souls don’t tend to hang around just because they can. We have very rarely seen a cheerful ghost or a spirit. Most of them are either demented or muddled."
+        },
+        {
+          "type": "p",
+          "text": "So what did we learn? We learned that there are spirits who tend to remain here. The reasons for their extended stay can be numerous. It can be a personal reason or just that they are too scared to leave. There are investigations still taking place to help answer more regarding the afterlife and the story after death. Until then, all we can do is try from our front and use our best judgment to learn more about them without getting mired by any previous beliefs."
+        },
+        {
+          "type": "h2",
+          "text": "My advice to you",
+          "tone": "note"
+        },
+        {
+          "type": "p",
+          "text": "Please remember that any physical or emotional discomforts a person experiences can mostly be due to various diseases or emotional conditions he or she is going through. I have seen that majority of cases do not involve paranormal activity of any kind. Paranormal events are extremely rare occurrences. Hence your problems should be first brought to the notice of a qualified medical practitioner. I have often seen that the line between borderline personality disorders or other psychiatric disorders and “spirit possession” is thin. Hence a good paranormal investigator should advise his clients that professional medical care is the first solution or remedy for any physical or emotional discomfort."
+        },
+        {
+          "type": "p",
+          "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
+        }
+      ],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "signs-of-a-haunted-house",
+      "title": "Signs of a Haunted House — and What They Usually Turn Out to Be",
+      "category": "western",
+      "alsoIn": [],
+      "seed": "pm-hauntedhouse",
+      "date": "April 1, 2021",
+      "readTime": "7 min read",
+      "kicker": "",
+      "excerpt": "Most reported hauntings resolve into plumbing, wiring or airflow. The residue is what deserves attention.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "death-rebirth-and-evolution",
+      "title": "Death, Rebirth and Evolution — Eastern Perspectives",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-rebirth",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "",
+      "excerpt": "The issue of rebirth, or the existence of the soul beyond one lifetime, seen through eastern eyes.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "reincarnation-universal-law",
+      "title": "Reincarnation — Universal Law",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-reincarnation",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "",
+      "excerpt": "The universal law is precise and flawless. A small seed carries within it the whole of the tree to come.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "how-the-soul-leaves-the-body",
+      "title": "How the Soul Leaves the Body — Hindu Philosophy",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-soulleaves",
+      "date": "April 1, 2021",
+      "readTime": "7 min read",
+      "kicker": "",
+      "excerpt": "When breathing becomes difficult at death, the Jiva — the individual self — begins its passage.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "symptoms-and-indications-of-death",
+      "title": "Symptoms and Indications of Death — Eastern Teachings",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-symptomsdeath",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "",
+      "excerpt": "The classical texts describe the approach of death in remarkable detail. Much of it is still observable.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "religious-views-on-the-journey-of-the-soul",
+      "title": "Different Religious Views on the Journey of the Soul",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-journeysoul",
+      "date": "April 1, 2021",
+      "readTime": "8 min read",
+      "kicker": "",
+      "excerpt": "Where the traditions agree about what follows death, and the precise points at which they part.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "ancestor-worship-in-hinduism",
+      "title": "Ancestor Worship: A Fundamental Principle of Hinduism",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-ancestor",
+      "date": "April 1, 2021",
+      "readTime": "7 min read",
+      "kicker": "",
+      "excerpt": "Why the obligation to the departed sits at the centre of the tradition rather than at its edges.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "karma-and-the-shape-of-a-life",
+      "title": "Karma and the Shape of a Life",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-karma",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "",
+      "excerpt": "Karma as mechanism rather than punishment — and what that changes about how a life reads.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "the-subtle-body-explained",
+      "title": "The Subtle Body, Explained",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-subtlebody",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "",
+      "excerpt": "The sheaths described in the Upanishads, and how they map onto what investigators actually encounter.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "pitru-paksha-and-the-obligation-to-the-departed",
+      "title": "Pitru Paksha and the Obligation to the Departed",
+      "category": "eastern",
+      "alsoIn": [],
+      "seed": "pm-pitru",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "",
+      "excerpt": "A fortnight given over to the ancestors, and what the rite is understood to accomplish.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "how-to-review-the-best-paranormal-evidence",
+      "title": "Paranormal Evidence: How to Review the Best Paranormal Evidence?",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-evidence",
+      "date": "April 1, 2021",
+      "readTime": "8 min read",
+      "kicker": "Investigation",
+      "excerpt": "Capturing the evidence of paranormal activity is the ultimate goal for an investigator. Sieving through the footage for the genuine anomaly is the harder half.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "ghost-hunting-thermometers",
+      "title": "Ghost Hunting Thermometers: The Types of Thermometers",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-thermometer",
+      "date": "April 1, 2021",
+      "readTime": "7 min read",
+      "kicker": "Equipment",
+      "excerpt": "Ambient, infrared and probe — which reading means something, and which is measuring your own hand.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "depossession-instructions",
+      "title": "Depossession Instructions — How to Do It?",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-depossession",
+      "date": "April 1, 2021",
+      "readTime": "9 min read",
+      "kicker": "Technique",
+      "excerpt": "The sequence, step by step, and the points at which an inexperienced practitioner tends to lose the thread.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "how-to-get-a-clear-evp",
+      "title": "Electronic Voice Phenomenon: How to Get a Clear EVP?",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-evp",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "Investigation",
+      "excerpt": "Room, recorder, silence and patience. Most unusable EVP is lost before the session even begins.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "what-is-an-em-pump",
+      "title": "What is an EM Pump?",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-empump",
+      "date": "April 1, 2021",
+      "readTime": "4 min read",
+      "kicker": "Equipment",
+      "excerpt": "What the device actually does, and the reason its use remains contested among investigators.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "a-history-of-evp-equipment",
+      "title": "EVP Equipment — A History of EVP Equipment",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-evprecorder",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "Equipment",
+      "excerpt": "From reel-to-reel to solid state, and what each generation of hardware changed about the results.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "what-is-an-evp",
+      "title": "What is an EVP?",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-evprecord",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "Investigation",
+      "excerpt": "A plain definition, the three classes of recording, and why class C is almost never worth keeping.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "running-a-baseline-sweep",
+      "title": "Running a Baseline Sweep Before the Session",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-baseline",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "Method",
+      "excerpt": "The unglamorous hour that decides whether anything you record afterwards can be trusted.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "emf-meters-what-they-measure",
+      "title": "EMF Meters: What They Measure and What They Do Not",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-emf",
+      "date": "April 1, 2021",
+      "readTime": "7 min read",
+      "kicker": "Equipment",
+      "excerpt": "The single most misread instrument in the field, and how to read it honestly.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "interviewing-a-witness",
+      "title": "Interviewing a Witness Without Leading Them",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-interview",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "Method",
+      "excerpt": "The account is evidence too — and the easiest piece of evidence for an investigator to contaminate.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "photographic-anomalies",
+      "title": "Photographic Anomalies: Orbs, Flares and the Rest",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-photo",
+      "date": "April 1, 2021",
+      "readTime": "5 min read",
+      "kicker": "Investigation",
+      "excerpt": "Nearly all of it is dust, moisture or optics. Ruling those out is what makes the remainder interesting.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "building-a-field-kit",
+      "title": "Building a Field Kit That You Will Actually Carry",
+      "category": "investigation",
+      "alsoIn": [],
+      "seed": "pm-kit",
+      "date": "April 1, 2021",
+      "readTime": "6 min read",
+      "kicker": "Equipment",
+      "excerpt": "What earns its place in the bag after twenty-five years, and what stays permanently at home.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "story-of-possession-a-case-study-of-anamika",
+      "title": "Story of Possession: A Case Study of Anamika",
+      "category": "cases",
+      "alsoIn": [],
+      "seed": "pm-anamika",
+      "date": "April 1, 2021",
+      "readTime": "12 min read",
+      "kicker": "",
+      "excerpt": "We have discussed possession across many posts and what it can do to an ordinary human being. Here is the full record of one case — the onset, the investigation, the depossession, and what followed.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "the-house-that-emptied-itself",
+      "title": "The House That Emptied Itself",
+      "category": "cases",
+      "alsoIn": [],
+      "seed": "pm-house",
+      "date": "April 1, 2021",
+      "readTime": "10 min read",
+      "kicker": "",
+      "excerpt": "Four families in six years. The record of what was found, and of what was eventually done about it.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "a-child-who-remembered",
+      "title": "A Child Who Remembered",
+      "category": "cases",
+      "alsoIn": [],
+      "seed": "pm-child",
+      "date": "April 1, 2021",
+      "readTime": "11 min read",
+      "kicker": "",
+      "excerpt": "A recall case documented over two years, with the details that could be checked and the ones that could not.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    },
+    {
+      "slug": "the-factory-night-shift",
+      "title": "The Factory Night Shift",
+      "category": "cases",
+      "alsoIn": [],
+      "seed": "pm-factory",
+      "date": "April 1, 2021",
+      "readTime": "9 min read",
+      "kicker": "",
+      "excerpt": "A workplace haunting reported by eleven people, and the eighteen months it took to close the file.",
+      "dek": "",
+      "tags": [],
+      "body": [],
+      "status": "published",
+      "image": ""
+    }
+  ],
+  "home": {
+    "featureCategory": "eastern",
+    "cardBandCategory": "western",
+    "highlights": [
+      "death-rebirth-and-evolution",
+      "how-to-review-the-best-paranormal-evidence",
+      "story-of-possession-a-case-study-of-anamika"
+    ],
+    "investigationRows": [
+      "how-to-review-the-best-paranormal-evidence",
+      "ghost-hunting-thermometers",
+      "depossession-instructions",
+      "how-to-get-a-clear-evp",
+      "what-is-an-em-pump",
+      "a-history-of-evp-equipment"
+    ],
+    "latestPosts": [
+      "what-is-depossession-therapy",
+      "what-is-possession",
+      "how-to-connect-with-your-spirit-guides",
+      "what-is-an-addicted-ghost",
+      "is-a-ghost-real",
+      "what-is-an-evp"
+    ],
+    "spotlight": {
+      "slug": "story-of-possession-a-case-study-of-anamika",
+      "alt": "A figure standing in a lit doorway at the end of a dark passage"
+    }
+  },
+  "navLinks": [
+    {
+      "label": "Home",
+      "href": "/",
+      "mobileLabel": ""
+    },
+    {
+      "label": "About",
+      "href": "/about",
+      "mobileLabel": ""
+    },
+    {
+      "label": "Eastern Views",
+      "href": "/eastern-views",
+      "mobileLabel": ""
+    },
+    {
+      "label": "Western Views",
+      "href": "/western-views",
+      "mobileLabel": ""
+    },
+    {
+      "label": "Investigation",
+      "href": "/investigation",
+      "mobileLabel": "Paranormal Investigation"
+    },
+    {
+      "label": "Case Studies",
+      "href": "/case-studies",
+      "mobileLabel": ""
+    },
+    {
+      "label": "Contact",
+      "href": "/contact",
+      "mobileLabel": ""
+    }
+  ],
+  "popularSearches": [
+    "EVP",
+    "Spirit possession",
+    "Depossession",
+    "Reincarnation",
+    "Spirit guides"
+  ],
+  "topics": [
+    {
+      "label": "EVP",
+      "icon": "wave",
+      "href": "/investigation"
+    },
+    {
+      "label": "Possession",
+      "icon": "spirit",
+      "href": "/western-views"
+    },
+    {
+      "label": "Spirit Guides",
+      "icon": "sun",
+      "href": "/western-views"
+    },
+    {
+      "label": "Reincarnation",
+      "icon": "flame",
+      "href": "/eastern-views"
+    },
+    {
+      "label": "Hauntings",
+      "icon": "house",
+      "href": "/western-views"
+    },
+    {
+      "label": "Depossession",
+      "icon": "release",
+      "href": "/investigation"
+    },
+    {
+      "label": "Ancestor Worship",
+      "icon": "book",
+      "href": "/eastern-views"
+    },
+    {
+      "label": "Journey of the Soul",
+      "icon": "heart",
+      "href": "/eastern-views"
+    },
+    {
+      "label": "Ghost Hunting Gear",
+      "icon": "gear",
+      "href": "/investigation"
+    }
+  ],
+  "relatedSites": [
+    {
+      "name": "Praveen Saanker",
+      "href": "https://www.praveensaanker.com/",
+      "blurb": "Life Coach, Psychotherapist and Family Office Advisor — guidance for a balanced life journey across UAE and India.",
+      "domain": "praveensaanker.ae · .com",
+      "image": ""
+    },
+    {
+      "name": "Vedicology Academy",
+      "href": "https://www.vedicologyindia.com/",
+      "blurb": "Transformative learning that integrates ancient Vedic teaching with contemporary life insight.",
+      "domain": "vedicologyindia.com",
+      "image": ""
+    },
+    {
+      "name": "Vedicology Consulting",
+      "href": "https://www.vedicology.com/",
+      "blurb": "Vedic Astrology, Numerology and Vastu Shastra for modern clarity and harmonious living.",
+      "domain": "vedicology.com",
+      "image": ""
+    },
+    {
+      "name": "Prosperty Real Estate",
+      "href": "https://www.prospertyrealestate.com/",
+      "blurb": "Personalised property advisory in Chennai for residential, commercial and industrial clients.",
+      "domain": "prospertyrealestate.com",
+      "image": ""
+    }
+  ],
+  "footerPopular": [
+    "death-rebirth-and-evolution",
+    "reincarnation-universal-law",
+    "how-the-soul-leaves-the-body",
+    "symptoms-and-indications-of-death",
+    "religious-views-on-the-journey-of-the-soul",
+    "how-to-review-the-best-paranormal-evidence"
+  ]
+}

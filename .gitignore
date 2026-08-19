@@ -1,0 +1,20 @@
+# Dependencies and build output live in each app's own .gitignore too; these
+# catch anything that lands at the root.
+node_modules
+.next
+out
+build
+
+# Secrets. Every real value lives in a .env.local that never leaves the machine
+# — the committed .env.example files carry placeholders only.
+.env
+.env.local
+.env.*.local
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+*.log
+*.tsbuildinfo
