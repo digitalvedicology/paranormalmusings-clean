@@ -34,9 +34,20 @@ export function articleSections(body: Block[]) {
   const intro: Block[] = []
   const sections: ArticleSection[] = []
 
+  // A heading can legitimately repeat within a piece — "Storytime…" twice, say.
+  // Two elements with the same id is invalid HTML and makes the anchor jump to
+  // whichever came first, so repeats are numbered.
+  const used = new Map<string, number>()
+  const uniqueId = (text: string) => {
+    const base = headingId(text)
+    const seen = (used.get(base) ?? 0) + 1
+    used.set(base, seen)
+    return seen === 1 ? base : `${base}-${seen}`
+  }
+
   for (const block of body) {
     if (block.type === 'h2') {
-      sections.push({ id: headingId(block.text), title: block.text, tone: block.tone, blocks: [] })
+      sections.push({ id: uniqueId(block.text), title: block.text, tone: block.tone, blocks: [] })
     } else if (sections.length) {
       sections[sections.length - 1].blocks.push(block)
     } else {
