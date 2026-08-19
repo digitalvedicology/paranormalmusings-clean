@@ -206,13 +206,22 @@ export default function BlockEditor({
             />
           )}
 
-          <div className="mt-2 flex justify-end">
+          {/* Inserting in place is how a body actually gets written — a picture
+              usually belongs between two particular paragraphs, not at the end. */}
+          <div className="mt-2 flex justify-end gap-4">
             <button
               type="button"
               className="text-[12px] font-semibold text-muted hover:text-gold-600"
               onClick={() => insertAfter(index, 'p')}
             >
               + Insert paragraph below
+            </button>
+            <button
+              type="button"
+              className="text-[12px] font-semibold text-muted hover:text-gold-600"
+              onClick={() => insertAfter(index, 'image')}
+            >
+              + Insert picture below
             </button>
           </div>
         </div>
