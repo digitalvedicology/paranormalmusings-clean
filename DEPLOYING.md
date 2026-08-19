@@ -169,13 +169,37 @@ if the single-repo route genuinely fails.
 
 ---
 
+## If uploaded pictures 404 on the site
+
+The site serves uploads by reading the same folder the admin writes to. That
+needs both apps to share a filesystem, which not every host allows — some give
+each app its own, and then the site looks in a folder that is empty no matter
+how correct the path string is.
+
+The symptom is specific: the admin's media library **lists** the files, but
+`/media/<file>` on the site returns **404 "Not found"**. (A **500** saying
+`MEDIA_DIR is not set` is the other problem — a missing variable.)
+
+The fix is to let the admin serve its own pictures, which needs no sharing:
+
+1. On the **admin**, change `MEDIA_BASE_URL` to
+   `https://admin.paranormalmusings.com/api/media/file`
+2. On the **site**, remove `MEDIA_DIR` — it is no longer used
+3. Redeploy both, then re-upload anything still pointing at a `/media/…` path
+
+Stored URLs become absolute, so the site never touches the filesystem for
+pictures. The trade-off is that they then load from the admin and go with it if
+it is down — which is why this is the fallback rather than the default.
+
+---
+
 ## Cost of getting it wrong
 
 | Symptom | Cause |
 | --- | --- |
 | Content reverts after a deploy | `DATA_DIR` unset, or inside the app folder |
 | Uploaded photos vanish after a deploy | `UPLOAD_DIR` unset, or inside the app folder |
-| Photos upload but show as broken on the site | `MEDIA_DIR` does not match `UPLOAD_DIR` |
+| Photos upload but 404 on the site | `MEDIA_DIR` does not match `UPLOAD_DIR`, or the apps cannot share a folder — see above |
 | Saves work but the site is stale for a minute | `REVALIDATE_SECRET` differs between the apps |
 | Site shows old content and never updates | `ADMIN_API_URL` wrong — the site is serving its bundled fallback |
 | Admin will not accept any password | `ADMIN_PASSWORD` not set; an unset password locks the admin rather than opening it |
