@@ -289,30 +289,29 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* ── Elsewhere ────────────────────────────────────────────────── */}
+      {/* ── Get in touch ─────────────────────────────────────────────── */}
       <section className="wrap pb-12 lg:pb-16">
-        <div className="rounded-[28px] bg-night-800 text-white px-6 sm:px-10 lg:px-12 py-10 lg:py-12 reveal">
-          <p className="label text-gold-300">Elsewhere</p>
-          <h2 className="mt-2 font-display text-[24px] lg:text-[28px]">The rest of the work</h2>
-          <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-white/60">
-            This blog is one part of a wider practice across coaching, Vedic study and advisory work.
+        <div className="rounded-[28px] bg-night-800 text-white px-6 sm:px-10 lg:px-12 py-10 lg:py-12 text-center reveal">
+          <p className="label text-gold-300">Consultations</p>
+          <h2 className="mt-3 font-display text-[26px] sm:text-[32px] leading-tight">
+            Something happening you cannot explain?
+          </h2>
+          <p className="mt-4 max-w-xl mx-auto text-[15px] leading-relaxed text-white/60">
+            Describe what happened, where, and roughly when it began. Every message gets a reply.
           </p>
-
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {content.relatedSites.map((related) => (
-              <a
-                key={related.name}
-                href={related.href}
-                className="block overflow-hidden rounded-xl bg-white/[0.04] hover:bg-white/[0.08] transition"
-              >
-                {related.image && <img src={related.image} alt="" className="w-full h-[96px] object-cover moody" />}
-                <div className="p-5">
-                  <p className="text-[12.5px] font-bold tracking-label uppercase text-gold-300">{related.name}</p>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-white/55">{related.blurb}</p>
-                  <p className="mt-3 text-[12px] text-white/40">{related.domain}</p>
-                </div>
-              </a>
-            ))}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center h-11 px-6 rounded-full bg-gold-500 text-[14px] font-semibold hover:bg-gold-600 transition"
+            >
+              Write to me
+            </Link>
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center h-11 px-6 rounded-full border border-white/25 text-[14px] font-semibold hover:bg-white/10 transition"
+            >
+              Read the case studies
+            </Link>
           </div>
         </div>
       </section>

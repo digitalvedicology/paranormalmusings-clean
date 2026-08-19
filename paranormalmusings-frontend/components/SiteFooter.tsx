@@ -52,7 +52,7 @@ export default async function SiteFooter() {
   return (
     <footer id="contact" className="bg-night-900 text-white scroll-mt-24">
       <div className="wrap pt-14 pb-8">
-        <div className="grid lg:grid-cols-[1.3fr_1fr_1.2fr_1.4fr] gap-10 lg:gap-12">
+        <div className="grid lg:grid-cols-[1.3fr_1fr_1.2fr_1fr] gap-10 lg:gap-12">
           {/* Brand + contact */}
           <div>
             <div className="flex items-center gap-3">
@@ -158,28 +158,12 @@ export default async function SiteFooter() {
             </ul>
           </div>
 
-          {/* Related websites */}
+          {/* Newsletter */}
           <div>
-            <p className="label text-white/40">Our Related Websites</p>
-            <div className="mt-5 grid sm:grid-cols-2 gap-4">
-              {content.relatedSites.map((related) => (
-                <a
-                  key={related.name}
-                  href={related.href}
-                  className="block overflow-hidden rounded-xl bg-white/[0.04] hover:bg-white/[0.08] transition"
-                >
-                  {/* Optional — a card with no picture keeps its original look. */}
-                  {related.image && (
-                    <img src={related.image} alt="" className="w-full h-[86px] object-cover moody" />
-                  )}
-                  <div className="p-4">
-                    <p className="text-[12.5px] font-bold tracking-label uppercase text-gold-300">{related.name}</p>
-                    <p className="mt-2 text-[12.5px] leading-relaxed text-white/55">{related.blurb}</p>
-                    <p className="mt-2.5 text-[12px] text-white/40">{related.domain}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
+            <p className="label text-white/40">Notes from the field</p>
+            <p className="mt-5 text-[14px] leading-[1.75] text-white/55">
+              New investigations, case notes and perspectives on life after death — once a week, and nothing else.
+            </p>
 
             <SubscribeForm variant="inline" />
           </div>
