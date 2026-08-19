@@ -117,7 +117,13 @@ function derive(doc: ContentDoc) {
       hub: { pillar: null, clusters: [], questions: [] },
     }
 
-  const postsIn = (key: Category) => doc.posts.filter((post) => post.category === key)
+  /**
+   * Everything filed under a section — the posts that live there, plus the ones
+   * cross-filed into it. A cross-filed post keeps the address of its own
+   * section, so it appears in both listings without ever having two URLs.
+   */
+  const postsIn = (key: Category) =>
+    doc.posts.filter((post) => post.category === key || post.alsoIn.includes(key))
 
   const articleHref = (post: Post) => `${meta(post.category).href}/${post.slug}`
 
