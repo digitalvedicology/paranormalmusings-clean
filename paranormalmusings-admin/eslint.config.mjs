@@ -10,6 +10,9 @@ export default [
     rules: {
       // Thumbnails here are the same remote placeholders the site uses.
       '@next/next/no-img-element': 'off',
+      // `const { _id, order, ...post } = doc` is how a stored record is turned
+      // back into content. The named keys are meant to be discarded.
+      '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
     },
   },
 ]

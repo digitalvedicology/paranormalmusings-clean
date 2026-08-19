@@ -52,16 +52,37 @@ unpublished content never reaches the browser at all.
 
 ## Where the content lives
 
-`data/content.json` — the whole site in one document, written atomically
-(temp file, then rename) so an interrupted save cannot corrupt it, and
-serialised through one promise chain so two requests cannot overwrite each
-other.
+Two backends, one interface. Everything above `lib/store.ts` — every route,
+every screen — works the same either way.
 
-Everything goes through `lib/store.ts`. **Swapping the file for a database means
-rewriting `readDoc` and `writeDoc` and nothing else** — no route and no screen
-touches the filesystem directly.
+**With `MONGODB_URI` set** the content lives in MongoDB: a record per post, a
+record per section, and one record for everything else. Saving an article
+writes that one record rather than rewriting all hundred and ten, so two edits
+to different posts cannot overwrite each other.
 
-Back it up by copying that one file.
+**Without it** the content lives in `data/content.json`, written atomically
+(temp file, then rename) so an interrupted save cannot corrupt it. That is what
+makes a fresh clone runnable with nothing installed.
+
+Either way, writes are serialised through one promise chain so two concurrent
+requests cannot interleave a read-modify-write.
+
+### Moving to MongoDB
+
+1. Create a free cluster at [MongoDB Atlas](https://www.mongodb.com/atlas) and
+   copy its connection string
+2. Allow the server to reach it — Atlas blocks every address until you add one
+   under **Network Access**
+3. Import what you have:
+
+   ```bash
+   MONGODB_URI="mongodb+srv://…" npm run migrate:mongo
+   ```
+
+4. Set `MONGODB_URI` on the admin and redeploy
+
+The script refuses to overwrite a database that already holds content unless
+given `--force`, and `data/content.json` stays as the seed for a fresh install.
 
 ## The API
 

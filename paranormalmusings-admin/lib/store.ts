@@ -1,40 +1,34 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
+import { categories, ensureIndexes, posts, settings, usingDatabase, type CategoryDoc, type PostDoc, type SettingsDoc } from './db'
 import type { CategoryPage, ContentDoc, Post } from './types'
 
 /**
  * Persistence for the whole content document.
  *
- * It is a single JSON file, written atomically (temp file + rename) so a
- * crashed save can never leave a half-written document behind, and serialised
- * through one promise chain so two concurrent requests cannot interleave a
- * read-modify-write and lose an edit.
+ * There are two backends behind one interface. Set `MONGODB_URI` and the
+ * content lives in MongoDB, a record per post; leave it unset and it lives in
+ * `data/content.json`, which is what makes a fresh clone runnable with nothing
+ * installed. Everything above this file — every route, every screen — works the
+ * same either way, because both backends expose only `readDoc` and `update`.
  *
- * Every read and write in the app goes through this module. Swapping the file
- * for a database means reimplementing `readDoc` and `writeDoc` and nothing
- * else — no route or component touches the filesystem directly.
+ * Writes are serialised through one promise chain so two concurrent requests
+ * cannot interleave a read-modify-write and lose an edit.
  */
 
-/**
- * On a host that redeploys by replacing the app folder, anything written inside
- * it is lost on the next deploy. `DATA_DIR` points the document at a directory
- * outside the app — set it in production and the content survives; leave it
- * unset and it sits in `data/` beside the code, which is what you want locally.
- */
 const DATA_DIR = process.env.DATA_DIR ?? path.join(process.cwd(), 'data')
 const FILE = path.join(DATA_DIR, 'content.json')
-
-/**
- * First run against an empty `DATA_DIR` has nothing to read. Rather than fail,
- * seed it from the copy committed with the code — so a fresh deploy comes up
- * with the site intact and starts saving to the persistent location.
- */
+/** The copy committed with the code, used to seed an empty store. */
 const SEED = path.join(process.cwd(), 'data', 'content.json')
 
 /** Serialises writes; each save chains onto the previous one. */
 let queue: Promise<unknown> = Promise.resolve()
 
-export async function readDoc(): Promise<ContentDoc> {
+const readSeed = async (): Promise<ContentDoc> => JSON.parse(await fs.readFile(SEED, 'utf8')) as ContentDoc
+
+/* ── File backend ────────────────────────────────────────────────────── */
+
+async function readFileDoc(): Promise<ContentDoc> {
   try {
     return JSON.parse(await fs.readFile(FILE, 'utf8')) as ContentDoc
   } catch (error) {
@@ -44,20 +38,108 @@ export async function readDoc(): Promise<ContentDoc> {
     if (FILE === SEED) throw error
 
     console.warn(`[store] ${FILE} is empty — seeding it from the committed copy`)
-    const doc = JSON.parse(await fs.readFile(SEED, 'utf8')) as ContentDoc
+    const doc = await readSeed()
     await fs.mkdir(DATA_DIR, { recursive: true })
     await fs.writeFile(FILE, JSON.stringify(doc, null, 2), 'utf8')
     return doc
   }
 }
 
-async function writeDoc(doc: ContentDoc): Promise<ContentDoc> {
-  doc.updatedAt = new Date().toISOString()
+async function writeFileDoc(doc: ContentDoc): Promise<ContentDoc> {
   const tmp = `${FILE}.${process.pid}.tmp`
   await fs.mkdir(DATA_DIR, { recursive: true })
   await fs.writeFile(tmp, JSON.stringify(doc, null, 2), 'utf8')
   await fs.rename(tmp, FILE)
   return doc
+}
+
+/* ── Database backend ────────────────────────────────────────────────── */
+
+/** Strips the fields that belong to storage rather than to the content. */
+const stripPost = ({ _id, order, ...post }: PostDoc): Post => post
+const stripCategory = ({ _id, order, ...category }: CategoryDoc): CategoryPage => category
+
+async function readDbDoc(): Promise<ContentDoc> {
+  const [postCol, categoryCol, settingsCol] = [await posts(), await categories(), await settings()]
+  const config = await settingsCol.findOne({ _id: 'settings' })
+
+  // An empty database is a first run, not a fault: fill it from the committed
+  // copy so a fresh deployment comes up with the site intact.
+  if (!config) {
+    console.warn('[store] the database is empty — seeding it from the committed copy')
+    const seeded = await writeDbDoc(await readSeed())
+    return seeded
+  }
+
+  const [postDocs, categoryDocs] = await Promise.all([
+    postCol.find().sort({ order: 1 }).toArray(),
+    categoryCol.find().sort({ order: 1 }).toArray(),
+  ])
+
+  const { _id, ...rest } = config
+  return { ...rest, categories: categoryDocs.map(stripCategory), posts: postDocs.map(stripPost) }
+}
+
+/**
+ * Writes only what actually changed.
+ *
+ * Saving one article should touch one record, not rewrite all hundred and ten —
+ * both because it is faster and because two people editing different posts then
+ * cannot overwrite each other.
+ */
+async function writeDbDoc(doc: ContentDoc, before?: ContentDoc): Promise<ContentDoc> {
+  const [postCol, categoryCol, settingsCol] = [await posts(), await categories(), await settings()]
+
+  const { categories: nextCategories, posts: nextPosts, ...config } = doc
+
+  /* Posts, keyed by slug. A renamed slug is a delete and an insert. */
+  const beforePosts = new Map((before?.posts ?? []).map((post, index) => [post.slug, JSON.stringify({ post, index })]))
+  const postOps = nextPosts
+    .map((post, index) => ({ post, index }))
+    .filter(({ post, index }) => beforePosts.get(post.slug) !== JSON.stringify({ post, index }))
+    .map(({ post, index }) => ({
+      replaceOne: { filter: { _id: post.slug }, replacement: { ...post, _id: post.slug, order: index }, upsert: true },
+    }))
+
+  const liveSlugs = new Set(nextPosts.map((post) => post.slug))
+  const goneSlugs = [...beforePosts.keys()].filter((slug) => !liveSlugs.has(slug))
+
+  /* Sections, keyed by their stable key. */
+  const beforeCategories = new Map(
+    (before?.categories ?? []).map((category, index) => [category.key, JSON.stringify({ category, index })]),
+  )
+  const categoryOps = nextCategories
+    .map((category, index) => ({ category, index }))
+    .filter(({ category, index }) => beforeCategories.get(category.key) !== JSON.stringify({ category, index }))
+    .map(({ category, index }) => ({
+      replaceOne: {
+        filter: { _id: category.key },
+        replacement: { ...category, _id: category.key, order: index },
+        upsert: true,
+      },
+    }))
+
+  const liveKeys = new Set(nextCategories.map((category) => category.key))
+  const goneKeys = [...beforeCategories.keys()].filter((key) => !liveKeys.has(key))
+
+  await Promise.all([
+    postOps.length ? postCol.bulkWrite(postOps as never) : null,
+    goneSlugs.length ? postCol.deleteMany({ _id: { $in: goneSlugs } }) : null,
+    categoryOps.length ? categoryCol.bulkWrite(categoryOps as never) : null,
+    goneKeys.length ? categoryCol.deleteMany({ _id: { $in: goneKeys } }) : null,
+    // Settings is one small record; comparing it is not worth the code.
+    settingsCol.replaceOne({ _id: 'settings' }, { ...config, _id: 'settings' } as SettingsDoc, { upsert: true }),
+  ])
+
+  return doc
+}
+
+/* ── The interface everything else uses ──────────────────────────────── */
+
+export async function readDoc(): Promise<ContentDoc> {
+  if (!usingDatabase()) return readFileDoc()
+  await ensureIndexes()
+  return readDbDoc()
 }
 
 /**
@@ -67,12 +149,20 @@ async function writeDoc(doc: ContentDoc): Promise<ContentDoc> {
  * `mutate` may replace the document wholesale by returning a new one, or edit
  * the draft in place and return nothing.
  */
-export function update(mutate: (doc: ContentDoc) => ContentDoc | void | Promise<ContentDoc | void>): Promise<ContentDoc> {
+export function update(
+  mutate: (doc: ContentDoc) => ContentDoc | void | Promise<ContentDoc | void>,
+): Promise<ContentDoc> {
   const run = queue.then(async () => {
-    const doc = await readDoc()
-    const next = (await mutate(doc)) ?? doc
-    return writeDoc(next)
+    const current = await readDoc()
+    // The mutator edits in place, so the diff needs a copy taken beforehand.
+    const before = structuredClone(current)
+
+    const next = (await mutate(current)) ?? current
+    next.updatedAt = new Date().toISOString()
+
+    return usingDatabase() ? writeDbDoc(next, before) : writeFileDoc(next)
   })
+
   // Keep the chain alive even when this save rejects, so one failure does not
   // poison every save that follows it.
   queue = run.catch(() => {})
@@ -87,7 +177,7 @@ export const findCategory = (doc: ContentDoc, key: string): CategoryPage | undef
 export const findPost = (doc: ContentDoc, slug: string): Post | undefined =>
   doc.posts.find((post) => post.slug === slug)
 
-/** Posts whose primary category is `key`, plus those cross-filed into it. */
+/** Posts whose primary category is `key`. */
 export const postsIn = (doc: ContentDoc, key: string): Post[] =>
   doc.posts.filter((post) => post.category === key)
 

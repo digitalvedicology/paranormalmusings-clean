@@ -9,9 +9,11 @@
     "lint": "next lint",
     "build:admin": "next build",
     "start:admin": "next start -p 3001",
-    "install:admin": "npm install"
+    "install:admin": "npm install",
+    "migrate:mongo": "tsx scripts/migrate-to-mongo.ts"
   },
   "dependencies": {
+    "mongodb": "^7.5.0",
     "next": "15.5.4",
     "react": "19.1.1",
     "react-dom": "19.1.1"
@@ -23,8 +25,10 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9.25.1",
     "eslint-config-next": "15.5.4",
+    "mongodb-memory-server": "^11.2.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.12",
     "typescript": "^5.8.3"
   }
 }
