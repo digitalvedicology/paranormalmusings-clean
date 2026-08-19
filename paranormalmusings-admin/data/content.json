@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19T11:18:32.076Z",
+  "updatedAt": "2026-08-19T11:21:40.158Z",
   "site": {
     "name": "Paranormal Musings",
     "tagline": "Notes from beyond the veil",
@@ -87,8 +87,7 @@
             "blurb": "Attachment, confusion, unfinished business, vengeance — the reasons the dead stay earthbound.",
             "slugs": [
               "why-do-spirits-remain-among-us",
-              "is-a-ghost-real",
-              "signs-of-a-haunted-house"
+              "is-a-ghost-real"
             ]
           }
         ],
@@ -7972,7 +7971,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-science-of-the-paranormal-the-science-beh.png",
       "imagePlacement": "standard",
       "seed": "pm-science",
       "date": "April 1, 2021",
@@ -8050,7 +8049,7 @@
       "title": "Cause of Hauntings — Why Do Hauntings Happen?",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-why-do-hauntings-happen.png",
       "imagePlacement": "standard",
       "seed": "pm-causehaunt",
       "date": "April 1, 2021",
@@ -8205,7 +8204,7 @@
       "title": "What’s After Death?",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-what-happens-when-we-die.png",
       "imagePlacement": "standard",
       "seed": "pm-afterdeath",
       "date": "April 1, 2021",
@@ -8322,7 +8321,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-what-are-orbs.png",
       "imagePlacement": "standard",
       "seed": "pm-orbs",
       "date": "April 1, 2021",
@@ -8542,7 +8541,7 @@
       "title": "Types of Spirit Guides: What are They?",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-what-are-spirit-guides.png",
       "imagePlacement": "standard",
       "seed": "pm-guidetypes",
       "date": "April 1, 2021",
@@ -8624,7 +8623,7 @@
       "title": "What are Demons: Demons and Negative Entities Explained",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-demonic-hauntings.png",
       "imagePlacement": "standard",
       "seed": "pm-demons",
       "date": "April 1, 2021",
@@ -8751,7 +8750,7 @@
       "title": "What are Angels: The Types of Angels",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-what-are-angels.png",
       "imagePlacement": "standard",
       "seed": "pm-angels",
       "date": "April 1, 2021",
@@ -8824,7 +8823,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-waht-is-haunting.png",
       "imagePlacement": "standard",
       "seed": "pm-whathaunting",
       "date": "April 1, 2021",
@@ -8935,7 +8934,7 @@
       "title": "Spirit Possession: Historical Observations of Spirit Possession",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/spirit-possession-e1615790105445.jpg",
       "imagePlacement": "standard",
       "seed": "pm-historical",
       "date": "April 1, 2021",
@@ -9129,7 +9128,7 @@
       "title": "Psychic Children: Haunting of Psychic Children",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-psychic-children-haunting-of-psychic-chil.png",
       "imagePlacement": "standard",
       "seed": "pm-psychicchildren",
       "date": "April 1, 2021",
@@ -9226,7 +9225,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-can-you-help-a-ghost-or-a-spirit-pass-on-.png",
       "imagePlacement": "standard",
       "seed": "pm-helpaghost",
       "date": "April 1, 2021",
@@ -9377,7 +9376,7 @@
       "title": "Concept of Resurrection and Judgement Day",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/concept-of-resurrection-and-judgement-day-e1616053093935.jpg",
       "imagePlacement": "standard",
       "seed": "pm-resurrection",
       "date": "April 1, 2021",
@@ -9481,7 +9480,7 @@
       "title": "Signs of Possession: What Are the Signs to Look For?",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-signs-of-possession.png",
       "imagePlacement": "standard",
       "seed": "pm-signs",
       "date": "April 1, 2021",
@@ -9663,7 +9662,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-how-to-prevent-spirit-possession.png",
       "imagePlacement": "standard",
       "seed": "pm-ghostentry",
       "date": "April 1, 2021",
@@ -9921,7 +9920,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/what-is-channelling-and-how-does-channeling-work-e1615797982.jpg",
       "imagePlacement": "standard",
       "seed": "pm-channelling",
       "date": "April 1, 2021",
@@ -10111,7 +10110,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-correct-way-to-talk-to-a-ghost.png",
       "imagePlacement": "standard",
       "seed": "pm-talk",
       "date": "April 1, 2021",
@@ -10199,7 +10198,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-how-to-get-rid-of-spirits-in-your-home.png",
       "imagePlacement": "standard",
       "seed": "pm-getrid",
       "date": "April 1, 2021",
@@ -10319,6 +10318,8 @@
       "title": "Symptoms of Spirit Possession: Physical Spirit Possession Symptoms",
       "category": "western",
       "alsoIn": [],
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-physical-symptoms-of-spirit-possession.png",
+      "imagePlacement": "standard",
       "seed": "pm-symptoms",
       "date": "April 1, 2021",
       "readTime": "5 min read",
@@ -10390,14 +10391,15 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious, spiritual or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published",
-      "image": ""
+      "status": "published"
     },
     {
       "slug": "ghost-possession-effects",
       "title": "Ghost Possession: Effects of Ghost Possession",
       "category": "western",
       "alsoIn": [],
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-what-is-possession-spirit-or-ghost-possess.png",
+      "imagePlacement": "standard",
       "seed": "pm-ghostposs",
       "date": "April 1, 2021",
       "readTime": "6 min read",
@@ -10501,8 +10503,7 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published",
-      "image": ""
+      "status": "published"
     },
     {
       "slug": "why-do-spirits-remain-among-us",
@@ -10511,7 +10512,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-why-do-spirits-remain-among-us.png",
       "imagePlacement": "standard",
       "seed": "pm-remainamong",
       "date": "April 1, 2021",
@@ -10777,7 +10778,7 @@
       "alsoIn": [
         "investigation"
       ],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-how-to-perform-a-depossession.png",
       "imagePlacement": "standard",
       "seed": "pm-deposstherapy",
       "date": "April 1, 2021",
@@ -10881,6 +10882,8 @@
       "title": "What is Possession? How Can an Expert Help?",
       "category": "western",
       "alsoIn": [],
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-what-is-possession.png",
+      "imagePlacement": "standard",
       "seed": "pm-possession",
       "date": "April 1, 2021",
       "readTime": "6 min read",
@@ -10968,14 +10971,15 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published",
-      "image": ""
+      "status": "published"
     },
     {
       "slug": "how-to-connect-with-your-spirit-guides",
       "title": "How to Connect With Your Spirit Guides?",
       "category": "western",
       "alsoIn": [],
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-what-are-spirit-guides-1.png",
+      "imagePlacement": "standard",
       "seed": "pm-guides",
       "date": "April 1, 2021",
       "readTime": "7 min read",
@@ -11104,14 +11108,15 @@
           "text": "In case you feel cut off or isolated from your spirit guides, then don’t worry. Once you connect with your spirit guides, then it is always there. This connection will stay even after you die and meet your guide in the afterlife. So don’t be anxious. The spirits are always working to help you and communicate with you. In your worst moments, the spirit wants to help, but since you are going through a challenging phase, you are not able to comprehend the messages designed by the spirit. Remember, your Spirit guide is always there for you. Helping you, protecting you, taking care of you, and always watching you. All you need to do is just to open yourself to it."
         }
       ],
-      "status": "published",
-      "image": ""
+      "status": "published"
     },
     {
       "slug": "what-is-an-addicted-ghost",
       "title": "What is Addicted Ghost?",
       "category": "western",
       "alsoIn": [],
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-what-are-addicted-ghosts.png",
+      "imagePlacement": "standard",
       "seed": "pm-addicted",
       "date": "April 1, 2021",
       "readTime": "5 min read",
@@ -11199,15 +11204,15 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published",
-      "image": ""
+      "status": "published"
     },
     {
       "slug": "is-a-ghost-real",
       "title": "Is Ghost Real: Why Do Ghosts Remain?",
       "category": "western",
       "alsoIn": [],
-      "image": "",
+      "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-why-do-spirits-remain-earthbound.png",
+      "imagePlacement": "standard",
       "seed": "pm-earthbound",
       "date": "April 1, 2021",
       "readTime": "5 min read",
@@ -11319,22 +11324,6 @@
         }
       ],
       "status": "published"
-    },
-    {
-      "slug": "signs-of-a-haunted-house",
-      "title": "Signs of a Haunted House — and What They Usually Turn Out to Be",
-      "category": "western",
-      "alsoIn": [],
-      "seed": "pm-hauntedhouse",
-      "date": "April 1, 2021",
-      "readTime": "7 min read",
-      "kicker": "",
-      "excerpt": "Most reported hauntings resolve into plumbing, wiring or airflow. The residue is what deserves attention.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
     },
     {
       "slug": "death-rebirth-and-evolution",
@@ -11865,54 +11854,6 @@
       "status": "published"
     },
     {
-      "slug": "karma-and-the-shape-of-a-life",
-      "title": "Karma and the Shape of a Life",
-      "category": "eastern",
-      "alsoIn": [],
-      "seed": "pm-karma",
-      "date": "April 1, 2021",
-      "readTime": "6 min read",
-      "kicker": "",
-      "excerpt": "Karma as mechanism rather than punishment — and what that changes about how a life reads.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "the-subtle-body-explained",
-      "title": "The Subtle Body, Explained",
-      "category": "eastern",
-      "alsoIn": [],
-      "seed": "pm-subtlebody",
-      "date": "April 1, 2021",
-      "readTime": "5 min read",
-      "kicker": "",
-      "excerpt": "The sheaths described in the Upanishads, and how they map onto what investigators actually encounter.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "pitru-paksha-and-the-obligation-to-the-departed",
-      "title": "Pitru Paksha and the Obligation to the Departed",
-      "category": "eastern",
-      "alsoIn": [],
-      "seed": "pm-pitru",
-      "date": "April 1, 2021",
-      "readTime": "6 min read",
-      "kicker": "",
-      "excerpt": "A fortnight given over to the ancestors, and what the rite is understood to accomplish.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
       "slug": "ghost-hunting-thermometers",
       "title": "Ghost Hunting Thermometers: The Types of Thermometers",
       "category": "investigation",
@@ -12258,86 +12199,6 @@
       "status": "published"
     },
     {
-      "slug": "running-a-baseline-sweep",
-      "title": "Running a Baseline Sweep Before the Session",
-      "category": "investigation",
-      "alsoIn": [],
-      "seed": "pm-baseline",
-      "date": "April 1, 2021",
-      "readTime": "6 min read",
-      "kicker": "Method",
-      "excerpt": "The unglamorous hour that decides whether anything you record afterwards can be trusted.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "emf-meters-what-they-measure",
-      "title": "EMF Meters: What They Measure and What They Do Not",
-      "category": "investigation",
-      "alsoIn": [],
-      "seed": "pm-emf",
-      "date": "April 1, 2021",
-      "readTime": "7 min read",
-      "kicker": "Equipment",
-      "excerpt": "The single most misread instrument in the field, and how to read it honestly.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "interviewing-a-witness",
-      "title": "Interviewing a Witness Without Leading Them",
-      "category": "investigation",
-      "alsoIn": [],
-      "seed": "pm-interview",
-      "date": "April 1, 2021",
-      "readTime": "6 min read",
-      "kicker": "Method",
-      "excerpt": "The account is evidence too — and the easiest piece of evidence for an investigator to contaminate.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "photographic-anomalies",
-      "title": "Photographic Anomalies: Orbs, Flares and the Rest",
-      "category": "investigation",
-      "alsoIn": [],
-      "seed": "pm-photo",
-      "date": "April 1, 2021",
-      "readTime": "5 min read",
-      "kicker": "Investigation",
-      "excerpt": "Nearly all of it is dust, moisture or optics. Ruling those out is what makes the remainder interesting.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "building-a-field-kit",
-      "title": "Building a Field Kit That You Will Actually Carry",
-      "category": "investigation",
-      "alsoIn": [],
-      "seed": "pm-kit",
-      "date": "April 1, 2021",
-      "readTime": "6 min read",
-      "kicker": "Equipment",
-      "excerpt": "What earns its place in the bag after twenty-five years, and what stays permanently at home.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
       "slug": "story-of-possession-a-case-study-of-anamika",
       "title": "Story of Possession: A Case Study of Anamika",
       "category": "cases",
@@ -12578,54 +12439,6 @@
         }
       ],
       "status": "published"
-    },
-    {
-      "slug": "the-house-that-emptied-itself",
-      "title": "The House That Emptied Itself",
-      "category": "cases",
-      "alsoIn": [],
-      "seed": "pm-house",
-      "date": "April 1, 2021",
-      "readTime": "10 min read",
-      "kicker": "",
-      "excerpt": "Four families in six years. The record of what was found, and of what was eventually done about it.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "a-child-who-remembered",
-      "title": "A Child Who Remembered",
-      "category": "cases",
-      "alsoIn": [],
-      "seed": "pm-child",
-      "date": "April 1, 2021",
-      "readTime": "11 min read",
-      "kicker": "",
-      "excerpt": "A recall case documented over two years, with the details that could be checked and the ones that could not.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
-    },
-    {
-      "slug": "the-factory-night-shift",
-      "title": "The Factory Night Shift",
-      "category": "cases",
-      "alsoIn": [],
-      "seed": "pm-factory",
-      "date": "April 1, 2021",
-      "readTime": "9 min read",
-      "kicker": "",
-      "excerpt": "A workplace haunting reported by eleven people, and the eighteen months it took to close the file.",
-      "dek": "",
-      "tags": [],
-      "body": [],
-      "status": "published",
-      "image": ""
     }
   ],
   "home": {
