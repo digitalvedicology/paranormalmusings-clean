@@ -33,6 +33,19 @@ function Prose({ blocks }: { blocks: Block[] }) {
               </li>
             ))}
           </ul>
+        ) : block.type === 'image' ? (
+          /* Pulled slightly wider than the measure, so a picture reads as a
+             break in the column rather than another paragraph. */
+          <figure key={i} className="my-10 lg:-mx-10">
+            <div className="zoom-wrap rounded-2xl shadow-card">
+              <img src={block.src} alt={block.alt} className="w-full object-cover moody" />
+            </div>
+            {block.caption ? (
+              <figcaption className="mt-3 text-center text-[13.5px] leading-relaxed text-muted">
+                {block.caption}
+              </figcaption>
+            ) : null}
+          </figure>
         ) : block.type === 'p' ? (
           <p key={i} className="mt-6 text-[16.5px] leading-[1.8]">
             {block.text}

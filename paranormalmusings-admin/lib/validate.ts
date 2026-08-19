@@ -104,6 +104,18 @@ export function parseBody(value: unknown, problems: string[]): Block[] {
       return
     }
 
+    if (type === 'image') {
+      const src = parseImage(block.src, `${at}.src`, problems)
+      // An image block with no picture is an empty frame; drop it rather than
+      // render a gap. `alt` may legitimately be empty — that marks it decorative.
+      if (!src) return
+
+      const caption = str(block.caption, `${at}.caption`, problems)
+      const image: Block = { type: 'image', src, alt: str(block.alt, `${at}.alt`, problems) }
+      blocks.push(caption ? { ...image, caption } : image)
+      return
+    }
+
     const text = str(block.text, `${at}.text`, problems, { required: true })
     if (!text) return
 

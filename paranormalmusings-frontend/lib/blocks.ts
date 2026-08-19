@@ -11,6 +11,12 @@ export type Block =
   | { type: 'p'; text: string }
   | { type: 'quote'; text: string }
   | { type: 'list'; items: string[] }
+  /**
+   * A picture between paragraphs. `alt` describes it for anyone who cannot see
+   * it; a decorative image is marked by leaving it empty, which is a different
+   * thing from forgetting to write one.
+   */
+  | { type: 'image'; src: string; alt: string; caption?: string }
 
 export const headingId = (text: string) =>
   text

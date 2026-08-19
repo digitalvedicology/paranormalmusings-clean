@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Select, Textarea } from './ui'
+import ImageField from './ImageField'
+import { Field, Input, Select, Textarea } from './ui'
 import { BLOCK_TYPES, type Block, type BlockType } from '@/lib/types'
 
 /**
@@ -21,23 +22,39 @@ const TYPE_LABELS: Record<BlockType, string> = {
   p: 'Paragraph',
   quote: 'Pull quote',
   list: 'Bulleted list',
+  image: 'Picture',
 }
 
-const blank = (type: BlockType): Block =>
-  type === 'list' ? { type: 'list', items: [''] } : ({ type, text: '' } as Block)
+const blank = (type: BlockType): Block => {
+  if (type === 'list') return { type: 'list', items: [''] }
+  if (type === 'image') return { type: 'image', src: '', alt: '' }
+  return { type, text: '' } as Block
+}
 
 /** Rewrites a block to a new type, carrying the text across where it makes sense. */
 function retype(block: Block, type: BlockType): Block {
   if (block.type === type) return block
 
-  const text = block.type === 'list' ? block.items.join(' ') : block.text
+  // An image carries no prose, so its caption is the nearest thing to text.
+  const text =
+    block.type === 'list' ? block.items.join(' ') : block.type === 'image' ? (block.caption ?? '') : block.text
 
+  if (type === 'image') return { type: 'image', src: '', alt: '', ...(text ? { caption: text } : {}) }
   if (type === 'list') return { type: 'list', items: text ? [text] : [''] }
   if (type === 'h2') return { type: 'h2', text }
   return { type, text } as Block
 }
 
-export default function BlockEditor({ body, onChange }: { body: Block[]; onChange: (next: Block[]) => void }) {
+export default function BlockEditor({
+  body,
+  onChange,
+  siteUrl,
+}: {
+  body: Block[]
+  onChange: (next: Block[]) => void
+  /** Passed through to the picture control, which previews from the site. */
+  siteUrl: string
+}) {
   const [adding, setAdding] = useState<BlockType>('p')
 
   const replace = (index: number, next: Block) => onChange(body.map((block, i) => (i === index ? next : block)))
@@ -59,8 +76,17 @@ export default function BlockEditor({ body, onChange }: { body: Block[]; onChang
   }
 
   const sections = body.filter((block) => block.type === 'h2').length
+  const pictures = body.filter((block) => block.type === 'image').length
+
+  /** The prose in a block, if it has any — a picture contributes none. */
+  const prose = (block: Block) => {
+    if (block.type === 'list') return block.items.join(' ')
+    if (block.type === 'image') return block.caption ?? ''
+    return block.text
+  }
+
   const words = body.reduce(
-    (total, block) => total + (block.type === 'list' ? block.items.join(' ') : block.text).trim().split(/\s+/).filter(Boolean).length,
+    (total, block) => total + prose(block).trim().split(/\s+/).filter(Boolean).length,
     0,
   )
 
@@ -73,6 +99,11 @@ export default function BlockEditor({ body, onChange }: { body: Block[]; onChang
         <span>
           <strong className="font-semibold text-ink">{sections}</strong> section{sections === 1 ? '' : 's'}
         </span>
+        {pictures ? (
+          <span>
+            <strong className="font-semibold text-ink">{pictures}</strong> picture{pictures === 1 ? '' : 's'}
+          </span>
+        ) : null}
         <span>
           <strong className="font-semibold text-ink">{words}</strong> words
         </span>
@@ -138,6 +169,33 @@ export default function BlockEditor({ body, onChange }: { body: Block[]; onChang
 
           {block.type === 'list' ? (
             <ListItems items={block.items} onChange={(items) => replace(index, { type: 'list', items })} />
+          ) : block.type === 'image' ? (
+            <div className="space-y-3">
+              <ImageField
+                label="Picture"
+                value={block.src}
+                onChange={(src) => replace(index, { ...block, src })}
+                siteUrl={siteUrl}
+              />
+              <div className="grid gap-3 sm:grid-cols-2">
+                <Field
+                  label="Describe it"
+                  hint="Read aloud in place of the picture. Leave empty only if it is purely decorative."
+                >
+                  <Input
+                    value={block.alt}
+                    placeholder="A figure in a lit doorway"
+                    onChange={(event) => replace(index, { ...block, alt: event.target.value })}
+                  />
+                </Field>
+                <Field label="Caption" hint="Optional. Printed under the picture.">
+                  <Input
+                    value={block.caption ?? ''}
+                    onChange={(event) => replace(index, { ...block, caption: event.target.value })}
+                  />
+                </Field>
+              </div>
+            </div>
           ) : (
             <Textarea
               rows={block.type === 'p' ? 4 : 2}

@@ -239,7 +239,7 @@ export default function PostForm({
         title="Body"
         description="Built from blocks so the site keeps control of headings, quotes and lists — section headings become the article’s anchors."
       >
-        <BlockEditor body={draft.body} onChange={(body) => set('body', body)} />
+        <BlockEditor body={draft.body} onChange={(body) => set('body', body)} siteUrl={siteUrl} />
       </Section>
 
       <SaveBar
