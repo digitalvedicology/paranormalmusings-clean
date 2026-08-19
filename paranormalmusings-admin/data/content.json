@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19T10:02:59.398Z",
+  "updatedAt": "2026-08-19T10:08:38.123Z",
   "site": {
     "name": "Paranormal Musings",
     "tagline": "Notes from beyond the veil",
@@ -165,9 +165,7 @@
       "slug": "science-of-the-paranormal",
       "title": "Science of the Paranormal: The Science Behind Ghosts",
       "category": "western",
-      "alsoIn": [
-        "investigation"
-      ],
+      "alsoIn": [],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-science",
@@ -515,9 +513,7 @@
       "slug": "what-are-orbs",
       "title": "What are Orbs: Meaning of Orbs",
       "category": "western",
-      "alsoIn": [
-        "investigation"
-      ],
+      "alsoIn": [],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-orbs",
@@ -628,9 +624,7 @@
       "slug": "most-haunted-places",
       "title": "Most Haunted Places Where Paranormal Activity is Prominent",
       "category": "western",
-      "alsoIn": [
-        "investigation"
-      ],
+      "alsoIn": [],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-hauntedplaces",
@@ -1017,9 +1011,7 @@
       "slug": "what-is-haunting",
       "title": "What is Haunting?",
       "category": "western",
-      "alsoIn": [
-        "investigation"
-      ],
+      "alsoIn": [],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-whathaunting",
@@ -1419,9 +1411,7 @@
       "slug": "how-to-help-a-ghost",
       "title": "How to Help a Ghost?",
       "category": "western",
-      "alsoIn": [
-        "investigation"
-      ],
+      "alsoIn": [],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-helpaghost",
@@ -1856,9 +1846,7 @@
       "slug": "ghost-entry-how-to-protect-yourself-from-possession",
       "title": "Ghost Entry: How to Protect Yourself From Possession?",
       "category": "western",
-      "alsoIn": [
-        "investigation"
-      ],
+      "alsoIn": [],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-ghostentry",
@@ -2114,9 +2102,7 @@
       "slug": "what-is-channelling",
       "title": "What is Channelling? What Does Channelling Do?",
       "category": "western",
-      "alsoIn": [
-        "investigation"
-      ],
+      "alsoIn": [],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-channelling",
