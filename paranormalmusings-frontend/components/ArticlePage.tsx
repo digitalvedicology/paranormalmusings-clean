@@ -98,7 +98,7 @@ export default async function ArticlePage({ post }: { post: Post }) {
                 <img
                   src={artwork(post.image, post.seed, 1600, 900)}
                   alt=""
-                  className="w-full h-[210px] sm:h-[320px] lg:h-[400px] object-cover moody"
+                  className="w-full moody"
                 />
               </div>
             )}
@@ -146,7 +146,7 @@ export default async function ArticlePage({ post }: { post: Post }) {
                 <img
                   src={artwork(post.image, post.seed, 1600, 900)}
                   alt=""
-                  className="w-full h-[210px] sm:h-[320px] lg:h-[400px] object-cover moody"
+                  className="w-full moody"
                 />
               </div>
             )}
