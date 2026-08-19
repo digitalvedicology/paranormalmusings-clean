@@ -204,12 +204,35 @@ export default function PostForm({
             hint="Landscape reads best, roughly 1600×900 or larger. The site's own grade is applied on top, so upload the plain original."
           />
 
-          <Field
-            label="Placeholder seed"
-            hint="Only used while there is no photograph above — it generates a stand-in so listings are never full of blank boxes."
-          >
-            <Input value={draft.seed} onChange={(event) => set('seed', event.target.value)} />
-          </Field>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field
+              label="Where it appears"
+              hint={
+                draft.imagePlacement === 'lead'
+                  ? 'Full width above the headline, so the picture opens the piece.'
+                  : draft.imagePlacement === 'hidden'
+                    ? 'Not on the article page. Still used on cards and in listings.'
+                    : 'Under the byline row, between the standfirst and the first paragraph.'
+              }
+            >
+              <Select
+                value={draft.imagePlacement}
+                onChange={(event) => set('imagePlacement', event.target.value as Post['imagePlacement'])}
+                options={[
+                  { value: 'lead', label: 'Above the headline' },
+                  { value: 'standard', label: 'Under the byline' },
+                  { value: 'hidden', label: 'Not on the article' },
+                ]}
+              />
+            </Field>
+
+            <Field
+              label="Placeholder seed"
+              hint="Only used while there is no photograph above — it generates a stand-in so listings are never full of blank boxes."
+            >
+              <Input value={draft.seed} onChange={(event) => set('seed', event.target.value)} />
+            </Field>
+          </div>
         </div>
       </Section>
 

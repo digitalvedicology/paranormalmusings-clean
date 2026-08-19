@@ -21,6 +21,7 @@ export default async function NewPostPage({ searchParams }: { searchParams: Prom
     category: chosen,
     alsoIn: [],
     image: '',
+    imagePlacement: 'standard',
     seed: '',
     date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
     readTime: '',

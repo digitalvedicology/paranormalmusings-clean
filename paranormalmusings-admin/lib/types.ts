@@ -79,6 +79,10 @@ export type CategoryPage = {
 
 /* ── Posts ───────────────────────────────────────────────────────────── */
 
+/** Where the featured image sits on the article page. */
+export const PLACEMENTS = ['lead', 'standard', 'hidden'] as const
+export type ImagePlacement = (typeof PLACEMENTS)[number]
+
 export const STATUSES = ['published', 'draft'] as const
 export type PostStatus = (typeof STATUSES)[number]
 
@@ -91,6 +95,11 @@ export type Post = {
   alsoIn: string[]
   /** Real artwork. Empty falls back to the placeholder the seed generates. */
   image: string
+  /**
+   * Where that artwork sits on the article page. It is used on cards and in
+   * listings either way — 'hidden' only takes it off the article itself.
+   */
+  imagePlacement: ImagePlacement
   seed: string
   date: string
   readTime: string

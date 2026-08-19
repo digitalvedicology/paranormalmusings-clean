@@ -44,6 +44,8 @@ export type Post = {
   alsoIn: Category[]
   /** Real artwork. Empty falls back to the seed placeholder. */
   image: string
+  /** Where that artwork sits on the article page. */
+  imagePlacement: 'lead' | 'standard' | 'hidden'
   seed: string
   date: string
   readTime: string

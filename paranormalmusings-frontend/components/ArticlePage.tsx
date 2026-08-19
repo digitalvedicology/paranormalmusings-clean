@@ -92,6 +92,17 @@ export default async function ArticlePage({ post }: { post: Post }) {
         <div className="mt-7 grid gap-10 lg:gap-14 lg:grid-cols-[minmax(0,1fr)_330px] xl:grid-cols-[minmax(0,1fr)_352px]">
           {/* ── MAIN CONTENT ─────────────────────────────────────────── */}
           <article>
+            {/* The featured image opens the piece when it is the lead. */}
+            {post.imagePlacement === 'lead' && (
+              <div className="mb-8 rounded-2xl overflow-hidden shadow-card">
+                <img
+                  src={artwork(post.image, post.seed, 1600, 900)}
+                  alt=""
+                  className="w-full h-[210px] sm:h-[320px] lg:h-[400px] object-cover moody"
+                />
+              </div>
+            )}
+
             {/* Title & meta */}
             <div className="flex flex-wrap items-center gap-2">
               <Link
@@ -129,14 +140,16 @@ export default async function ArticlePage({ post }: { post: Post }) {
               <Meta icon={<path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-6.5A8 8 0 1 1 21 12Z" />}>0 comments</Meta>
             </div>
 
-            {/* Featured image */}
-            <div className="mt-8 rounded-2xl overflow-hidden shadow-card">
-              <img
-                src={artwork(post.image, post.seed, 1600, 900)}
-                alt=""
-                className="w-full h-[210px] sm:h-[320px] lg:h-[400px] object-cover moody"
-              />
-            </div>
+            {/* Featured image, in its usual place under the byline row. */}
+            {post.imagePlacement === 'standard' && (
+              <div className="mt-8 rounded-2xl overflow-hidden shadow-card">
+                <img
+                  src={artwork(post.image, post.seed, 1600, 900)}
+                  alt=""
+                  className="w-full h-[210px] sm:h-[320px] lg:h-[400px] object-cover moody"
+                />
+              </div>
+            )}
 
             {/* Article body */}
             <div className="mt-9">

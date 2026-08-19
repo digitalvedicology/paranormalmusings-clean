@@ -1,4 +1,4 @@
-import { ART_KEYS, BLOCK_TYPES, ICON_KEYS, LAYOUTS, STATUSES } from './types'
+import { ART_KEYS, BLOCK_TYPES, ICON_KEYS, LAYOUTS, PLACEMENTS, STATUSES } from './types'
 import type { Block, CategoryPage, ContentDoc, Post } from './types'
 
 /**
@@ -174,6 +174,11 @@ export function parsePost(input: unknown, doc: ContentDoc, base?: Post): Post {
     category,
     alsoIn,
     image: parseImage(raw.image, 'image', problems, base?.image ?? ''),
+    imagePlacement: keep(
+      'imagePlacement',
+      () => oneOf(raw.imagePlacement, PLACEMENTS, 'imagePlacement', 'standard', problems),
+      base?.imagePlacement ?? 'standard',
+    ),
     seed: keep('seed', () => str(raw.seed, 'seed', problems), base?.seed ?? `pm-${slug}`.slice(0, 40)),
     date: keep('date', () => str(raw.date, 'date', problems), base?.date ?? ''),
     readTime: keep('readTime', () => str(raw.readTime, 'readTime', problems), base?.readTime ?? ''),

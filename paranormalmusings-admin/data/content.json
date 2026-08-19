@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19T07:10:51.647Z",
+  "updatedAt": "2026-08-19T08:02:29.649Z",
   "site": {
     "name": "Paranormal Musings",
     "tagline": "Notes from beyond the veil",
@@ -266,7 +266,8 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "imagePlacement": "standard"
     },
     {
       "slug": "how-to-talk-to-a-ghost",
@@ -353,7 +354,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "how-to-get-rid-of-spirits-in-your-house",
@@ -474,7 +476,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "symptoms-of-spirit-possession",
@@ -553,7 +556,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "ghost-possession-effects",
@@ -664,7 +668,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "why-do-spirits-remain-among-us",
@@ -929,7 +934,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "what-is-depossession-therapy",
@@ -1034,7 +1040,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "what-is-possession",
@@ -1129,7 +1136,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "how-to-connect-with-your-spirit-guides",
@@ -1265,7 +1273,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "what-is-an-addicted-ghost",
@@ -1360,7 +1369,8 @@
         }
       ],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "is-a-ghost-real",
@@ -1368,6 +1378,7 @@
       "category": "western",
       "alsoIn": [],
       "image": "",
+      "imagePlacement": "standard",
       "seed": "pm-earthbound",
       "date": "April 1, 2021",
       "readTime": "5 min read",
@@ -1494,7 +1505,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "death-rebirth-and-evolution",
@@ -1510,7 +1522,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "reincarnation-universal-law",
@@ -1526,7 +1539,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "how-the-soul-leaves-the-body",
@@ -1542,7 +1556,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "symptoms-and-indications-of-death",
@@ -1558,7 +1573,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "religious-views-on-the-journey-of-the-soul",
@@ -1574,7 +1590,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "ancestor-worship-in-hinduism",
@@ -1590,7 +1607,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "karma-and-the-shape-of-a-life",
@@ -1606,7 +1624,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "the-subtle-body-explained",
@@ -1622,7 +1641,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "pitru-paksha-and-the-obligation-to-the-departed",
@@ -1638,7 +1658,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "how-to-review-the-best-paranormal-evidence",
@@ -1654,7 +1675,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "ghost-hunting-thermometers",
@@ -1670,7 +1692,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "depossession-instructions",
@@ -1686,7 +1709,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "how-to-get-a-clear-evp",
@@ -1702,7 +1726,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "what-is-an-em-pump",
@@ -1718,7 +1743,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "a-history-of-evp-equipment",
@@ -1734,7 +1760,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "what-is-an-evp",
@@ -1750,7 +1777,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "running-a-baseline-sweep",
@@ -1766,7 +1794,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "emf-meters-what-they-measure",
@@ -1782,7 +1811,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "interviewing-a-witness",
@@ -1798,7 +1828,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "photographic-anomalies",
@@ -1814,7 +1845,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "building-a-field-kit",
@@ -1830,7 +1862,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "story-of-possession-a-case-study-of-anamika",
@@ -1846,7 +1879,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "the-house-that-emptied-itself",
@@ -1862,7 +1896,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "a-child-who-remembered",
@@ -1878,7 +1913,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     },
     {
       "slug": "the-factory-night-shift",
@@ -1894,7 +1930,8 @@
       "tags": [],
       "body": [],
       "status": "published",
-      "image": ""
+      "image": "",
+      "imagePlacement": "standard"
     }
   ],
   "home": {
