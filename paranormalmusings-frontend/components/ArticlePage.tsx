@@ -34,11 +34,16 @@ function Prose({ blocks }: { blocks: Block[] }) {
             ))}
           </ul>
         ) : block.type === 'image' ? (
-          /* Pulled slightly wider than the measure, so a picture reads as a
-             break in the column rather than another paragraph. */
-          <figure key={i} className="my-10 lg:-mx-10">
+          /* Held to the width of the text it sits in, and capped in height —
+             an uncropped portrait at full column width swamps the page it is
+             meant to illustrate. */
+          <figure key={i} className="my-9">
             <div className="zoom-wrap rounded-2xl shadow-card">
-              <img src={block.src} alt={block.alt} className="w-full object-cover moody" />
+              <img
+                src={block.src}
+                alt={block.alt}
+                className="w-full max-h-[300px] sm:max-h-[380px] object-cover moody"
+              />
             </div>
             {block.caption ? (
               <figcaption className="mt-3 text-center text-[13.5px] leading-relaxed text-muted">
