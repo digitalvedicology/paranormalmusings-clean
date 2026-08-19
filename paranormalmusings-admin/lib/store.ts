@@ -15,15 +15,40 @@ import type { CategoryPage, ContentDoc, Post } from './types'
  * else — no route or component touches the filesystem directly.
  */
 
-const DATA_DIR = path.join(process.cwd(), 'data')
+/**
+ * On a host that redeploys by replacing the app folder, anything written inside
+ * it is lost on the next deploy. `DATA_DIR` points the document at a directory
+ * outside the app — set it in production and the content survives; leave it
+ * unset and it sits in `data/` beside the code, which is what you want locally.
+ */
+const DATA_DIR = process.env.DATA_DIR ?? path.join(process.cwd(), 'data')
 const FILE = path.join(DATA_DIR, 'content.json')
+
+/**
+ * First run against an empty `DATA_DIR` has nothing to read. Rather than fail,
+ * seed it from the copy committed with the code — so a fresh deploy comes up
+ * with the site intact and starts saving to the persistent location.
+ */
+const SEED = path.join(process.cwd(), 'data', 'content.json')
 
 /** Serialises writes; each save chains onto the previous one. */
 let queue: Promise<unknown> = Promise.resolve()
 
 export async function readDoc(): Promise<ContentDoc> {
-  const text = await fs.readFile(FILE, 'utf8')
-  return JSON.parse(text) as ContentDoc
+  try {
+    return JSON.parse(await fs.readFile(FILE, 'utf8')) as ContentDoc
+  } catch (error) {
+    // Only an absent file falls back to the seed. A corrupt or unreadable one
+    // must surface, not be silently replaced with older content.
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error
+    if (FILE === SEED) throw error
+
+    console.warn(`[store] ${FILE} is empty — seeding it from the committed copy`)
+    const doc = JSON.parse(await fs.readFile(SEED, 'utf8')) as ContentDoc
+    await fs.mkdir(DATA_DIR, { recursive: true })
+    await fs.writeFile(FILE, JSON.stringify(doc, null, 2), 'utf8')
+    return doc
+  }
 }
 
 async function writeDoc(doc: ContentDoc): Promise<ContentDoc> {

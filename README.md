@@ -72,14 +72,17 @@ deleting a section is refused while posts still live there.
 
 ## Deploying
 
+Step-by-step for Hostinger — subdomain, both apps, and the persistent-storage
+setup that stops a redeploy wiping your content — is in [DEPLOYING.md](DEPLOYING.md).
+
 Both are ordinary Next.js apps. Two things to get right:
 
-1. **`data/content.json` needs a persistent, writable disk.** On a serverless
-   host the filesystem is ephemeral and every save is lost on the next cold
-   start. Deploy the admin to something with a real disk (a VPS, a container
-   with a volume, Railway, Render), or move the store to a database — that means
-   rewriting `readDoc` and `writeDoc` in `paranormalmusings-admin/lib/store.ts`
-   and nothing else.
+1. **The content and the uploads need a writable directory outside both apps.**
+   Most hosts replace the app folder on every deploy, so anything written inside
+   it is lost. Set `DATA_DIR`, `UPLOAD_DIR` and `MEDIA_DIR` at a path that
+   survives — see [DEPLOYING.md](DEPLOYING.md). On a host with no persistent disk
+   at all, move the store to a database instead: that means rewriting `readDoc`
+   and `writeDoc` in `paranormalmusings-admin/lib/store.ts` and nothing else.
 2. **Change every value in both `.env.local` files.** The ones committed for
    local development are placeholders.
 
