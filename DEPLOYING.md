@@ -5,7 +5,7 @@ as "web apps". Two of them:
 
 | Hostname | App | What it is |
 | --- | --- | --- |
-| `paranormalmusings.com` | `paranormalmusings-frontend` | The public site |
+| `frontend.paranormalmusings.com` | `paranormalmusings-frontend` | The public site |
 | `admin.paranormalmusings.com` | `paranormalmusings-admin` | The editing screens and the content API |
 
 The admin is a separate hostname rather than a path on the main site because
@@ -43,10 +43,10 @@ it, and saves there from then on.
 
 ---
 
-## 1. Create the subdomain
+## 1. Create the subdomains
 
-hPanel → **Domains → paranormalmusings.com → Subdomains**. Create `admin`,
-giving you `admin.paranormalmusings.com`. Leave the document root at whatever it
+hPanel → **Domains → paranormalmusings.com → Subdomains**. Create both `frontend` and `admin`,
+giving you `frontend.paranormalmusings.com` and `admin.paranormalmusings.com`. Leave the document root at whatever it
 suggests; the web app takes it over.
 
 DNS for a subdomain of a domain already on Hostinger propagates in minutes.
@@ -56,7 +56,7 @@ DNS for a subdomain of a domain already on Hostinger propagates in minutes.
 ## 2. Deploy the site
 
 hPanel → **Websites → Add Website → Node.js web app**, choose
-`paranormalmusings.com`, and connect the GitHub repository.
+`frontend.paranormalmusings.com`, and connect the GitHub repository.
 
 | Setting | Value |
 | --- | --- |
@@ -104,7 +104,7 @@ Environment variables:
 ```
 ADMIN_PASSWORD    = <the password you will sign in with>
 ADMIN_API_KEY     = <a long random string>
-SITE_URL          = https://paranormalmusings.com
+SITE_URL          = https://frontend.paranormalmusings.com
 REVALIDATE_SECRET = <the same string as the site's>
 DATA_DIR          = /home/uXXXXXXXX/pm-data
 UPLOAD_DIR        = /home/uXXXXXXXX/pm-data/media
@@ -122,7 +122,7 @@ cookie.
 
 ## 4. Check it
 
-1. `https://paranormalmusings.com` — the site, with all its content.
+1. `https://frontend.paranormalmusings.com` — the site, with all its content.
 2. `https://admin.paranormalmusings.com` — the sign-in screen.
 3. Sign in, change something small, save. The save bar should say
    **"Saved and the site has been refreshed."** Anything else means the two
