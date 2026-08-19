@@ -6,7 +6,10 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start -p 3001",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:admin": "next build",
+    "start:admin": "next start -p 3001",
+    "install:admin": "npm install"
   },
   "dependencies": {
     "next": "15.5.4",

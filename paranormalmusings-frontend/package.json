@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:frontend": "next build",
+    "start:frontend": "next start",
+    "install:frontend": "npm install"
   },
   "dependencies": {
     "next": "15.5.4",
