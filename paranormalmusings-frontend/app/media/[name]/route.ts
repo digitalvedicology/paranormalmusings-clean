@@ -32,7 +32,13 @@ const TYPES: Record<string, string> = {
 }
 
 export async function GET(_request: Request, { params }: { params: Promise<{ name: string }> }) {
-  if (!MEDIA_DIR) return new Response('Media directory is not configured', { status: 404 })
+  // An unset MEDIA_DIR is a configuration fault, not a missing picture. A 404
+  // here reads as "that file does not exist" and sends you looking in the wrong
+  // place — which is exactly what it did once. Say what is actually wrong.
+  if (!MEDIA_DIR) {
+    console.error('[media] MEDIA_DIR is not set — uploaded pictures cannot be served')
+    return new Response('MEDIA_DIR is not set on this app', { status: 500 })
+  }
 
   const { name } = await params
 

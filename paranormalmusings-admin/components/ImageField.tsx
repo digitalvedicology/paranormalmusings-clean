@@ -132,8 +132,9 @@ export default function ImageField({
           {error ? <p className="text-[12.5px] font-semibold text-red-700">{error}</p> : null}
           {broken && value ? (
             <p className="text-[12.5px] text-red-700">
-              Nothing loads from that address. Check the site is running and the file is in its{' '}
-              <code className="font-mono">public/images</code> folder.
+              Nothing loads from that address. If the site is deployed, check its{' '}
+              <code className="font-mono">MEDIA_DIR</code> is set to the same folder as this app&rsquo;s{' '}
+              <code className="font-mono">UPLOAD_DIR</code>.
             </p>
           ) : null}
           {hint ? <p className="text-[12.5px] leading-snug text-muted">{hint}</p> : null}
