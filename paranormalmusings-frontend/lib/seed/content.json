@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19T11:13:44.453Z",
+  "updatedAt": "2026-08-19T11:18:32.076Z",
   "site": {
     "name": "Paranormal Musings",
     "tagline": "Notes from beyond the veil",
@@ -6862,7 +6862,9 @@
       "slug": "what-is-paranormal-an-introduction",
       "title": "What is Paranormal: An Introduction",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "https://admin.paranormalmusings.com/api/media/file/paranormal-musings-what-is-paranormal.png",
       "imagePlacement": "standard",
       "seed": "pm-whatis",
@@ -7548,7 +7550,9 @@
       "slug": "signs-of-haunting",
       "title": "Signs of Haunting",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "https://admin.paranormalmusings.com/api/media/file/amityville-hauted-house-1.jpg",
       "imagePlacement": "standard",
       "seed": "pm-signsof",
@@ -7856,7 +7860,9 @@
       "slug": "haunting-place-what-are-some-of-the-haunted-places-where-paranormal-ac",
       "title": "Haunting Place: What are some of the Haunted Places where Paranormal Activity is Frequent?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-commonhauntingsites.png",
       "imagePlacement": "standard",
       "seed": "pm-hauntingplace",
@@ -7963,7 +7969,9 @@
       "slug": "science-of-the-paranormal",
       "title": "Science of the Paranormal: The Science Behind Ghosts",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-science",
@@ -8311,7 +8319,9 @@
       "slug": "what-are-orbs",
       "title": "What are Orbs: Meaning of Orbs",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-orbs",
@@ -8422,7 +8432,9 @@
       "slug": "most-haunted-places",
       "title": "Most Haunted Places With Paranormal Activity is Prominent",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-most-haunted-places.png",
       "imagePlacement": "standard",
       "seed": "pm-hauntedplaces",
@@ -8809,7 +8821,9 @@
       "slug": "what-is-haunting",
       "title": "What is Haunting?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-whathaunting",
@@ -9209,7 +9223,9 @@
       "slug": "how-to-help-a-ghost",
       "title": "How to Help a Ghost?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-helpaghost",
@@ -9644,7 +9660,9 @@
       "slug": "ghost-entry-how-to-protect-yourself-from-possession",
       "title": "Ghost Entry: How to Protect Yourself From Possession?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-ghostentry",
@@ -9900,7 +9918,9 @@
       "slug": "what-is-channelling",
       "title": "What is Channelling? What Does Channelling Do?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-channelling",
@@ -10088,7 +10108,9 @@
       "slug": "how-to-talk-to-a-ghost",
       "title": "How to Talk to a Ghost?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-talk",
@@ -10174,7 +10196,9 @@
       "slug": "how-to-get-rid-of-spirits-in-your-house",
       "title": "How to Get Rid of Spirits in Your House?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-getrid",
@@ -10484,7 +10508,9 @@
       "slug": "why-do-spirits-remain-among-us",
       "title": "Spirit Haunting: Why Spirits Remain Among Us?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-remainamong",
@@ -10748,7 +10774,9 @@
       "slug": "what-is-depossession-therapy",
       "title": "What is Depossession Therapy?",
       "category": "western",
-      "alsoIn": [],
+      "alsoIn": [
+        "investigation"
+      ],
       "image": "",
       "imagePlacement": "standard",
       "seed": "pm-deposstherapy",
