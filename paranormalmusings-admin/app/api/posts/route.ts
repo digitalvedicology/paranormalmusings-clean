@@ -1,5 +1,5 @@
 import { body, handle, json, requireAuth } from '@/lib/api'
-import { pingSite } from '@/lib/revalidate'
+import { saved } from '@/lib/revalidate'
 import { readDoc, update } from '@/lib/store'
 import { parsePost } from '@/lib/validate'
 
@@ -43,6 +43,6 @@ export async function POST(request: Request) {
       draft.posts.unshift(post)
     })
 
-    return json({ post, note: (await pingSite()).detail }, 201)
+    return json({ post, ...(await saved()) }, 201)
   })
 }

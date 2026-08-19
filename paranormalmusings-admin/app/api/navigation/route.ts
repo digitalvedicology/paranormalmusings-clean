@@ -1,5 +1,5 @@
 import { body, handle, json, requireAuth } from '@/lib/api'
-import { pingSite } from '@/lib/revalidate'
+import { saved } from '@/lib/revalidate'
 import { readDoc, update } from '@/lib/store'
 import { parseNavLinks, parseRelatedSites, parseStringList, parseTopics } from '@/lib/validate'
 
@@ -46,6 +46,6 @@ export async function PATCH(request: Request) {
       draft.footerPopular = footerPopular
     })
 
-    return json({ navLinks, popularSearches, topics, relatedSites, footerPopular, note: (await pingSite()).detail })
+    return json({ navLinks, popularSearches, topics, relatedSites, footerPopular, ...(await saved()) })
   })
 }

@@ -129,17 +129,23 @@ export function Pill({ status }: { status: 'published' | 'draft' | string }) {
 }
 
 /** Inline result of the last save — success note or the validation problems. */
-export function Notice({ notice }: { notice: { kind: 'ok' | 'error'; text: string; problems?: string[] } | null }) {
+export function Notice({
+  notice,
+}: {
+  notice: { kind: 'ok' | 'warn' | 'error'; text: string; problems?: string[] } | null
+}) {
   if (!notice) return null
 
-  const ok = notice.kind === 'ok'
+  // Three states, because a save can succeed while the site fails to refresh —
+  // and that is neither a success nor a failure to save.
+  const tone = {
+    ok: 'border-emerald-200 bg-emerald-50 text-emerald-800',
+    warn: 'border-amber-200 bg-amber-50 text-amber-900',
+    error: 'border-red-200 bg-red-50 text-red-800',
+  }[notice.kind]
+
   return (
-    <div
-      role="status"
-      className={`rounded-lg border px-3.5 py-2.5 text-[13px] ${
-        ok ? 'border-emerald-200 bg-emerald-50 text-emerald-800' : 'border-red-200 bg-red-50 text-red-800'
-      }`}
-    >
+    <div role="status" className={`rounded-lg border px-3.5 py-2.5 text-[13px] ${tone}`}>
       <p className="font-semibold">{notice.text}</p>
       {notice.problems?.length ? (
         <ul className="mt-1.5 list-disc space-y-0.5 pl-4">

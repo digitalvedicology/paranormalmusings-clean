@@ -1,5 +1,5 @@
 import { body, fail, handle, json, requireAuth } from '@/lib/api'
-import { pingSite } from '@/lib/revalidate'
+import { saved } from '@/lib/revalidate'
 import { postsIn, readDoc, update } from '@/lib/store'
 import { Invalid } from '@/lib/validate'
 
@@ -49,11 +49,11 @@ export async function PUT(request: Request) {
       )
     }
 
-    const saved = await update((draft) => {
+    const updated = await update((draft) => {
       draft.categories = wanted.map((key) => draft.categories.find((category) => category.key === key)!)
     })
 
-    return json({ categories: saved.categories, note: (await pingSite()).detail })
+    return json({ categories: updated.categories, ...(await saved()) })
   })
 }
 
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
     }
 
     const href = String(raw.href ?? `/${key}`)
-    const saved = await update((draft) => {
+    const updated = await update((draft) => {
       draft.categories.push({
         key,
         label,
@@ -98,6 +98,6 @@ export async function POST(request: Request) {
       })
     })
 
-    return json({ category: saved.categories.at(-1), note: (await pingSite()).detail }, 201)
+    return json({ category: updated.categories.at(-1), ...(await saved()) }, 201)
   })
 }

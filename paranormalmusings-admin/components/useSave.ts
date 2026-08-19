@@ -3,7 +3,7 @@
 import { useCallback, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-export type Notice = { kind: 'ok' | 'error'; text: string; problems?: string[] }
+export type Notice = { kind: 'ok' | 'warn' | 'error'; text: string; problems?: string[] }
 
 /**
  * One request lifecycle, shared by every editing screen.
@@ -52,8 +52,13 @@ export function useSave() {
           return false
         }
 
-        // `note` carries whether the public site could be refreshed too.
-        setNotice({ kind: 'ok', text: data.note ?? 'Saved.' })
+        // The write succeeded either way; `refreshed` says whether the public
+        // site picked it up. Reporting a failed refresh in the success style is
+        // how a stale site goes unnoticed, so it gets its own.
+        setNotice({
+          kind: (data as { refreshed?: boolean }).refreshed === false ? 'warn' : 'ok',
+          text: data.note ?? 'Saved.',
+        })
         onDone?.(data as T)
         router.refresh()
         return true

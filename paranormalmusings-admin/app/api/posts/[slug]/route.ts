@@ -1,5 +1,5 @@
 import { body, fail, handle, json, requireAuth } from '@/lib/api'
-import { pingSite } from '@/lib/revalidate'
+import { saved } from '@/lib/revalidate'
 import { findPost, forgetPost, postUsage, readDoc, renamePost, update } from '@/lib/store'
 import { parsePost } from '@/lib/validate'
 
@@ -42,7 +42,7 @@ export async function PATCH(request: Request, { params }: Params) {
       if (next.slug !== slug) renamePost(draft, slug, next.slug)
     })
 
-    return json({ post: next, note: (await pingSite()).detail })
+    return json({ post: next, ...(await saved()) })
   })
 }
 
@@ -61,6 +61,6 @@ export async function DELETE(request: Request, { params }: Params) {
       forgetPost(draft, slug)
     })
 
-    return json({ ok: true, note: (await pingSite()).detail })
+    return json({ ok: true, ...(await saved()) })
   })
 }

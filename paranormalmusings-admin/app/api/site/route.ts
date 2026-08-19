@@ -1,5 +1,5 @@
 import { body, handle, json, requireAuth } from '@/lib/api'
-import { pingSite } from '@/lib/revalidate'
+import { saved } from '@/lib/revalidate'
 import { readDoc, update } from '@/lib/store'
 import { parseSite } from '@/lib/validate'
 
@@ -20,6 +20,6 @@ export async function PATCH(request: Request) {
       draft.site = site
     })
 
-    return json({ site, note: (await pingSite()).detail })
+    return json({ site, ...(await saved()) })
   })
 }

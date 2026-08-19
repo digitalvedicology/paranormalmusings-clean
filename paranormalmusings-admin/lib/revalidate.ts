@@ -39,3 +39,14 @@ export async function pingSite(): Promise<RevalidateResult> {
     return { ok: false, detail: 'Saved, but the site could not be reached to refresh it.' }
   }
 }
+
+/**
+ * What a route returns after a successful write: the note to show, and whether
+ * the site actually refreshed. The two are separate because a save can succeed
+ * while the refresh fails, and reporting that as an unqualified success is how
+ * a stale site goes unnoticed.
+ */
+export async function saved(): Promise<{ note: string; refreshed: boolean }> {
+  const result = await pingSite()
+  return { note: result.detail, refreshed: result.ok }
+}

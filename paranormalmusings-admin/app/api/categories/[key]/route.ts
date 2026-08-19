@@ -1,5 +1,5 @@
 import { body, fail, handle, json, requireAuth } from '@/lib/api'
-import { pingSite } from '@/lib/revalidate'
+import { saved } from '@/lib/revalidate'
 import { categoryUsage, findCategory, postsIn, readDoc, update } from '@/lib/store'
 import { parseCategory } from '@/lib/validate'
 
@@ -34,7 +34,7 @@ export async function PATCH(request: Request, { params }: Params) {
 
     const next = parseCategory(await body(request), existing)
 
-    const saved = await update((draft) => {
+    const updated = await update((draft) => {
       const index = draft.categories.findIndex((category) => category.key === key)
       const before = draft.categories[index]
       draft.categories[index] = next
@@ -47,7 +47,7 @@ export async function PATCH(request: Request, { params }: Params) {
       }
     })
 
-    return json({ category: findCategory(saved, key), note: (await pingSite()).detail })
+    return json({ category: findCategory(updated, key), ...(await saved()) })
   })
 }
 
@@ -84,6 +84,6 @@ export async function DELETE(request: Request, { params }: Params) {
       draft.topics = draft.topics.filter((topic) => topic.href !== category.href)
     })
 
-    return json({ ok: true, note: (await pingSite()).detail })
+    return json({ ok: true, ...(await saved()) })
   })
 }
