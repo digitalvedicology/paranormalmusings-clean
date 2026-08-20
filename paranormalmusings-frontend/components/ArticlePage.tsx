@@ -47,7 +47,10 @@ function Prose({ blocks }: { blocks: Block[] }) {
             ) : null}
           </figure>
         ) : block.type === 'p' ? (
-          <p key={i} className="mt-6 text-[16.5px] leading-[1.8]">
+          /* The gap between paragraphs is one line of the text itself — at
+             16.5px on 1.8 that is ~30px, so mt-7 rather than mt-6. Any less
+             and the paragraphs read as one block. */
+          <p key={i} className="mt-7 text-[16.5px] leading-[1.8]">
             {block.text}
           </p>
         ) : null,
@@ -126,7 +129,9 @@ export default async function ArticlePage({ post }: { post: Post }) {
               {post.title}
             </h1>
 
-            {post.dek && <p className="mt-5 max-w-3xl text-[17px] lg:text-[18px] leading-[1.6] text-muted">{post.dek}</p>}
+            {/* No width cap: the headline and the body both fill the column,
+                so capping only the standfirst left it stopping short. */}
+            {post.dek && <p className="mt-5 text-[17px] lg:text-[18px] leading-[1.65] text-muted">{post.dek}</p>}
 
             <div className="mt-7 py-4 border-y border-rule flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-muted">
               <span className="inline-flex items-center gap-2.5">
