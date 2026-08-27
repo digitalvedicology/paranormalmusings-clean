@@ -32,12 +32,83 @@
       "art": "art-3",
       "blurb": "Death, rebirth and the journey of the soul through Hindu and Vedic teaching.",
       "lede": "Death, rebirth and the journey of the soul, read through Hindu and Vedic teaching — the tradition I was raised inside and still return to.",
-      "layout": "archive",
+      "layout": "hub",
       "published": true,
       "hub": {
-        "pillar": null,
-        "clusters": [],
-        "questions": []
+        "pillar": "six-lokas-or-planes-after-death-journey-according-to-hinduism",
+        "clusters": [
+          {
+            "title": "The journey after death",
+            "blurb": "Where the soul goes once it leaves — the planes it passes through, the paths open to it, and what waits at the end of each.",
+            "slugs": [
+              "six-lokas-or-planes-after-death-journey-according-to-hinduism",
+              "souls-journey-after-death-indian-and-eastern-views",
+              "souls-journey-after-death-three-paths-according-to-hindu-philosophy",
+              "souls-journey-after-death-the-third-place-or-tritiyam-sthaanam",
+              "a-sojourn-to-heaven-after-death"
+            ]
+          },
+          {
+            "title": "Death and the leaving",
+            "blurb": "What death is in Vedic terms, the signs that precede it, and the way the soul actually parts from the body.",
+            "slugs": [
+              "what-is-death-and-how-to-conquer-death-hinduism",
+              "how-the-soul-leaves-the-body",
+              "symptoms-and-indications-of-death",
+              "process-of-death-according-to-yoga-vasishtha",
+              "death-the-great-equalizer"
+            ]
+          },
+          {
+            "title": "Rebirth and karma",
+            "blurb": "What carries over, what decides the next birth, and the hells and heavens the tradition places in between.",
+            "slugs": [
+              "theory-of-rebirth-and-recreation-eastern-perspectives",
+              "reincarnation-universal-law",
+              "reincarnation-and-metempsychosis",
+              "criteria-for-rebirth",
+              "karma-and-the-concept-of-various-hells",
+              "death-rebirth-and-evolution"
+            ]
+          },
+          {
+            "title": "The soul, the rites, the ancestors",
+            "blurb": "What the soul is held to be, and the ceremonies the living perform for those who have gone ahead of them.",
+            "slugs": [
+              "what-is-soul-according-to-indian-teachings",
+              "soul-after-death-different-schools-of-thoughts",
+              "shraadh-ceremony-and-prayers-for-the-dead",
+              "hindu-rituals-for-death",
+              "ancestor-worship-in-hinduism"
+            ]
+          }
+        ],
+        "questions": [
+          {
+            "question": "What happens to the soul after death?",
+            "slug": "souls-journey-after-death-indian-and-eastern-views"
+          },
+          {
+            "question": "What are the six lokas?",
+            "slug": "six-lokas-or-planes-after-death-journey-according-to-hinduism"
+          },
+          {
+            "question": "How does the soul leave the body?",
+            "slug": "how-the-soul-leaves-the-body"
+          },
+          {
+            "question": "What decides whether a soul is reborn?",
+            "slug": "criteria-for-rebirth"
+          },
+          {
+            "question": "What is the soul, according to Indian teaching?",
+            "slug": "what-is-soul-according-to-indian-teachings"
+          },
+          {
+            "question": "Why is the Shraadh ceremony performed?",
+            "slug": "shraadh-ceremony-and-prayers-for-the-dead"
+          }
+        ]
       }
     },
     {
@@ -130,12 +201,82 @@
       "art": "art-4",
       "blurb": "Method, equipment and evidence — how a real investigation is actually run.",
       "lede": "Method, equipment and evidence. How an investigation is actually run, what the instruments can and cannot tell you, and how to sieve footage for the genuine anomaly.",
-      "layout": "archive",
+      "layout": "hub",
       "published": true,
       "hub": {
-        "pillar": null,
-        "clusters": [],
-        "questions": []
+        "pillar": "how-to-conduct-an-investigation-of-the-paranormal",
+        "clusters": [
+          {
+            "title": "Becoming an investigator",
+            "blurb": "What the work involves, what it asks of you, and how a team is put together and run.",
+            "slugs": [
+              "what-is-a-paranormal-investigator",
+              "how-to-become-a-paranormal-investigator",
+              "paranormal-investigator-job-what-does-it-involve",
+              "paranormal-investigation-team",
+              "what-is-sixth-sense-how-to-develop-sixth-sense-to-be-a-paranormal-inve"
+            ]
+          },
+          {
+            "title": "The kit",
+            "blurb": "Everything that goes in the bag — what each instrument is for, and what it can and cannot tell you.",
+            "slugs": [
+              "paranormal-investigator-kit-what-are-the-things-you-must-have",
+              "ghost-hunting-equipment-must-haves",
+              "cameras-for-ghost-hunting-significance-and-importance",
+              "ghost-hunting-thermometers",
+              "what-is-em-pump",
+              "ghost-hunting-tools-some-other-holy-tools-you-must-have-in-your-kit"
+            ]
+          },
+          {
+            "title": "Capturing and reading evidence",
+            "blurb": "Recording voice and image in the field, then sieving hours of it for the one anomaly that holds up.",
+            "slugs": [
+              "what-is-an-evp",
+              "electronic-voice-phenomenon-how-to-get-an-evp",
+              "evp-equipment-history-of-evp-equipment",
+              "ghost-photos-what-is-the-camera-procedure-to-get-best-ghost-photos",
+              "paranormal-evidence-how-to-review-best-paranormal-evidence"
+            ]
+          },
+          {
+            "title": "Working safely",
+            "blurb": "What never to do on an investigation, how to handle your own fear, and where responsibility for the site sits.",
+            "slugs": [
+              "ghost-hunting-tips-what-should-you-strictly-avoid",
+              "safe-ghost-hunting-7-key-points-to-remember",
+              "what-is-fear",
+              "what-is-self-responsibility-in-paranormal-investigation"
+            ]
+          }
+        ],
+        "questions": [
+          {
+            "question": "What does a paranormal investigator actually do?",
+            "slug": "what-is-a-paranormal-investigator"
+          },
+          {
+            "question": "How do I become a paranormal investigator?",
+            "slug": "how-to-become-a-paranormal-investigator"
+          },
+          {
+            "question": "What should be in an investigator’s kit?",
+            "slug": "paranormal-investigator-kit-what-are-the-things-you-must-have"
+          },
+          {
+            "question": "How do I record an EVP?",
+            "slug": "electronic-voice-phenomenon-how-to-get-an-evp"
+          },
+          {
+            "question": "How do I tell real evidence from a false positive?",
+            "slug": "paranormal-evidence-how-to-review-best-paranormal-evidence"
+          },
+          {
+            "question": "What should I never do on an investigation?",
+            "slug": "ghost-hunting-tips-what-should-you-strictly-avoid"
+          }
+        ]
       },
       "image": ""
     },
@@ -149,10 +290,10 @@
       "art": "art-1",
       "blurb": "Complete records from the field, written up case by case.",
       "lede": "Complete records from the field, written up case by case — the onset, the investigation, the resolution, and what followed afterwards.",
-      "layout": "archive",
+      "layout": "hub",
       "published": true,
       "hub": {
-        "pillar": null,
+        "pillar": "story-of-possession-a-case-study-of-anamika",
         "clusters": [],
         "questions": []
       },
