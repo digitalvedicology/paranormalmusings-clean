@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { Logo, SearchIcon } from './icons'
+import { SearchIcon } from './icons'
 import type { NavLink, SiteSettings } from '@/lib/content'
 
 /**
@@ -54,14 +54,8 @@ export default function SiteHeader({
       >
         <div className="wrap">
           <div className="flex items-center gap-6 h-[74px]">
-            <Link href="/" className="flex items-center gap-3 shrink-0" aria-label={`${site.name} — home`}>
-              <Logo />
-              <span className="leading-none">
-                <span className="block font-extrabold tracking-tight text-ink text-[17px] sm:text-[19px]">
-                  PARANORMAL MUSINGS
-                </span>
-                <span className="hidden sm:block mt-[3px] text-[11px] text-muted">{site.tagline}</span>
-              </span>
+            <Link href="/" className="flex items-center shrink-0" aria-label={`${site.name} — home`}>
+              <img src="/images/paranormalmusings-logo.webp" alt={site.name} className="h-12 sm:h-[52px] w-auto" />
             </Link>
 
             {/* Primary nav */}
