@@ -1,10 +1,17 @@
-import PostCard from '../PostCard'
+import PostGrid from '../PostGrid'
 import SectionLink from '../SectionLink'
-import { ArrowRight } from '../icons'
 import { getContent } from '@/lib/content'
 
 export default async function LatestPosts() {
   const content = await getContent()
+
+  // Page one stays the curated six; the rest of the archive follows behind
+  // them, so the numbered pages now walk the whole catalogue instead of being
+  // decorative.
+  const curated = content.latestPosts
+  const curatedSlugs = new Set(curated.map((post) => post.slug))
+  const cards = [...curated, ...content.posts.filter((post) => !curatedSlugs.has(post.slug))].map(content.toCard)
+
   return (
     <section id="latest" className="scroll-mt-24">
       <div className="wrap py-12 lg:py-16">
@@ -13,41 +20,7 @@ export default async function LatestPosts() {
           <SectionLink href="/western-views">Browse the archive</SectionLink>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-10 reveal">
-          {content.latestPosts.map((post) => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </div>
-
-        {/* Pagination */}
-        <div className="mt-12 flex items-center justify-center gap-2">
-          <span className="grid place-items-center w-10 h-10 rounded-full bg-ink text-white text-[14px] font-semibold">
-            1
-          </span>
-          {['2', '3'].map((page) => (
-            <a
-              key={page}
-              href="#"
-              className="grid place-items-center w-10 h-10 rounded-full border border-rule text-ink text-[14px] font-semibold hover:border-ink/25 transition"
-            >
-              {page}
-            </a>
-          ))}
-          <span className="px-1 text-muted">…</span>
-          <a
-            href="#"
-            className="grid place-items-center w-10 h-10 rounded-full border border-rule text-ink text-[14px] font-semibold hover:border-ink/25 transition"
-          >
-            13
-          </a>
-          <a
-            href="#"
-            aria-label="Next page"
-            className="ml-1 grid place-items-center w-10 h-10 rounded-full border border-rule text-ink hover:border-ink/25 transition"
-          >
-            <ArrowRight />
-          </a>
-        </div>
+        <PostGrid posts={cards} author={content.site.author} authorImage={content.site.authorImage} perPage={6} />
       </div>
     </section>
   )
