@@ -191,18 +191,6 @@ export default function Hero({ author }: { author: string }) {
           )
         })}
 
-        {/* ── FLOATING CHIP ────────────────────────────────────────────── */}
-        <div className="wrap pointer-events-none absolute inset-x-0 top-7 hidden lg:block">
-          <div className="flex justify-end">
-            <div className="glass rounded-2xl px-4 py-3 flex items-center gap-2.5">
-              <svg viewBox="0 0 24 24" className="w-[18px] h-[18px] text-gold-300" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round">
-                <path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9L3.5 9.7l5.9-.8L12 3.5Z" />
-              </svg>
-              <span className="text-[13.5px] font-semibold text-white">Editor&rsquo;s Pick</span>
-            </div>
-          </div>
-        </div>
-
         {/* ── CONTROLS ─────────────────────────────────────────────────── */}
         <div className="wrap absolute inset-x-0 bottom-0 pb-7 sm:pb-9">
           <div className="flex items-end justify-between gap-6">
