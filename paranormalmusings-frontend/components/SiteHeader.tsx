@@ -70,7 +70,7 @@ export default function SiteHeader({
         <div className="wrap">
           <div className="flex items-center gap-6 h-[74px]">
             <Link href="/" className="flex items-center shrink-0" aria-label={`${site.name} — home`}>
-              <img src="/images/paranormalmusings-logo.webp" alt={site.name} className="h-12 sm:h-[52px] w-auto" />
+              <img src="/images/paranormalmusings-logo.png" alt={site.name} className="h-12 sm:h-[52px] w-auto" />
             </Link>
 
             {/* Primary nav */}
