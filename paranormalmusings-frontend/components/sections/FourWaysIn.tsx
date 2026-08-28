@@ -2,6 +2,14 @@ import Link from 'next/link'
 import SectionLink from '../SectionLink'
 import { artwork, getContent } from '@/lib/content'
 
+/** The card artwork for each section, used unless the admin sets its own. */
+const CARD_IMAGE: Record<string, string> = {
+  eastern: '/images/four-ways-in/eastern.png',
+  western: '/images/four-ways-in/western.png',
+  investigation: '/images/four-ways-in/investigation.png',
+  cases: '/images/four-ways-in/cases.png',
+}
+
 export default async function FourWaysIn() {
   const content = await getContent()
   return (
@@ -24,7 +32,7 @@ export default async function FourWaysIn() {
             >
               <div className="zoom-wrap">
                 <img
-                  src={artwork(category.image, category.seed, 600, 440)}
+                  src={artwork(category.image || CARD_IMAGE[key], category.seed, 600, 440)}
                   alt=""
                   className="w-full h-[150px] sm:h-[170px] object-cover moody"
                 />
