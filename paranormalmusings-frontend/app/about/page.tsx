@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { artwork, getContent, photo } from '@/lib/content'
+import { getContent } from '@/lib/content'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { site } = await getContent()
@@ -33,12 +33,11 @@ function CopySection({ title, children, dark = false }: { title: string; childre
 }
 
 export default async function AboutPage() {
-  const content = await getContent()
-  const portrait = artwork(content.site.authorImage, 'pm-praveen', 900, 1100)
+  const portrait = '/images/about/study.png'
 
   return <>
     <section className="relative isolate flex min-h-[360px] items-center overflow-hidden bg-night-900 text-white lg:min-h-[400px]">
-      <div className="absolute inset-0 opacity-30"><img src={photo('pm-about-hero', 1800, 700)} alt="" className="h-full w-full object-cover" /></div>
+      <div className="absolute inset-0 opacity-40"><img src="/images/about/about-header.png" alt="" className="h-full w-full object-cover" /></div>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,12,7,.94),rgba(16,12,7,.5))]" />
       <div className="wrap relative py-10 lg:py-12"><p className="label text-gold-300">paranormal musings with Praveen Saanker</p><h1 className="mt-3 max-w-3xl font-display text-[38px] leading-[1.05] sm:text-[50px] lg:text-[60px]">About Paranormal Musings with Praveen Saanker</h1></div>
     </section>
