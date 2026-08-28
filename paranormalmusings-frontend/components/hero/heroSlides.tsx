@@ -25,7 +25,7 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 1 · The blog ─────────────────────────────────────────────── */
   {
     art: 'art-1',
-    image: '/images/hero-1.jpg',
+    image: '/images/home/hero-1.png',
     eyebrow: 'Featured',
     readTime: '8 min read',
     headingLevel: 'h1',
@@ -66,7 +66,7 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 2 · Western Views ────────────────────────────────────────── */
   {
     art: 'art-2',
-    image: '/images/hero-2.jpg',
+    image: '/images/home/hero-2.png',
     eyebrow: 'Western Views',
     readTime: '7 min read',
     headingLevel: 'h2',
@@ -106,7 +106,7 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 3 · Eastern Views ────────────────────────────────────────── */
   {
     art: 'art-3',
-    image: '/images/hero-3.jpg',
+    image: '/images/home/hero-3.png',
     eyebrow: 'Eastern Views',
     readTime: '6 min read',
     headingLevel: 'h2',
@@ -139,7 +139,7 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 4 · Investigation ────────────────────────────────────────── */
   {
     art: 'art-4',
-    image: '/images/hero-4.jpg',
+    image: '/images/home/hero-4.png',
     eyebrow: 'Investigation',
     readTime: '7 min read',
     headingLevel: 'h2',
