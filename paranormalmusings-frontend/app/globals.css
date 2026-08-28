@@ -119,9 +119,16 @@ a:hover .zoom-wrap img, .card-lift:hover .zoom-wrap img { transform: scale(1.06)
 
 .silhouette { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-/* No image overlay. The copy carries its own soft shadow so white type
-   still reads against a bright photograph. */
-.hslide-scrim { display: none; }
+/* No image overlay by default. The copy carries its own soft shadow so
+   white type still reads against a bright photograph. Individual slides
+   can opt back into a dark wash with `.is-on`. */
+.hslide-scrim { position: absolute; inset: 0; display: none; }
+.hslide-scrim.is-on {
+  display: block;
+  background:
+    linear-gradient(94deg, rgba(16,12,7,.82) 0%, rgba(16,12,7,.58) 40%, rgba(16,12,7,.12) 72%, rgba(16,12,7,0) 100%),
+    linear-gradient(0deg, rgba(16,12,7,.45) 0%, rgba(16,12,7,0) 40%);
+}
 
 .hslide-copy { text-shadow: 0 2px 14px rgba(0, 0, 0, .55), 0 1px 3px rgba(0, 0, 0, .5); }
 

@@ -131,7 +131,7 @@ export default function Hero({ author }: { author: string }) {
                 />
               )}
 
-              <div className="hslide-scrim" />
+              <div className={`hslide-scrim${slide.art === 'art-3' ? ' is-on' : ''}`} />
 
               <div className="wrap absolute inset-0 flex items-center">
                 <div className="hslide-copy max-w-[900px] pb-24 sm:pb-28">
