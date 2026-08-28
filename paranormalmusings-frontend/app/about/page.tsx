@@ -1,322 +1,63 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import Newsletter from '@/components/sections/Newsletter'
-import { ArrowRight, TopicIcon } from '@/components/icons'
-import { artwork, getContent } from '@/lib/content'
+import { artwork, getContent, photo } from '@/lib/content'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { site } = await getContent()
-  return {
-    title: 'About',
-    description: `${site.author} — psychotherapist, family business advisor and life coach, founder of Vedicology, and a paranormal consultant of more than twenty-five years.`,
-  }
+  return { title: 'About', description: `About Paranormal Musings with ${site.author}` }
 }
 
-/* ── Editorial copy ──────────────────────────────────────────────────────
-   Kept here rather than in the CMS: this page is a single authored piece,
-   not a list of records, and its sections are laid out individually.      */
-
-/** The stat band beside the portrait — each one a verifiable affiliation. */
-const standing = [
-  {
-    figure: '1862',
-    label: 'The Ghost Club',
-    body: 'Life member of the oldest organisation in the world associated with psychical research, still investigating hauntings across the globe.',
-  },
-  {
-    figure: '1952',
-    label: 'New England Society for Psychic Research',
-    body: 'Member of the earliest paranormal research and ghost exploration group in New England, founded by Ed and Lorraine Warren.',
-  },
-  {
-    figure: 'PhD',
-    label: 'Clinical and counselling psychology',
-    body: 'University of Canterbury, Christchurch — alongside a Master of Counselling from the same faculty.',
-  },
-  {
-    figure: '3',
-    label: 'Practices',
-    body: 'Individuals and family businesses advised through offices in Dubai, Kuala Lumpur and Singapore.',
-  },
-]
-
 const qualifications = [
-  {
-    icon: 'book',
-    title: 'Doctoral',
-    body: 'Doctor of Philosophy (PhD), University of Canterbury, Christchurch, New Zealand — clinical, counselling and allied psychology.',
-  },
-  {
-    icon: 'heart',
-    title: 'Counselling',
-    body: 'Master of Counselling, University of Canterbury, Christchurch, New Zealand — counselling psychology.',
-  },
-  {
-    icon: 'gear',
-    title: 'Executive MBA',
-    body: 'IMD Business School, Lausanne, Switzerland — business administration and management.',
-  },
-  {
-    icon: 'sun',
-    title: 'MBA',
-    body: 'Master of Business Administration, Madras University — finance.',
-  },
+  ['Doctoral Program', 'Doctor of Philosophy (PhD), University of Canterbury, Christchurch, New Zealand', 'Field of Study – Clinical, Counselling and Allied Psychology'],
+  ['Post Graduate Programs', 'Master of Counselling, University of Canterbury, Christchurch, New Zealand', 'Field of Study – Counselling Psychology'],
+  ['Post Graduate Programs', 'Executive MBA, IMD Business School, Lausanne, Switzerland', 'Field Of Study – Business Administration and Management, General'],
+  ['Post Graduate Programs', 'Master of Business Administration – MBA, Madras University', 'Field Of Study – Finance, General'],
 ]
 
 const specialisations = [
-  'Clinical Hypnotherapist and Past Life Regression Therapist — National Guild of Hypnotists, Inc (Merrimack, NH, USA)',
-  'Integrated Clinical Hypnotherapist — California Hypnosis Institute of India, Mumbai',
-  'Advanced Hatha Yoga Practitioner and Teacher’s Trainer (Therapeutic) — certified by Yoga Alliance USA, International Yoga Academy (Hong Kong), Manonmaniam Sundaranar University and the Tamilnadu State Physical Education Department',
-  'Award of Excellence, Project Edge — Counselling Adolescents — Medical University of South Carolina and the National Guild of Hypnotists',
-  'Certification in the Essentials of General Marriage and Family Counselling Therapy — Harold Abel School of Social and Behavioural Science, Capella University',
-  'Patron Member — The Ed and Lorraine Warren Inner Group, and All Access Patron of The Warren Inner Circle',
+  'Clinical Hypnotherapist and Past Life Regression Therapist, National Guild of Hypnotists, Inc (Merrimack, NH, USA)',
+  'Integrated Clinical Hypnotherapist (California Hypnosis Institute of India, Mumbai, India)',
+  'Advanced Hatha Yoga Practitioner & Teacher’s Trainer (Therapeutic) Certified by the Yoga Alliance USA. International Yoga Academy (Hongkong), Manonmaniam Sundaranar University and Tamilnadu State Physical Education Department',
+  'Award of Excellence (Project Edge – Counselling Adolescents), Medical University of South Carolina & National Guild of Hypnotists',
+  'Certification in the Essentials of General Marriage and Family Counselling Therapy, Harold Abel School of Social and Behavioural Science, Capella University',
+  'Member – New England Society For Psychic Research (The oldest Paranormal Research and Ghost Hunting Group in New England found by Ed and Lorraine Warren in 1952)',
+  'Patron Member – The Ed and Lorraine Warren Inner Group & All Access Patron – The Warren Inner Circle',
+  'Life Member – The Ghost Club – Founded in 1862, and is the oldest organisation in the world associated with psychical research. Prime interest is that of paranormal phenomena associated with ghosts and hauntings.',
 ]
 
-/** A titled band of prose, so the long biography stays readable. */
-function Chapter({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) {
-  return (
-    <section className="wrap py-12 lg:py-16">
-      <div className="grid lg:grid-cols-[300px_1fr] gap-8 lg:gap-16 reveal">
-        <div>
-          <p className="label text-gold-600">{eyebrow}</p>
-          <h2 className="mt-2 font-display text-[25px] lg:text-[29px] leading-[1.2] text-ink">{title}</h2>
-        </div>
-        <div className="max-w-3xl space-y-4 text-[15.5px] leading-[1.75]">{children}</div>
-      </div>
-    </section>
-  )
+function Kicker({ children }: { children: React.ReactNode }) {
+  return <p className="label flex items-center gap-3 text-gold-600 before:h-px before:w-9 before:bg-gold-500">{children}</p>
+}
+
+function CopySection({ title, children, dark = false }: { title: string; children: React.ReactNode; dark?: boolean }) {
+  return <section className={dark ? 'bg-night-800 text-white' : 'bg-paper'}><div className="wrap py-14 lg:py-20"><div className="max-w-6xl"><Kicker>Paranormal Musings</Kicker><h2 className={`mt-4 font-display text-[30px] leading-[1.17] sm:text-[35px] ${dark ? 'text-white' : 'text-ink'}`}>{title}</h2><div className={`mt-8 max-w-6xl space-y-5 text-[17px] leading-[1.85] ${dark ? 'text-white/70' : 'text-body'}`}>{children}</div></div></div></section>
 }
 
 export default async function AboutPage() {
   const content = await getContent()
   const portrait = artwork(content.site.authorImage, 'pm-praveen', 900, 1100)
 
-  return (
-    <>
-      {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="wrap pt-8 lg:pt-12 pb-4">
-        <div className="rounded-[28px] bg-mist border border-rule px-6 sm:px-10 lg:px-14 py-10 lg:py-14">
-          <div className="grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-14 items-center">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full bg-paper border border-rule px-3.5 py-1.5 text-[12.5px] font-semibold text-ink shadow-soft">
-                <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-gold-500" />
-                Paranormal consultant · 25+ years
-              </span>
+  return <>
+    <section className="relative isolate flex min-h-[360px] items-center overflow-hidden bg-night-900 text-white lg:min-h-[400px]">
+      <div className="absolute inset-0 opacity-30"><img src={photo('pm-about-hero', 1800, 700)} alt="" className="h-full w-full object-cover" /></div>
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,12,7,.94),rgba(16,12,7,.5))]" />
+      <div className="wrap relative py-10 lg:py-12"><p className="label text-gold-300">paranormal musings with Praveen Saanker</p><h1 className="mt-3 max-w-3xl font-display text-[38px] leading-[1.05] sm:text-[50px] lg:text-[60px]">About Paranormal Musings with Praveen Saanker</h1></div>
+    </section>
 
-              <h1 className="mt-6 font-display text-[32px] sm:text-[42px] lg:text-[50px] leading-[1.1] text-ink">
-                About Paranormal Musings with {content.site.author}
-              </h1>
+    <section className="wrap py-14 lg:py-20">
+      <div className="grid items-center gap-10 lg:grid-cols-[.75fr_1.25fr] lg:gap-16">
+        <div className="relative mx-auto w-full max-w-[410px] pb-8 pr-8"><img src={portrait} alt="Praveen Saanker" className="h-[400px] w-full object-cover shadow-float sm:h-[500px]" /><div className="absolute bottom-0 right-0 h-28 w-28 border-[8px] border-paper bg-gold-500" /></div>
+        <div><Kicker>paranormal musings with Praveen Saanker</Kicker><div className="mt-5 space-y-5 text-[15.5px] leading-[1.85] text-body"><p>Mr Praveen Saanker is a Psychotherapist, Family Business Advisor and Life Coach. Sri Praveen Saanker is the founder of “Vedicology” and is a globally renowned scholar on Sanatana Dharma recognized for his expertise and use of Indian Spirituality. He’s considered as a specialist on Vedic Scriptures, Traditional Indian Rituals and Customs, Astrology, Vastu Shastra and Numerology.</p><p>Praveen successfully incorporates the fundamentals of Vedas with contemporary psychology and business administration. Mr Praveen Saanker functions with business entrepreneurs, working professionals and next-generation leaders advising them on the household ministry and locating a subtle balance between household and business priorities.</p><p>Mr Praveen Saanker is a gifted all-natural speaker, mediator, and facilitator. His intensive research and coaching into various aspects of Psychotherapy (Western and Indian), Vedic areas, traditional scriptures, Astrology and Vastu Shastra have allowed him to create a profound comprehension of individuals, structures and relationships.</p></div></div>
+      </div>
+    </section>
 
-              <p className="mt-5 max-w-xl text-[15.5px] lg:text-[16.5px] leading-[1.7] text-muted">
-                Psychotherapist, family business advisor and life coach. Founder of Vedicology, and a globally
-                recognised scholar on Sanatana Dharma — writing here on the paranormal from inside both the Indian and
-                the Western traditions.
-              </p>
+    <CopySection title="Praveen Saanker’s Interest in the “Paranormal”" dark><p>Praveen Saanker has been an ardent student of the paranormal arena ever since he has been a child. Praveen has impressive experience as a renowned “Paranormal Consultant” and enjoys a strong reputation in the detection of “Paranormal Energy Spectrum”. Praveen is widely considered to be a subject matter expert in the traditional Indian Paranormal arena. He is well versed with various ancient Indian scriptures, rituals, customs and practices on the “after death aspects”.</p><p>Apart from Praveen’s extensive Eastern lineage and experience in the Indian Paranormal Arena, Praveen Saanker has been a part of the “New England Society For Psychic Research” (The earliest Paranormal Research and Ghost Exploration Group, New England commenced by Ed and Lorraine Warren during 1952).</p><p>Praveen is also an All Access Patron Member with The Ed and Lorraine Warren Inner Group & and a valuable member of “The Warren Inner Circle”.</p><p>Praveen Saanker is a Life Membership of “The Ghost Club”. The Ghost Club commenced in 1862 and is “the oldest organisation across the world associated with psychical research” associated with ghosts and hauntings. Ghost Club has been actively investigating hauntings and paranormal events across the world.</p></CopySection>
 
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  href="/contact"
-                  className="link-arrow inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold-500 text-white text-[14px] font-semibold hover:bg-gold-600 transition shadow-soft"
-                >
-                  Get in touch
-                  <ArrowRight />
-                </Link>
-                <Link
-                  href="/western-views"
-                  className="inline-flex items-center h-11 px-6 rounded-full border border-rule bg-paper text-[14px] font-semibold text-ink hover:bg-mist transition"
-                >
-                  Read the blog
-                </Link>
-              </div>
-            </div>
+    <CopySection title="Praveen Saanker’s Upbringing and Initiation"><p>Praveen dedicates his wisdom and experience on traditional Indian aspects of Astrology, Vastu Shastra, Mantrikam and Tantra Vidya into his ancient family roots in Kerala along with his traditional upbringing. Praveen comes from one of the reputed families in Kerala that have always given great importance to the study of Conventional Vedic Sciences. He uses his knowledge to spread the teachings of our ancient Indian spiritual heritage via ultra-modern scientific techniques.</p><p>Ever since his initiation into “The Tantra Vidyalaya” (An Ancient institution for the study of Jyothisham, Vastu Shastra and other ancient Vedic disciplines) Praveen Saanker’s fervour for learning the intricacies of our Vedic Sciences had no bounds. Praveen later got initiated into the “Meppad Mantreeka Sampradayam” which is one of the oldest and most potent Mantrika Sampradayas of North Kerala. Meppad tradition follows “Kaula” philosophy through “Brahma Vidya Sampradaya”, which is the path to Nirvana. Meppad was also well known for Astrology and Ayur Veda treatment during the ancient days.</p></CopySection>
 
-            <div className="zoom-wrap rounded-2xl shadow-card">
-              <img
-                src={portrait}
-                alt={content.site.author}
-                className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover moody-soft"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    <CopySection title="Praveen’s Professional Credentials" dark><p>Currently, a psychotherapist, corporate consultant, life coach and family business advisor, Praveen Saanker works with individuals and family businesses through his offices in Dubai, Kuala Lumpur and Singapore.</p><p>Mr Praveen Saanker uses his extensive corporate experience to help professionals, entrepreneurs and family companies. Praveen assists in identifying your goals and objectives and advise you on pursuing the same in a dharmic way. Praveen Saanker was a Senior Vice President with HSBC in the Wealth Management and Private Banking Division of the Global Bank. Praveen has amazing experience working together with other reputed organisations such as the ASK Group. Praveen Saanker was the “Director – Family Wealth Advisory Services” with the ASK Group.</p></CopySection>
 
-      {/* ── Standing: portrait beside the affiliations ───────────────── */}
-      <section className="wrap py-8 lg:py-10">
-        <div className="rounded-[28px] bg-mist border border-rule px-6 sm:px-8 lg:px-10 py-8 lg:py-10">
-          <div className="grid lg:grid-cols-[1fr_1.25fr] gap-6 lg:gap-8 items-stretch reveal">
-            <div className="zoom-wrap rounded-2xl min-h-[320px]">
-              <img
-                src={artwork(content.site.authorImage, 'pm-praveen', 800, 1000)}
-                alt=""
-                className="w-full h-full min-h-[320px] object-cover moody"
-              />
-            </div>
+    <section className="bg-mist border-y border-rule"><div className="wrap py-14 lg:py-20"><div className="max-w-2xl"><Kicker>Academic Qualifications</Kicker><h2 className="mt-4 font-display text-[34px] leading-tight text-ink">Academic Qualifications</h2></div><div className="mt-9 grid gap-4 md:grid-cols-2">{qualifications.map(([level, degree, field]) => <article key={degree} className="border-l-[3px] border-gold-500 bg-paper p-6 shadow-soft"><p className="label text-gold-600">{level}</p><h3 className="mt-3 font-display text-[22px] leading-snug text-ink">{degree}</h3><p className="mt-3 text-[13.5px] leading-relaxed text-muted">{field}</p></article>)}</div></div></section>
 
-            <div className="grid gap-4 content-between">
-              {standing.map((item) => (
-                <div key={item.label} className="rounded-2xl bg-paper border border-rule p-5 lg:p-6 shadow-soft">
-                  <div className="grid sm:grid-cols-[150px_1fr] gap-2 sm:gap-6">
-                    <div>
-                      <p className="font-display text-[30px] lg:text-[34px] leading-none text-ink">{item.figure}</p>
-                      <p className="mt-2 text-[12.5px] leading-snug text-muted">{item.label}</p>
-                    </div>
-                    <p className="text-[13.5px] leading-relaxed text-muted">{item.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── The biography ────────────────────────────────────────────── */}
-      <Chapter eyebrow="The work" title="Vedic scholarship, read alongside modern psychology">
-        <p>
-          Mr Praveen Saanker is a psychotherapist, family business advisor and life coach. He is the founder of
-          Vedicology and a globally renowned scholar on Sanatana Dharma, recognised for his expertise in and use of
-          Indian spirituality. He is considered a specialist on Vedic scriptures, traditional Indian rituals and
-          customs, astrology, Vastu Shastra and numerology.
-        </p>
-        <p>
-          Praveen successfully incorporates the fundamentals of the Vedas with contemporary psychology and business
-          administration. He works with business entrepreneurs, working professionals and next-generation leaders,
-          advising them on the household ministry and on locating a subtle balance between family and business
-          priorities.
-        </p>
-        <p>
-          He is a gifted natural speaker, mediator and facilitator. His intensive research and coaching across
-          psychotherapy — both Western and Indian — Vedic disciplines, traditional scriptures, astrology and Vastu
-          Shastra have allowed him to develop a profound understanding of individuals, structures and relationships.
-        </p>
-      </Chapter>
-
-      <Chapter eyebrow="The paranormal" title="A student of the field since childhood">
-        <p>
-          Praveen Saanker has been an ardent student of the paranormal arena ever since he was a child. He has
-          considerable experience as a renowned paranormal consultant and holds a strong reputation in the detection of
-          the paranormal energy spectrum. He is widely considered a subject matter expert in the traditional Indian
-          paranormal arena, and is well versed in the ancient Indian scriptures, rituals, customs and practices
-          concerning the after-death aspects.
-        </p>
-        <p>
-          Apart from that Eastern lineage, Praveen has been part of the New England Society for Psychic Research — the
-          earliest paranormal research and ghost exploration group in New England, begun by Ed and Lorraine Warren in
-          1952. He is an All Access Patron Member with The Ed and Lorraine Warren Inner Group and a member of The
-          Warren Inner Circle.
-        </p>
-        <p>
-          He holds life membership of The Ghost Club. Founded in 1862, it is the oldest organisation in the world
-          associated with psychical research, and remains active in investigating hauntings and paranormal events
-          across the world.
-        </p>
-      </Chapter>
-
-      <Chapter eyebrow="Upbringing" title="Kerala, and initiation into the Vedic disciplines">
-        <p>
-          Praveen brings his knowledge of the traditional Indian aspects of astrology, Vastu Shastra, Mantrikam and
-          Tantra Vidya back to his family roots in Kerala and to his traditional upbringing. He comes from one of the
-          reputed families in Kerala that have always given great importance to the study of conventional Vedic
-          sciences, and he uses that knowledge to carry the teachings of India’s spiritual heritage through modern
-          scientific technique.
-        </p>
-        <p>
-          Ever since his initiation into The Tantra Vidyalaya — an ancient institution for the study of Jyothisham,
-          Vastu Shastra and other Vedic disciplines — his appetite for the intricacies of the Vedic sciences has had no
-          bounds. He was later initiated into the Meppad Mantreeka Sampradayam, one of the oldest and most potent
-          Mantrika Sampradayas of North Kerala. The Meppad tradition follows Kaula philosophy through Brahma Vidya
-          Sampradaya, the path to Nirvana, and was well known in ancient days for astrology and Ayurvedic treatment.
-        </p>
-      </Chapter>
-
-      <Chapter eyebrow="Professionally" title="Advising individuals and family businesses">
-        <p>
-          Currently a psychotherapist, corporate consultant, life coach and family business advisor, Praveen Saanker
-          works with individuals and family businesses through his offices in Dubai, Kuala Lumpur and Singapore.
-        </p>
-        <p>
-          He draws on extensive corporate experience to help professionals, entrepreneurs and family companies —
-          identifying their goals and objectives, and advising on how to pursue them in a dharmic way. He was
-          previously Senior Vice President with HSBC in the Wealth Management and Private Banking division of the
-          global bank, and Director of Family Wealth Advisory Services with the ASK Group.
-        </p>
-      </Chapter>
-
-      {/* ── Qualifications ───────────────────────────────────────────── */}
-      <section className="bg-mist border-y border-rule">
-        <div className="wrap py-12 lg:py-16">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-display text-[27px] sm:text-[33px] leading-[1.2] text-ink">
-              Academic qualifications behind the practice
-            </h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-muted">
-              Four degrees across psychology and business, taken at faculties in New Zealand, Switzerland and India.
-            </p>
-          </div>
-
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 reveal">
-            {qualifications.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-paper border border-rule p-6 shadow-soft">
-                <span className="grid place-items-center w-10 h-10 rounded-xl bg-gold-500 text-white">
-                  <TopicIcon name={item.icon} />
-                </span>
-                <h3 className="mt-4 font-display text-[19px] leading-snug text-ink">{item.title}</h3>
-                <p className="mt-2 text-[13.5px] leading-relaxed text-muted">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Specialisations ──────────────────────────────────────────── */}
-      <section className="wrap py-12 lg:py-16">
-        <div className="grid lg:grid-cols-[300px_1fr] gap-8 lg:gap-16 reveal">
-          <div>
-            <p className="label text-gold-600">Also certified</p>
-            <h2 className="mt-2 font-display text-[25px] lg:text-[29px] leading-[1.2] text-ink">
-              Specialisations and memberships
-            </h2>
-          </div>
-
-          <ul className="max-w-3xl grid gap-3.5">
-            {specialisations.map((item) => (
-              <li key={item} className="flex gap-3.5 text-[15px] leading-[1.7]">
-                <span aria-hidden="true" className="mt-[10px] w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* ── Get in touch ─────────────────────────────────────────────── */}
-      <section className="wrap pb-12 lg:pb-16">
-        <div className="rounded-[28px] bg-night-800 text-white px-6 sm:px-10 lg:px-12 py-10 lg:py-12 text-center reveal">
-          <p className="label text-gold-300">Consultations</p>
-          <h2 className="mt-3 font-display text-[26px] sm:text-[32px] leading-tight">
-            Something happening you cannot explain?
-          </h2>
-          <p className="mt-4 max-w-xl mx-auto text-[15px] leading-relaxed text-white/60">
-            Describe what happened, where, and roughly when it began. Every message gets a reply.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex items-center h-11 px-6 rounded-full bg-gold-500 text-[14px] font-semibold hover:bg-gold-600 transition"
-            >
-              Write to me
-            </Link>
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center h-11 px-6 rounded-full border border-white/25 text-[14px] font-semibold hover:bg-white/10 transition"
-            >
-              Read the case studies
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Newsletter />
-    </>
-  )
+    <section className="wrap py-14 lg:py-20"><div className="grid gap-9 lg:grid-cols-[290px_minmax(0,1fr)] lg:gap-16"><div><Kicker>Paranormal Musings</Kicker><h2 className="mt-4 font-display text-[30px] leading-tight text-ink">Other Relevant Specialisations</h2></div><ul className="grid gap-4 border-t border-rule pt-6">{specialisations.map((item) => <li key={item} className="flex gap-3 text-[15px] leading-[1.75] text-body"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />{item}</li>)}</ul></div></section>
+  </>
 }

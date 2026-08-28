@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Logo } from './icons'
 import SubscribeForm from './SubscribeForm'
 import { getContent } from '@/lib/content'
 
@@ -55,10 +54,11 @@ export default async function SiteFooter() {
         <div className="grid lg:grid-cols-[1.3fr_1fr_1.2fr_1fr] gap-10 lg:gap-12">
           {/* Brand + contact */}
           <div>
-            <div className="flex items-center gap-3">
-              <Logo flat />
-              <span className="font-extrabold tracking-tight text-[17px]">PARANORMAL MUSINGS</span>
-            </div>
+            <img
+              src="/images/paranormalmusings-logo.png"
+              alt={content.site.name}
+              className="h-11 w-auto brightness-0 invert"
+            />
 
             <p className="mt-5 text-[14px] leading-[1.75] text-white/55 max-w-sm">
               Paranormal explorations and perspectives on &ldquo;life after death&rdquo; from Indian (Eastern) and
@@ -133,7 +133,6 @@ export default async function SiteFooter() {
               {[
                 { label: 'Home', href: '/' },
                 { label: 'About', href: '/about' },
-                { label: 'Contact', href: '/contact' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-white transition">
