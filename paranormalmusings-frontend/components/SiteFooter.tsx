@@ -66,25 +66,6 @@ export default async function SiteFooter() {
             </p>
 
             <ul className="mt-6 space-y-3 text-[13.5px] text-white/60">
-              <li className="flex gap-3">
-                <svg viewBox="0 0 24 24" className="w-4 h-4 mt-[3px] shrink-0 text-gold-300" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round">
-                  <path d="M12 21s-6.5-5.2-6.5-10a6.5 6.5 0 0 1 13 0c0 4.8-6.5 10-6.5 10Z" />
-                  <circle cx="12" cy="11" r="2.2" />
-                </svg>
-                <span>
-                  {content.site.address[0]}
-                  <br />
-                  {content.site.address[1]}
-                </span>
-              </li>
-              <li className="flex gap-3 items-center">
-                <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 text-gold-300" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round">
-                  <path d="M4.5 5.5c0 8 6 14 14 14l1.8-3.2-4-2.1-1.9 1.9a13 13 0 0 1-4.4-4.4l1.9-1.9-2.1-4L6.6 5.5Z" />
-                </svg>
-                <a href={content.site.phone.href} className="hover:text-white transition">
-                  {content.site.phone.label}
-                </a>
-              </li>
               <li className="flex gap-3 items-center">
                 <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 text-gold-300" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round">
                   <rect x="3" y="5" width="18" height="14" rx="2" />
