@@ -46,7 +46,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-paper font-sans text-body antialiased">
         {/* The header is a client component, so its copy is passed in. */}
-        <SiteHeader site={content.site} navLinks={content.navLinks} popularSearches={content.popularSearches} />
+        <SiteHeader
+          site={content.site}
+          navLinks={content.navLinks}
+          popularSearches={content.popularSearches}
+          searchIndex={content.posts.map(content.toCard)}
+        />
         <main>{children}</main>
         <SiteFooter />
         {/* One observer for the whole app; re-runs per navigation. */}

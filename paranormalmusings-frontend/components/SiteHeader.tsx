@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { SearchIcon } from './icons'
-import type { NavLink, SiteSettings } from '@/lib/content'
+import type { CardData, NavLink, SiteSettings } from '@/lib/content'
 
 /**
  * The header runs on the client (sticky state, drawer, search overlay), so its
@@ -14,16 +14,31 @@ export default function SiteHeader({
   site,
   navLinks,
   popularSearches,
+  searchIndex,
 }: {
   site: SiteSettings
   navLinks: NavLink[]
   popularSearches: string[]
+  /** Every post, flattened, so the overlay can search titles on the client. */
+  searchIndex: CardData[]
 }) {
   const pathname = usePathname()
+  const router = useRouter()
   const [stuck, setStuck] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [query, setQuery] = useState('')
   const searchInput = useRef<HTMLInputElement>(null)
+
+  const q = query.trim().toLowerCase()
+  const results = q
+    ? searchIndex.filter((post) => post.title.toLowerCase().includes(q)).slice(0, 8)
+    : []
+
+  const closeSearch = () => {
+    setSearchOpen(false)
+    setQuery('')
+  }
 
   /* Header shadow once the page has scrolled */
   useEffect(() => {
@@ -37,7 +52,7 @@ export default function SiteHeader({
     if (!searchOpen) return
     const focus = setTimeout(() => searchInput.current?.focus(), 60)
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setSearchOpen(false)
+      if (e.key === 'Escape') closeSearch()
     }
     document.addEventListener('keydown', onKey)
     return () => {
@@ -83,15 +98,6 @@ export default function SiteHeader({
               >
                 <SearchIcon />
               </button>
-              <a href="#newsletter" className="hidden sm:block text-[14px] font-semibold text-ink px-3 py-2 rounded-full hover:bg-mist transition">
-                Sign In
-              </a>
-              <a
-                href="#newsletter"
-                className="hidden sm:inline-flex items-center h-10 px-5 rounded-full bg-gold-500 text-white text-[14px] font-semibold hover:bg-gold-600 transition shadow-soft"
-              >
-                Subscribe
-              </a>
 
               <button
                 onClick={() => setDrawerOpen((v) => !v)}
@@ -124,13 +130,6 @@ export default function SiteHeader({
                   {link.mobileLabel || link.label}
                 </Link>
               ))}
-              <a
-                href="#newsletter"
-                onClick={() => setDrawerOpen(false)}
-                className="mt-3 inline-flex justify-center items-center h-11 rounded-full bg-gold-500 text-white font-semibold"
-              >
-                Subscribe
-              </a>
             </div>
           </div>
         )}
@@ -141,7 +140,7 @@ export default function SiteHeader({
         id="searchOverlay"
         className={`fixed inset-0 z-[60] bg-night-900/60 backdrop-blur-sm${searchOpen ? ' open' : ''}`}
         onClick={(e) => {
-          if (e.target === e.currentTarget) setSearchOpen(false)
+          if (e.target === e.currentTarget) closeSearch()
         }}
       >
         <div className="wrap pt-24">
@@ -151,22 +150,63 @@ export default function SiteHeader({
               <input
                 ref={searchInput}
                 type="search"
-                placeholder="Search…"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && results[0]) {
+                    router.push(results[0].href)
+                    closeSearch()
+                  }
+                }}
+                placeholder="Search articles…"
                 className="flex-1 h-11 text-[16px] text-ink placeholder:text-muted outline-none bg-transparent"
               />
-              <button onClick={() => setSearchOpen(false)} className="text-[13px] font-semibold text-muted hover:text-ink px-2">
+              <button onClick={closeSearch} className="text-[13px] font-semibold text-muted hover:text-ink px-2">
                 ESC
               </button>
             </div>
+
             <div className="mt-4 pt-4 border-t border-rule">
-              <p className="label text-muted mb-3">Popular searches</p>
-              <div className="flex flex-wrap gap-2">
-                {popularSearches.map((term) => (
-                  <a key={term} href="#" className="chip px-3 py-1.5 rounded-full bg-mist text-[13px] font-medium text-ink">
-                    {term}
-                  </a>
-                ))}
-              </div>
+              {q ? (
+                results.length ? (
+                  <ul className="grid gap-1">
+                    {results.map((post) => (
+                      <li key={post.slug}>
+                        <Link
+                          href={post.href}
+                          onClick={closeSearch}
+                          className="flex items-center justify-between gap-4 rounded-lg px-3 py-2.5 hover:bg-mist transition"
+                        >
+                          <span className="text-[14.5px] leading-snug text-ink">{post.title}</span>
+                          <span className="label text-gold-600 shrink-0">{post.label}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="px-3 py-2 text-[14px] text-muted">
+                    No articles match &ldquo;{query.trim()}&rdquo;.
+                  </p>
+                )
+              ) : (
+                <>
+                  <p className="label text-muted mb-3">Popular searches</p>
+                  <div className="flex flex-wrap gap-2">
+                    {popularSearches.map((term) => (
+                      <button
+                        key={term}
+                        onClick={() => {
+                          setQuery(term)
+                          searchInput.current?.focus()
+                        }}
+                        className="chip px-3 py-1.5 rounded-full bg-mist text-[13px] font-medium text-ink hover:bg-rule/60 transition"
+                      >
+                        {term}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
