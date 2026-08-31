@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -8,125 +7,101 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <article className="wrap py-12 lg:py-16 max-w-4xl mx-auto prose prose-invert">
+    <article className="wrap py-12 lg:py-16 max-w-4xl mx-auto">
       <h1 className="text-4xl font-display mb-8">Privacy Policy</h1>
       <p className="text-base text-body leading-relaxed mb-6">Last updated: August 31, 2026</p>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Overview</h2>
-        <p>Paranormal Musings (&quot;we,&quot; &quot;us,&quot; &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Privacy Policy for https://paranormalmusings.com</h2>
+        <p>At https://paranormalmusings.com, accessible from https://paranormalmusings.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by https://paranormalmusings.com and how we use it.</p>
+        <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+        <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in https://paranormalmusings.com. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the Free Privacy Policy Generator.</p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Information We Collect</h2>
-        <h3 className="text-xl font-semibold mt-6 mb-3">Contact Form Submissions</h3>
-        <p>When you submit the "Write to Us" contact form, we collect:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Your name</li>
-          <li>Your email address</li>
-          <li>Your message</li>
-        </ul>
-        <p>This information is used solely to respond to your inquiry and is not shared with third parties.</p>
-
-        <h3 className="text-xl font-semibold mt-6 mb-3">Automatically Collected Information</h3>
-        <p>When you visit our site, we may automatically collect:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>IP address and browser type (via web server logs)</li>
-          <li>Pages visited and time spent on each page</li>
-          <li>Referrer information</li>
-          <li>Search queries and queries used (if applicable)</li>
-        </ul>
-        <p>This data is used for analytics and site improvement purposes only.</p>
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Consent</h2>
+        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Data Storage and Security</h2>
-        <p>Contact form submissions are stored in two locations:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li><strong>Primary:</strong> Transactional email via Resend</li>
-          <li><strong>Backup:</strong> Payload CMS database</li>
-        </ul>
-        <p>We use industry-standard encryption (HTTPS) to protect your data in transit. Access to stored data is restricted to authorized personnel only.</p>
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Information we collect</h2>
+        <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+        <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
+        <p>When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">How We Use Your Information</h2>
-        <ul className="list-disc pl-6 mb-4">
-          <li>To respond to your contact form submissions</li>
-          <li>To improve our website and services</li>
-          <li>To analyze site performance and user behavior</li>
-          <li>To comply with legal obligations</li>
-        </ul>
-        <p>We will never:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Sell your personal information</li>
-          <li>Share your email with third parties for marketing</li>
-          <li>Use your data for purposes other than stated here</li>
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">How we use your information</h2>
+        <p>We use the information we collect in various ways, including to:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li>Provide, operate, and maintain our website</li>
+          <li>Improve, personalize, and expand our website</li>
+          <li>Understand and analyze how you use our website</li>
+          <li>Develop new products, services, features, and functionality</li>
+          <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes</li>
+          <li>Send you emails</li>
+          <li>Find and prevent fraud</li>
         </ul>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Third-Party Services</h2>
-        <p>Our website uses the following third-party services:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li><strong>Cloudflare Turnstile:</strong> Spam protection on the contact form</li>
-          <li><strong>Resend:</strong> Transactional email delivery</li>
-          <li><strong>Payload CMS:</strong> Content management and data storage</li>
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Log Files</h2>
+        <p>https://paranormalmusings.com follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&apos; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&apos; movement on the website, and gathering demographic information.</p>
+      </section>
+
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Cookies and Web Beacons</h2>
+        <p>Like any other website, https://paranormalmusings.com uses &lsquo;cookies&rsquo;. These cookies are used to store information including visitors&rsquo; preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users&rsquo; experience by customizing our web page content based on visitors&rsquo; browser type and/or other information.</p>
+        <p>For more general information on cookies, please read &quot;What Are Cookies&quot; from Cookie Consent.</p>
+      </section>
+
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Google DoubleClick DART Cookie</h2>
+        <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – https://policies.google.com/technologies/ads</p>
+      </section>
+
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Advertising Partners Privacy Policies</h2>
+        <p>You may consult this list to find the Privacy Policy for each of the advertising partners of https://paranormalmusings.com.</p>
+        <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on https://paranormalmusings.com, which are sent directly to users&apos; browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+        <p>Note that https://paranormalmusings.com has no access to or control over these cookies that are used by third-party advertisers.</p>
+      </section>
+
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Third Party Privacy Policies</h2>
+        <p>https://paranormalmusings.com&rsquo;s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+        <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers&apos; respective websites.</p>
+      </section>
+
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+        <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li>Request that a business that collects a consumer&apos;s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</li>
+          <li>Request that a business delete any personal data about the consumer that a business has collected.</li>
+          <li>Request that a business that sells a consumer&apos;s personal data, not sell the consumer&apos;s personal data.</li>
         </ul>
-        <p>Each service has its own privacy policy. We encourage you to review their policies as they govern their use of your data.</p>
+        <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Cookies</h2>
-        <p>Our website does not use cookies for tracking or analytics. See our <Link href="/cookies" className="text-gold-500 hover:text-gold-400 underline">Cookies Policy</Link> for details.</p>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Your Rights</h2>
-        <p className="mb-4">Depending on your location, you may have rights regarding your personal data:</p>
-
-        <h3 className="text-xl font-semibold mt-6 mb-3">GDPR (EU Residents)</h3>
-        <p className="mb-4">If you are in the EU, you have the right to:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Access your personal data</li>
-          <li>Correct inaccurate data</li>
-          <li>Request deletion (right to be forgotten)</li>
-          <li>Restrict or object to processing</li>
-          <li>Data portability</li>
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">GDPR Data Protection Rights</h2>
+        <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>The right to access</strong> – You have the right to request copies of your personal data. We may charge you a small fee for this service.</li>
+          <li><strong>The right to rectification</strong> – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</li>
+          <li><strong>The right to erasure</strong> – You have the right to request that we erase your personal data, under certain conditions.</li>
+          <li><strong>The right to restrict processing</strong> – You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+          <li><strong>The right to object to processing</strong> – You have the right to object to our processing of your personal data, under certain conditions.</li>
+          <li><strong>The right to data portability</strong> – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
         </ul>
-
-        <h3 className="text-xl font-semibold mt-6 mb-3">India's DPDP Act (2023)</h3>
-        <p className="mb-4">If you are in India, you have rights to:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Know what personal data is collected and how it is used</li>
-          <li>Correct, delete, or restrict your data</li>
-          <li>Withdraw consent at any time</li>
-        </ul>
-
-        <p className="mt-4">To exercise any of these rights, email: <a href="mailto:support@vedicology.com" className="text-gold-500 hover:text-gold-400 underline">support@vedicology.com</a></p>
+        <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Data Retention</h2>
-        <p>We retain contact form submissions indefinitely to maintain records, unless you request deletion. You may request deletion of your data at any time by emailing the address above.</p>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Children's Privacy</h2>
-        <p>Our website is not directed to children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.</p>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Contact Us</h2>
-        <p>If you have questions about this Privacy Policy or our privacy practices, please contact us:</p>
-        <p className="mt-4">
-          <strong>Email:</strong> <a href="mailto:support@vedicology.com" className="text-gold-500 hover:text-gold-400 underline">support@vedicology.com</a>
-        </p>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-display mt-10 mb-4">Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. The date at the top of this page indicates when it was last revised. Your continued use of our site following any changes constitutes your acceptance of the updated policy.</p>
+      <section className="mb-10 space-y-4">
+        <h2 className="text-2xl font-display mt-10 mb-4">Children&apos;s Information</h2>
+        <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+        <p>https://paranormalmusings.com does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
       </section>
     </article>
   )
