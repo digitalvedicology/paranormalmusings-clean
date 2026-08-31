@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import PostGrid from './PostGrid'
 import { artwork, getContent, type Category } from '@/lib/content'
@@ -25,11 +26,19 @@ export default async function CategoryHub({ category }: { category: Category }) 
       {/* ── Featured ───────────────────────────────────────────────────── */}
       {pillar && (
         <div className="wrap pt-6 lg:pt-8">
-          <Link href={content.postHref(pillar)} className="group block relative rounded-[16px] overflow-hidden zoom-wrap">
-            <img
+          <Link
+            href={content.postHref(pillar)}
+            className="group block relative rounded-[16px] overflow-hidden zoom-wrap h-[340px] sm:h-[400px] lg:h-[470px]"
+          >
+            {/* The banner of the page it opens, so it carries the preload here
+                the way the home hero does on the front page. */}
+            <Image
               src={artwork(pillar.image, pillar.seed, 1800, 1000)}
               alt=""
-              className="w-full h-[340px] sm:h-[400px] lg:h-[470px] object-cover moody"
+              fill
+              sizes="100vw"
+              priority
+              className="object-cover moody"
             />
             <div
               aria-hidden="true"

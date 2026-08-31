@@ -7,7 +7,7 @@ import FourWaysIn from '@/components/sections/FourWaysIn'
 import Highlights from '@/components/sections/Highlights'
 import Investigation from '@/components/sections/Investigation'
 import LatestPosts from '@/components/sections/LatestPosts'
-import Newsletter from '@/components/sections/Newsletter'
+import WriteToUs from '@/components/sections/WriteToUs'
 import Spotlight from '@/components/sections/Spotlight'
 import { getContent } from '@/lib/content'
 
@@ -28,7 +28,7 @@ export default async function Home() {
       <FourWaysIn />
       <About />
       <LatestPosts />
-      <Newsletter />
+      <WriteToUs />
     </>
   )
 }

@@ -1,38 +1,145 @@
 'use client'
 
-import { useState } from 'react'
-import { ArrowRight } from './icons'
+import { useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
 
-const subjects = ['A case I would like looked at', 'A question about an article', 'Speaking or media', 'Something else']
+interface FormState {
+  status: 'idle' | 'loading' | 'success' | 'error'
+  message?: string
+  retryAfter?: number
+}
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (element: string | HTMLElement, options: object) => string
+      reset: (widgetId: string) => void
+      remove: (widgetId: string) => void
+      getResponse: (widgetId: string) => string
+    }
+  }
+}
 
 /**
- * Client-side only for now — it validates and acknowledges in place. Point
- * `submit` at an API route or a form service to actually deliver the message.
+ * Contact form with spam protection (honeypot, rate limiting, Turnstile),
+ * email delivery via Resend, and storage in Payload CMS.
+ *
+ * Server-side handler ensures email address and API keys never leak to browser.
  */
 export default function ContactForm() {
-  const [sent, setSent] = useState(false)
+  const [formState, setFormState] = useState<FormState>({ status: 'idle' })
+  const [turnstileWidgetId, setTurnstileWidgetId] = useState<string>('')
+  const formRef = useRef<HTMLFormElement>(null)
+  const turnstileRef = useRef<HTMLDivElement>(null)
 
-  const field = 'w-full h-12 px-4 rounded-xl bg-paper border border-rule text-[14.5px] text-ink placeholder:text-muted outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/40 transition'
+  // Load Turnstile script and render widget
+  useEffect(() => {
+    if (!window.turnstile) {
+      const script = document.createElement('script')
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
+      script.async = true
+      script.defer = true
+      document.body.appendChild(script)
+    }
 
-  if (sent) {
+    const checkTurnstile = setInterval(() => {
+      if (window.turnstile && turnstileRef.current && !turnstileWidgetId) {
+        try {
+          const widgetId = window.turnstile.render(turnstileRef.current, {
+            sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_KEY || '',
+            theme: 'light',
+            size: 'normal',
+          })
+          setTurnstileWidgetId(widgetId)
+        } catch (error) {
+          console.error('Failed to render Turnstile:', error)
+        }
+        clearInterval(checkTurnstile)
+      }
+    }, 100)
+
+    return () => clearInterval(checkTurnstile)
+  }, [turnstileWidgetId])
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setFormState({ status: 'loading' })
+
+    if (!formRef.current) return
+
+    const formData = new FormData(formRef.current)
+    const turnstileToken = turnstileWidgetId ? window.turnstile?.getResponse(turnstileWidgetId) : ''
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message'),
+          honeypot: formData.get('honeypot'),
+          'cf-turnstile-response': turnstileToken,
+        }),
+      })
+
+      const data = (await response.json()) as {
+        success: boolean
+        message?: string
+        error?: string
+        retryAfter?: number
+      }
+
+      if (data.success) {
+        setFormState({ status: 'success', message: data.message })
+        formRef.current.reset()
+
+        // Reset Turnstile
+        if (turnstileWidgetId && window.turnstile) {
+          window.turnstile.reset(turnstileWidgetId)
+        }
+
+        // Clear success message after 8 seconds
+        setTimeout(() => {
+          setFormState({ status: 'idle' })
+        }, 8000)
+      } else {
+        setFormState({
+          status: 'error',
+          message: data.error,
+          retryAfter: data.retryAfter,
+        })
+      }
+    } catch (error) {
+      setFormState({
+        status: 'error',
+        message: 'Failed to send message. Please try again.',
+      })
+    }
+  }
+
+  const field = 'w-full px-4 py-2.5 rounded-lg border border-divider text-body placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold-500 transition disabled:opacity-50'
+
+  if (formState.status === 'success') {
     return (
-      <div className="rounded-2xl bg-paper border border-rule p-8 shadow-soft">
-        <div className="grid place-items-center w-12 h-12 rounded-full bg-gold-100 text-gold-600">
+      <div className="rounded-2xl bg-green-50 border border-green-200 p-8">
+        <div className="grid place-items-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-5">
           <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m4 12.5 5 5L20 7" />
           </svg>
         </div>
-        <h3 className="mt-5 font-display text-[24px] text-ink">Message received</h3>
-        <p className="mt-2.5 text-[15px] leading-relaxed">
-          Thank you for writing. Case enquiries are read personally and answered in the order they arrive — please allow
-          a few days for a reply.
+        <h3 className="font-display text-[24px] text-ink">Message received</h3>
+        <p className="mt-3 text-[15px] leading-relaxed text-body">
+          Thank you for writing. We read everything but cannot reply to every message. Your inquiry has been recorded.
         </p>
         <button
-          onClick={() => setSent(false)}
-          className="link-arrow mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-muted hover:text-ink transition"
+          onClick={() => setFormState({ status: 'idle' })}
+          className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-ink hover:opacity-70 transition"
         >
           Send another message
-          <ArrowRight />
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+          </svg>
         </button>
       </div>
     )
@@ -40,61 +147,110 @@ export default function ContactForm() {
 
   return (
     <form
-      className="rounded-2xl bg-paper border border-rule p-6 sm:p-8 shadow-soft"
-      onSubmit={(e) => {
-        e.preventDefault()
-        setSent(true)
-      }}
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="rounded-2xl bg-paper border border-divider p-6 sm:p-8 shadow-soft"
     >
+      {/* Error message */}
+      {formState.status === 'error' && (
+        <div className="mb-6 p-4 rounded-lg bg-red-50 border border-red-200">
+          <p className="text-red-800 text-[14px] font-medium">{formState.message}</p>
+          {formState.retryAfter && (
+            <p className="text-red-700 text-[12px] mt-2">
+              Please wait {Math.ceil(formState.retryAfter / 60)} minutes before trying again.
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* Name and Email */}
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="name" className="label text-muted">
+          <label htmlFor="contact-name" className="block text-[14px] font-medium text-ink mb-2">
             Your name
           </label>
-          <input id="name" name="name" required placeholder="Full name" className={`${field} mt-2.5`} />
+          <input
+            id="contact-name"
+            name="name"
+            type="text"
+            required
+            maxLength={100}
+            placeholder="Full name"
+            disabled={formState.status === 'loading'}
+            className={field}
+          />
         </div>
         <div>
-          <label htmlFor="email" className="label text-muted">
+          <label htmlFor="contact-email" className="block text-[14px] font-medium text-ink mb-2">
             Email
           </label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com" className={`${field} mt-2.5`} />
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            required
+            placeholder="you@example.com"
+            disabled={formState.status === 'loading'}
+            className={field}
+          />
         </div>
       </div>
 
+      {/* Message */}
       <div className="mt-4">
-        <label htmlFor="subject" className="label text-muted">
-          What is this about?
-        </label>
-        <select id="subject" name="subject" defaultValue={subjects[0]} className={`${field} mt-2.5`}>
-          {subjects.map((subject) => (
-            <option key={subject}>{subject}</option>
-          ))}
-        </select>
-      </div>
-
-      <div className="mt-4">
-        <label htmlFor="message" className="label text-muted">
+        <label htmlFor="contact-message" className="block text-[14px] font-medium text-ink mb-2">
           Message
         </label>
         <textarea
-          id="message"
+          id="contact-message"
           name="message"
           required
+          minLength={10}
+          maxLength={5000}
           rows={6}
-          placeholder="Tell me what happened, where, and when it started."
-          className="w-full mt-2.5 p-4 rounded-xl bg-paper border border-rule text-[14.5px] leading-relaxed text-ink placeholder:text-muted outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/40 transition resize-y"
+          placeholder="Tell me what's on your mind..."
+          disabled={formState.status === 'loading'}
+          className={`${field} resize-y`}
         />
+        <p className="mt-1 text-[12px] text-muted">10–5000 characters</p>
       </div>
 
+      {/* Honeypot field (hidden from real users) */}
+      <input
+        name="honeypot"
+        type="text"
+        style={{ display: 'none' }}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
+
+      {/* Turnstile Widget */}
+      {process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_KEY && (
+        <div className="mt-4 flex justify-center">
+          <div ref={turnstileRef} />
+        </div>
+      )}
+
+      {/* Submit Button */}
       <button
         type="submit"
-        className="link-arrow mt-6 inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-gold-500 text-white text-[14px] font-semibold hover:bg-gold-600 transition shadow-soft"
+        disabled={formState.status === 'loading' || formState.status === 'success'}
+        className="mt-6 inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-gold-500 text-white text-[14px] font-semibold hover:bg-gold-600 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-soft"
       >
-        Send message
-        <ArrowRight />
+        {formState.status === 'loading' ? 'Sending...' : 'Send message'}
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+        </svg>
       </button>
-      <p className="mt-3.5 text-[12.5px] text-muted">
-        Nothing you write here is published. Case details stay between us unless you say otherwise.
+
+      {/* Privacy notice */}
+      <p className="mt-4 text-[12px] leading-relaxed text-muted">
+        Nothing you write here is published. We collect your name and email to respond to your message. Your data is protected under the{' '}
+        <Link href="/" className="text-ink hover:underline">
+          Privacy Policy
+        </Link>{' '}
+        (India DPDP Act 2023 &amp; GDPR compliant).
       </p>
     </form>
   )

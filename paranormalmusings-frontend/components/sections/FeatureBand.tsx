@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import SectionLink from '../SectionLink'
 import { artwork, getContent, type Category } from '@/lib/content'
@@ -30,11 +31,13 @@ export default async function FeatureBand({ category }: { category: Category }) 
           {/* Lead story */}
           <article>
             <Link href={content.postHref(lead)} className="block">
-              <div className="zoom-wrap rounded-2xl shadow-card">
-                <img
+              <div className="zoom-wrap relative rounded-2xl shadow-card h-[240px] sm:h-[330px] lg:h-[360px]">
+                <Image
                   src={artwork(lead.image, lead.seed, 1200, 760)}
                   alt=""
-                  className="w-full h-[240px] sm:h-[330px] lg:h-[360px] object-cover moody"
+                  fill
+                  sizes="(min-width: 1024px) 53vw, 100vw"
+                  className="object-cover moody"
                 />
               </div>
               <p className="label text-gold-600 mt-5">{content.categoryLabel(lead)}</p>
@@ -43,7 +46,7 @@ export default async function FeatureBand({ category }: { category: Category }) 
               </h3>
               <p className="mt-3 max-w-2xl text-[15px] leading-relaxed">{lead.excerpt}</p>
               <div className="mt-4 flex items-center gap-2.5 text-[12.5px] text-muted">
-                <img src={artwork(content.site.authorImage, 'pm-praveen', 80, 80)} alt="" className="w-6 h-6 rounded-full object-cover moody-soft" />
+                <Image src={artwork(content.site.authorImage, 'pm-praveen', 80, 80)} alt="" width={24} height={24} className="w-6 h-6 rounded-full object-cover moody-soft" />
                 <span className="font-semibold text-ink/80">{content.site.author}</span>
                 <span className="opacity-50">•</span>
                 <span>{lead.date}</span>
@@ -57,8 +60,8 @@ export default async function FeatureBand({ category }: { category: Category }) 
           <div className="flex flex-col divide-y divide-rule">
             {side.map((post, i) => (
               <Link key={post.slug} href={content.postHref(post)} className={`flex gap-5 ${['pb-6', 'py-6', 'pt-6'][i]}`}>
-                <div className="zoom-wrap rounded-2xl shrink-0 w-[130px] sm:w-[168px] h-[104px] sm:h-[122px]">
-                  <img src={artwork(post.image, post.seed, 480, 360)} alt="" className="w-full h-full object-cover moody" />
+                <div className="zoom-wrap relative rounded-2xl shrink-0 w-[130px] sm:w-[168px] h-[104px] sm:h-[122px]">
+                  <Image src={artwork(post.image, post.seed, 480, 360)} alt="" fill sizes="(min-width: 640px) 168px, 130px" className="object-cover moody" />
                 </div>
                 <div className="min-w-0">
                   <p className="label text-gold-600">{content.categoryLabel(post)}</p>
@@ -78,8 +81,8 @@ export default async function FeatureBand({ category }: { category: Category }) 
         <div className="mt-10 pt-10 border-t border-rule grid sm:grid-cols-2 gap-8 sm:gap-0 sm:divide-x divide-rule reveal">
           {strip.map((post, i) => (
             <Link key={post.slug} href={content.postHref(post)} className={`flex gap-5 ${i === 0 ? 'sm:pr-8' : 'sm:pl-8'}`}>
-              <div className="zoom-wrap rounded-2xl shrink-0 w-[130px] sm:w-[150px] h-[100px] sm:h-[110px]">
-                <img src={artwork(post.image, post.seed, 480, 360)} alt="" className="w-full h-full object-cover moody" />
+              <div className="zoom-wrap relative rounded-2xl shrink-0 w-[130px] sm:w-[150px] h-[100px] sm:h-[110px]">
+                <Image src={artwork(post.image, post.seed, 480, 360)} alt="" fill sizes="(min-width: 640px) 150px, 130px" className="object-cover moody" />
               </div>
               <div className="min-w-0">
                 <p className="label text-gold-600">{content.categoryLabel(post)}</p>

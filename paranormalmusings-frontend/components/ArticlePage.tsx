@@ -1,9 +1,30 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import ArticleSidebar from './ArticleSidebar'
-import CommentForm from './CommentForm'
+// CommentForm removed - feature not yet implemented
+// import CommentForm from './CommentForm'
 import PostCard from './PostCard'
 import SectionLink from './SectionLink'
+import EndOfArticleContact from './EndOfArticleContact'
 import { artwork, articleSections, getContent, headingId, type Block, type Post } from '@/lib/content'
+
+/**
+ * How wide a picture in the article column actually renders. The column is
+ * whatever is left of the page once the gutters and the sidebar are taken out,
+ * so this is measured rather than guessed — it is what stops a phone
+ * downloading the desktop file.
+ */
+const COLUMN = '(min-width: 1280px) 800px, (min-width: 1024px) 660px, 100vw'
+
+/**
+ * The proportions a picture is assumed to have until the real file arrives.
+ *
+ * Uploads carry no dimensions with them, and an image with no shape reserved
+ * is the whole of the layout shift on an article page. Sixteen-by-nine holds
+ * roughly the right amount of room; `h-auto` lets the real ratio take over the
+ * moment it is known, so nothing is ever cropped or stretched.
+ */
+const ASSUMED = { width: 1600, height: 900 }
 
 /* ── Prose ─────────────────────────────────────────────────────────────── */
 
@@ -38,7 +59,7 @@ function Prose({ blocks }: { blocks: Block[] }) {
              picture's own proportions — nothing is cropped. */
           <figure key={i} className="my-9">
             <div className="zoom-wrap rounded-2xl shadow-card">
-              <img src={block.src} alt={block.alt} className="w-full moody" />
+              <Image {...ASSUMED} src={block.src} alt={block.alt} sizes={COLUMN} className="w-full h-auto moody" />
             </div>
             {block.caption ? (
               <figcaption className="mt-3 text-center text-[13.5px] leading-relaxed text-muted">
@@ -98,10 +119,15 @@ export default async function ArticlePage({ post }: { post: Post }) {
             {/* The featured image opens the piece when it is the lead. */}
             {post.imagePlacement === 'lead' && (
               <div className="mb-8 rounded-2xl overflow-hidden shadow-card">
-                <img
+                {/* Opening the piece, so it is this page's LCP element and the
+                    one picture on it that earns a preload. */}
+                <Image
+                  {...ASSUMED}
                   src={artwork(post.image, post.seed, 1600, 900)}
                   alt=""
-                  className="w-full moody"
+                  sizes={COLUMN}
+                  priority
+                  className="w-full h-auto moody"
                 />
               </div>
             )}
@@ -135,7 +161,7 @@ export default async function ArticlePage({ post }: { post: Post }) {
 
             <div className="mt-7 py-4 border-y border-rule flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-muted">
               <span className="inline-flex items-center gap-2.5">
-                <img src={artwork(content.site.authorImage, 'pm-praveen', 80, 80)} alt="" className="w-7 h-7 rounded-full object-cover moody-soft" />
+                <Image src={artwork(content.site.authorImage, 'pm-praveen', 80, 80)} alt="" width={28} height={28} className="w-7 h-7 rounded-full object-cover moody-soft" />
                 <span className="font-semibold text-ink">{content.site.author}</span>
               </span>
               <Meta icon={<><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M8 3v4M16 3v4M3 11h18" /></>}>
@@ -148,10 +174,12 @@ export default async function ArticlePage({ post }: { post: Post }) {
             {/* Featured image, in its usual place under the byline row. */}
             {post.imagePlacement === 'standard' && (
               <div className="mt-8 rounded-2xl overflow-hidden shadow-card">
-                <img
+                <Image
+                  {...ASSUMED}
                   src={artwork(post.image, post.seed, 1600, 900)}
                   alt=""
-                  className="w-full moody"
+                  sizes={COLUMN}
+                  className="w-full h-auto moody"
                 />
               </div>
             )}
@@ -197,9 +225,11 @@ export default async function ArticlePage({ post }: { post: Post }) {
 
             {/* Author bio */}
             <div className="mt-10 rounded-2xl border border-rule p-6 sm:p-7 flex flex-col sm:flex-row gap-5">
-              <img
+              <Image
                 src={artwork(content.site.authorImage, 'pm-praveen', 200, 200)}
                 alt={content.site.author}
+                width={64}
+                height={64}
                 className="w-16 h-16 rounded-full object-cover shrink-0 moody-soft"
               />
               <div>
@@ -217,17 +247,7 @@ export default async function ArticlePage({ post }: { post: Post }) {
               </div>
             </div>
 
-            {/* Comments */}
-            <section className="mt-12 pt-8 border-t border-rule">
-              <h2 className="font-display text-[24px] text-ink">Comments</h2>
-              <div className="mt-5 rounded-2xl border border-dashed border-rule px-6 py-8 text-center">
-                <p className="text-[15px] text-muted">
-                  No comments on this story yet — yours would be the first.
-                </p>
-              </div>
-              <h3 className="mt-10 font-display text-[20px] text-ink">Leave a reply</h3>
-              <CommentForm />
-            </section>
+            {/* Comments disabled - use Write to Us form instead */}
           </article>
 
           {/* ── SIDEBAR ──────────────────────────────────────────────── */}
@@ -255,6 +275,11 @@ export default async function ArticlePage({ post }: { post: Post }) {
           </div>
         </section>
       )}
+
+      {/* ── End of article contact ──────────────────────────────────────── */}
+      <div className="wrap">
+        <EndOfArticleContact />
+      </div>
     </>
   )
 }

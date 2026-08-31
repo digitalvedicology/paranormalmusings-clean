@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { getContent } from '@/lib/content'
+import { personSchema } from '@/lib/structured-data'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { site } = await getContent()
@@ -33,18 +35,23 @@ function CopySection({ title, children, dark = false }: { title: string; childre
 }
 
 export default async function AboutPage() {
-  const portrait = '/images/about/study.png'
+  const portrait = '/images/about/study.webp'
+  const content = await getContent()
+  const schema = personSchema(content.site)
 
   return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <section className="relative isolate flex min-h-[360px] items-center overflow-hidden bg-night-900 text-white lg:min-h-[400px]">
-      <div className="absolute inset-0 opacity-40"><img src="/images/about/about-header.png" alt="" className="h-full w-full object-cover" /></div>
+      {/* The banner behind the title — this page's LCP element, so it is the one
+          picture here that is preloaded rather than lazily fetched. */}
+      <div className="absolute inset-0 opacity-40"><Image src="/images/about/about-header.webp" alt="Study environment representing paranormal research and investigation practice" fill sizes="100vw" priority className="object-cover" /></div>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,12,7,.94),rgba(16,12,7,.5))]" />
       <div className="wrap relative py-10 lg:py-12"><p className="label text-gold-300">paranormal musings with Praveen Saanker</p><h1 className="mt-3 max-w-3xl font-display text-[38px] leading-[1.05] sm:text-[50px] lg:text-[60px]">About Paranormal Musings with Praveen Saanker</h1></div>
     </section>
 
     <section className="wrap py-14 lg:py-20">
       <div className="grid items-center gap-10 lg:grid-cols-[.75fr_1.25fr] lg:gap-16">
-        <div className="relative mx-auto w-full max-w-[410px] pb-8 pr-8"><img src={portrait} alt="Praveen Saanker" className="h-[400px] w-full object-cover shadow-float sm:h-[500px]" /><div className="absolute bottom-0 right-0 h-28 w-28 border-[8px] border-paper bg-gold-500" /></div>
+        <div className="relative mx-auto w-full max-w-[410px] pb-8 pr-8"><Image src={portrait} alt="Praveen Saanker paranormal investigator and author portrait" width={378} height={500} sizes="(min-width: 1024px) 378px, 100vw" className="h-[400px] w-full object-cover shadow-float sm:h-[500px]" /><div className="absolute bottom-0 right-0 h-28 w-28 border-[8px] border-paper bg-gold-500" /></div>
         <div><Kicker>paranormal musings with Praveen Saanker</Kicker><div className="mt-5 space-y-5 text-[15.5px] leading-[1.85] text-body"><p>Mr Praveen Saanker is a Psychotherapist, Family Business Advisor and Life Coach. Sri Praveen Saanker is the founder of “Vedicology” and is a globally renowned scholar on Sanatana Dharma recognized for his expertise and use of Indian Spirituality. He’s considered as a specialist on Vedic Scriptures, Traditional Indian Rituals and Customs, Astrology, Vastu Shastra and Numerology.</p><p>Praveen successfully incorporates the fundamentals of Vedas with contemporary psychology and business administration. Mr Praveen Saanker functions with business entrepreneurs, working professionals and next-generation leaders advising them on the household ministry and locating a subtle balance between household and business priorities.</p><p>Mr Praveen Saanker is a gifted all-natural speaker, mediator, and facilitator. His intensive research and coaching into various aspects of Psychotherapy (Western and Indian), Vedic areas, traditional scriptures, Astrology and Vastu Shastra have allowed him to create a profound comprehension of individuals, structures and relationships.</p></div></div>
       </div>
     </section>

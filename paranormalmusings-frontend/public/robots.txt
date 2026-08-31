@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow crawling of next internals
+Disallow: /_next/
+Disallow: /.next/
+
+# Disallow unnecessary paths
+Disallow: /api/
+Disallow: /admin/
+
+# Point to the primary sitemap
+Sitemap: https://paranormalmusings.com/sitemap.xml

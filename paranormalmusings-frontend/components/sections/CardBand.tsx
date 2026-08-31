@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import PostCard from '../PostCard'
 import SectionLink from '../SectionLink'
@@ -39,8 +40,8 @@ export default async function CardBand({ category }: { category: Category }) {
         <div className="mt-10 pt-8 border-t border-rule grid md:grid-cols-3 gap-6 md:gap-0 md:divide-x divide-rule reveal">
           {compact.map((post, i) => (
             <Link key={post.slug} href={content.postHref(post)} className={`flex gap-4 ${['md:pr-7', 'md:px-7', 'md:pl-7'][i]}`}>
-              <div className="zoom-wrap rounded-xl shrink-0 w-[74px] h-[74px]">
-                <img src={artwork(post.image, post.seed, 240, 240)} alt="" className="w-full h-full object-cover moody" />
+              <div className="zoom-wrap relative rounded-xl shrink-0 w-[74px] h-[74px]">
+                <Image src={artwork(post.image, post.seed, 240, 240)} alt="" fill sizes="74px" className="object-cover moody" />
               </div>
               <div>
                 <h3 className="font-display text-[17px] leading-snug text-ink hover-title">{post.title}</h3>

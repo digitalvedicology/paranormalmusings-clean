@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import SectionLink from '../SectionLink'
 import { artwork, getContent } from '@/lib/content'
 
@@ -8,9 +9,11 @@ export default async function About() {
       <div className="wrap py-12 lg:py-16">
         <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-center reveal">
           <div className="flex items-center gap-5">
-            <img
+            <Image
               src={artwork(content.site.authorImage, 'pm-praveen', 200, 200)}
-              alt={content.site.author}
+              alt={`${content.site.author} paranormal investigator and author portrait`}
+              width={112}
+              height={112}
               className="w-24 h-24 lg:w-28 lg:h-28 rounded-2xl object-cover shadow-card moody-soft"
             />
             <div className="lg:hidden">
@@ -29,13 +32,13 @@ export default async function About() {
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-6 text-[13px] text-muted">
               <span>
-                <strong className="text-ink font-semibold">124</strong> articles published
+                <strong className="text-ink font-semibold">{content.posts.length}</strong> articles published
               </span>
               <span>
                 <strong className="text-ink font-semibold">25+</strong> years investigating
               </span>
               <span>
-                <strong className="text-ink font-semibold">4</strong> categories
+                <strong className="text-ink font-semibold">{content.categories.length}</strong> {content.categories.length === 1 ? 'category' : 'categories'}
               </span>
             </div>
 

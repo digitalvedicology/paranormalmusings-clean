@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import SubscribeForm from './SubscribeForm'
 import { artwork, getContent, type Post } from '@/lib/content'
@@ -25,9 +26,11 @@ export default async function ArticleSidebar({ post }: { post: Post }) {
       {/* About the author */}
       <Widget title="About the author">
         <div className="flex items-center gap-4">
-          <img
+          <Image
             src={artwork(content.site.authorImage, 'pm-praveen', 160, 160)}
             alt={content.site.author}
+            width={56}
+            height={56}
             className="w-14 h-14 rounded-full object-cover moody-soft shrink-0"
           />
           <div>
@@ -65,8 +68,8 @@ export default async function ArticleSidebar({ post }: { post: Post }) {
                 <span className="w-5 shrink-0 pt-0.5 font-extrabold text-[13px] text-ink/20 tabular-nums">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <div className="zoom-wrap rounded-lg shrink-0 w-[54px] h-[54px]">
-                  <img src={artwork(other.image, other.seed, 160, 160)} alt="" className="w-full h-full object-cover moody" />
+                <div className="zoom-wrap relative rounded-lg shrink-0 w-[54px] h-[54px]">
+                  <Image src={artwork(other.image, other.seed, 160, 160)} alt="" fill sizes="54px" className="object-cover moody" />
                 </div>
                 <div className="min-w-0">
                   <h3 className="font-display text-[14.5px] leading-snug text-ink hover-title">{other.title}</h3>

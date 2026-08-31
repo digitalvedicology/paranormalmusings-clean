@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import SectionLink from '../SectionLink'
 import { artwork, getContent } from '@/lib/content'
@@ -17,8 +18,8 @@ export default async function Highlights() {
         <div className="grid md:grid-cols-3 gap-6 md:gap-0 md:divide-x divide-rule reveal">
           {content.highlights.map((post, i) => (
             <Link key={post.slug} href={content.postHref(post)} className={`flex gap-4 ${['md:pr-7', 'md:px-7', 'md:pl-7'][i]}`}>
-              <div className="zoom-wrap rounded-xl shrink-0 w-[86px] h-[86px]">
-                <img src={artwork(post.image, post.seed, 240, 240)} alt="" className="w-full h-full object-cover moody" />
+              <div className="zoom-wrap relative rounded-xl shrink-0 w-[86px] h-[86px]">
+                <Image src={artwork(post.image, post.seed, 240, 240)} alt="" fill sizes="86px" className="object-cover moody" />
               </div>
               <div className="min-w-0">
                 <p className="label text-gold-600">{content.categoryLabel(post)}</p>

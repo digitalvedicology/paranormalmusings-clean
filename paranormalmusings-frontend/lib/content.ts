@@ -96,34 +96,43 @@ function derive(doc: ContentDoc) {
   const pick = (slugs: string[]): Post[] => slugs.map(bySlug).filter((post): post is Post => Boolean(post))
 
   /**
-   * A category's own meta. Falls back to a placeholder rather than throwing:
-   * an unpublished section can still be referenced by a stale link, and a
-   * missing label is a better outcome than a 500.
-   */
-  const meta = (key: Category): CategoryPage =>
-    byKey.get(key) ?? {
-      key,
-      label: key,
-      title: key,
-      href: `/${key}`,
-      count: 0,
-      image: '',
-      seed: `pm-${key}`,
-      art: 'art-1',
-      blurb: '',
-      lede: '',
-      layout: 'archive',
-      published: false,
-      hub: { pillar: null, clusters: [], questions: [] },
-    }
-
-  /**
    * Everything filed under a section — the posts that live there, plus the ones
    * cross-filed into it. A cross-filed post keeps the address of its own
    * section, so it appears in both listings without ever having two URLs.
    */
   const postsIn = (key: Category) =>
     doc.posts.filter((post) => post.category === key || post.alsoIn.includes(key))
+
+  /**
+   * A category's own meta. Falls back to a placeholder rather than throwing:
+   * an unpublished section can still be referenced by a stale link, and a
+   * missing label is a better outcome than a 500.
+   *
+   * **Count is dynamically calculated** from postsIn() to ensure accuracy,
+   * overriding any stale seed data.
+   */
+  const meta = (key: Category): CategoryPage => {
+    const seedMeta = byKey.get(key)
+    const actualCount = postsIn(key).length
+
+    return {
+      ...(seedMeta || {
+        key,
+        label: key,
+        title: key,
+        href: `/${key}`,
+        image: '',
+        seed: `pm-${key}`,
+        art: 'art-1',
+        blurb: '',
+        lede: '',
+        layout: 'archive',
+        published: false,
+        hub: { pillar: null, clusters: [], questions: [] },
+      }),
+      count: actualCount, // Always use actual count, never seed value
+    }
+  }
 
   const articleHref = (post: Post) => `${meta(post.category).href}/${post.slug}`
 

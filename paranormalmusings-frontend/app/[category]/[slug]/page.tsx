@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ArticlePage from '@/components/ArticlePage'
 import { getContent } from '@/lib/content'
+import { articleSchema, breadcrumbSchema, formatDateToISO8601 } from '@/lib/structured-data'
 
 type Params = { category: string; slug: string }
 
@@ -33,20 +34,67 @@ async function resolve(params: Params) {
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
-  const post = await resolve(await params)
+  const resolvedParams = await params
+  const post = await resolve(resolvedParams)
   if (!post) return {}
 
+  const content = await (await import('@/lib/content')).getContent()
+  const baseUrl = 'https://paranormalmusings.com'
+  const articleUrl = `${baseUrl}${content.articleHref(post)}`
   const description = post.dek || post.excerpt
+
+  // Parse and format date to ISO 8601
+  const publishedDate = post.date ? formatDateToISO8601(post.date) : undefined
+
   return {
     title: post.title,
     description,
-    openGraph: { title: post.title, description, type: 'article', publishedTime: post.date },
+    alternates: {
+      canonical: articleUrl,
+    },
+    openGraph: {
+      title: post.title,
+      description,
+      type: 'article',
+      url: articleUrl,
+      publishedTime: publishedDate,
+      modifiedTime: publishedDate,
+      authors: [content.site.author],
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description,
+      creator: '@paranormalmusings',
+    },
   }
 }
+
 
 export default async function Page({ params }: { params: Promise<Params> }) {
   const post = await resolve(await params)
   if (!post) notFound()
 
-  return <ArticlePage post={post} />
+  const content = await getContent()
+  const categoryMeta = content.categoryMeta(post.category)
+  const articleSchemaData = articleSchema(post, categoryMeta, content.site.author)
+  const breadcrumbSchemaData = breadcrumbSchema(categoryMeta, post)
+
+  return (
+    <>
+      <ArticlePage post={post} />
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchemaData) }}
+        suppressHydrationWarning
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchemaData) }}
+        suppressHydrationWarning
+      />
+    </>
+  )
 }

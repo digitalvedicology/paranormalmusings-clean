@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { artwork, type CardData } from '@/lib/content'
@@ -60,8 +61,14 @@ export default function PostGrid({
       <div ref={top} className="scroll-mt-28 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
         {visible.map((post) => (
           <Link key={post.slug} href={post.href} className="card-lift group flex flex-col">
-            <div className="zoom-wrap rounded-[12px]">
-              <img src={artwork(post.image, post.seed, 800, 560)} alt="" className="w-full h-[200px] object-cover moody" />
+            <div className="zoom-wrap relative rounded-[12px] h-[200px]">
+              <Image
+                src={artwork(post.image, post.seed, 800, 560)}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 31vw, (min-width: 640px) 47vw, 100vw"
+                className="object-cover moody"
+              />
             </div>
 
             <h3 className="mt-5 font-display text-[20px] leading-snug text-ink hover-title">{post.title}</h3>
@@ -69,7 +76,7 @@ export default function PostGrid({
             {post.excerpt && <p className="mt-2.5 text-[14px] leading-[1.6] text-muted">{post.excerpt}</p>}
 
             <div className="mt-5 flex items-center gap-2.5 text-[12.5px] text-muted">
-              <img src={artwork(authorImage, 'pm-praveen', 80, 80)} alt="" className="w-6 h-6 rounded-full object-cover moody-soft" />
+              <Image src={artwork(authorImage, 'pm-praveen', 80, 80)} alt="" width={24} height={24} className="w-6 h-6 rounded-full object-cover moody-soft" />
               <span className="font-semibold text-ink/85">{author}</span>
               <span className="opacity-50">•</span>
               <span>{post.date}</span>

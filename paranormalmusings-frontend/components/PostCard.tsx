@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { artwork, getContent, type Post } from '@/lib/content'
 
@@ -13,8 +14,16 @@ export default async function PostCard({
 
   return (
     <Link href={content.postHref(post)} className="card-lift">
-      <div className="zoom-wrap rounded-2xl shadow-card">
-        <img src={artwork(post.image, post.seed, 800, 560)} alt="" className={`w-full ${imageHeight} object-cover moody`} />
+      {/* The card height sits on the frame rather than the picture, so the grid
+          holds its shape whether or not the artwork has arrived. */}
+      <div className={`zoom-wrap relative rounded-2xl shadow-card ${imageHeight}`}>
+        <Image
+          src={artwork(post.image, post.seed, 800, 560)}
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 31vw, (min-width: 640px) 47vw, 100vw"
+          className="object-cover moody"
+        />
       </div>
       <p className="label text-gold-600 mt-4">{content.categoryLabel(post)}</p>
       <h3 className="mt-2 font-display text-[20px] leading-snug text-ink hover-title">{post.title}</h3>

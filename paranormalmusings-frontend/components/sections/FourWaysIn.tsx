@@ -1,13 +1,22 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import SectionLink from '../SectionLink'
 import { artwork, getContent } from '@/lib/content'
 
 /** The card artwork for each section, used unless the admin sets its own. */
 const CARD_IMAGE: Record<string, string> = {
-  eastern: '/images/four-ways-in/eastern.png',
-  western: '/images/four-ways-in/western.png',
-  investigation: '/images/four-ways-in/investigation.png',
-  cases: '/images/four-ways-in/cases.png',
+  eastern: '/images/four-ways-in/eastern.webp',
+  western: '/images/four-ways-in/western.webp',
+  investigation: '/images/four-ways-in/investigation.webp',
+  cases: '/images/four-ways-in/cases.webp',
+}
+
+/** Alt text for category card images */
+const CARD_ALT: Record<string, string> = {
+  eastern: 'Hindu temple architecture representing Eastern spiritual perspectives',
+  western: 'Western paranormal investigation concept imagery',
+  investigation: 'Paranormal investigation equipment and techniques visualization',
+  cases: 'Paranormal case study documentation and research records',
 }
 
 export default async function FourWaysIn() {
@@ -30,11 +39,15 @@ export default async function FourWaysIn() {
               href={category.href}
               className="card-lift rounded-2xl border border-rule bg-paper overflow-hidden hover:shadow-card"
             >
-              <div className="zoom-wrap">
-                <img
+              {/* The height moves onto the frame so the space is held before
+                  the picture lands — and so the picture can fill it. */}
+              <div className="zoom-wrap relative h-[150px] sm:h-[170px]">
+                <Image
                   src={artwork(category.image || CARD_IMAGE[key], category.seed, 600, 440)}
-                  alt=""
-                  className="w-full h-[150px] sm:h-[170px] object-cover moody"
+                  alt={CARD_ALT[key] || category.title}
+                  fill
+                  sizes="(min-width: 1024px) 23vw, 47vw"
+                  className="object-cover moody"
                 />
               </div>
               <div className="p-5">

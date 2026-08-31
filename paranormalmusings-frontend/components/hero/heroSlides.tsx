@@ -8,6 +8,7 @@ import type { ReactNode } from 'react'
 export type HeroSlide = {
   art: string
   image: string
+  imageAlt: string
   eyebrow: string
   readTime: string
   headline: ReactNode
@@ -25,7 +26,8 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 1 · The blog ─────────────────────────────────────────────── */
   {
     art: 'art-1',
-    image: '/images/home/hero-1.png',
+    image: '/images/home/hero-1.webp',
+    imageAlt: 'Moonlit forest treeline at dusk under starry sky',
     eyebrow: 'Featured',
     readTime: '8 min read',
     headingLevel: 'h1',
@@ -42,7 +44,7 @@ export const heroSlides: HeroSlide[] = [
         paranormal energy spectrum.
       </>
     ),
-    cta: { label: 'Read Featured Story', href: '/western-views' },
+    cta: { label: 'Read Featured Story', href: '/western-views/how-to-protect-yourself-from-ghosts-and-bad-spirits' },
     secondaryCta: { label: 'Explore Latest', href: '#latest' },
     // A moonlit stand of trees over a low horizon.
     silhouette: (
@@ -66,7 +68,8 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 2 · Western Views ────────────────────────────────────────── */
   {
     art: 'art-2',
-    image: '/images/home/hero-2.png',
+    image: '/images/home/hero-2.webp',
+    imageAlt: 'Lit doorway threshold glowing in darkness symbolizing passage between worlds',
     eyebrow: 'Western Views',
     readTime: '7 min read',
     headingLevel: 'h2',
@@ -81,7 +84,7 @@ export const heroSlides: HeroSlide[] = [
         everyone&rsquo;s mind. In this excerpt, you will learn how to protect yourself…
       </>
     ),
-    byline: { date: 'April 1, 2021', extra: '0 comments' },
+    byline: { date: 'April 1, 2021' },
     // This slide is the article itself, so it links straight to it.
     cta: { label: 'Read Story', href: '/western-views/how-to-protect-yourself-from-ghosts-and-bad-spirits' },
     // A lit threshold in a dark room.
@@ -106,7 +109,8 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 3 · Eastern Views ────────────────────────────────────────── */
   {
     art: 'art-3',
-    image: '/images/home/hero-3.png',
+    image: '/images/home/hero-3.webp',
+    imageAlt: 'Layered mountain ridges at sunset creating atmospheric spiritual landscape',
     eyebrow: 'Eastern Views',
     readTime: '6 min read',
     headingLevel: 'h2',
@@ -123,7 +127,7 @@ export const heroSlides: HeroSlide[] = [
       </>
     ),
     byline: { date: 'April 1, 2021' },
-    cta: { label: 'Read Story', href: '/eastern-views' },
+    cta: { label: 'Read Story', href: '/eastern-views/death-rebirth-and-evolution' },
     // A sun low over layered ridges.
     silhouette: (
       <svg className="silhouette" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
@@ -139,7 +143,8 @@ export const heroSlides: HeroSlide[] = [
   /* ── SLIDE 4 · Investigation ────────────────────────────────────────── */
   {
     art: 'art-4',
-    image: '/images/home/hero-4.png',
+    image: '/images/home/hero-4.webp',
+    imageAlt: 'Night treeline silhouette with ethereal energy waves representing EVP phenomena',
     eyebrow: 'Investigation',
     readTime: '7 min read',
     headingLevel: 'h2',
@@ -155,7 +160,7 @@ export const heroSlides: HeroSlide[] = [
       </>
     ),
     byline: { date: 'April 1, 2021' },
-    cta: { label: 'Read Story', href: '/investigation' },
+    cta: { label: 'Read Story', href: '/investigation/paranormal-evidence-how-to-review-best-paranormal-evidence' },
     // A night treeline under an EVP trace.
     silhouette: (
       <svg className="silhouette" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">

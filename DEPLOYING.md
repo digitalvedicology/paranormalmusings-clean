@@ -191,6 +191,13 @@ Stored URLs become absolute, so the site never touches the filesystem for
 pictures. The trade-off is that they then load from the admin and go with it if
 it is down — which is why this is the fallback rather than the default.
 
+One thing to know if you take this route: the site resizes and re-encodes every
+picture before serving it, and it will only do that for hostnames it has been
+told to trust. `next.config.mjs` trusts `admin.paranormalmusings.com` and
+whatever hostname `ADMIN_API_URL` names, which covers both the deployment above
+and local development. **Move the admin to a third hostname and you must add it
+there too** — otherwise every picture on the site becomes a 400.
+
 ---
 
 ## Cost of getting it wrong

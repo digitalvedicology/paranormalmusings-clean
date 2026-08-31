@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { ArrowRight } from '../icons'
 import { heroSlides } from './heroSlides'
@@ -12,6 +13,15 @@ export default function Hero({ author }: { author: string }) {
   const [playing, setPlaying] = useState(false)
   /* Slides whose photograph is missing fall back to their drawn backdrop. */
   const [missingArt, setMissingArt] = useState<number[]>([])
+  /**
+   * Which slides have had their photograph put into the page at all.
+   *
+   * Only the first is there on load — it is the largest thing the reader sees
+   * and the only one worth spending the opening bytes on. The others are added
+   * a beat later and always one ahead of where the reader is, so they arrive
+   * before they are needed without ever racing the hero for bandwidth.
+   */
+  const [ready, setReady] = useState<number[]>([0])
 
   const heroRef = useRef<HTMLElement>(null)
   const dotsRef = useRef<HTMLDivElement>(null)
@@ -42,6 +52,17 @@ export default function Hero({ author }: { author: string }) {
     },
     [play],
   )
+
+  /* Bring in the slide being shown and the one after it. The wait on first load
+     is what keeps the other three backdrops out of the opening request. */
+  useEffect(() => {
+    const next = (index + 1) % heroSlides.length
+    const timeout = setTimeout(
+      () => setReady((prev) => (prev.includes(index) && prev.includes(next) ? prev : [...new Set([...prev, index, next])])),
+      index === 0 ? 2500 : 0,
+    )
+    return () => clearTimeout(timeout)
+  }, [index])
 
   /* Restart the progress fill whenever the active slide changes. */
   useEffect(() => {
@@ -104,6 +125,16 @@ export default function Hero({ author }: { author: string }) {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
+      {/* Announce slide changes to screen readers */}
+      <div
+        className="sr-only"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        Now showing slide {index + 1} of {heroSlides.length}: {heroSlides[index].headline}
+      </div>
+
       <div className="hero-stage relative w-full">
         {heroSlides.map((slide, i) => {
           const Heading = slide.headingLevel
@@ -122,10 +153,16 @@ export default function Hero({ author }: { author: string }) {
                 <span className="fog fog-b" />
               </div>
 
-              {!missingArt.includes(i) && (
-                <img
+              {!missingArt.includes(i) && ready.includes(i) && (
+                <Image
                   src={slide.image}
-                  alt=""
+                  alt={slide.imageAlt}
+                  fill
+                  sizes="100vw"
+                  /* The one image on the page worth a preload: the opening
+                     slide is the largest thing above the fold, so it is the
+                     LCP element. Every other picture on the site is lazy. */
+                  priority={i === 0}
                   className="moody"
                   onError={() => setMissingArt((prev) => (prev.includes(i) ? prev : [...prev, i]))}
                 />

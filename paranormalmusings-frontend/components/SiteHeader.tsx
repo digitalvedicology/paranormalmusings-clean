@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
@@ -7,20 +8,18 @@ import { SearchIcon } from './icons'
 import type { CardData, NavLink, SiteSettings } from '@/lib/content'
 
 /**
- * The header runs on the client (sticky state, drawer, search overlay), so its
- * copy is handed down from the layout rather than fetched here.
+ * The header runs on the client (sticky state, drawer, search overlay).
+ * Site copy is handed down from the layout; search index is fetched lazily
+ * via /api/search-index when the user opens the search overlay.
  */
 export default function SiteHeader({
   site,
   navLinks,
   popularSearches,
-  searchIndex,
 }: {
   site: SiteSettings
   navLinks: NavLink[]
   popularSearches: string[]
-  /** Every post, flattened, so the overlay can search titles on the client. */
-  searchIndex: CardData[]
 }) {
   const pathname = usePathname()
   const router = useRouter()
@@ -28,6 +27,8 @@ export default function SiteHeader({
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState('')
+  const [searchIndex, setSearchIndex] = useState<CardData[]>([])
+  const [searchLoading, setSearchLoading] = useState(false)
   const searchInput = useRef<HTMLInputElement>(null)
 
   const q = query.trim().toLowerCase()
@@ -50,6 +51,17 @@ export default function SiteHeader({
 
   useEffect(() => {
     if (!searchOpen) return
+
+    // Fetch search index lazily when overlay opens
+    if (searchIndex.length === 0 && !searchLoading) {
+      setSearchLoading(true)
+      fetch('/api/search-index')
+        .then((res) => res.json() as Promise<CardData[]>)
+        .then((data) => setSearchIndex(data))
+        .catch((error) => console.error('[search] Failed to load index:', error))
+        .finally(() => setSearchLoading(false))
+    }
+
     const focus = setTimeout(() => searchInput.current?.focus(), 60)
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeSearch()
@@ -59,7 +71,7 @@ export default function SiteHeader({
       clearTimeout(focus)
       document.removeEventListener('keydown', onKey)
     }
-  }, [searchOpen])
+  }, [searchOpen, searchIndex.length, searchLoading])
 
   return (
     <>
@@ -70,7 +82,15 @@ export default function SiteHeader({
         <div className="wrap">
           <div className="flex items-center gap-6 h-[74px]">
             <Link href="/" className="flex items-center shrink-0" aria-label={`${site.name} — home`}>
-              <img src="/images/paranormalmusings-logo.png" alt={site.name} className="h-12 sm:h-[52px] w-auto" />
+              {/* Its own proportions, so the row keeps its height before the
+                  file arrives and the header does not jump. */}
+              <Image
+                src="/images/paranormalmusings-logo.png"
+                alt={`${site.name} logo featuring mystical third eye symbol`}
+                width={310}
+                height={124}
+                className="h-12 sm:h-[52px] w-auto"
+              />
             </Link>
 
             {/* Primary nav */}
@@ -138,7 +158,11 @@ export default function SiteHeader({
       {/* Search overlay */}
       <div
         id="searchOverlay"
-        className={`fixed inset-0 z-[60] bg-night-900/60 backdrop-blur-sm${searchOpen ? ' open' : ''}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search"
+        hidden={!searchOpen}
+        className={`fixed inset-0 z-[60] bg-night-900/60 backdrop-blur-sm transition-opacity${searchOpen ? ' opacity-100' : ' opacity-0 pointer-events-none'}`}
         onClick={(e) => {
           if (e.target === e.currentTarget) closeSearch()
         }}
@@ -167,7 +191,10 @@ export default function SiteHeader({
             </div>
 
             <div className="mt-4 pt-4 border-t border-rule">
-              {q ? (
+              {searchLoading && (
+                <p className="px-3 py-2 text-[14px] text-muted">Loading search index…</p>
+              )}
+              {!searchLoading && q ? (
                 results.length ? (
                   <ul className="grid gap-1">
                     {results.map((post) => (

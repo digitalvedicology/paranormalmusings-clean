@@ -1,5 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
-import SubscribeForm from './SubscribeForm'
+import ContactForm from './ContactForm'
 import { getContent } from '@/lib/content'
 
 const socials = [
@@ -50,13 +51,25 @@ export default async function SiteFooter() {
   const content = await getContent()
   return (
     <footer id="contact" className="bg-night-900 text-white scroll-mt-24">
+      {/* Contact form section */}
+      <div className="bg-night-800 border-t border-b border-white/10">
+        <div className="wrap py-14 lg:py-16">
+          <div className="max-w-md">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+
+      {/* Footer content */}
       <div className="wrap pt-14 pb-8">
         <div className="grid lg:grid-cols-[1.3fr_1fr_1.2fr_1fr] gap-10 lg:gap-12">
           {/* Brand + contact */}
           <div>
-            <img
+            <Image
               src="/images/paranormalmusings-logo.png"
-              alt={content.site.name}
+              alt={`${content.site.name} logo featuring mystical third eye symbol`}
+              width={310}
+              height={124}
               className="h-11 w-auto brightness-0 invert"
             />
 
@@ -77,20 +90,7 @@ export default async function SiteFooter() {
               </li>
             </ul>
 
-            <div className="mt-6 flex items-center gap-2.5">
-              {socials.map((social) => (
-                <a
-                  key={social.label}
-                  href="#"
-                  aria-label={social.label}
-                  className="grid place-items-center w-9 h-9 rounded-full bg-white/[0.08] hover:bg-white/15 transition"
-                >
-                  <svg viewBox="0 0 24 24" className={social.size}>
-                    {social.path}
-                  </svg>
-                </a>
-              ))}
-            </div>
+            {/* Social links disabled: add when social profiles are available */}
           </div>
 
           {/* Categories */}
@@ -138,15 +138,7 @@ export default async function SiteFooter() {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <p className="label text-white/40">Notes from the field</p>
-            <p className="mt-5 text-[14px] leading-[1.75] text-white/55">
-              New investigations, case notes and perspectives on life after death — once a week, and nothing else.
-            </p>
-
-            <SubscribeForm variant="inline" />
-          </div>
+          {/* Newsletter - disabled until wired to real ESP */}
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-white/40">
@@ -154,15 +146,18 @@ export default async function SiteFooter() {
             © {new Date().getFullYear()} {content.site.name} · {content.site.author}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-white/70 transition">
+            <Link href="/privacy" className="hover:text-white/70 transition">
               Privacy
-            </a>
-            <a href="#" className="hover:text-white/70 transition">
+            </Link>
+            <Link href="/terms" className="hover:text-white/70 transition">
               Terms
-            </a>
-            <a href="#" className="hover:text-white/70 transition">
+            </Link>
+            <Link href="/cookies" className="hover:text-white/70 transition">
               Cookies
-            </a>
+            </Link>
+            <Link href="/legal" className="hover:text-white/70 transition">
+              Legal
+            </Link>
           </div>
         </div>
       </div>

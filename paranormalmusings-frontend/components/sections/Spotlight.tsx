@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from '../icons'
 import { artwork, getContent } from '@/lib/content'
@@ -22,11 +23,13 @@ export default async function Spotlight() {
         <h2 className="relative font-display text-[24px] lg:text-[26px] mb-7">Investigator&rsquo;s Spotlight</h2>
 
         <div className="relative grid lg:grid-cols-[1.05fr_1fr] gap-8 lg:gap-12 items-center">
-          <Link href={href} className="zoom-wrap rounded-2xl block">
-            <img
+          <Link href={href} className="zoom-wrap relative rounded-2xl block h-[240px] sm:h-[320px]">
+            <Image
               src={artwork(spotlight.image, spotlight.seed, 1200, 760)}
               alt={spotlight.alt}
-              className="w-full h-[240px] sm:h-[320px] object-cover moody"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover moody"
             />
           </Link>
 
@@ -35,7 +38,7 @@ export default async function Spotlight() {
             <h3 className="mt-3 font-display text-[28px] sm:text-[34px] leading-[1.15]">{spotlight.title}</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-white/70 max-w-xl">{spotlight.excerpt}</p>
             <div className="mt-5 flex items-center gap-2.5 text-[12.5px] text-white/55">
-              <img src={artwork(content.site.authorImage, 'pm-praveen', 80, 80)} alt="" className="w-6 h-6 rounded-full object-cover" />
+              <Image src={artwork(content.site.authorImage, 'pm-praveen', 80, 80)} alt="" width={24} height={24} className="w-6 h-6 rounded-full object-cover" />
               <span className="font-semibold text-white/85">{content.site.author}</span>
               <span className="opacity-50">•</span>
               <span>{spotlight.date}</span>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import SectionLink from '../SectionLink'
 import { ArrowRight } from '../icons'
@@ -29,8 +30,8 @@ export default async function Investigation() {
               <span className="w-8 shrink-0 font-extrabold text-[15px] text-ink/25 tabular-nums">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <div className="zoom-wrap rounded-lg shrink-0 w-[62px] h-[44px] hidden sm:block">
-                <img src={artwork(post.image, post.seed, 200, 140)} alt="" className="w-full h-full object-cover moody" />
+              <div className="zoom-wrap relative rounded-lg shrink-0 w-[62px] h-[44px] hidden sm:block">
+                <Image src={artwork(post.image, post.seed, 200, 140)} alt="" fill sizes="62px" className="object-cover moody" />
               </div>
               <p className="label text-gold-600 w-[112px] shrink-0 hidden lg:block">{content.categoryLabel(post)}</p>
               <h3 className="flex-1 min-w-0 font-display text-[17px] sm:text-[18px] text-ink hover-title truncate">
