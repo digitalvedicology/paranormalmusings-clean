@@ -77,7 +77,7 @@ export default function CookiesPage() {
           <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
           <li><strong>Edge:</strong> Settings → Privacy, search, and services → Clear browsing data</li>
         </ul>
-        <p className="mt-4">You can also enable "Block all cookies" in your browser settings. Paranormal Musings will function normally with cookies blocked.</p>
+        <p className="mt-4">You can also enable &quot;Block all cookies&quot; in your browser settings. Paranormal Musings will function normally with cookies blocked.</p>
       </section>
 
       <section className="mb-10">

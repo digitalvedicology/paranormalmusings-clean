@@ -76,12 +76,12 @@ export default function LegalPage() {
 
       <section className="mb-10">
         <h2 className="text-2xl font-display mt-10 mb-4">9. Assumption of Risk</h2>
-        <p>By reading this website and applying any information contained herein, you assume full responsibility for any consequences resulting from your actions. Paranormal Musings and its author are not liable for any harm, loss, or damage arising from your use of this site's content.</p>
+        <p>By reading this website and applying any information contained herein, you assume full responsibility for any consequences resulting from your actions. Paranormal Musings and its author are not liable for any harm, loss, or damage arising from your use of this site&apos;s content.</p>
       </section>
 
       <section className="mb-10">
         <h2 className="text-2xl font-display mt-10 mb-4">10. Children and Sensitive Content</h2>
-        <p>Some content on this site discusses disturbing topics including death, violence, possession, and psychological trauma. While not gratuitous, this content may not be appropriate for children. Parents and guardians should monitor younger readers' access to this site.</p>
+        <p>Some content on this site discusses disturbing topics including death, violence, possession, and psychological trauma. While not gratuitous, this content may not be appropriate for children. Parents and guardians should monitor younger readers&apos; access to this site.</p>
       </section>
 
       <section className="mb-10">

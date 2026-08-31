@@ -3,4 +3,5 @@
  * Note: Dynamic redirects are handled by middleware.ts instead
  * This file exists for the next.config.mjs import
  */
-export default []
+const redirects = []
+export default redirects
