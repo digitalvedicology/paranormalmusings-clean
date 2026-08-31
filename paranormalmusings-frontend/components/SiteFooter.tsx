@@ -10,9 +10,7 @@ export default async function SiteFooter() {
       {/* Contact form section */}
       <div className="bg-night-800 border-t border-b border-white/10">
         <div className="wrap py-14 lg:py-16">
-          <div className="max-w-md">
-            <ContactForm />
-          </div>
+          <ContactForm />
         </div>
       </div>
 
