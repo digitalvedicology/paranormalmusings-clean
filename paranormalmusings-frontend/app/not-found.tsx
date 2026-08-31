@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SearchInput from '@/components/SearchInput'
 import { getContent } from '@/lib/content'
 
 /**
@@ -34,17 +35,7 @@ export default async function NotFound() {
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
-            <input
-              type="search"
-              placeholder="Search articles…"
-              className="flex-1 outline-none bg-transparent text-ink placeholder:text-muted"
-              onFocus={(e) => {
-                // Trigger search overlay if it exists
-                const searchButton = document.querySelector('[aria-label="Search"]') as HTMLButtonElement
-                if (searchButton) searchButton.click()
-                e.target.blur()
-              }}
-            />
+            <SearchInput />
           </div>
         </div>
 
