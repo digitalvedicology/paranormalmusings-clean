@@ -235,7 +235,7 @@ export default function ContactForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        disabled={formState.status === 'loading' || formState.status === 'success'}
+        disabled={formState.status === 'loading'}
         className="mt-6 inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-gold-500 text-white text-[14px] font-semibold hover:bg-gold-600 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-soft"
       >
         {formState.status === 'loading' ? 'Sending...' : 'Send message'}
