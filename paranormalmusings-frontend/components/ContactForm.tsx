@@ -176,7 +176,7 @@ export default function ContactForm() {
         {/* Form Header */}
         <div className="mb-8">
           <h3 className="font-display text-[26px] text-ink mb-2">Get in touch</h3>
-          <p className="text-[15px] text-body/75">I'd love to hear from you. Send me a message and I'll respond as soon as possible.</p>
+          <p className="text-[15px] text-body/75">I&apos;d love to hear from you. Send me a message and I&apos;ll respond as soon as possible.</p>
         </div>
 
         {/* Name and Email */}
