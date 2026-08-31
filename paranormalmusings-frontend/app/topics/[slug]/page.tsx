@@ -59,7 +59,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
       {/* Posts */}
       <section className="wrap py-12 lg:py-16">
         {posts.length > 0 ? (
-          <PostGrid posts={posts} content={content} />
+          <PostGrid posts={posts.map(content.toCard)} author={content.site.author} authorImage={content.site.authorImage} />
         ) : (
           <div className="text-center py-12">
             <p className="text-body mb-6">No posts found with this tag yet.</p>
