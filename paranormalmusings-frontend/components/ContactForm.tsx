@@ -122,7 +122,7 @@ export default function ContactForm() {
 
   if (formState.status === 'success') {
     return (
-      <div className="rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-10 text-center">
+      <div className="w-full rounded-3xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-10 text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-6">
           <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="m4 12.5 5 5L20 7" />
@@ -149,7 +149,7 @@ export default function ContactForm() {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="w-full max-w-2xl mx-auto rounded-3xl bg-gradient-to-br from-paper to-paper/95 border border-divider/60 p-8 sm:p-12 shadow-lg hover:shadow-xl transition-shadow"
+      className="w-full rounded-3xl bg-gradient-to-br from-paper to-paper/95 border border-divider/60 p-8 sm:p-12 shadow-lg hover:shadow-xl transition-shadow"
     >
       {/* Error message */}
       {formState.status === 'error' && (
