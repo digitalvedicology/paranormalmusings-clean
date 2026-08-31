@@ -12,7 +12,7 @@ export default function WriteToUs() {
 
           <div>
             <p className="text-[14.5px] leading-relaxed text-body/90 max-w-md">
-              Have experiences to share? Questions about the paranormal? Get in touch — I'd love to hear from you.
+              Have experiences to share? Questions about the paranormal? Get in touch — I&apos;d love to hear from you.
             </p>
             <div className="mt-5 flex flex-col gap-3">
               <a

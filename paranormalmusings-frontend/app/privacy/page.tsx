@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -13,7 +14,7 @@ export default function PrivacyPage() {
 
       <section className="mb-10">
         <h2 className="text-2xl font-display mt-10 mb-4">Overview</h2>
-        <p>Paranormal Musings ("we," "us," "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+        <p>Paranormal Musings (&quot;we,&quot; &quot;us,&quot; &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
       </section>
 
       <section className="mb-10">
@@ -77,7 +78,7 @@ export default function PrivacyPage() {
 
       <section className="mb-10">
         <h2 className="text-2xl font-display mt-10 mb-4">Cookies</h2>
-        <p>Our website does not use cookies for tracking or analytics. See our <a href="/cookies" className="text-gold-500 hover:text-gold-400 underline">Cookies Policy</a> for details.</p>
+        <p>Our website does not use cookies for tracking or analytics. See our <Link href="/cookies" className="text-gold-500 hover:text-gold-400 underline">Cookies Policy</Link> for details.</p>
       </section>
 
       <section className="mb-10">

@@ -22,11 +22,16 @@ export default function GA4Init() {
     document.head.appendChild(script)
 
     // Initialize gtag
-    ;(window as any).dataLayer = (window as any).dataLayer || []
-    function gtag(...args: any[]) {
-      ;(window as any).dataLayer.push(arguments)
+    interface WindowWithDataLayer extends Window {
+      dataLayer?: unknown[]
+      gtag?: (...args: unknown[]) => void
     }
-    ;(window as any).gtag = gtag
+    const windowWithDataLayer = window as WindowWithDataLayer
+    windowWithDataLayer.dataLayer = windowWithDataLayer.dataLayer || []
+    function gtag(...args: unknown[]) {
+      windowWithDataLayer.dataLayer?.push(args)
+    }
+    windowWithDataLayer.gtag = gtag
 
     gtag('js', new Date())
     gtag('config', gaId, {

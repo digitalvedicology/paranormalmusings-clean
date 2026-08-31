@@ -110,7 +110,7 @@ export default function ContactForm() {
           retryAfter: data.retryAfter,
         })
       }
-    } catch (error) {
+    } catch {
       setFormState({
         status: 'error',
         message: 'Failed to send message. Please try again.',

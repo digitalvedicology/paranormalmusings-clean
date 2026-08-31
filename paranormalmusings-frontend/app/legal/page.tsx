@@ -55,7 +55,7 @@ export default function LegalPage() {
 
       <section className="mb-10">
         <h2 className="text-2xl font-display mt-10 mb-4">5. Vedic and Spiritual Content</h2>
-        <p>Content related to Vedic teachings, Hindu philosophy, astrology, and spiritual practices represents one person's perspective and interpretation. These subjects are vast, complex, and interpreted differently across traditions and teachers. This website does not claim to represent the only or "correct" interpretation.</p>
+        <p>Content related to Vedic teachings, Hindu philosophy, astrology, and spiritual practices represents one person&apos;s perspective and interpretation. These subjects are vast, complex, and interpreted differently across traditions and teachers. This website does not claim to represent the only or &quot;correct&quot; interpretation.</p>
         <p className="mt-4">Readers are encouraged to explore these traditions through multiple sources and qualified teachers.</p>
       </section>
 

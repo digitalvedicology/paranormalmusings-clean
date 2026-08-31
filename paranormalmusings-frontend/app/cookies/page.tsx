@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Cookies Policy',
@@ -93,7 +94,7 @@ export default function CookiesPage() {
 
       <section className="mb-10">
         <h2 className="text-2xl font-display mt-10 mb-4">Contact Form Data</h2>
-        <p>When you submit the contact form, we collect your name, email, and message. This data is not stored in cookies — it is transmitted securely to our email service (Resend) and backup storage (Payload CMS). See our <a href="/privacy" className="text-gold-500 hover:text-gold-400 underline">Privacy Policy</a> for details.</p>
+        <p>When you submit the contact form, we collect your name, email, and message. This data is not stored in cookies — it is transmitted securely to our email service (Resend) and backup storage (Payload CMS). See our <Link href="/privacy" className="text-gold-500 hover:text-gold-400 underline">Privacy Policy</Link> for details.</p>
       </section>
 
       <section className="mb-10">
@@ -107,12 +108,12 @@ export default function CookiesPage() {
         <p className="mt-4">
           <a href="mailto:support@vedicology.com" className="text-gold-500 hover:text-gold-400 underline">support@vedicology.com</a>
         </p>
-        <p className="mt-4">Or use our <a href="/" className="text-gold-500 hover:text-gold-400 underline">contact form</a>.</p>
+        <p className="mt-4">Or use our <Link href="/" className="text-gold-500 hover:text-gold-400 underline">contact form</Link>.</p>
       </section>
 
       <section className="mb-10 bg-gold-500/10 border-l-4 border-gold-500 p-6">
         <h3 className="text-lg font-semibold mb-2">TL;DR</h3>
-        <p>We don't use cookies, don't track you, and don't sell your data. Our site works fine with cookies disabled.</p>
+        <p>We don&apos;t use cookies, don&apos;t track you, and don&apos;t sell your data. Our site works fine with cookies disabled.</p>
       </section>
     </article>
   )

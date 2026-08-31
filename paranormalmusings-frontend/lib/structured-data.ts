@@ -114,7 +114,13 @@ export function breadcrumbSchema(
   categoryMeta: CategoryPage,
   post?: Post,
 ) {
-  const items: any[] = [
+  interface BreadcrumbItem {
+    '@type': string
+    position: number
+    name: string
+    item: string
+  }
+  const items: BreadcrumbItem[] = [
     {
       '@type': 'ListItem',
       position: 1,

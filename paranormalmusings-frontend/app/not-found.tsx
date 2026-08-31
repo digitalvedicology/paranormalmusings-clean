@@ -18,7 +18,7 @@ export default async function NotFound() {
             404
           </h1>
           <p className="text-[18px] sm:text-[20px] leading-[1.6] text-muted max-w-xl">
-            The article you're looking for has either been moved, renamed, or doesn't exist.
+            The article you&apos;re looking for has either been moved, renamed, or doesn&apos;t exist.
           </p>
         </div>
 

@@ -3,50 +3,6 @@ import Link from 'next/link'
 import ContactForm from './ContactForm'
 import { getContent } from '@/lib/content'
 
-const socials = [
-  {
-    label: 'Instagram',
-    path: (
-      <>
-        <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="17" cy="7" r="1" fill="currentColor" />
-      </>
-    ),
-    size: 'w-[17px] h-[17px]',
-  },
-  {
-    label: 'LinkedIn',
-    path: (
-      <path
-        fill="currentColor"
-        d="M4.5 8.8h3v10.7h-3V8.8Zm1.5-4.6a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM10 8.8h2.9v1.5h.04c.4-.76 1.4-1.56 2.9-1.56 3.1 0 3.66 2 3.66 4.7v6h-3v-5.3c0-1.27-.02-2.9-1.8-2.9-1.8 0-2.07 1.37-2.07 2.8v5.4h-3V8.8Z"
-      />
-    ),
-    size: 'w-[17px] h-[17px]',
-  },
-  {
-    label: 'X',
-    path: (
-      <path
-        fill="currentColor"
-        d="M17.5 3h3l-6.6 7.5L21.8 21h-6l-4.7-6-5.3 6H2.8l7-8L2.5 3h6.2l4.2 5.6L17.5 3Zm-1.1 16.2h1.7L7.7 4.7H5.9l10.5 14.5Z"
-      />
-    ),
-    size: 'w-[15px] h-[15px]',
-  },
-  {
-    label: 'YouTube',
-    path: (
-      <path
-        fill="currentColor"
-        d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3-5.2 3Z"
-      />
-    ),
-    size: 'w-[18px] h-[18px]',
-  },
-]
-
 export default async function SiteFooter() {
   const content = await getContent()
   return (

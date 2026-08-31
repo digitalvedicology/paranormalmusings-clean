@@ -25,7 +25,7 @@ export default function TermsPage() {
           <li>Attempt to decompile or reverse engineer any software contained on the website</li>
           <li>Remove any copyright or other proprietary notations from the materials</li>
           <li>Transmit the materials to anyone or duplicate them on any other server</li>
-          <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+          <li>Transfer the materials to another person or &quot;mirror&quot; the materials on any other server</li>
           <li>Violate any applicable laws or regulations</li>
           <li>Encourage or conduct any illegal activity</li>
         </ul>

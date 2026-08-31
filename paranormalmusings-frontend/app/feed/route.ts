@@ -17,10 +17,10 @@ export async function GET() {
     .slice(0, 20)
 
   // Extract plain text from blocks for description
-  const getPlainText = (blocks: any[]) => {
+  const getPlainText = (blocks: Array<{ type: string; text?: string }>) => {
     return blocks
       .filter((b) => b.type === 'p')
-      .map((b) => b.text)
+      .map((b) => b.text || '')
       .join(' ')
       .slice(0, 300)
   }

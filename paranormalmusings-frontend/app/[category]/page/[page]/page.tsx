@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const categoryHref = meta.href
   const pageUrl = `${baseUrl}${categoryHref}/page/${resolved.page}`
 
-  const alternates: any = { canonical: pageUrl }
+  const alternates: Record<string, string> = { canonical: pageUrl }
 
   // rel="prev" (except on page 2)
   if (resolved.page > 2) {

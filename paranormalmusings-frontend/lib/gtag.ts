@@ -6,6 +6,11 @@
 // Your GA4 Measurement ID - set this via environment variable
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
+interface WindowWithDataLayer extends Window {
+  dataLayer?: unknown[]
+  gtag?: (...args: unknown[]) => void
+}
+
 /**
  * Initialize Google Analytics on the client
  */
@@ -19,9 +24,10 @@ export function initGA() {
   document.head.appendChild(script)
 
   // Initialize gtag
-  window.dataLayer = window.dataLayer || []
-  function gtag(...args: any[]) {
-    window.dataLayer.push(arguments)
+  const windowWithDataLayer = window as WindowWithDataLayer
+  windowWithDataLayer.dataLayer = windowWithDataLayer.dataLayer || []
+  function gtag(...args: unknown[]) {
+    windowWithDataLayer.dataLayer?.push(args)
   }
   gtag('js', new Date())
   gtag('config', GA_ID, {
@@ -29,7 +35,7 @@ export function initGA() {
     anonymize_ip: true,
     cookie_flags: 'SameSite=None;Secure',
   })
-  ;(window as any).gtag = gtag
+  windowWithDataLayer.gtag = gtag
 }
 
 /**
@@ -38,7 +44,7 @@ export function initGA() {
 export function trackEvent(action: string, category: string, label?: string, value?: number) {
   if (typeof window === 'undefined' || !GA_ID) return
 
-  const gtag = (window as any).gtag
+  const gtag = (window as WindowWithDataLayer).gtag
   if (!gtag) return
 
   gtag('event', action, {
@@ -54,7 +60,7 @@ export function trackEvent(action: string, category: string, label?: string, val
 export function trackPageView(path: string, title: string) {
   if (typeof window === 'undefined' || !GA_ID) return
 
-  const gtag = (window as any).gtag
+  const gtag = (window as WindowWithDataLayer).gtag
   if (!gtag) return
 
   gtag('config', GA_ID, {

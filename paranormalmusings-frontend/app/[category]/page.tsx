@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const archiveCount = allPosts.length - 1 // Exclude lead story
   const totalPages = Math.ceil(archiveCount / 15)
 
-  const alternates: any = { canonical: `${baseUrl}${meta.href}` }
+  const alternates: Record<string, string> = { canonical: `${baseUrl}${meta.href}` }
 
   // rel="next" for page 2
   if (totalPages > 1) {
