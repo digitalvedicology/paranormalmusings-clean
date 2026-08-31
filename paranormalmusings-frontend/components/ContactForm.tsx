@@ -118,23 +118,23 @@ export default function ContactForm() {
     }
   }
 
-  const field = 'w-full px-4 py-2.5 rounded-lg border border-divider text-body placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold-500 transition disabled:opacity-50'
+  const field = 'w-full px-4 py-3 rounded-lg border border-divider bg-paper text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition disabled:opacity-60 disabled:cursor-not-allowed'
 
   if (formState.status === 'success') {
     return (
-      <div className="rounded-2xl bg-green-50 border border-green-200 p-8">
-        <div className="grid place-items-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-5">
-          <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <div className="rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-10 text-center">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-6">
+          <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="m4 12.5 5 5L20 7" />
           </svg>
         </div>
-        <h3 className="font-display text-[24px] text-ink">Message received</h3>
-        <p className="mt-3 text-[15px] leading-relaxed text-body">
-          Thank you for writing. We read everything but cannot reply to every message. Your inquiry has been recorded.
+        <h3 className="font-display text-[28px] text-ink mb-2">Message received!</h3>
+        <p className="text-[15px] leading-relaxed text-body/85 max-w-md mx-auto mb-6">
+          Thank you for reaching out. I read every message and will get back to you as soon as possible.
         </p>
         <button
           onClick={() => setFormState({ status: 'idle' })}
-          className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-ink hover:opacity-70 transition"
+          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-ink text-paper font-semibold text-[14px] hover:opacity-90 transition"
         >
           Send another message
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,109 +149,130 @@ export default function ContactForm() {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="rounded-2xl bg-paper border border-divider p-6 sm:p-8 shadow-soft"
+      className="w-full max-w-2xl mx-auto rounded-2xl bg-paper border border-divider p-8 sm:p-12 shadow-soft"
     >
       {/* Error message */}
       {formState.status === 'error' && (
-        <div className="mb-6 p-4 rounded-lg bg-red-50 border border-red-200">
-          <p className="text-red-800 text-[14px] font-medium">{formState.message}</p>
-          {formState.retryAfter && (
-            <p className="text-red-700 text-[12px] mt-2">
-              Please wait {Math.ceil(formState.retryAfter / 60)} minutes before trying again.
-            </p>
-          )}
+        <div className="mb-8 p-4 rounded-xl bg-red-50 border border-red-200">
+          <div className="flex gap-3">
+            <svg className="w-5 h-5 text-red-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+            </svg>
+            <div>
+              <p className="text-red-800 text-[14px] font-semibold">{formState.message}</p>
+              {formState.retryAfter && (
+                <p className="text-red-700 text-[13px] mt-1">
+                  Please wait {Math.ceil(formState.retryAfter / 60)} minute{Math.ceil(formState.retryAfter / 60) > 1 ? 's' : ''} before trying again.
+                </p>
+              )}
+            </div>
+          </div>
         </div>
       )}
 
-      {/* Name and Email */}
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="contact-name" className="block text-[14px] font-medium text-ink mb-2">
-            Your name
-          </label>
-          <input
-            id="contact-name"
-            name="name"
-            type="text"
-            required
-            maxLength={100}
-            placeholder="Full name"
-            disabled={formState.status === 'loading'}
-            className={field}
-          />
+      <div className="space-y-6">
+        {/* Name and Email */}
+        <div className="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label htmlFor="contact-name" className="block text-[14px] font-semibold text-ink mb-2">
+              Your name
+            </label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              required
+              maxLength={100}
+              placeholder="Full name"
+              disabled={formState.status === 'loading'}
+              className={field}
+            />
+          </div>
+          <div>
+            <label htmlFor="contact-email" className="block text-[14px] font-semibold text-ink mb-2">
+              Email address
+            </label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+              disabled={formState.status === 'loading'}
+              className={field}
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor="contact-email" className="block text-[14px] font-medium text-ink mb-2">
-            Email
-          </label>
-          <input
-            id="contact-email"
-            name="email"
-            type="email"
-            required
-            placeholder="you@example.com"
-            disabled={formState.status === 'loading'}
-            className={field}
-          />
-        </div>
-      </div>
 
-      {/* Message */}
-      <div className="mt-4">
-        <label htmlFor="contact-message" className="block text-[14px] font-medium text-ink mb-2">
-          Message
-        </label>
-        <textarea
-          id="contact-message"
-          name="message"
-          required
-          minLength={10}
-          maxLength={5000}
-          rows={6}
-          placeholder="Tell me what's on your mind..."
-          disabled={formState.status === 'loading'}
-          className={`${field} resize-y`}
+        {/* Message */}
+        <div>
+          <label htmlFor="contact-message" className="block text-[14px] font-semibold text-ink mb-2">
+            Your message
+          </label>
+          <textarea
+            id="contact-message"
+            name="message"
+            required
+            minLength={10}
+            maxLength={5000}
+            rows={7}
+            placeholder="Tell me what's on your mind..."
+            disabled={formState.status === 'loading'}
+            className={`${field} resize-none`}
+          />
+          <p className="mt-2 text-[12px] text-muted">10–5000 characters</p>
+        </div>
+
+        {/* Honeypot field (hidden from real users) */}
+        <input
+          name="honeypot"
+          type="text"
+          style={{ display: 'none' }}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
         />
-        <p className="mt-1 text-[12px] text-muted">10–5000 characters</p>
+
+        {/* Turnstile Widget */}
+        {process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_KEY && (
+          <div className="flex justify-center">
+            <div ref={turnstileRef} />
+          </div>
+        )}
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={formState.status === 'loading'}
+          className="w-full h-13 px-8 rounded-lg bg-gold-500 text-white text-[15px] font-semibold hover:bg-gold-600 active:scale-95 transition disabled:opacity-60 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
+        >
+          {formState.status === 'loading' ? (
+            <span className="inline-flex items-center gap-2">
+              <svg className="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" strokeWidth="2" className="opacity-25" />
+                <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+              </svg>
+              Sending...
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-2">
+              Send message
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          )}
+        </button>
+
+        {/* Privacy notice */}
+        <p className="text-[13px] leading-relaxed text-muted/85">
+          Your privacy matters. We only use your information to respond to your message. Your data is protected under the{' '}
+          <Link href="/privacy" className="text-ink font-medium hover:underline">
+            Privacy Policy
+          </Link>
+          {' '}(India DPDP Act 2023 &amp; GDPR compliant).
+        </p>
       </div>
-
-      {/* Honeypot field (hidden from real users) */}
-      <input
-        name="honeypot"
-        type="text"
-        style={{ display: 'none' }}
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-      />
-
-      {/* Turnstile Widget */}
-      {process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_KEY && (
-        <div className="mt-4 flex justify-center">
-          <div ref={turnstileRef} />
-        </div>
-      )}
-
-      {/* Submit Button */}
-      <button
-        type="submit"
-        disabled={formState.status === 'loading'}
-        className="mt-6 inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-gold-500 text-white text-[14px] font-semibold hover:bg-gold-600 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-soft"
-      >
-        {formState.status === 'loading' ? 'Sending...' : 'Send message'}
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      {/* Privacy notice */}
-      <p className="mt-4 text-[12px] leading-relaxed text-muted">
-        Nothing you write here is published. We collect your name and email to respond to your message. Your data is protected under the{' '}
-        <Link href="/" className="text-ink hover:underline">
-          Privacy Policy
-        </Link>{' '}
-        (India DPDP Act 2023 &amp; GDPR compliant).
-      </p>
     </form>
   )
 }
