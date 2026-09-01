@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 import { contactFormLimiter } from '@/lib/rate-limiter'
 
 interface ContactFormData {
@@ -122,37 +123,42 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Send email via Resend (if configured)
+    // Send email via Nodemailer SMTP
     let emailSent = false
-    const resendApiKey = process.env.RESEND_API_KEY
+    const smtpHost = process.env.SMTP_HOST
+    const smtpPort = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 587
+    const smtpUser = process.env.SMTP_USER
+    const smtpPassword = process.env.SMTP_PASSWORD
+    const smtpFrom = process.env.SMTP_FROM || 'contact@paranormalmusings.com'
+    const contactEmailTo = process.env.CONTACT_EMAIL_TO || 'support@vedicology.com'
 
-    if (resendApiKey) {
+    if (smtpHost && smtpUser && smtpPassword) {
       try {
-        const emailResponse = await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${resendApiKey}`,
+        const transporter = nodemailer.createTransport({
+          host: smtpHost,
+          port: smtpPort,
+          secure: smtpPort === 465,
+          auth: {
+            user: smtpUser,
+            pass: smtpPassword,
           },
-          body: JSON.stringify({
-            from: `noreply@paranormalmusings.com`,
-            to: process.env.CONTACT_EMAIL_TO || 'support@vedicology.com',
-            replyTo: body.email,
-            subject: `New contact form message from ${body.name}`,
-            html: generateEmailHtml(body.name, body.email, body.message),
-            text: `Name: ${body.name}\nEmail: ${body.email}\n\nMessage:\n${body.message}`,
-          }),
         })
 
-        if (!emailResponse.ok) {
-          const error = await emailResponse.text()
-          console.error('[contact] Resend API error:', error)
-        } else {
-          emailSent = true
-        }
+        await transporter.sendMail({
+          from: smtpFrom,
+          to: contactEmailTo,
+          replyTo: body.email,
+          subject: `New contact form message from ${body.name}`,
+          html: generateEmailHtml(body.name, body.email, body.message),
+          text: `Name: ${body.name}\nEmail: ${body.email}\n\nMessage:\n${body.message}`,
+        })
+
+        emailSent = true
       } catch (error) {
-        console.error('[contact] Failed to send email via Resend:', (error as Error).message)
+        console.error('[contact] Failed to send email via SMTP:', (error as Error).message)
       }
+    } else {
+      console.warn('[contact] SMTP not configured - set SMTP_HOST, SMTP_USER, SMTP_PASSWORD')
     }
 
     // Store in Payload CMS
