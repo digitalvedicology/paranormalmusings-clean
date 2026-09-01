@@ -89,7 +89,7 @@ export default function ContactFormModal() {
               Get in touch
             </h2>
             <p className="text-body/75 text-[14px] sm:text-[15px]">
-              Share your paranormal experiences or ask a question. I'd love to hear from you.
+              Share your paranormal experiences or ask a question. I&apos;d love to hear from you.
             </p>
           </div>
 
