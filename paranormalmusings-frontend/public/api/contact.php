@@ -64,7 +64,7 @@ try {
     }
 
     // Email configuration
-    $to_email = 'paranormalmusings@proton.me';
+    $to_email = 'test@paranormalmusings.com';
     $from_email = 'test@paranormalmusings.com';
     $subject = "New contact form message from " . $name;
 
