@@ -60,4 +60,4 @@ class RateLimiter {
   }
 }
 
-export const contactFormLimiter = new RateLimiter(3600000, 5) // 5 per hour
+export const contactFormLimiter = new RateLimiter(3600000, 50) // 50 per hour (increase for testing, reduce to 5 for production)

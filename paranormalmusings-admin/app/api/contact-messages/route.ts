@@ -1,11 +1,44 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { promises as fs } from 'node:fs'
+import path from 'node:path'
 
 export const dynamic = 'force-dynamic'
 
+const DATA_DIR = process.env.DATA_DIR ?? path.join(process.cwd(), 'data')
+const MESSAGES_FILE = path.join(DATA_DIR, 'contact-messages.json')
+
+interface ContactMessage {
+  id: string
+  name: string
+  email: string
+  message: string
+  ipAddress: string
+  userAgent?: string
+  status: string
+  createdAt: string
+}
+
+async function readMessages(): Promise<ContactMessage[]> {
+  try {
+    const data = await fs.readFile(MESSAGES_FILE, 'utf8')
+    return JSON.parse(data) as ContactMessage[]
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      return []
+    }
+    throw error
+  }
+}
+
+async function writeMessages(messages: ContactMessage[]): Promise<void> {
+  await fs.mkdir(DATA_DIR, { recursive: true })
+  await fs.writeFile(MESSAGES_FILE, JSON.stringify(messages, null, 2), 'utf8')
+}
+
 /**
  * POST /api/contact-messages
- * Accept contact form submissions and send via Hostinger SMTP.
+ * Accept contact form submissions and store them to a JSON file.
+ * Simple approach that doesn't require SMTP configuration.
  */
 export async function POST(request: NextRequest) {
   try {
@@ -26,37 +59,32 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create Hostinger SMTP transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'mail.paranormalmusings.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_PORT === '465',
-      auth: {
-        user: process.env.SMTP_USER || 'contact@paranormalmusings.com',
-        pass: process.env.SMTP_PASSWORD || '',
-      },
-    })
+    const now = new Date().toISOString()
+    const message: ContactMessage = {
+      id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      name: body.name,
+      email: body.email,
+      message: body.message,
+      ipAddress: body.ipAddress,
+      userAgent: body.userAgent,
+      status: body.status || 'new',
+      createdAt: now,
+    }
 
-    const recipientEmail = process.env.CONTACT_EMAIL_TO || 'paranormalmusings@proton.me'
+    const messages = await readMessages()
+    messages.unshift(message)
+    await writeMessages(messages)
 
-    // Send email to admin
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || 'contact@paranormalmusings.com',
-      to: recipientEmail,
-      replyTo: body.email,
-      subject: `New contact form message from ${body.name}`,
-      html: generateEmailHtml(body.name, body.email, body.message),
-      text: `Name: ${body.name}\nEmail: ${body.email}\n\nMessage:\n${body.message}`,
-    })
+    console.log(`[contact-messages] New message stored from ${body.name} (${body.email})`)
 
     return NextResponse.json(
-      { success: true, message: 'Message sent successfully' },
+      { success: true, message: 'Message stored successfully' },
       { status: 200 }
     )
   } catch (error) {
     console.error('[contact-messages] Error:', (error as Error).message)
     return NextResponse.json(
-      { success: false, error: 'Failed to send message' },
+      { success: false, error: 'Failed to store message' },
       { status: 500 }
     )
   }
