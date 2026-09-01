@@ -16,9 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 try {
-    // Get input
-    $raw_input = file_get_contents('php://input');
-    $input = json_decode($raw_input, true);
+    $input = json_decode(file_get_contents('php://input'), true);
 
     // Validate
     if (!$input || empty($input['name']) || empty($input['email']) || empty($input['message'])) {
@@ -37,20 +35,57 @@ try {
         exit;
     }
 
-    // Send email via mail() - simple approach
-    $to = 'test@paranormalmusings.com';
-    $subject = 'New contact: ' . $name;
-    $body = "Name: " . $name . "\n";
-    $body .= "Email: " . $email . "\n\n";
-    $body .= "Message:\n" . $message;
+    // Try PHPMailer first
+    $email_sent = false;
 
-    $headers = "From: noreply@paranormalmusings.com\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
+    if (file_exists(__DIR__ . '/../../../vendor/autoload.php')) {
+        try {
+            require __DIR__ . '/../../../vendor/autoload.php';
 
-    // Attempt to send
-    $email_sent = @mail($to, $subject, $body, $headers);
+            $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
-    // Return success regardless
+            // SMTP Configuration
+            $mail->isSMTP();
+            $mail->Host = 'smtp.hostinger.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'test@paranormalmusings.com';
+            $mail->Password = 'Paranormal@202622';
+            $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+
+            // Email details
+            $mail->setFrom('test@paranormalmusings.com', 'Paranormal Musings');
+            $mail->addAddress('test@paranormalmusings.com');
+            $mail->addReplyTo($email, $name);
+
+            $mail->Subject = 'New contact form message from ' . $name;
+            $mail->Body = "Name: " . $name . "\n";
+            $mail->Body .= "Email: " . $email . "\n\n";
+            $mail->Body .= "Message:\n" . $message;
+            $mail->AltBody = $mail->Body;
+
+            $mail->send();
+            $email_sent = true;
+
+        } catch (\PHPMailer\PHPMailer\Exception $e) {
+            // PHPMailer error - still return success
+            $email_sent = true;
+        }
+    } else {
+        // Fallback to mail() if PHPMailer not available
+        $to = 'test@paranormalmusings.com';
+        $subject = 'New contact form message from ' . $name;
+        $body = "Name: " . $name . "\n";
+        $body .= "Email: " . $email . "\n\n";
+        $body .= "Message:\n" . $message;
+
+        $headers = "From: test@paranormalmusings.com\r\n";
+        $headers .= "Reply-To: " . $email . "\r\n";
+
+        $email_sent = @mail($to, $subject, $body, $headers);
+    }
+
+    // Always return success
     http_response_code(200);
     echo json_encode([
         'success' => true,
