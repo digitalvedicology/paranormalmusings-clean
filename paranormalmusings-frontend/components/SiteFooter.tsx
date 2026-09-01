@@ -25,20 +25,6 @@ export default async function SiteFooter() {
               Paranormal explorations and perspectives on &ldquo;life after death&rdquo; from Indian (Eastern) and
               Western viewpoints — including encounters with inhuman energies and the paranormal energy spectrum.
             </p>
-
-            <ul className="mt-6 space-y-3 text-[13.5px] text-white/60">
-              <li className="flex gap-3 items-center">
-                <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 text-gold-300" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round">
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="m3.5 7 8.5 5.5L20.5 7" />
-                </svg>
-                <a href={content.site.email.href} className="hover:text-white transition">
-                  {content.site.email.label}
-                </a>
-              </li>
-            </ul>
-
-            {/* Social links disabled: add when social profiles are available */}
           </div>
 
           {/* Categories */}
