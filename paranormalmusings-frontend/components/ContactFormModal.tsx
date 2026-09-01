@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
 import ContactForm from './ContactForm'
 
 export default function ContactFormModal() {
@@ -129,7 +130,7 @@ export default function ContactFormModal() {
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
               <p className="text-[13px] text-body/75 leading-relaxed">
-                <span className="font-semibold text-body/90">Your privacy is protected.</span> We only use your information to respond to your message. See our <a href="/privacy" className="text-gold-600 hover:text-gold-700 font-medium transition">Privacy Policy</a>.
+                <span className="font-semibold text-body/90">Your privacy is protected.</span> We only use your information to respond to your message. See our <Link href="/privacy" className="text-gold-600 hover:text-gold-700 font-medium transition">Privacy Policy</Link>.
               </p>
             </div>
           </div>
