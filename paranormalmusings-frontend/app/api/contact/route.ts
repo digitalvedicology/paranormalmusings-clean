@@ -138,8 +138,16 @@ export async function POST(request: NextRequest) {
     let emailSent = false
     const contactEmailTo = process.env.CONTACT_EMAIL_TO || 'test@paranormalmusings.com'
 
+    console.log('[contact] SMTP Config:', {
+      host: process.env.SMTP_HOST,
+      user: process.env.SMTP_USER ? 'SET' : 'NOT SET',
+      password: process.env.SMTP_PASSWORD ? 'SET' : 'NOT SET',
+      to: contactEmailTo,
+    })
+
     if (process.env.SMTP_USER && process.env.SMTP_PASSWORD) {
       try {
+        console.log('[contact] Attempting to send email via SMTP...')
         await transporter.sendMail({
           from: process.env.SMTP_USER,
           to: contactEmailTo,
@@ -149,12 +157,17 @@ export async function POST(request: NextRequest) {
           text: `Name: ${body.name}\nEmail: ${body.email}\n\nMessage:\n${body.message}`,
         })
 
+        console.log('[contact] Email sent successfully!')
         emailSent = true
       } catch (error) {
-        console.error('[contact] Failed to send email via SMTP:', (error as Error).message)
+        console.error('[contact] Failed to send email:', {
+          message: (error as Error).message,
+          code: (error as any).code,
+          command: (error as any).command,
+        })
       }
     } else {
-      console.warn('[contact] SMTP not configured - set SMTP_USER and SMTP_PASSWORD')
+      console.warn('[contact] SMTP credentials missing - set SMTP_USER and SMTP_PASSWORD environment variables')
     }
 
     // Store in Payload CMS
