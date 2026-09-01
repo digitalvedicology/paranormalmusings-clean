@@ -70,7 +70,7 @@ export default function ContactForm({ onSuccess }: { onSuccess?: () => void } = 
     const turnstileToken = turnstileWidgetId ? window.turnstile?.getResponse(turnstileWidgetId) : ''
 
     try {
-      const response = await fetch('/api/contact.php', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
