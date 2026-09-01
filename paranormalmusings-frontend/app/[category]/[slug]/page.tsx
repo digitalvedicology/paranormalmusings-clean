@@ -41,20 +41,27 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const content = await (await import('@/lib/content')).getContent()
   const baseUrl = 'https://paranormalmusings.com'
   const articleUrl = `${baseUrl}${content.articleHref(post)}`
-  const description = post.dek || post.excerpt
+
+  // Use SEO metadata if available, fallback to post content
+  const title = post.seo?.metaTitle || post.title
+  const description = post.seo?.metaDescription || post.dek || post.excerpt
+  const ogTitle = post.seo?.ogTitle || post.title
+  const ogDescription = post.seo?.ogDescription || description
+  const ogImage = post.seo?.ogImage || undefined
+  const canonical = post.seo?.canonical || articleUrl
 
   // Parse and format date to ISO 8601
   const publishedDate = post.date ? formatDateToISO8601(post.date) : undefined
 
-  return {
-    title: post.title,
+  const metadata: Metadata = {
+    title,
     description,
     alternates: {
-      canonical: articleUrl,
+      canonical,
     },
     openGraph: {
-      title: post.title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       type: 'article',
       url: articleUrl,
       publishedTime: publishedDate,
@@ -64,11 +71,20 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       creator: '@paranormalmusings',
     },
   }
+
+  if (ogImage) {
+    metadata.openGraph = {
+      ...metadata.openGraph,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    }
+  }
+
+  return metadata
 }
 
 

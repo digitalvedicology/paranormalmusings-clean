@@ -109,6 +109,15 @@
             "slug": "shraadh-ceremony-and-prayers-for-the-dead"
           }
         ]
+      },
+      "seo": {
+        "metaTitle": "Eastern Views on death, afterlife and the paranormal - paranormalmusings.com",
+        "metaDescription": "According to eastern views the disembodied spirits, based on their attachments to the world, stay earthbound after death.",
+        "keyword": "eastern views death afterlife paranormal",
+        "ogTitle": "Eastern Views on death, afterlife and the paranormal",
+        "ogDescription": "According to eastern views the disembodied spirits, based on their attachments to the world, stay earthbound after death.",
+        "ogImage": "/images/og-eastern-death.jpg",
+        "canonical": "https://paranormalmusings.com/eastern-views-on-death-afterlife-and-the-paranormal/"
       }
     },
     {
@@ -189,7 +198,16 @@
           }
         ]
       },
-      "image": ""
+      "image": "",
+      "seo": {
+        "metaTitle": "Paranormal Western Views - paranormalmusings.com",
+        "metaDescription": "Discover Western perspectives on paranormal phenomena including ghost encounters hauntings and spiritual beliefs across Western cultures.",
+        "keyword": "paranormal western views",
+        "ogTitle": "Paranormal Western Views Archives",
+        "ogDescription": "Western perspectives on paranormal phenomena including ghost encounters and spiritual beliefs.",
+        "ogImage": "/images/og-western-views.jpg",
+        "canonical": "https://paranormalmusings.com/category/paranormal-western-views/"
+      }
     },
     {
       "key": "investigation",
@@ -278,7 +296,16 @@
           }
         ]
       },
-      "image": ""
+      "image": "",
+      "seo": {
+        "metaTitle": "Paranormal Investigation - paranormalmusings.com",
+        "metaDescription": "Learn about paranormal investigation techniques",
+        "keyword": "equipment",
+        "ogTitle": "and methodologies for ghost hunting and spirit detection by expert paranormal investigator.",
+        "ogDescription": "paranormal investigation",
+        "ogImage": "Paranormal Investigation Archives",
+        "canonical": "Paranormal investigation techniques"
+      }
     },
     {
       "key": "cases",
@@ -297,7 +324,16 @@
         "clusters": [],
         "questions": []
       },
-      "image": ""
+      "image": "",
+      "seo": {
+        "metaTitle": "Paranormal Case Studies - paranormalmusings.com",
+        "metaDescription": "Explore real paranormal case studies and investigations by Paranormal Expert Praveen Saanker. Detailed analysis of spirit possession and hauntings.",
+        "keyword": "case studies",
+        "ogTitle": "Paranormal Case Studies Archives",
+        "ogDescription": "Real paranormal case studies and investigations covering spirit possession and hauntings.",
+        "ogImage": "/images/og-case-studies.jpg",
+        "canonical": "https://paranormalmusings.com/category/case-studies/"
+      }
     }
   ],
   "posts": [
@@ -502,7 +538,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost or Spirit Possession of Prateek: Case Study Number 3 -",
+        "metaDescription": "The case study of Prateek will show how a paranormal expert in Chennai, India deals with ghost spirit possession due to addiction.",
+        "keyword": "ghost or spirit possession prateek case",
+        "ogTitle": "Ghost or Spirit Possession of Prateek: Case Study Number 3",
+        "ogDescription": "The case study of Prateek will show how a paranormal expert in Chennai, India deals with ghost spirit possession due to addiction.",
+        "ogImage": "/images/og-prateek-case.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-or-spirit-possession-of-prateek-case-study-number-3/"
+      }
     },
     {
       "slug": "real-possession-stories-the-curious-case-of-paarth-mehta",
@@ -672,7 +717,16 @@
           "text": "Unlike real possession stories, I was addressing the entity who was attached to his aura. In addition, I also said if a loved one was present. The spirit answered that his wife had come. I performed a depossession therapy, and he apparently went with her into the Light. However, in the end, I was successful in helping Paarth through depossession therapy."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Real Possession Stories - The Curious Case of Paarth Mehta - Case Study 5",
+        "metaDescription": "Our last of several real possession stories is going to be of Paarth Mehta. As a paranormal expert in Chennai, India, this was pretty tough.",
+        "keyword": "real possession stories curious case paarth",
+        "ogTitle": "Real Possession Stories - The Curious Case of Paarth Mehta - Case Study 5",
+        "ogDescription": "Our last of several real possession stories is going to be of Paarth Mehta. As a paranormal expert in Chennai, India, this was pretty tough.",
+        "ogImage": "/images/og-paarth-case.jpg",
+        "canonical": "https://paranormalmusings.com/real-possession-stories-the-curious-case-of-paarth-mehta/"
+      }
     },
     {
       "slug": "real-cases-of-possession-the-sara-ajmani-story",
@@ -987,7 +1041,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Real Cases of Possession: The Sara Ajmani Story -",
+        "metaDescription": "As a paranormal investigator in Chennai, India, I have come across many real cases of possession and one case is that on my client - Sara.",
+        "keyword": "real cases possession sara ajmani story",
+        "ogTitle": "Real Cases of Possession: The Sara Ajmani Story",
+        "ogDescription": "As a paranormal investigator in Chennai, India, I have come across many real cases of possession and one case is that on my client - Sara.",
+        "ogImage": "/images/og-sara-case.jpg",
+        "canonical": "https://paranormalmusings.com/real-cases-of-possession-the-sara-ajmani-story/"
+      }
     },
     {
       "slug": "paranormal-investigator-kit-what-are-the-things-you-must-have",
@@ -1138,7 +1201,16 @@
           "text": "They pick up images at both ends of the light spectrum and are usually UV & IR sensitive. Meaning, they allow us to view all sorts of light ranges not typically visible with the human eye. Thus, they pick up things we miss entirely without them. Since ghosts, dogs, and all sorts of things we probably don’t even realize aren’t limited in light, sound, and sensing ranges like we humans are, it’s always extremely beneficial when we can get closer to that limitless state of observation."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Paranormal Investigator Kit: What are the Things You Must Have?",
+        "metaDescription": "A paranormal investigator is nothing without his ghost hunting equipment kit. So what does a paranormal investigator kit contain?",
+        "keyword": "paranormal investigator kit what are things",
+        "ogTitle": "Paranormal Investigator Kit: What are the Things You Must Have?",
+        "ogDescription": "A paranormal investigator is nothing without his ghost hunting equipment kit. So what does a paranormal investigator kit contain?",
+        "ogImage": "/images/og-investigator-kit.jpg",
+        "canonical": "https://paranormalmusings.com/paranormal-investigator-kit-what-are-the-things-you-must-have/"
+      }
     },
     {
       "slug": "ghost-hunting-equipment-must-haves",
@@ -1273,7 +1345,16 @@
           "text": "Full-spectrum camcorders are a must in the ghost hunting equipment kit for a paranormal investigator in India. They pick up images at both ends of the light spectrum and are usually UV & IR sensitive. Meaning, they allow us to view all sorts of light ranges not typically visible with the human eye. Thus, they pick up things we miss entirely without them. Since ghosts, dogs, and all sorts of things we probably don’t even realize aren’t limited in light, sound, and sensing ranges like we humans are, it’s always extremely beneficial when we can get closer to that limitless state of observation."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Hunting Equipment Must-Haves - paranormalmusings.com",
+        "metaDescription": "In this excerpt, we will look at the ghost hunting equipment you must have in your kit to become a paranormal Investigator in India.",
+        "keyword": "ghost hunting equipment must haves",
+        "ogTitle": "Ghost Hunting Equipment Must-Haves",
+        "ogDescription": "In this excerpt, we will look at the ghost hunting equipment you must have in your kit to become a paranormal Investigator in India.",
+        "ogImage": "/images/og-equipment.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-hunting-equipment-must-haves/"
+      }
     },
     {
       "slug": "what-is-a-paranormal-investigator",
@@ -1382,7 +1463,16 @@
           "text": "Most people in the world have the same space to store data in their brains. Everything that has happened and is happening is recorded and kept in our brains. Hence, we must understand our brain and work with what we currently know. And we now know that our environment alters our brain, so you, as a paranormal investigator, should know how to tap into your environment."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is a Paranormal Investigator? - paranormalmusings.com",
+        "metaDescription": "A paranormal investigator or expert should keep his mind open to new ideas to do his paranormal investigation in an unbiased manner.",
+        "keyword": "what is a paranormal investigator",
+        "ogTitle": "What is a Paranormal Investigator?",
+        "ogDescription": "A paranormal investigator or expert should keep his mind open to new ideas to do his paranormal investigation in an unbiased manner.",
+        "ogImage": "/images/og-paranormal-investigator.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-a-paranormal-investigator/"
+      }
     },
     {
       "slug": "how-to-become-a-paranormal-investigator",
@@ -1536,7 +1626,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "How to Become a Paranormal Investigator? - paranormalmusings.com",
+        "metaDescription": "Before I answer how to be a paranormal investigator, it is very important to understand the concept of being a paranormal investigator.",
+        "keyword": "how to become a paranormal investigator",
+        "ogTitle": "How to Become a Paranormal Investigator?",
+        "ogDescription": "Before I answer how to be a paranormal investigator, it is very important to understand the concept of being a paranormal investigator.",
+        "ogImage": "/images/og-become-investigator.jpg",
+        "canonical": "https://paranormalmusings.com/how-to-become-a-paranormal-investigator/"
+      }
     },
     {
       "slug": "ghost-photos-what-is-the-camera-procedure-to-get-best-ghost-photos",
@@ -1656,7 +1755,16 @@
           ]
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Photos: What is the Camera Procedure to Get Best Ghost Photos?",
+        "metaDescription": "Now, just getting a camera to hunt ghost is not enough for a paranormal expert. Let's look at camera procedure to get the best ghost photos.",
+        "keyword": "ghost photos what camera procedure get",
+        "ogTitle": "Ghost Photos: What is the Right Camera Procedure to Get Best Ghost Photos?",
+        "ogDescription": "Now, just getting a camera to hunt ghost is not enough for a paranormal expert. Let's look at camera procedure to get the best ghost photos.",
+        "ogImage": "/images/og-ghost-photos.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-photos-what-is-the-camera-procedure-to-get-best-ghost-photos/"
+      }
     },
     {
       "slug": "cameras-for-ghost-hunting-significance-and-importance",
@@ -1822,7 +1930,16 @@
           "text": "In essence, these are the three types of cameras used for ghost hunting. Each of them has its fair share of pros and cons. However, these still are a marvel of technology. In addition, they have always helped in gathering some phenomenal images as evidence."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Cameras for Ghost Hunting: Significance and Importance",
+        "metaDescription": "Let's look at the cameras for ghost hunting and discuss the importance of camera for ghost hunting in any paranormal investigation.",
+        "keyword": "cameras ghost hunting significance importance",
+        "ogTitle": "Cameras for Ghost Hunting: Significance and Importance",
+        "ogDescription": "Let's look at the cameras for ghost hunting and discuss the importance of camera for ghost hunting in any paranormal investigation.",
+        "ogImage": "/images/og-ghost-cameras.jpg",
+        "canonical": "https://paranormalmusings.com/cameras-for-ghost-hunting-significance-and-importance/"
+      }
     },
     {
       "slug": "ghost-hunting-tips-what-should-you-strictly-avoid",
@@ -1968,7 +2085,16 @@
           "text": "Lastly, I would like to say that ghosts are from another realm where rules are very different. A negative spirit is more inclined towards finding a way to reach you in a paranormal investigation. There have been accounts of people where I heard about things getting really out of control. However, with the help of a professional people have saved themselves from physical and more importantly, mental torture. I have listed three ghost hunting tips and I think the most important of all is to have a cool, calm, and collective mind before you get into such a situation."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Hunting Tips: What Should You Strictly Avoid?",
+        "metaDescription": "Keep these ghost hunting tips in mind before doing a paranormal investigation that makes it worse and that you may regret it later.",
+        "keyword": "ghost hunting tips what should you",
+        "ogTitle": "Ghost Hunting Tips: What Should You Strictly Avoid?",
+        "ogDescription": "Keep these ghost hunting tips in mind before doing a paranormal investigation that makes it worse and that you may regret it later.",
+        "ogImage": "/images/og-hunting-tips.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-hunting-tips-what-should-you-strictly-avoid/"
+      }
     },
     {
       "slug": "ghost-hunting-camera-tips-and-tricks",
@@ -2039,7 +2165,16 @@
           "text": "Here is a little advice – the odds of encountering an evil spirit or entity are slim. Still, never go hunting for evil spirits or entities. Do not dare them to come around. If you hear or see a sign of evil spirits, get out; leave immediately. I cannot stress this enough! You are not trained to handle these evil spirits or entities. Only a person or group that is trained in handling evil spirits should go up against them. You are only going to create trouble you don’t want. Trust me on this!"
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Hunting Camera Tips and Tricks - paranormalmusings.com",
+        "metaDescription": "When it comes to ghost hunting camera, it is important to capture paranormal activity. Let us discussmore about ghost hunting cameras.",
+        "keyword": "ghost hunting camera tips and tricks",
+        "ogTitle": "Ghost Hunting Camera Tips and Tricks",
+        "ogDescription": "When it comes to ghost hunting camera, it is important to capture paranormal activity. Let us discussmore about ghost hunting cameras.",
+        "ogImage": "/images/og-camera-tips.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-hunting-camera-tips-and-tricks/"
+      }
     },
     {
       "slug": "what-is-fear",
@@ -2132,7 +2267,16 @@
           "text": "The purpose of fear is to negate any injury to you. It gives us the feeling of being safe from danger and stops us from doing things whose results are not in our control. Sometimes it is a good thing. For example – if a truck is coming at you on the road, then it’s the fear of getting injured or dying that makes you jump away from the road. Some people might say it’s our reflexes that make us do that. And we agree, but it’s the fear to die that triggers those reflexes. Hence, there are times when it can save your life, but for a paranormal researcher being afraid will make his job too inconvenient."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Fear? How to Overcome Fear? paranormalmusings.com",
+        "metaDescription": "Therefore, in this excerpt, we will understand what is fear, especially in terms of paranormal, and then look at how to overcome fear.",
+        "keyword": "what is fear",
+        "ogTitle": "What is Fear?",
+        "ogDescription": "Therefore, in this excerpt, we will understand what is fear, especially in terms of paranormal, and then look at how to overcome fear.",
+        "ogImage": "/images/og-fear.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-fear/"
+      }
     },
     {
       "slug": "what-are-spirit-orbs",
@@ -2220,7 +2364,16 @@
           "text": "Quite simply, orbs are the easiest way many spirits can manifest with the amount of energy they have to work with. Whenever it comes to orbs, let them multiply. Politely ask them to show you a sign. Know that they listen. And if they want, they can communicate whether through physical sensations or any other way. To wrap it up, it is important to gather evidence while doing paranormal investigations and spirit orbs are one such piece."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What are Spirit Orbs? | Spirit Orbs Meaning - paranormalmusings.com",
+        "metaDescription": "Let us discuss spirit orbs in detail and understand why they are more common than the full-body manifestations in the paranormal world?",
+        "keyword": "what are spirit orbs",
+        "ogTitle": "What are Spirit Orbs?",
+        "ogDescription": "Let us discuss spirit orbs in detail and understand why they are more common than the full-body manifestations in the paranormal world?",
+        "ogImage": "/images/og-spirit-orbs.jpg",
+        "canonical": "https://paranormalmusings.com/what-are-spirit-orbs/"
+      }
     },
     {
       "slug": "what-is-sixth-sense-how-to-develop-sixth-sense-to-be-a-paranormal-inve",
@@ -2355,7 +2508,16 @@
           "text": "She looked at me and sort of screamed that when she flicked the water, it felt as if it hit something and flew back. This was my friends’ first real ghost encounter or with anything paranormal. This was meant to happen since Krishnan was just standing there. To wrap it up, Krishnan went to where he ideally belonged through the white light. The family hasn’t heard any more noise in their house ever since."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Encounter With a Regular Spirit - paranormalmusings.com",
+        "metaDescription": "The most common ghost is just your average, regular ghost in the paranormal realm. This blog is basically a story of my real ghost encounter.",
+        "keyword": "ghost encounter with a regular spirit",
+        "ogTitle": "Ghost Encounter With a Regular Spirit",
+        "ogDescription": "The most common ghost is just your average, regular ghost in the paranormal realm. This blog is basically a story of my real ghost encounter.",
+        "ogImage": "/images/og-ghost-encounter.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-encounter-with-a-regular-spirit/"
+      }
     },
     {
       "slug": "ghost-smell-as-a-sign-that-your-house-is-haunted",
@@ -2413,7 +2575,16 @@
           "text": "Whether you believe in paranormal activity or not, one thing you must note is to not disregard the spirit or ghost. They do not like that. If the ghost didn’t want you to know it was there, you wouldn’t have smelled the ghost smell in the first place. So ignore it and things will likely ramp up, as most ghosts simply hate to be ignored. Now, the only caution I will share here is that negative entities and demons are also big on smell. Often, lasting smell and too gross, as if something was rotting. Always, negative smells. Smells that will make you sick to your stomach. Thus, the smell is such an important identifier. You simply can’t afford to overlook it. You cannot overlook it."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Smell as a Sign That Your House is Haunted",
+        "metaDescription": "What is Ghost Smell? In this blog, we will discover a bit about ghost smells and what to do in such cases of paranormal activity.",
+        "keyword": "ghost smell as sign that your",
+        "ogTitle": "Ghost Smell as a Sign That Your House is Haunted",
+        "ogDescription": "What is Ghost Smell? In this blog, we will discover a bit about ghost smells and what to do in such cases of paranormal activity.",
+        "ogImage": "/images/og-ghost-smell.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-smell-as-a-sign-that-your-house-is-haunted/"
+      }
     },
     {
       "slug": "paranormal-investigator-job-what-does-it-involve",
@@ -2535,7 +2706,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Paranormal Investigator Job: What Does it Involve?",
+        "metaDescription": "Paranormal Investigator sounds like a cool title for your job. Doesnt it? But do know what paranormal investigator jobs involve?",
+        "keyword": "paranormal investigator job what does it",
+        "ogTitle": "Paranormal Investigator Job: What Does it Involve?",
+        "ogDescription": "Paranormal Investigator sounds like a cool title for your job. Doesnt it? But do know what paranormal investigator jobs involve?",
+        "ogImage": "/images/og-investigator-job.jpg",
+        "canonical": "https://paranormalmusings.com/paranormal-investigator-job-what-does-it-involve/"
+      }
     },
     {
       "slug": "what-is-manifestation",
@@ -2665,7 +2845,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Manifestation? | Manifestation Meaning paranormalmusings.com",
+        "metaDescription": "For a paranormal investigator, a manifestation is an ultimate prize. But do you know what is manifestation meaning? Read on!",
+        "keyword": "what is manifestation",
+        "ogTitle": "What is Manifestation?",
+        "ogDescription": "For a paranormal investigator, a manifestation is an ultimate prize. But do you know what is manifestation meaning? Read on!",
+        "ogImage": "/images/og-manifestation.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-manifestation/"
+      }
     },
     {
       "slug": "ovilus-ghost-hunting-equipment",
@@ -2724,7 +2913,16 @@
           "text": "Keep in mind that printed on the Ovilus itself by the manufacturer is “For entertainment purposes only.” The manufacturer even lists on their website the odds of getting a relative response: 1:512 for the Ovilus I, 1:1024 for the Ovilus FX/Video Ovilus, and 1:2,048 for the PX. The odds change with the different modes also, from 1:2,048 in dictionary mode to 1:71 in phonetic mode. For 11th Hour Paranormal, the verdict of the use of this tool for investigations is not yet in. We personally don’t use it as a main tool in our investigations. At this time, we do not show any data associated with it to a client. We need to do a lot more research before that happens."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ovilus Ghost Hunting Equipment - paranormalmusings.com",
+        "metaDescription": "Ovilus is one of the latest entrants in the ghost hunting equipment market. It is one of the newest pieces for paranormal investigation.",
+        "keyword": "ovilus ghost hunting equipment",
+        "ogTitle": "Ovilus Ghost Hunting Equipment",
+        "ogDescription": "Ovilus is one of the latest entrants in the ghost hunting equipment market. It is one of the newest pieces for paranormal investigation.",
+        "ogImage": "/images/og-ovilus.jpg",
+        "canonical": "https://paranormalmusings.com/ovilus-ghost-hunting-equipment/"
+      }
     },
     {
       "slug": "what-is-self-responsibility-in-paranormal-investigation",
@@ -2790,7 +2988,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Self-Responsibility in Paranormal Investigation?",
+        "metaDescription": "Self-responsibility is a vital aspect of paranormal investigation and is an essential trait in a paranormal investigator. Want to Know how?",
+        "keyword": "what self responsibility paranormal investigation",
+        "ogTitle": "What is Self-Responsibility in Paranormal Investigation?",
+        "ogDescription": "Self-responsibility is a vital aspect of paranormal investigation and is an essential trait in a paranormal investigator. Want to Know how?",
+        "ogImage": "/images/og-self-responsibility.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-self-responsibility-in-paranormal-investigation/"
+      }
     },
     {
       "slug": "what-is-a-seance",
@@ -2891,7 +3098,16 @@
           "text": "People conduct it to get answers from the spirit and is mostly done by the family of the deceased. Sometimes people die under suspicious circumstances and the family wants to know the reasons behind the demise of their loved one. Hence, this procedure is used as it is considered safe and many people have used this successfully to find what they want to know."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is a Seance? | Types of Seance - paranormalmusings.com",
+        "metaDescription": "In this excerpt, we will discuss what is a seance and does it account for any paranormal activity or not. Read on to know more about it!",
+        "keyword": "what is a seance",
+        "ogTitle": "What is a Seance?",
+        "ogDescription": "In this excerpt, we will discuss what is a seance and does it account for any paranormal activity or not. Read on to know more about it!",
+        "ogImage": "/images/og-seance.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-a-seance/"
+      }
     },
     {
       "slug": "paranormal-investigation-team",
@@ -3018,7 +3234,16 @@
           "text": "A consultant is quite tricky. As the name suggests, he or she consults with the team on various issues. He, she can perform one of two different roles: an offsite, off-team adviser. He or she may be unable to participate actively in investigations, but who wants to remain on the team."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Paranormal Investigation Team paranormalmusings.com",
+        "metaDescription": "To conduct a successful paranormal investigation, there are different team members with their own set of tasks. Curious? Have a look!",
+        "keyword": "paranormal investigation team",
+        "ogTitle": "Paranormal Investigation Team",
+        "ogDescription": "To conduct a successful paranormal investigation, there are different team members with their own set of tasks. Curious? Have a look!",
+        "ogImage": "/images/og-investigation-team.jpg",
+        "canonical": "https://paranormalmusings.com/paranormal-investigation-team/"
+      }
     },
     {
       "slug": "paranormal-terms-important-paranormal-terms-and-definitions",
@@ -3157,7 +3382,16 @@
           "text": "So, we come to the conclusion that equipment is necessary but they are not the final means to find out the correct answer. They help you save time and provide you with logical data. You need to understand to keep things simple and only use them for aid."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Paranormal Terms: Important Paranormal Terms and Definitions",
+        "metaDescription": "If you want to be a paranormal investigator, then there are certain paranormal terms and definitions with which you need to be familiar.",
+        "keyword": "paranormal terms important paranormal terms definitions",
+        "ogTitle": "Paranormal Terms: Important Paranormal Terms and Definitions",
+        "ogDescription": "If you want to be a paranormal investigator, then there are certain paranormal terms and definitions with which you need to be familiar.",
+        "ogImage": "/images/og-paranormal-terms.jpg",
+        "canonical": "https://paranormalmusings.com/paranormal-terms-important-paranormal-terms-and-definitions/"
+      }
     },
     {
       "slug": "what-is-ectoplasm",
@@ -3226,7 +3460,16 @@
           "text": "Ectoplasm is a collection of energy produced by Earth things and spiritual things in order to enable other things outside of our normal material world to happen. Now, whether that means making things appear or disappear might be the bigger question. My guess is, both. Thus, my view on ectoplasm is that it’s definitely not a hoax, although it can be. And, some people often generate it rather automatically and naturally. I also know for certain that those in spirit, both ghosts, and guides, use it to manifest events on the Earth plane. Plus, it is viewable by some on occasion while others simply don’t or can’t see it. Also, I believe it’s likely a byproduct of almost working with the paranormal. And lastly, it’s a good thing. Therefore, if you see ectoplasm don’t flee. Instead, encourage it by providing even more energy to the room via batteries, electricity, and such. Or, try taking a psychic along on your ghost hunts."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Ectoplasm? | Ectoplasm Meaning - paranormalmusings.com",
+        "metaDescription": "In this blog, we will try to understand what is ectoplasm, its meaning, and why is it a big thing for a paranormal expert.",
+        "keyword": "what is ectoplasm",
+        "ogTitle": "What is Ectoplasm?",
+        "ogDescription": "In this blog, we will try to understand what is ectoplasm, its meaning, and why is it a big thing for a paranormal expert.",
+        "ogImage": "/images/og-ectoplasm.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-ectoplasm/"
+      }
     },
     {
       "slug": "what-is-a-psychic",
@@ -3403,7 +3646,16 @@
           "text": "Therefore, you can clearly see that the term psychic has so many meanings and it is clearly not justified when people talk only about the negative aspects of it. I hope that people are able to understand more about it after reading this and don’t confuse it with witchcraft or dark magic. Psychics are normal people like us. They are not some creatures from some other dimension whose aim is to cause harm to anyone. All they have is a gift. A gift from God, angel, spirit, or whatever you want to name it."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is a Psychic? | Psychic Meaning | Types of Psychic",
+        "metaDescription": "In this excerpt, we will determine what is a psychic and also talk about the types of psychics who are a paranormal expert too.",
+        "keyword": "what is a psychic",
+        "ogTitle": "What is a Psychic?",
+        "ogDescription": "In this excerpt, we will determine what is a psychic and also talk about the types of psychics who are a paranormal expert too.",
+        "ogImage": "/images/og-psychic.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-a-psychic/"
+      }
     },
     {
       "slug": "digital-video-recorder-camera-for-paranormal-investigation",
@@ -3462,7 +3714,16 @@
           "text": "You should make announcements because you can get lost while using a digital recorder camera for paranormal investigation. It happens to me all the time. I don’t always remember where I am or what room I was in ten minutes after I’ve left the room. Also, the team member doing the evidence review might be someone other than the person who made the recordings. Making announcements alleviates the headache of figuring out where the recording is from. When you set up the cameras, try to put them in a corner. And it is advisable to make them about shoulder high. That way the cameras can record the whole room."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Digital Video Recorder Camera for Paranormal Investigation",
+        "metaDescription": "There are a lot of techniques used to record evidence of the paranormal investigation, and using digital video recorder camera is one of them.",
+        "keyword": "digital video recorder camera paranormal investigation",
+        "ogTitle": "Digital Video Recorder Camera for Paranormal Investigation",
+        "ogDescription": "There are a lot of techniques used to record evidence of the paranormal investigation, and using digital video recorder camera is one of them.",
+        "ogImage": "/images/og-dvr-camera.jpg",
+        "canonical": "https://paranormalmusings.com/digital-video-recorder-camera-for-paranormal-investigation/"
+      }
     },
     {
       "slug": "what-is-a-medium",
@@ -3611,7 +3872,16 @@
           "text": "Here are some additional tips. If you want to meet a medium then the place to start is some sort of metaphysical place or some type of place where metaphysical workshops are conducted. You can also search the web and see from references if the person is legit or not. Another way is talking to a good paranormal investigator. Paranormal Investigator usually knows mediums and they will help you to find one. A good paranormal investigator always has a psychic in his team for conducting investigations in haunted places. Hence, you can approach an investigator and seek the contact details of his psychic."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is a Medium? | Difference Between Psychic and a Medium",
+        "metaDescription": "In this excerpt, we will understand what is a medium and how are they similar or different from a paranormal investigator and a psychic.",
+        "keyword": "what is a medium",
+        "ogTitle": "What is a Medium?",
+        "ogDescription": "In this excerpt, we will understand what is a medium and how are they similar or different from a paranormal investigator and a psychic.",
+        "ogImage": "/images/og-medium.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-a-medium/"
+      }
     },
     {
       "slug": "what-is-an-electromagnetic-field-how-is-it-paranormally-significant",
@@ -3721,7 +3991,16 @@
           "text": "“Use the meter to isolate the anomalous field by tilting and turning it in various directions. This is also your hint to start taking pictures in order to capture any potential paranormal sources. If you happen to get an EMF reading which has no explanation and you can not support it by pictures and EVPs, consider this to be paranormally significant.”"
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is an Electromagnetic Field? How is It Paranormally Significant?",
+        "metaDescription": "In this blog we will look at what is an electromagnetic field and its significance in a paranormal investigation. Let's get started!",
+        "keyword": "what electromagnetic field how it paranormally",
+        "ogTitle": "What is an Electromagnetic Field? How is It Paranormally Significant?",
+        "ogDescription": "In this blog we will look at what is an electromagnetic field and its significance in a paranormal investigation. Let's get started!",
+        "ogImage": "/images/og-electromagnetic-field.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-an-electromagnetic-field-how-is-it-paranormally-significant/"
+      }
     },
     {
       "slug": "paranormal-activity-level-how-to-determine-it",
@@ -3864,7 +4143,16 @@
           "text": "IC: Investigation completed. Additional investigation needed under the original level or reclassified level. State reclassified level in the comment section."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Paranormal Activity Level: How to Determine It? - paranormalmusings.com",
+        "metaDescription": "Did you know that there are different level of paranormal activity that a paranormal expert determines in his investigations?",
+        "keyword": "paranormal activity level how determine it",
+        "ogTitle": "Paranormal Activity Level: How to Determine It?",
+        "ogDescription": "Did you know that there are different level of paranormal activity that a paranormal expert determines in his investigations?",
+        "ogImage": "/images/og-activity-level.jpg",
+        "canonical": "https://paranormalmusings.com/paranormal-activity-level-how-to-determine-it/"
+      }
     },
     {
       "slug": "how-to-conduct-an-investigation-of-the-paranormal",
@@ -4063,7 +4351,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "How to Conduct an Investigation of the Paranormal?",
+        "metaDescription": "In this blog, we will look at all the information that one requires during a paranormal investigation and how to conduct an investigation.",
+        "keyword": "how conduct investigation paranormal",
+        "ogTitle": "How to Conduct an Investigation of the Paranormal?",
+        "ogDescription": "In this blog, we will look at all the information that one requires during a paranormal investigation and how to conduct an investigation.",
+        "ogImage": "/images/og-conduct-investigation.jpg",
+        "canonical": "https://paranormalmusings.com/how-to-conduct-an-investigation-of-the-paranormal/"
+      }
     },
     {
       "slug": "evil-spirits-how-to-detect-evil-spirits-in-your-home",
@@ -4317,7 +4614,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Evil Spirits: How to Detect Evil Spirits in Your Home?",
+        "metaDescription": "Having said that, in this blog, you will learn how to detect evil spirits in your home from the view of a paranormal expert. Let's start!",
+        "keyword": "evil spirits how detect evil spirits",
+        "ogTitle": "Evil Spirits: How to Detect Evil Spirits in Your Home?",
+        "ogDescription": "Having said that, in this blog, you will learn how to detect evil spirits in your home from the view of a paranormal expert. Let's start!",
+        "ogImage": "/images/og-evil-spirits.jpg",
+        "canonical": "https://paranormalmusings.com/evil-spirits-how-to-detect-evil-spirits-in-your-home/"
+      }
     },
     {
       "slug": "safe-ghost-hunting-7-key-points-to-remember",
@@ -4398,7 +4704,16 @@
           "text": "This is a very critical step. Paranormal expert in India says that you must use knowledge. In addition, spiritual intervention will also keep you as safe as possible. Don’t ever forget this step."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Safe Ghost Hunting: 7 Key Points To Remember - paranormalmusings.com",
+        "metaDescription": "Paranormal Expert in India believe that not following the seven safe ghost hunting tips can increase the chances of injury.",
+        "keyword": "safe ghost hunting 7 key points",
+        "ogTitle": "Safe Ghost Hunting: 7 Key Points To Remember",
+        "ogDescription": "Paranormal Expert in India believe that not following the seven safe ghost hunting tips can increase the chances of injury.",
+        "ogImage": "/images/og-safe-hunting.jpg",
+        "canonical": "https://paranormalmusings.com/safe-ghost-hunting-7-key-points-to-remember/"
+      }
     },
     {
       "slug": "ghost-hunting-tools-some-other-holy-tools-you-must-have-in-your-kit",
@@ -4525,7 +4840,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Hunting Tools - Some Other Holy Tools You Must Have in Your Kit",
+        "metaDescription": "Other than the usual tool in a paranormal investigation, a paranormal expert must have a few other ghost hunting tools in their kit.",
+        "keyword": "ghost hunting tools some other holy",
+        "ogTitle": "Ghost Hunting Tools - Some Other Holy Tools You Must Have in Your Kit",
+        "ogDescription": "Other than the usual tool in a paranormal investigation, a paranormal expert must have a few other ghost hunting tools in their kit.",
+        "ogImage": "/images/og-hunting-tools.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-hunting-tools-some-other-holy-tools-you-must-have-in-your-kit/"
+      }
     },
     {
       "slug": "evp-equipment-history-of-evp-equipment",
@@ -4596,7 +4920,16 @@
           "text": "These devices capture drastic and unexplained energy changes throughout the affected environment. These theories have carried over into the rationale for Electronic Voice Phenomena. Paranormal entities manipulate sound energy to communicate through EVP equipment."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "EVP Equipment - History of EVP Equipment - paranormalmusings.com",
+        "metaDescription": "In this excerpt, we will talk about the history of EVP equipment and whether it is real or not in a paranormal investigation. Read on!",
+        "keyword": "evp equipment history of evp equipment",
+        "ogTitle": "EVP Equipment - History of EVP Equipment",
+        "ogDescription": "In this excerpt, we will talk about the history of EVP equipment and whether it is real or not in a paranormal investigation. Read on!",
+        "ogImage": "/images/og-evp-equipment.jpg",
+        "canonical": "https://paranormalmusings.com/evp-equipment-history-of-evp-equipment/"
+      }
     },
     {
       "slug": "what-is-em-pump",
@@ -4646,7 +4979,16 @@
           "text": "When a paranormal investigator uses the EM pump, they set the device to capture both video and audio evidence. At this point, it is also imperative that you remember that one should avoid setting the EMF meter adjacent to the pump. The reason I am saying this is because the spirits can damage it. An with the price tags that these equipment come with, I am sure you would not want that. That being said, now you understand the meaning and use of a pump in a paranormal investigation."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is EM Pump? | Use of EM Pump in Paranormal Investigation",
+        "metaDescription": "You may have seen an EM pump used by a paranormal investigator on some of the paranormal shows. Do you know what is an EM pump?",
+        "keyword": "what is em pump",
+        "ogTitle": "What is EM Pump?",
+        "ogDescription": "You may have seen an EM pump used by a paranormal investigator on some of the paranormal shows. Do you know what is an EM pump?",
+        "ogImage": "/images/og-em-pump.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-em-pump/"
+      }
     },
     {
       "slug": "electronic-voice-phenomenon-how-to-get-an-evp",
@@ -4762,7 +5104,16 @@
           "text": "If you are lucky, you will record a clear electronic voice phenomenon in a paranormal investigation. Take anything the spirit says in response to this question under scrutiny. Don’t ignore the warning signs if the spirit wants you to go somewhere alone. Take a fellow investigator with you at all times. The spirit could be trying to steer you to a place where it is stronger and has more control. This, in brief, was how to get EVP and carry out EVP sessions. If you are an amateur paranormal investigator, remember to never provoke the spirit. There is a thin line between being courageous and looking stupid."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Electronic Voice Phenomenon: How to Get an EVP?",
+        "metaDescription": "You have a basic idea about what an electronic voice phenomenon or EVP means in a paranormal investigation. So, how to get an EVP?",
+        "keyword": "electronic voice phenomenon how get evp",
+        "ogTitle": "Electronic Voice Phenomenon: How to Get an EVP?",
+        "ogDescription": "You have a basic idea about what an electronic voice phenomenon or EVP means in a paranormal investigation. So, how to get an EVP?",
+        "ogImage": "/images/og-evp.jpg",
+        "canonical": "https://paranormalmusings.com/electronic-voice-phenomenon-how-to-get-an-evp/"
+      }
     },
     {
       "slug": "paranormal-evidence-how-to-review-best-paranormal-evidence",
@@ -4977,7 +5328,16 @@
           "text": "The final report with all the evidence of paranormal activity should be stored in two different storage devices for the official record and the client respectively. In essence, this is how you can capture and classify evidence of paranormal activity."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Paranormal Evidence: How to Review Best Paranormal Evidence?",
+        "metaDescription": "Capturing the best paranormal evidence showing prominent paranormal activity is the ultimate goal for an investigator. Let's find out how.",
+        "keyword": "paranormal evidence how review best paranormal",
+        "ogTitle": "Paranormal Evidence: How to Review Best Paranormal Evidence?",
+        "ogDescription": "Capturing the best paranormal evidence showing prominent paranormal activity is the ultimate goal for an investigator. Let's find out how.",
+        "ogImage": "/images/og-paranormal-evidence.jpg",
+        "canonical": "https://paranormalmusings.com/paranormal-evidence-how-to-review-best-paranormal-evidence/"
+      }
     },
     {
       "slug": "what-is-death-and-how-to-conquer-death-hinduism",
@@ -5029,7 +5389,16 @@
           "text": "Life flows seamlessly towards kaivalyam! What is Death and How to Conquer Death"
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Death and How to Conquer Death - Hinduism",
+        "metaDescription": "Let us discuss what is death and how to conquer death according to Hinduism. Death is a change from one body to another.",
+        "keyword": "what death how conquer death hinduism",
+        "ogTitle": "What is Death and How to Conquer Death - Hinduism",
+        "ogDescription": "Let us discuss what is death and how to conquer death according to Hinduism. Death is a change from one body to another.",
+        "ogImage": "/images/og-conquer-death.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-death-and-how-to-conquer-death-hinduism/"
+      }
     },
     {
       "slug": "karma-and-the-concept-of-various-hells",
@@ -5119,7 +5488,16 @@
           "text": "The significance of ancestral worship plays a vital role to ease the journey of the jivas."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Karma and the Concept of Various Hells - paranormalmusings.com",
+        "metaDescription": "Now let us understand the connection between karma and the concept of various hells in different hindu scriptures",
+        "keyword": "karma concept various hells",
+        "ogTitle": "Karma and the Concept of Various Hells",
+        "ogDescription": "Now let us understand the connection between karma and the concept of various hells in different hindu scriptures.",
+        "ogImage": "/images/og-karma-hells.jpg",
+        "canonical": "https://paranormalmusings.com/karma-and-the-concept-of-various-hells/"
+      }
     },
     {
       "slug": "reincarnation-and-metempsychosis",
@@ -5157,7 +5535,16 @@
           "text": "However, religions like Buddhism and western philosophies believe that a human soul is reborn only in the human body. Once achieving human birth, there is no deterioration. A man goes through all punishments and suffering during his lifetime or in the new births."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Reincarnation and Metempsychosis - paranormalmusings.com",
+        "metaDescription": "I get a lot of queries on Reincarnation and Metempsychosis. Metempsychos is is the transmigration of the soul of a human being into a new body of the same or a different species.",
+        "keyword": "reincarnation and metempsychosis",
+        "ogTitle": "Reincarnation and Metempsychosis",
+        "ogDescription": "I get a lot of queries on Reincarnation and Metempsychosis. Metempsychos is is the transmigration of the soul of a human being into a new body of the same or a different species.",
+        "ogImage": "/images/og-reincarnation.jpg",
+        "canonical": "https://paranormalmusings.com/reincarnation-and-metempsychosis/"
+      }
     },
     {
       "slug": "back-to-source-after-death-eastern-teachings",
@@ -5199,7 +5586,16 @@
           "text": "We’ll discuss the transition of the soul in different other blogs. But for now, Indian and Eastern belief systems point to the fact that the body dissolves into 5 elements and goes back to nature and the soul continues its journey. Back to Source After Death – Eastern Teachings"
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Back to Source After Death - Eastern Teachings - paranormalmusings.com",
+        "metaDescription": "Back to Source After Death. The gross physical body comprises of the five elements or Mahabhutas earth, water, fire, air and space.",
+        "keyword": "back source after death eastern teachings",
+        "ogTitle": "Back to Source After Death - Eastern Teachings",
+        "ogDescription": "Back to Source After Death. The gross physical body comprises of the five elements or Mahabhutas earth, water, fire, air and space.",
+        "ogImage": "/images/og-back-to-source.jpg",
+        "canonical": "https://paranormalmusings.com/back-to-source-after-death-eastern-teachings/"
+      }
     },
     {
       "slug": "who-is-a-sage",
@@ -5253,7 +5649,16 @@
           "text": "Sat chit Ananda or truth consciousness and bliss are his very nature."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Who is a Sage - paranormalmusings.com",
+        "metaDescription": "According to Hinduism, a sage is a person of wisdom and clarity. He who attains self-realization through his work and grace is a sage.",
+        "keyword": "who is a sage",
+        "ogTitle": "Who is a Sage",
+        "ogDescription": "According to Hinduism, a sage is a person of wisdom and clarity. He who attains self-realization through his work and grace is a sage.",
+        "ogImage": "/images/og-sage.jpg",
+        "canonical": "https://paranormalmusings.com/who-is-a-sage/"
+      }
     },
     {
       "slug": "death-the-great-equalizer",
@@ -5291,7 +5696,16 @@
           "text": "Man goes through various kinds of experiences. Assimilation of experiences happens because of death. It is in the astral plane that consolidation and assimilation take place. Just like chewing the cud and masticating takes place, all lessons’ are completely understood and absorbed. The soul is then ready for a new birth."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Death - The Great Equalizer - paranormalmusings.com",
+        "metaDescription": "Death is a certainty  the only certainty. It remains an enigma and a mystery, but all of us on earth have to pass through its hands.",
+        "keyword": "death the great equalizer",
+        "ogTitle": "Death - The Great Equalizer",
+        "ogDescription": "Death is a certainty  the only certainty. It remains an enigma and a mystery, but all of us on earth have to pass through its hands.",
+        "ogImage": "/images/og-death-equalizer.jpg",
+        "canonical": "https://paranormalmusings.com/death-the-great-equalizer/"
+      }
     },
     {
       "slug": "a-sojourn-to-heaven-after-death",
@@ -5321,7 +5735,16 @@
           "text": "This soul is reborn in noble and virtuous families. His journey continues without any obstacles in peaceful surroundings for his evolution and progress towards divinity."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "A Sojourn to Heaven After Death - paranormalmusings.com",
+        "metaDescription": "A person embodied with virtues goes to Heaven after death. A virtuous person reaps benefits for his good work and behaviour",
+        "keyword": "a sojourn to heaven after death",
+        "ogTitle": "A Sojourn to Heaven After Death",
+        "ogDescription": "A person embodied with virtues goes to Heaven after death. A virtuous person reaps benefits for his good work and behaviour.",
+        "ogImage": "/images/og-heaven.jpg",
+        "canonical": "https://paranormalmusings.com/a-sojourn-to-heaven-after-death/"
+      }
     },
     {
       "slug": "soul-after-death-different-schools-of-thoughts",
@@ -5463,7 +5886,16 @@
           "text": "Once this clarity is attained, there is no going back. An individual goes through life, allowing the universe to function through him as he realises that consciousness is the only power that operates the universe."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Soul after Death - Different Schools of Thoughts - paranormalmusings.com",
+        "metaDescription": "Soul after death. There are different schools of thought on the soul's journey after separation from the body. Soul after death.",
+        "keyword": "soul after death different schools thoughts",
+        "ogTitle": "Soul after Death - Different Schools of Thoughts",
+        "ogDescription": "Soul after death. There are different schools of thought on the soul's journey after separation from the body. Soul after death.",
+        "ogImage": "/images/og-soul-schools.jpg",
+        "canonical": "https://paranormalmusings.com/soul-after-death-different-schools-of-thoughts/"
+      }
     },
     {
       "slug": "prana-or-vital-force-role-of-udana-vayu-or-prana",
@@ -5501,7 +5933,16 @@
           "text": "It is this prana that enables an individual to reach higher realms and get absorbed in Brahman. In the process of death, the individual soul merges with the supreme soul or Para Brahman."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Prana or vital force - Role of Udana Vayu or Prana",
+        "metaDescription": "Prana or vital force - Let's understand the role of Udana Vayu or Prana. Vayu is air or wind and otherwise known as the vital force or prana.",
+        "keyword": "prana or vital force role udana",
+        "ogTitle": "Prana or vital force - Role of Udana Vayu or Prana",
+        "ogDescription": "Prana or vital force - Let's understand the role of Udana Vayu or Prana. Vayu is air or wind and otherwise known as the vital force or prana.",
+        "ogImage": "/images/og-prana.jpg",
+        "canonical": "https://paranormalmusings.com/prana-or-vital-force-role-of-udana-vayu-or-prana/"
+      }
     },
     {
       "slug": "change-is-the-only-constant-according-to-indian-spiritual-teachings",
@@ -5539,7 +5980,16 @@
           "text": "Sages and saints of yore have concluded that soul and God are one. We are made in the image of the divine. We must contemplate and go beyond the mind. It’s important we cultivate virtues. Surrender chanting of mantras, reading of scriptures, selfless service is a route to divinity."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Change is the only constant according to Indian Spiritual Teachings",
+        "metaDescription": "Change is the only constant according to Indian Spiritual Teachings. This body, which is a combination of the five elements, will perish.",
+        "keyword": "change only constant according indian spiritual",
+        "ogTitle": "Change is the only constant according to Indian Spiritual Teachings",
+        "ogDescription": "Change is the only constant according to Indian Spiritual Teachings. This body, which is a combination of the five elements, will perish.",
+        "ogImage": "/images/og-change-constant.jpg",
+        "canonical": "https://paranormalmusings.com/change-is-the-only-constant-according-to-indian-spiritual-teachings/"
+      }
     },
     {
       "slug": "criteria-for-rebirth",
@@ -5573,7 +6023,16 @@
           "text": "The linga sarira or astral body carries the impressions of the past birth. It continues to exist till it achieves the realization of the self and attains liberation."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Criteria for Rebirth - paranormalmusings.com",
+        "metaDescription": "Again, a common question that comes up frequently is on Rebirth. What are the criteria for rebirth? Man faces different kinds of situations and meets various types of persons during his lifetime.",
+        "keyword": "criteria for rebirth",
+        "ogTitle": "Criteria for Rebirth",
+        "ogDescription": "Again, a common question that comes up frequently is on Rebirth. What are the criteria for rebirth? Man faces different kinds of situations and meets various types of persons during his lifetime.",
+        "ogImage": "/images/og-criteria-rebirth.jpg",
+        "canonical": "https://paranormalmusings.com/criteria-for-rebirth/"
+      }
     },
     {
       "slug": "eastern-views-on-death-afterlife-and-the-paranormal",
@@ -5651,7 +6110,16 @@
           "text": "Out of many thousands who endeavour for perfection, and of those who have achieved perfection, hardly one knows Me in truth."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Eastern Views on death, afterlife and the paranormal - paranormalmusings.com",
+        "metaDescription": "According to eastern views the disembodied spirits, based on their attachments to the world, stay earthbound after death.",
+        "keyword": "eastern views death afterlife paranormal",
+        "ogTitle": "Eastern Views on death, afterlife and the paranormal",
+        "ogDescription": "According to eastern views the disembodied spirits, based on their attachments to the world, stay earthbound after death.",
+        "ogImage": "/images/og-eastern-death.jpg",
+        "canonical": "https://paranormalmusings.com/eastern-views-on-death-afterlife-and-the-paranormal/"
+      }
     },
     {
       "slug": "shraadh-ceremony-and-prayers-for-the-dead",
@@ -5721,7 +6189,16 @@
           "text": "However, at the time of death, an individual drowned in the misery of illness or the fear of approaching an end cannot think of god. He would be in a state of regret or guilt for his mistakes. Family members then read from the scriptures or chant to raise the vibrations. The chanting and reading of scriptures enable an individual to detach himself from the body, mind and depart in peace. Sincere prayers serve as a bridge for the transition. Viveka and Vairagya can dawn on him and undo the effects of the past karma. Hence it’s important to perform the Shraadh ceremony and prayers for the dead."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Shraadh Ceremony And Prayers For The Dead - paranormalmusings.com",
+        "metaDescription": "Let's discuss the shraadh ceremony and prayers for the dead. The Manusmriti is an ancient legal text and constitution among the many Dharmasastras of Hinduism",
+        "keyword": "shraadh ceremony prayers dead",
+        "ogTitle": "Shraadh Ceremony And Prayers For The Dead",
+        "ogDescription": "Let's discuss the shraadh ceremony and prayers for the dead. The Manusmriti is an ancient legal text and constitution among the many Dharmasastras of Hinduism.",
+        "ogImage": "/images/og-shraadh.jpg",
+        "canonical": "https://paranormalmusings.com/shraadh-ceremony-and-prayers-for-the-dead/"
+      }
     },
     {
       "slug": "six-lokas-or-planes-after-death-journey-according-to-hinduism",
@@ -6099,7 +6576,16 @@
           "text": "The final note is to understand the nature of the mind, ego, body and consciousness. Am individual should seek the grace of God and guru and work towards self-realisation."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Six Lokas or Planes - After Death Journey according to Hinduism",
+        "metaDescription": "After Death Journey according to Hinduism. After his death, a man who has spent his life on earth in sensual indulgence enters the preta loka",
+        "keyword": "six lokas or planes after death",
+        "ogTitle": "Six Lokas or Planes - After Death Journey according to Hinduism",
+        "ogDescription": "After Death Journey according to Hinduism. After his death, a man who has spent his life on earth in sensual indulgence enters the preta loka.",
+        "ogImage": "/images/og-six-lokas.jpg",
+        "canonical": "https://paranormalmusings.com/six-lokas-or-planes-after-death-journey-according-to-hinduism/"
+      }
     },
     {
       "slug": "process-of-death-according-to-yoga-vasishtha",
@@ -6129,7 +6615,16 @@
           "text": "Yoga-Vāsiṣṭha is a philosophical text attributed to Valmiki, though the actual writer is Vasistha. The whole text contains over 29,000 verses. The brief version of the text is named Laghu Yogavasistha and comprises 6,000 verses."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Process of Death According to Yoga-Vasishtha - paranormalmusings.com",
+        "metaDescription": "Maharishi Vasishtha explains the process of death in the Yoga-Vasishtha. Yoga-Vasishtha is a philosophical text attributed to Valmiki, though the actual author is Vasistha.",
+        "keyword": "process death according yoga vasishtha",
+        "ogTitle": "Process of Death According to Yoga-Vasishtha",
+        "ogDescription": "Maharishi Vasishtha explains the process of death in the Yoga-Vasishtha. Yoga-Vasishtha is a philosophical text attributed to Valmiki, though the actual author is Vasistha.",
+        "ogImage": "/images/og-yoga-vasishtha.jpg",
+        "canonical": "https://paranormalmusings.com/process-of-death-according-to-yoga-vasishtha/"
+      }
     },
     {
       "slug": "souls-journey-after-death-indian-and-eastern-views",
@@ -6191,7 +6686,16 @@
           "text": "For the convenience and understanding of our readers, we have made these blogs in shorter formats. You can continue reading our other blogs on the same topic to enrich your knowledge better on the subject. Soul’s Journey After Death"
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Soul's Journey After Death - Indian and Eastern Views on After Death",
+        "metaDescription": "Soul's Journey After Death. The Jiva or the individual soul carries the subtle parts of the elements and the seeds of a new body.",
+        "keyword": "souls journey after death indian eastern",
+        "ogTitle": "Soul's Journey After Death - Indian and Eastern Views",
+        "ogDescription": "Soul's Journey After Death. The Jiva or the individual soul carries the subtle parts of the elements and the seeds of a new body.",
+        "ogImage": "/images/og-souls-journey.jpg",
+        "canonical": "https://paranormalmusings.com/souls-journey-after-death-indian-and-eastern-views/"
+      }
     },
     {
       "slug": "what-is-soul-according-to-indian-teachings",
@@ -6301,7 +6805,16 @@
           "text": "The silent witness in all states is the innermost self or Brahman. All the states can be transcended on removing avidya or ignorance to reach self-realisation."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Soul according to Indian Teachings? - paranormalmusings.com",
+        "metaDescription": "Soul according to Indian Teachings? Well, there are two types of souls: the individual soul or Jivatman and the Supreme Soul or Paramatman.",
+        "keyword": "what soul according indian teachings",
+        "ogTitle": "What is Soul according to Indian Teachings?",
+        "ogDescription": "Soul according to Indian Teachings? Well, there are two types of souls: the individual soul or Jivatman and the Supreme Soul or Paramatman.",
+        "ogImage": "/images/og-soul.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-soul-according-to-indian-teachings/"
+      }
     },
     {
       "slug": "hindu-rituals-for-death",
@@ -6339,7 +6852,16 @@
           "text": "Heaven or hell, Chandra Loka and Yama Loka are the destinations the soul goes to on leaving the body. Based on the actions performed during the earthly journey, the souls carry the imprints accordingly."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Hindu Rituals For Death - paranormalmusings.com",
+        "metaDescription": "Hindu Rituals for death. After death, Hindus believe that the physical body is of no purpose, and therefore does not need to be preserved.",
+        "keyword": "hindu rituals for death",
+        "ogTitle": "Hindu Rituals For Death",
+        "ogDescription": "Hindu Rituals for death. After death, Hindus believe that the physical body is of no purpose, and therefore does not need to be preserved.",
+        "ogImage": "/images/og-hindu-rituals.jpg",
+        "canonical": "https://paranormalmusings.com/hindu-rituals-for-death/"
+      }
     },
     {
       "slug": "souls-journey-after-death-the-third-place-or-tritiyam-sthaanam",
@@ -6373,7 +6895,16 @@
           "text": "The purpose of this law of incarnation is to realise that the Atman or the Absolute alone is bliss. The Atman alone must be the sole object of pursuit. One should get bitter with suffering and develop discernment and dispassion to attain the eternal happiness of the Absolute. A man should wake up from his slumber of ignorance and work towards freedom from the body of flesh, blood and bones."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Soul's Journey After Death - The Third Place or Tritiyam Sthaanam",
+        "metaDescription": "Soul's Journey After Death - The Third Place or Tritiyam Sthaanam. The immoral beings go to third place (Tritiyam sthaanam)",
+        "keyword": "souls journey after death third place",
+        "ogTitle": "Soul's Journey After Death - The Third Place or Tritiyam Sthaanam",
+        "ogDescription": "Soul's Journey After Death - The Third Place or Tritiyam Sthaanam. The immoral beings go to third place (Tritiyam sthaanam).",
+        "ogImage": "/images/og-tritiyam-sthaanam.jpg",
+        "canonical": "https://paranormalmusings.com/souls-journey-after-death-the-third-place-or-tritiyam-sthaanam/"
+      }
     },
     {
       "slug": "the-body-begins-a-new-journey-after-the-process-of-death-hindu-philoso",
@@ -6493,7 +7024,16 @@
           "text": "The Srutis says that people who do not go by way of Vidya across the Path of Devayana into Brahmaloka or by way of Karma across the path of Pitriyana to Chandraloka are reborn in lower forms. The immoral beings go to third place (Tritiyam sthaanam). According to the scriptures, those who go along neither of those ways become tiny creatures, flies, worms, etc., and live short lives. Their location is called the third place because it is neither Brahmaloka nor the Chandraloka."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Soul's Journey After Death - Three Paths according to Hindu Philosophy",
+        "metaDescription": "Let's discuss Soul's Journey After Death. The soul journeys many lives as it is not possible to settle all karmic accounts in one lifetime.",
+        "keyword": "souls journey after death three paths",
+        "ogTitle": "Soul's Journey After Death - Three Paths according to Hindu Philosophy",
+        "ogDescription": "Let's discuss Soul's Journey After Death. The soul journeys many lives as it is not possible to settle all karmic accounts in one lifetime.",
+        "ogImage": "/images/og-three-paths.jpg",
+        "canonical": "https://paranormalmusings.com/souls-journey-after-death-three-paths-according-to-hindu-philosophy/"
+      }
     },
     {
       "slug": "theory-of-rebirth-and-recreation-eastern-perspectives",
@@ -6659,7 +7199,16 @@
           "text": "The belief is that the child cries during birth because it is not happy to be reborn and remembers the suffering and death of their previous lives. It regrets that it had not taken the name of the lord. Namsmaranam can free man from the cycle of birth and death."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Theory of Rebirth and Recreation - Eastern Perspectives - paranormalmusings.com",
+        "metaDescription": "Let's have a look at the theory of rebirth and recreation. A seed is sown into the earth.  We nourish and nurture it with water and sunlight.",
+        "keyword": "theory rebirth recreation eastern perspectives",
+        "ogTitle": "Theory of Rebirth and Recreation - Eastern Perspectives",
+        "ogDescription": "Let's have a look at the theory of rebirth and recreation. A seed is sown into the earth.  We nourish and nurture it with water and sunlight.",
+        "ogImage": "/images/og-rebirth-theory.jpg",
+        "canonical": "https://paranormalmusings.com/theory-of-rebirth-and-recreation-eastern-perspectives/"
+      }
     },
     {
       "slug": "transmigration-of-souls-and-concept-of-preta-hindu-philosophy",
@@ -6697,7 +7246,16 @@
           "text": "This is one of the most important duties of a son according to Hindu philosophy."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Transmigration of Souls and Concept of Preta - Hindu Philosophy",
+        "metaDescription": "Transmigration of Souls and Concept of Preta. Hinduism is based on two fundamental doctrines, law of Karma and the law of transmigration.",
+        "keyword": "transmigration souls concept preta hindu philosophy",
+        "ogTitle": "Transmigration of Souls and Concept of Preta - Hindu Philosophy",
+        "ogDescription": "Transmigration of Souls and Concept of Preta. Hinduism is based on two fundamental doctrines, law of Karma and the law of transmigration.",
+        "ogImage": "/images/og-transmigration.jpg",
+        "canonical": "https://paranormalmusings.com/transmigration-of-souls-and-concept-of-preta-hindu-philosophy/"
+      }
     },
     {
       "slug": "psychic-readings-what-does-hinduism-say-about-psychic-reading",
@@ -6762,7 +7320,16 @@
           "text": "It is a matter of practice and patience to get exact information out of the infinite information available in the Akashik records. This is what Hinduism essentially believes in when it comes to psychic readings."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Psychic Readings: What Does Hinduism Say About Psychic Reading?",
+        "metaDescription": "In this excerpt, we will look at what is psychic reading and what Hinduism says about psychic readings of the paranormal universe.",
+        "keyword": "psychic readings what does hinduism say",
+        "ogTitle": "Psychic Readings: What Does Hinduism Say About Psychic Reading?",
+        "ogDescription": "In this excerpt, we will look at what is psychic reading and what Hinduism says about psychic readings of the paranormal universe.",
+        "ogImage": "/images/og-psychic-readings.jpg",
+        "canonical": "https://paranormalmusings.com/psychic-readings-what-does-hinduism-say-about-psychic-reading/"
+      }
     },
     {
       "slug": "types-of-hauntings-what-are-different-types-of-haunting",
@@ -6914,7 +7481,16 @@
           "text": "Usually, the places that experience various types of abnormal activities such as unusual creatures, unknown fog, erratic weather conditions, and altering temperature are suspected of having a portal in which these entities travel from one world to another. To wrap it up, these were the different types of haunting and what it means in the paranormal world."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Types of Hauntings: What are Different Types of Haunting?",
+        "metaDescription": "Let's look at the types of hauntings and throw light on the deeper aspects of the types of haunting and what it signifies in the paranormal.",
+        "keyword": "types hauntings what are different types",
+        "ogTitle": "Types of Hauntings: What are Different Types of Haunting?",
+        "ogDescription": "Let's look at the types of hauntings and throw light on the deeper aspects of the types of haunting and what it signifies in the paranormal.",
+        "ogImage": "/images/og-types-hauntings.jpg",
+        "canonical": "https://paranormalmusings.com/types-of-hauntings-what-are-different-types-of-haunting/"
+      }
     },
     {
       "slug": "spirit-possession-in-hinduism",
@@ -6996,7 +7572,16 @@
           "text": "Some of the tenets of the ancient Vedic tradition and spirit possession in Hinduism resurfaced in the West during the nineteenth century. The reasons behind this were in two movements, Theosophy and Spiritualism. Although they held many conflicting beliefs, both of these viewpoints strongly held to the belief in the continuation of the individual personality after death. Since our search has to do with possession by earthbound spirits, of particular interest is the influence of these two movements on healers in various parts of the world. In essence, this is what Hinduism and the Vedas talk about when it comes to possession."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Spirit Possession in Hinduism - paranormalmusings.com",
+        "metaDescription": "What do the Vedas say about evil spirit possession in Hinduism? Well, let's look at what a paranormal expert in Chennai, India says on this.",
+        "keyword": "spirit possession in hinduism",
+        "ogTitle": "Spirit Possession in Hinduism",
+        "ogDescription": "What do the Vedas say about evil spirit possession in Hinduism? Well, let's look at what a paranormal expert in Chennai, India says on this.",
+        "ogImage": "/images/og-possession-hinduism.jpg",
+        "canonical": "https://paranormalmusings.com/spirit-possession-in-hinduism/"
+      }
     },
     {
       "slug": "what-is-paranormal-an-introduction",
@@ -7070,7 +7655,16 @@
           "text": "Stay tuned."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Paranormal: An Introduction - paranormalmusings.com",
+        "metaDescription": "What is Paranormal Activity? If I asked you to define the term like a paranormal expert, how would you do it? Ghost? Spirits? Read on!",
+        "keyword": "what is paranormal an introduction",
+        "ogTitle": "What is Paranormal: An Introduction",
+        "ogDescription": "What is Paranormal Activity? If I asked you to define the term like a paranormal expert, how would you do it? Ghost? Spirits? Read on!",
+        "ogImage": "/images/og-paranormal-intro.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-paranormal-an-introduction/"
+      }
     },
     {
       "slug": "types-of-ghosts-spirits-demons-entities",
@@ -7222,7 +7816,16 @@
           "text": "Having said that, this is a quick run-through from the good and ugly side of the paranormal. If you wish to become a paranormal researcher, there are things that you need to keep in mind while dealing with each of the paranormal beings. In the upcoming blogs, we will discuss all of these in detail."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Types of Ghosts: Spirits, Demons, Entities - paranormalmusings.com",
+        "metaDescription": "Have you come across different types of ghosts when researching the paranormal? Let us discuss the types of ghost and how they are different.",
+        "keyword": "types of ghosts spirits demons entities",
+        "ogTitle": "Types of Ghosts: Spirits, Demons, Entities",
+        "ogDescription": "Have you come across different types of ghosts when researching the paranormal? Let us discuss the types of ghost and how they are different.",
+        "ogImage": "/images/og-types-ghosts.jpg",
+        "canonical": "https://paranormalmusings.com/types-of-ghosts-spirits-demons-entities/"
+      }
     },
     {
       "slug": "what-is-a-poltergeist-what-are-they-and-why-should-you-stay-away",
@@ -7311,7 +7914,16 @@
           "text": "When I look back, I realize that the attempt by negatives to scare or dishearten me from using my gift was foiled away by someone who was protecting me and keeping me away from evil. It might be the divine forces I pry upon or an angel or it might be my guiding spirits. I am not sure. Summing up, what I have seen and known about a poltergeist is that they are someone who has the ability to displace physical objects and that they are drawn towards people who are vulnerable. They feed on the weak and are in search of souls that can be scared and manipulated. The more scared you get the stronger they become. Also, they like to destroy or mess with your belongings. Now you know the meaning of poltergeist and why you should stay away. Over the last 25 years, I’ve had many experiences with poltergeists, but I exactly know how to handle these situations. And if you are not trained, I suggest you back off."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is a Poltergeist - What are They and Why Should you Stay Away?",
+        "metaDescription": "What is a Poltergiest? Let us understand poltergeist meaning and why is is important to stay away from them in the paranormal world.",
+        "keyword": "what poltergeist what are they why",
+        "ogTitle": "What is a Poltergeist - What are They and Why Should you Stay Away?",
+        "ogDescription": "What is a Poltergiest? Let us understand poltergeist meaning and why is is important to stay away from them in the paranormal world.",
+        "ogImage": "/images/og-poltergeist.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-a-poltergeist-what-are-they-and-why-should-you-stay-away/"
+      }
     },
     {
       "slug": "what-are-spirit-guides",
@@ -7392,7 +8004,16 @@
           "text": "To wrap it up, spirit guides are good, and ghosts are mostly neutral. In the next segment, we will talk about the different types of spirit guides and how can you connect and communicate with them easily. We will also look at expert opinions from a paranormal investigator."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What are Spirit Guides? - paranormalmusings.com",
+        "metaDescription": "In this excerpt, we will discuss what are spirit guides and the different aspects from the viewpoint of a paranormal expert. Let's start!",
+        "keyword": "what are spirit guides",
+        "ogTitle": "What are Spirit Guides?",
+        "ogDescription": "In this excerpt, we will discuss what are spirit guides and the different aspects from the viewpoint of a paranormal expert. Let's start!",
+        "ogImage": "/images/og-spirit-guides-main.jpg",
+        "canonical": "https://paranormalmusings.com/what-are-spirit-guides/"
+      }
     },
     {
       "slug": "what-is-a-ghost",
@@ -7500,7 +8121,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is a Ghost? | Some Interesting Facts paranormalmusings.com",
+        "metaDescription": "My understanding of a ghost in paranormal is different. It stems from my years of contact with them. Do you want to know more?",
+        "keyword": "what is a ghost",
+        "ogTitle": "What is a Ghost?",
+        "ogDescription": "My understanding of a ghost in paranormal is different. It stems from my years of contact with them. Do you want to know more?",
+        "ogImage": "/images/og-what-ghost.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-a-ghost/"
+      }
     },
     {
       "slug": "what-are-children-spirits",
@@ -7578,7 +8208,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What are Children Spirits? - paranormalmusings.com",
+        "metaDescription": "Let us look at what are children spirits and find if there are any substantial proof of their existence in any paranormal investigation.",
+        "keyword": "what are children spirits",
+        "ogTitle": "What are Children Spirits?",
+        "ogDescription": "Let us look at what are children spirits and find if there are any substantial proof of their existence in any paranormal investigation.",
+        "ogImage": "/images/og-children-spirits.jpg",
+        "canonical": "https://paranormalmusings.com/what-are-children-spirits/"
+      }
     },
     {
       "slug": "signs-of-spirit-possession-mental-and-emotional-symptoms",
@@ -7684,7 +8323,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Signs of Spirit Possession: Mental and Emotional Symptoms",
+        "metaDescription": "Let's talk about the mental and emotional signs of spirit possession from the perspective a paranormal investigator in Chennai, India.",
+        "keyword": "signs spirit possession mental emotional symptoms",
+        "ogTitle": "Signs of Spirit Possession: Mental and Emotional Symptoms",
+        "ogDescription": "Let's talk about the mental and emotional signs of spirit possession from the perspective a paranormal investigator in Chennai, India.",
+        "ogImage": "/images/og-spirit-symptoms.jpg",
+        "canonical": "https://paranormalmusings.com/signs-of-spirit-possession-mental-and-emotional-symptoms/"
+      }
     },
     {
       "slug": "signs-of-haunting",
@@ -7879,7 +8527,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Signs of Haunting | How to Determine if Your House is Haunted or Not?",
+        "metaDescription": "Let's look at haunting signs and why it is happening. If you tick all these boxes, you need to consult a paranormal investigator in India.",
+        "keyword": "signs of haunting",
+        "ogTitle": "Signs of Haunting",
+        "ogDescription": "Let's look at haunting signs and why it is happening. If you tick all these boxes, you need to consult a paranormal investigator in India.",
+        "ogImage": "/images/og-signs-haunting.jpg",
+        "canonical": "https://paranormalmusings.com/signs-of-haunting/"
+      }
     },
     {
       "slug": "can-ghost-kill-us",
@@ -7994,7 +8651,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Can Ghost Kill Us? | Facts - paranormalmusings.com",
+        "metaDescription": "Can Ghost Kill Us? In the history of paranormal investigation, there have been no reports of anyone being killed by a ghost.",
+        "keyword": "can ghost kill us",
+        "ogTitle": "Can Ghost Kill Us?",
+        "ogDescription": "Can Ghost Kill Us? In the history of paranormal investigation, there have been no reports of anyone being killed by a ghost.",
+        "ogImage": "/images/og-ghost-kill.jpg",
+        "canonical": "https://paranormalmusings.com/can-ghost-kill-us/"
+      }
     },
     {
       "slug": "haunting-place-what-are-some-of-the-haunted-places-where-paranormal-ac",
@@ -8453,7 +9119,16 @@
           "text": "Most of the accounts in my experience point out the fact that death is not as dark or negative as many of us make it out to be. Death is beautiful according to most of the patients. When an individual makes his leap towards the light, he is not full of malice or terror. He is full of warmth and a feeling of completion. The circle is complete. The race is over. Now it’s time to move on to another space. The space is unknown but it feels good. Death is the ultimate reality. What happens after death, we all will know."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What's After Death? | What Happens When We Die",
+        "metaDescription": "What happens after death, after we die? Let's understand this from the perspective of a paranormal expert in Chennai, India.",
+        "keyword": "whats after death",
+        "ogTitle": "What's After Death?",
+        "ogDescription": "What happens after death, after we die? Let's understand this from the perspective of a paranormal expert in Chennai, India.",
+        "ogImage": "/images/og-after-death.jpg",
+        "canonical": "https://paranormalmusings.com/whats-after-death/"
+      }
     },
     {
       "slug": "what-are-orbs",
@@ -9068,7 +9743,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Haunting? | Haunting Meaning paranormalmusings.com",
+        "metaDescription": "Let's look at what is the haunting meaning and also understand in brief, its types. Read on if you wish to be a paranormal expert.",
+        "keyword": "what is haunting",
+        "ogTitle": "What is Haunting?",
+        "ogDescription": "Let's look at what is the haunting meaning and also understand in brief, its types. Read on if you wish to be a paranormal expert.",
+        "ogImage": "/images/og-haunting.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-haunting/"
+      }
     },
     {
       "slug": "historical-observations-of-spirit-possession",
@@ -9510,7 +10194,16 @@
           "text": "Seriously, it’s fear that often keeps a negative ghost hanging around. Erase the fear, take their prisoners, and they’ll often give up the fight. But when the question of an inhuman entity or a demon arises, I suggest that you keep your hands off of it. It is no joke. And it most certainly is not the task of a year-old paranormal investigator. Do not take that aspect of the paranormal lightly. That is one paranormal thing you do not want to mess with. So let it be and contact a paranormal investigator or someone else who specializes in it."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "How to Help a Ghost? | Can You Help? - paranormalmusings.com",
+        "metaDescription": "You can either consult a paranormal investigator or if you wish to help a ghost, there are certain ways. Let us look at some of them!",
+        "keyword": "how to help a ghost",
+        "ogTitle": "How to Help a Ghost?",
+        "ogDescription": "You can either consult a paranormal investigator or if you wish to help a ghost, there are certain ways. Let us look at some of them!",
+        "ogImage": "/images/og-help-ghost.jpg",
+        "canonical": "https://paranormalmusings.com/how-to-help-a-ghost/"
+      }
     },
     {
       "slug": "concept-of-resurrection-and-judgement-day",
@@ -9614,7 +10307,16 @@
           "text": "The Hindus speak of Vaitarani, a river, as mentioned in the Garuda Purana that lies between the earth and the realm of Yama, Hindu god of death, and purifies one’s sins. Furthermore, while the righteous see it filled with nectar-like water, the sinful see it filled with blood. Souls have to cross this river after death."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Concept of Resurrection and Judgement Day - paranormalmusings.com",
+        "metaDescription": "Concept of Resurrection and Judgement Day. Lets understand the concept of resurrection in detail across different religions and faiths",
+        "keyword": "concept of resurrection and judgement day",
+        "ogTitle": "Concept of Resurrection and Judgement Day",
+        "ogDescription": "Concept of Resurrection and Judgement Day. Lets understand the concept of resurrection in detail across different religions and faiths.",
+        "ogImage": "/images/og-resurrection.jpg",
+        "canonical": "https://paranormalmusings.com/concept-of-resurrection-and-judgement-day/"
+      }
     },
     {
       "slug": "signs-of-possession",
@@ -10052,7 +10754,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Ghost Entry: How to Protect Yourself From Possession?",
+        "metaDescription": "Questions about ghost entry and possession need to be addressed properly by a paranormal expert. Want to know what are they?",
+        "keyword": "ghost entry how protect yourself from",
+        "ogTitle": "Ghost Entry: How to Protect Yourself From Possession?",
+        "ogDescription": "Questions about ghost entry and possession need to be addressed properly by a paranormal expert. Want to know what are they?",
+        "ogImage": "/images/og-ghost-entry.jpg",
+        "canonical": "https://paranormalmusings.com/ghost-entry-how-to-protect-yourself-from-possession/"
+      }
     },
     {
       "slug": "what-is-channelling",
@@ -10242,7 +10953,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "How to Protect Yourself From Ghosts and Bad Spirits?",
+        "metaDescription": "In this excerpt, we will learn how to protect yourself from ghosts and bad spirits from a paranormal investigator in Chennai, India.",
+        "keyword": "how protect yourself from ghosts bad",
+        "ogTitle": "How to Protect Yourself From Ghosts and Bad Spirits?",
+        "ogDescription": "In this excerpt, we will learn how to protect yourself from ghosts and bad spirits from a paranormal investigator in Chennai, India.",
+        "ogImage": "/images/og-protect-spirits.jpg",
+        "canonical": "https://paranormalmusings.com/how-to-protect-yourself-from-ghosts-and-bad-spirits/"
+      }
     },
     {
       "slug": "how-to-talk-to-a-ghost",
@@ -10330,7 +11050,16 @@
           "text": "Many are also extremely concerned about their family’s well-being. In fact, it’s been my experience that many souls after passing remain for days, weeks, and sometimes months just in order to help their loved ones adjust. Occasionally, you’ll even encounter a spirit who’s made the journey to the other side and returned very quickly in order to help their families adjust. It’s very rare on a ghost hunt though to find one who has transitioned already and come back because they normally have no desire to speak with you. Unless, and this is a big one, they want to set the record straight about their death, or need you to help their families somehow. Maybe relay a message."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "How to Talk to a Ghost? - paranormalmusings.com",
+        "metaDescription": "How to talk to a ghost? In this excerpt, we will discuss a very important topic for a paranormal investigation - how to talk to ghosts?",
+        "keyword": "how to talk to a ghost",
+        "ogTitle": "How to Talk to a Ghost?",
+        "ogDescription": "How to talk to a ghost? In this excerpt, we will discuss a very important topic for a paranormal investigation - how to talk to ghosts?",
+        "ogImage": "/images/og-talk-ghost.jpg",
+        "canonical": "https://paranormalmusings.com/how-to-talk-to-a-ghost/"
+      }
     },
     {
       "slug": "how-to-get-rid-of-spirits-in-your-house",
@@ -10452,7 +11181,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "How to Get Rid of Spirits in Your House? - paranormalmusings.com",
+        "metaDescription": "How to get rid of spirits in your house? In this blog, we will discuss how to get rid of paranormal activity. Want to know more? Read on!",
+        "keyword": "how get rid spirits your house",
+        "ogTitle": "How to Get Rid of Spirits in Your House?",
+        "ogDescription": "How to get rid of spirits in your house? In this blog, we will discuss how to get rid of paranormal activity. Want to know more? Read on!",
+        "ogImage": "/images/og-rid-spirits.jpg",
+        "canonical": "https://paranormalmusings.com/how-to-get-rid-of-spirits-in-your-house/"
+      }
     },
     {
       "slug": "symptoms-of-spirit-possession",
@@ -11016,7 +11754,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is Depossession Therapy? - paranormalmusings.com",
+        "metaDescription": "In this blog, we will look at what is depossession therapy is and how does a paranormal expert in Chennai carries it out.",
+        "keyword": "what is depossession therapy",
+        "ogTitle": "What is Depossession Therapy?",
+        "ogDescription": "In this blog, we will look at what is depossession therapy is and how does a paranormal expert in Chennai carries it out.",
+        "ogImage": "/images/og-depossession-therapy.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-depossession-therapy/"
+      }
     },
     {
       "slug": "what-is-possession",
@@ -11249,7 +11996,16 @@
           "text": "In case you feel cut off or isolated from your spirit guides, then don’t worry. Once you connect with your spirit guides, then it is always there. This connection will stay even after you die and meet your guide in the afterlife. So don’t be anxious. The spirits are always working to help you and communicate with you. In your worst moments, the spirit wants to help, but since you are going through a challenging phase, you are not able to comprehend the messages designed by the spirit. Remember, your Spirit guide is always there for you. Helping you, protecting you, taking care of you, and always watching you. All you need to do is just to open yourself to it."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "How to Connect With Your Spirit Guides? - paranormalmusings.com",
+        "metaDescription": "In this blog, we will discuss how to connect with your spirit guides residing in the paranormal world. Read on to find out more!",
+        "keyword": "how connect your spirit guides",
+        "ogTitle": "How to Connect With Your Spirit Guides?",
+        "ogDescription": "In this blog, we will discuss how to connect with your spirit guides residing in the paranormal world. Read on to find out more!",
+        "ogImage": "/images/og-spirit-guides.jpg",
+        "canonical": "https://paranormalmusings.com/how-to-connect-with-your-spirit-guides/"
+      }
     },
     {
       "slug": "what-is-an-addicted-ghost",
@@ -11752,7 +12508,16 @@
           "text": "After a series of transmigrations through higher and lower births, the individual soul ultimately merges with the supreme soul."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Reincarnation - Universal Law - paranormalmusings.com",
+        "metaDescription": "Let's understand the universal law of reincarnation. The universal law is precise and flawless. A small seed carries in it the potential of an oak tree.",
+        "keyword": "reincarnation universal law",
+        "ogTitle": "Reincarnation - Universal Law",
+        "ogDescription": "Let's understand the universal law of reincarnation. The universal law is precise and flawless. A small seed carries in it the potential of an oak tree.",
+        "ogImage": "/images/og-reincarnation-law.jpg",
+        "canonical": "https://paranormalmusings.com/reincarnation-universal-law/"
+      }
     },
     {
       "slug": "how-the-soul-leaves-the-body",
@@ -12337,7 +13102,16 @@
           "text": "Most paranormal expert today use a digital recorder for electronic voice phenomena detection. In the early days, most used an analogue, or tape, recorder. But such recorders have now become redundant. There are several reasons that have added to it, the first being the mechanical noises in the audio. The sounds from motors, tape movement, etc. can overlap with the actual EVP that the paranormal expert is trying to capture. This common problem, however, can be overcome by using an external microphone. Another problem with analogue recording equipment is the quality of the recordings it produces."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "What is an EVP? | EVP Meaning - paranormalmusings.com",
+        "metaDescription": "Let's discuss what is EVP and its meaning and also try to understand what is the reason behind its popularity for paranormal expert.",
+        "keyword": "what is an evp",
+        "ogTitle": "What is an EVP?",
+        "ogDescription": "Let's discuss what is EVP and its meaning and also try to understand what is the reason behind its popularity for paranormal expert.",
+        "ogImage": "/images/og-evp-meaning.jpg",
+        "canonical": "https://paranormalmusings.com/what-is-an-evp/"
+      }
     },
     {
       "slug": "story-of-possession-a-case-study-of-anamika",
@@ -12579,7 +13353,16 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published"
+      "status": "published",
+      "seo": {
+        "metaTitle": "Story of Possession: A Case Study of Anamika - paranormalmusings.com",
+        "metaDescription": "As a psychotherapist and paranormal explorer in Chennai, India, here is a story of possession, of my client, Ananmika. Lets start",
+        "keyword": "story possession case study anamika",
+        "ogTitle": "Story of Possession: A Case Study of Anamika",
+        "ogDescription": "As a psychotherapist and paranormal explorer in Chennai, India, here is a story of possession, of my client, Ananmika. Lets start",
+        "ogImage": "/images/og-anamika-case.jpg",
+        "canonical": "https://paranormalmusings.com/story-of-possession-a-case-study-of-anamika/"
+      }
     }
   ],
   "home": {

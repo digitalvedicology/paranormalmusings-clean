@@ -34,6 +34,16 @@ export type CategoryPage = {
   layout: 'hub' | 'archive'
   published: boolean
   hub: { pillar: string | null; clusters: HubCluster[]; questions: HubQuestion[] }
+  /** SEO Metadata */
+  seo?: {
+    metaTitle?: string
+    metaDescription?: string
+    keyword?: string
+    ogTitle?: string
+    ogDescription?: string
+    ogImage?: string
+    canonical?: string
+  }
 }
 
 export type Post = {
@@ -58,6 +68,16 @@ export type Post = {
   /** Empty means "not written up yet": cards link to the category instead. */
   body: Block[]
   status: 'published' | 'draft'
+  /** SEO Metadata */
+  seo?: {
+    metaTitle?: string
+    metaDescription?: string
+    keyword?: string
+    ogTitle?: string
+    ogDescription?: string
+    ogImage?: string
+    canonical?: string
+  }
 }
 
 export type SiteSettings = {

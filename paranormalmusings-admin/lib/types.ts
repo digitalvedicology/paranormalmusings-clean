@@ -75,6 +75,16 @@ export type CategoryPage = {
     clusters: HubCluster[]
     questions: HubQuestion[]
   }
+  /** SEO Metadata */
+  seo?: {
+    metaTitle?: string
+    metaDescription?: string
+    keyword?: string
+    ogTitle?: string
+    ogDescription?: string
+    ogImage?: string
+    canonical?: string
+  }
 }
 
 /* ── Posts ───────────────────────────────────────────────────────────── */
@@ -113,6 +123,16 @@ export type Post = {
   /** Empty means "not written up yet": cards link to the category instead. */
   body: Block[]
   status: PostStatus
+  /** SEO Metadata */
+  seo?: {
+    metaTitle?: string
+    metaDescription?: string
+    keyword?: string
+    ogTitle?: string
+    ogDescription?: string
+    ogImage?: string
+    canonical?: string
+  }
 }
 
 /* ── Everything else ─────────────────────────────────────────────────── */

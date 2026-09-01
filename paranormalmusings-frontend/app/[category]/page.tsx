@@ -50,16 +50,24 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const archiveCount = allPosts.length - 1 // Exclude lead story
   const totalPages = Math.ceil(archiveCount / 15)
 
-  const alternates: Record<string, string> = { canonical: `${baseUrl}${meta.href}` }
+  // Use SEO metadata if available, fallback to default
+  const title = meta.seo?.metaTitle || meta.title
+  const description = meta.seo?.metaDescription || meta.blurb
+  const ogTitle = meta.seo?.ogTitle || meta.title
+  const ogDescription = meta.seo?.ogDescription || description
+  const ogImage = meta.seo?.ogImage || undefined
+  const canonical = meta.seo?.canonical || `${baseUrl}${meta.href}`
+
+  const alternates: Record<string, string> = { canonical }
 
   // rel="next" for page 2
   if (totalPages > 1) {
     alternates.next = `${baseUrl}${meta.href}/page/2`
   }
 
-  return {
-    title: meta.title,
-    description: meta.blurb,
+  const metadata: Metadata = {
+    title,
+    description,
     alternates,
     robots: {
       index: true,
@@ -68,7 +76,29 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       'max-image-preview': 'large',
       'max-video-preview': -1,
     },
+    openGraph: {
+      title: ogTitle,
+      description: ogDescription,
+      type: 'website',
+      url: canonical,
+      siteName: 'Paranormal Musings',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: ogTitle,
+      description: ogDescription,
+      creator: '@paranormalmusings',
+    },
   }
+
+  if (ogImage) {
+    metadata.openGraph = {
+      ...metadata.openGraph,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    }
+  }
+
+  return metadata
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {

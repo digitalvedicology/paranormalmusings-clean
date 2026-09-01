@@ -73,7 +73,12 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const categoryHref = meta.href
   const pageUrl = `${baseUrl}${categoryHref}/page/${resolved.page}`
 
-  const alternates: Record<string, string> = { canonical: pageUrl }
+  // Use SEO metadata if available, fallback to default
+  const title = `${meta.seo?.metaTitle || meta.title} — Page ${resolved.page}`
+  const description = meta.seo?.metaDescription || `${meta.label} · Page ${resolved.page} of ${resolved.totalPages}`
+  const canonical = meta.seo?.canonical || pageUrl
+
+  const alternates: Record<string, string> = { canonical }
 
   // rel="prev" (except on page 2)
   if (resolved.page > 2) {
@@ -88,8 +93,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   }
 
   return {
-    title: `${meta.title} — Page ${resolved.page}`,
-    description: `${meta.label} · Page ${resolved.page} of ${resolved.totalPages}`,
+    title,
+    description,
     alternates,
     robots: {
       index: true,
