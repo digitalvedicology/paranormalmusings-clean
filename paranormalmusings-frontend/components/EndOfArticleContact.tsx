@@ -1,9 +1,6 @@
-import ContactForm from './ContactForm'
+'use client'
 
-/**
- * Contact form module shown at the end of article pages.
- * Encourages readers to write about their own experiences.
- */
+import ContactFormModal from './ContactFormModal'
 
 export default function EndOfArticleContact() {
   return (
@@ -18,7 +15,7 @@ export default function EndOfArticleContact() {
             you read here, we would like to hear from you.
           </p>
         </div>
-        <ContactForm />
+        <ContactFormModal />
       </div>
     </section>
   )

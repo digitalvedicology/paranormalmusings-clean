@@ -1,18 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import ContactForm from './ContactForm'
 import { getContent } from '@/lib/content'
 
 export default async function SiteFooter() {
   const content = await getContent()
   return (
     <footer id="contact" className="bg-night-900 text-white scroll-mt-24">
-      {/* Contact form section */}
-      <div className="bg-night-800 border-t border-b border-white/10">
-        <div className="wrap py-14 lg:py-16">
-          <ContactForm />
-        </div>
-      </div>
 
       {/* Footer content */}
       <div className="wrap pt-14 pb-8">
