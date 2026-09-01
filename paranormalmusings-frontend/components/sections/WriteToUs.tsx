@@ -1,4 +1,6 @@
-import Link from 'next/link'
+'use client'
+
+import ContactFormModal from '../ContactFormModal'
 
 export default function WriteToUs() {
   return (
@@ -14,19 +16,8 @@ export default function WriteToUs() {
             <p className="text-[14.5px] leading-relaxed text-body/90 max-w-md">
               Have experiences to share? Questions about the paranormal? Get in touch — I&apos;d love to hear from you.
             </p>
-            <div className="mt-5 flex flex-col gap-3">
-              <a
-                href="mailto:paranormalmusings@proton.me"
-                className="inline-block px-5 py-3 bg-ink text-paper rounded-lg font-semibold hover:bg-ink/90 transition text-[15px]"
-              >
-                Email us
-              </a>
-              <Link
-                href="/about#contact"
-                className="inline-block text-gold-600 hover:text-gold-700 font-semibold text-[14px] underline"
-              >
-                Use contact form →
-              </Link>
+            <div className="mt-5">
+              <ContactFormModal />
             </div>
           </div>
 

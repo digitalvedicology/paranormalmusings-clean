@@ -26,7 +26,7 @@ declare global {
  *
  * Server-side handler ensures email address and API keys never leak to browser.
  */
-export default function ContactForm() {
+export default function ContactForm({ onSuccess }: { onSuccess?: () => void } = {}) {
   const [formState, setFormState] = useState<FormState>({ status: 'idle' })
   const [turnstileWidgetId, setTurnstileWidgetId] = useState<string>('')
   const formRef = useRef<HTMLFormElement>(null)
@@ -99,10 +99,17 @@ export default function ContactForm() {
           window.turnstile.reset(turnstileWidgetId)
         }
 
-        // Clear success message after 8 seconds
-        setTimeout(() => {
-          setFormState({ status: 'idle' })
-        }, 8000)
+        // Call onSuccess callback if provided (for modal closure)
+        if (onSuccess) {
+          setTimeout(() => {
+            onSuccess()
+          }, 2500)
+        } else {
+          // Clear success message after 8 seconds if not in modal
+          setTimeout(() => {
+            setFormState({ status: 'idle' })
+          }, 8000)
+        }
       } else {
         setFormState({
           status: 'error',
