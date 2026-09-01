@@ -2,6 +2,17 @@ import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { contactFormLimiter } from '@/lib/rate-limiter'
 
+// Initialize SMTP transporter
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST || 'smtp.hostinger.com',
+  port: parseInt(process.env.SMTP_PORT || '587'),
+  secure: process.env.SMTP_PORT === '465',
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
+  },
+})
+
 interface ContactFormData {
   name: string
   email: string
@@ -125,27 +136,12 @@ export async function POST(request: NextRequest) {
 
     // Send email via Nodemailer SMTP
     let emailSent = false
-    const smtpHost = process.env.SMTP_HOST
-    const smtpPort = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 587
-    const smtpUser = process.env.SMTP_USER
-    const smtpPassword = process.env.SMTP_PASSWORD
-    const smtpFrom = process.env.SMTP_FROM || 'contact@paranormalmusings.com'
-    const contactEmailTo = process.env.CONTACT_EMAIL_TO || 'support@vedicology.com'
+    const contactEmailTo = process.env.CONTACT_EMAIL_TO || 'test@paranormalmusings.com'
 
-    if (smtpHost && smtpUser && smtpPassword) {
+    if (process.env.SMTP_USER && process.env.SMTP_PASSWORD) {
       try {
-        const transporter = nodemailer.createTransport({
-          host: smtpHost,
-          port: smtpPort,
-          secure: smtpPort === 465,
-          auth: {
-            user: smtpUser,
-            pass: smtpPassword,
-          },
-        })
-
         await transporter.sendMail({
-          from: smtpFrom,
+          from: process.env.SMTP_USER,
           to: contactEmailTo,
           replyTo: body.email,
           subject: `New contact form message from ${body.name}`,
@@ -158,7 +154,7 @@ export async function POST(request: NextRequest) {
         console.error('[contact] Failed to send email via SMTP:', (error as Error).message)
       }
     } else {
-      console.warn('[contact] SMTP not configured - set SMTP_HOST, SMTP_USER, SMTP_PASSWORD')
+      console.warn('[contact] SMTP not configured - set SMTP_USER and SMTP_PASSWORD')
     }
 
     // Store in Payload CMS
