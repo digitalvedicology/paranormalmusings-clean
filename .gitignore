@@ -9,6 +9,7 @@ build
 # — the committed .env.example files carry placeholders only.
 .env
 .env.local
+.env.production
 .env.*.local
 
 # Editor and OS noise
