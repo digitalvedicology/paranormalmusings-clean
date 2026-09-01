@@ -124,9 +124,6 @@ const nextConfig = {
     const { default: redirectsList } = await import('./lib/redirects.js')
     return redirectsList
   },
-  experimental: {
-    turbopack: false,
-  },
 }
 
 export default nextConfig

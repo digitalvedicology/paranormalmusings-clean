@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint",
-    "build:frontend": "next build",
+    "build:frontend": "next build --webpack",
     "start:frontend": "next start",
     "install:frontend": "npm install"
   },

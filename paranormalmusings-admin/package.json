@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start -p 3001",
     "lint": "next lint",
-    "build:admin": "next build",
+    "build:admin": "next build --webpack",
     "start:admin": "next start -p 3001",
     "install:admin": "npm install",
     "migrate:mongo": "tsx scripts/migrate-to-mongo.ts"
