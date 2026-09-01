@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import Link from 'next/link'
 
 interface FormState {
   status: 'idle' | 'loading' | 'success' | 'error'
@@ -295,18 +294,6 @@ export default function ContactForm({ onSuccess }: { onSuccess?: () => void } = 
             )}
           </div>
         </button>
-
-        {/* Privacy notice */}
-        <div className="p-4 rounded-xl bg-ink/3 border border-ink/10">
-          <p className="text-[12px] leading-relaxed text-body/75">
-            <span className="block font-medium text-ink/90 mb-1.5">🔒 Your privacy is protected</span>
-            We only use your information to respond to your message. Your data is protected under the{' '}
-            <Link href="/privacy" className="text-gold-600 font-medium hover:text-gold-700 transition">
-              Privacy Policy
-            </Link>
-            {' '}(India DPDP Act 2023 &amp; GDPR compliant).
-          </p>
-        </div>
       </div>
     </form>
   )
