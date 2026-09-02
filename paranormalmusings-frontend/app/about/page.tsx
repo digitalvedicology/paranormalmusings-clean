@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { getContent } from '@/lib/content'
 import { personSchema } from '@/lib/structured-data'
+import WriteToUs from '@/components/sections/WriteToUs'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { site } = await getContent()
@@ -65,5 +66,7 @@ export default async function AboutPage() {
     <section className="bg-mist border-y border-rule"><div className="wrap py-14 lg:py-20"><div className="max-w-2xl"><Kicker>Academic Qualifications</Kicker><h2 className="mt-4 font-display text-[34px] leading-tight text-ink">Academic Qualifications</h2></div><div className="mt-9 grid gap-4 md:grid-cols-2">{qualifications.map(([level, degree, field]) => <article key={degree} className="border-l-[3px] border-gold-500 bg-paper p-6 shadow-soft"><p className="label text-gold-600">{level}</p><h3 className="mt-3 font-display text-[22px] leading-snug text-ink">{degree}</h3><p className="mt-3 text-[13.5px] leading-relaxed text-muted">{field}</p></article>)}</div></div></section>
 
     <section className="wrap py-14 lg:py-20"><div className="grid gap-9 lg:grid-cols-[290px_minmax(0,1fr)] lg:gap-16"><div><Kicker>Paranormal Musings</Kicker><h2 className="mt-4 font-display text-[30px] leading-tight text-ink">Other Relevant Specialisations</h2></div><ul className="grid gap-4 border-t border-rule pt-6">{specialisations.map((item) => <li key={item} className="flex gap-3 text-[15px] leading-[1.75] text-body"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />{item}</li>)}</ul></div></section>
+
+    <WriteToUs />
   </>
 }

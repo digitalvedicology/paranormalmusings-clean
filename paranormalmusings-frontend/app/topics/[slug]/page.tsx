@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import PostGrid from '@/components/PostGrid'
 import { getTopic, getPostsByTopic, getAllTopics } from '@/lib/tags'
 import { getContent } from '@/lib/content'
+import WriteToUs from '@/components/sections/WriteToUs'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
@@ -90,6 +91,8 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             ))}
         </div>
       </section>
+
+      <WriteToUs />
     </>
   )
 }
