@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getContent } from '@/lib/content'
+import SubscribeForm from './SubscribeForm'
 
 export default async function SiteFooter() {
   const content = await getContent()
@@ -71,7 +72,11 @@ export default async function SiteFooter() {
             </ul>
           </div>
 
-          {/* Newsletter - disabled until wired to real ESP */}
+          {/* Newsletter */}
+          <div>
+            <p className="label text-white/40">Newsletter</p>
+            <SubscribeForm variant="inline" />
+          </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-white/40">
