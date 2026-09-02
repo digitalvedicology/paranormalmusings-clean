@@ -9,6 +9,7 @@ const LINKS = [
   { href: '/posts', label: 'Posts', hint: 'Every article' },
   { href: '/home', label: 'Home page', hint: 'The curated bands' },
   { href: '/navigation', label: 'Navigation', hint: 'Menu, topics, footer' },
+  { href: '/subscribers', label: 'Newsletter Subscribers', hint: 'Manage subscriber list' },
   { href: '/settings', label: 'Site details', hint: 'Name, author, contact' },
 ]
 
