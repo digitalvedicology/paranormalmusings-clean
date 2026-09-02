@@ -5,7 +5,7 @@ import ArticleSidebar from './ArticleSidebar'
 // import CommentForm from './CommentForm'
 import PostCard from './PostCard'
 import SectionLink from './SectionLink'
-import EndOfArticleContact from './EndOfArticleContact'
+import WriteToUs from './sections/WriteToUs'
 import { artwork, articleSections, getContent, headingId, type Block, type Post } from '@/lib/content'
 
 /**
@@ -277,8 +277,8 @@ export default async function ArticlePage({ post }: { post: Post }) {
       )}
 
       {/* ── End of article contact ──────────────────────────────────────── */}
-      <div className="wrap">
-        <EndOfArticleContact />
+      <div className="pt-12 lg:pt-16">
+        <WriteToUs />
       </div>
     </>
   )
