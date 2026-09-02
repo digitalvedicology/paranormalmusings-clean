@@ -80,30 +80,6 @@ export default async function CategoryHub({ category }: { category: Category }) 
         <h2 className="font-display text-[22px] lg:text-[24px] text-ink mb-9">Recent blog posts</h2>
         <PostGrid posts={rest.map(content.toCard)} author={content.site.author} authorImage={content.site.authorImage} perPage={9} />
       </section>
-
-      {/* ── Closing CTA — butts against the footer as one dark block ───── */}
-      <section className="bg-night-900 text-white">
-        <div className="wrap pt-16 lg:pt-20 pb-14 lg:pb-16 text-center">
-          <h2 className="font-display text-[26px] sm:text-[32px] leading-tight">Still looking for an explanation?</h2>
-          <p className="mt-4 max-w-xl mx-auto text-[15px] leading-relaxed text-white/60">
-            Twenty-five years of case notes, and a reply to every message that arrives.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex items-center h-11 px-6 rounded-lg border border-white/25 text-[14px] font-semibold hover:bg-white/10 transition"
-            >
-              Chat to us
-            </Link>
-            <Link
-              href="#newsletter"
-              className="inline-flex items-center h-11 px-6 rounded-lg bg-gold-500 text-[14px] font-semibold hover:bg-gold-600 transition"
-            >
-              Get started
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
