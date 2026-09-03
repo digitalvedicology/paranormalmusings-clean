@@ -13,7 +13,11 @@ import type { NextRequest } from 'next/server'
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   const { searchParams } = request.nextUrl
-  const baseUrl = request.nextUrl.origin
+
+  // Always allow revalidation endpoint - critical for admin to update frontend
+  if (pathname === '/api/revalidate') {
+    return NextResponse.next()
+  }
 
   // Enforce canonical host: redirect www to apex
   if (request.nextUrl.hostname === 'www.paranormalmusings.com') {
