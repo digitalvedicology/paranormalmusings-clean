@@ -4,7 +4,7 @@ import path from 'node:path'
 
 export const dynamic = 'force-dynamic'
 
-const DATA_DIR = process.env.DATA_DIR ?? path.join(process.cwd(), 'data')
+const DATA_DIR = process.env.DATA_DIR?.trim() || path.join(process.cwd(), 'data')
 const SUBSCRIBERS_FILE = path.join(DATA_DIR, 'newsletter-subscribers.json')
 
 interface NewsletterSubscriber {
