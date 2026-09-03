@@ -19,3 +19,7 @@ Thumbs.db
 .idea
 *.log
 *.tsbuildinfo
+
+# Uploaded files and data (dynamic, not code)
+paranormalmusings-admin/data/
+paranormalmusings-frontend/public/images/
