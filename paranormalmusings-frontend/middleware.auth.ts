@@ -11,9 +11,9 @@ import { NextRequest, NextResponse } from 'next/server'
  */
 
 export function middleware(request: NextRequest) {
-  // Only apply auth to staging domain
+  // Only apply auth to staging domain (not production frontend)
   const hostname = request.headers.get('host') || ''
-  const isStaging = hostname.includes('paranormalmusings.com') && !hostname.includes('admin.')
+  const isStaging = hostname.includes('staging.') || hostname.includes('frontend.')
   const isDisabled = process.env.STAGING_BASIC_AUTH_DISABLED === 'true'
 
   if (!isStaging || isDisabled) {
