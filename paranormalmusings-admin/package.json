@@ -8,6 +8,7 @@
     "start": "next start -p 3001",
     "lint": "next lint",
     "build:admin": "next build --webpack",
+    "build:frontend": "next build --webpack",
     "start:admin": "next start -p 3001",
     "install:admin": "npm install",
     "migrate:mongo": "tsx scripts/migrate-to-mongo.ts"
