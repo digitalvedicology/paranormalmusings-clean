@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19T11:53:39.114Z",
+  "updatedAt": "2026-09-03T15:02:04.184Z",
   "site": {
     "name": "Paranormal Musings",
     "tagline": "Notes from beyond the veil",
@@ -342,7 +342,7 @@
       "title": "Ghost or Spirit Possession of Prateek: Case Study Number 3",
       "category": "cases",
       "alsoIn": [],
-      "image": "https://admin.paranormalmusings.com/api/media/file/paranormalmusings-case-study-of-prateek.png",
+      "image": "/images/ghost-or-spirit-possession-of-prateek.png",
       "imagePlacement": "standard",
       "seed": "pm-ghostor",
       "date": "11 February 2021",
@@ -538,16 +538,7 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published",
-      "seo": {
-        "metaTitle": "Ghost or Spirit Possession of Prateek: Case Study Number 3 -",
-        "metaDescription": "The case study of Prateek will show how a paranormal expert in Chennai, India deals with ghost spirit possession due to addiction.",
-        "keyword": "ghost or spirit possession prateek case",
-        "ogTitle": "Ghost or Spirit Possession of Prateek: Case Study Number 3",
-        "ogDescription": "The case study of Prateek will show how a paranormal expert in Chennai, India deals with ghost spirit possession due to addiction.",
-        "ogImage": "/images/og-prateek-case.jpg",
-        "canonical": "https://paranormalmusings.com/ghost-or-spirit-possession-of-prateek-case-study-number-3/"
-      }
+      "status": "published"
     },
     {
       "slug": "real-possession-stories-the-curious-case-of-paarth-mehta",
