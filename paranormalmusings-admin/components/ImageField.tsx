@@ -30,16 +30,52 @@ export default function ImageField({
   shape?: 'landscape' | 'square'
 }) {
   const input = useRef<HTMLInputElement>(null)
+  const dropZone = useRef<HTMLDivElement>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [broken, setBroken] = useState(false)
   const [library, setLibrary] = useState<MediaFile[] | null>(null)
+  const [isDragging, setIsDragging] = useState(false)
 
   // A stored path is relative to the site, which is served from a different
   // origin than the admin — so previews here need the site prefixed back on.
   const preview = value.startsWith('/') ? `${siteUrl.replace(/\/$/, '')}${value}` : value
 
   useEffect(() => setBroken(false), [value])
+
+  useEffect(() => {
+    const zone = dropZone.current
+    if (!zone) return
+
+    const handleDragOver = (e: DragEvent) => {
+      e.preventDefault()
+      e.stopPropagation()
+      setIsDragging(true)
+    }
+
+    const handleDragLeave = (e: DragEvent) => {
+      e.preventDefault()
+      if (e.target === zone) setIsDragging(false)
+    }
+
+    const handleDrop = (e: DragEvent) => {
+      e.preventDefault()
+      e.stopPropagation()
+      setIsDragging(false)
+      const files = e.dataTransfer?.files
+      if (files?.[0]) upload(files[0])
+    }
+
+    zone.addEventListener('dragover', handleDragOver)
+    zone.addEventListener('dragleave', handleDragLeave)
+    zone.addEventListener('drop', handleDrop)
+
+    return () => {
+      zone.removeEventListener('dragover', handleDragOver)
+      zone.removeEventListener('dragleave', handleDragLeave)
+      zone.removeEventListener('drop', handleDrop)
+    }
+  }, [])
 
   async function upload(file: File) {
     setBusy(true)
@@ -81,15 +117,16 @@ export default function ImageField({
 
       <div className="mt-1.5 flex flex-wrap items-start gap-4">
         <div
-          className={`relative shrink-0 overflow-hidden rounded-lg border border-rule bg-mist ${
-            shape === 'square' ? 'h-24 w-24' : 'h-24 w-40'
-          }`}
+          ref={dropZone}
+          className={`relative shrink-0 overflow-hidden rounded-lg border-2 cursor-pointer transition-colors ${
+            isDragging ? 'border-gold-500 bg-gold-50' : 'border-rule bg-mist'
+          } ${shape === 'square' ? 'h-24 w-24' : 'h-24 w-40'}`}
         >
           {value && !broken ? (
             <img src={preview} alt="" className="h-full w-full object-cover" onError={() => setBroken(true)} />
           ) : (
             <div className="grid h-full w-full place-items-center px-2 text-center text-[11px] leading-tight text-muted">
-              {broken ? 'Will not load' : 'Placeholder in use'}
+              {broken ? 'Will not load' : isDragging ? '📸 Drop here' : '📁 Drag or click'}
             </div>
           )}
         </div>
