@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint",
     "build:frontend": "next build --webpack",
-    "start:frontend": "next start",
+    "start:frontend": "next start -p 3000",
     "install:frontend": "npm install"
   },
   "dependencies": {
