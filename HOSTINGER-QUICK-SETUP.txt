@@ -1,0 +1,160 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║         PARANORMAL MUSINGS - HOSTINGER PRODUCTION SETUP                        ║
+║                    Environment Variables Checklist                             ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+📌 STEP 1: GENERATE SECRETS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate 3 strong secrets (save these securely!):
+
+  Command: openssl rand -base64 32
+
+  REVALIDATE_SECRET:    [____________________________________]
+  ADMIN_API_KEY:        [____________________________________]
+  ADMIN_PASSWORD:       [____________________________________]
+
+
+📌 STEP 2: GET HOSTINGER CREDENTIALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Login to hpanel.hostinger.com
+2. Emails → Your domain → contact@paranormalmusings.com
+3. Note the email password: [____________________________________]
+
+
+📌 STEP 3: FRONTEND .env.production
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Location: /home/paranormalmusings/public_html/.env.production
+
+ADMIN_API_URL=https://admin.paranormalmusings.com
+CONTENT_REVALIDATE=3600
+REVALIDATE_SECRET=[USE SECRET FROM STEP 1]
+SMTP_HOST=smtp.hostinger.com
+SMTP_PORT=587
+SMTP_USER=contact@paranormalmusings.com
+SMTP_PASSWORD=[USE PASSWORD FROM STEP 2]
+SMTP_FROM=contact@paranormalmusings.com
+CONTACT_EMAIL_TO=paranormalmusings@proton.me
+NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_KEY=[FROM CLOUDFLARE DASHBOARD]
+CLOUDFLARE_TURNSTILE_SECRET_KEY=[FROM CLOUDFLARE DASHBOARD]
+NEXT_PUBLIC_GA_ID=[FROM GOOGLE ANALYTICS]
+
+
+📌 STEP 4: ADMIN .env.production
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Location: /home/admin.paranormalmusings.com/public_html/.env.production
+
+ADMIN_PASSWORD=[USE PASSWORD FROM STEP 1]
+ADMIN_API_KEY=[USE API_KEY FROM STEP 1]
+SITE_URL=https://paranormalmusings.com
+REVALIDATE_SECRET=[MUST BE SAME AS FRONTEND - FROM STEP 1]
+UPLOAD_DIR=/home/paranormalmusings/public_html/media
+SMTP_HOST=smtp.hostinger.com
+SMTP_PORT=587
+SMTP_USER=contact@paranormalmusings.com
+SMTP_PASSWORD=[USE PASSWORD FROM STEP 2]
+SMTP_FROM=contact@paranormalmusings.com
+CONTACT_EMAIL_TO=paranormalmusings@proton.me
+DATA_DIR=/home/admin.paranormalmusings.com/public_html/data
+
+
+📌 STEP 5: CREATE DIRECTORIES (SSH)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ssh username@hostinger-ip
+
+mkdir -p /home/paranormalmusings/public_html/media
+chmod 755 /home/paranormalmusings/public_html/media
+
+mkdir -p /home/admin.paranormalmusings.com/public_html/data
+chmod 755 /home/admin.paranormalmusings.com/public_html/data
+
+
+📌 STEP 6: SET PERMISSIONS (SSH)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Make .env files readable only by owner (security)
+chmod 600 /home/paranormalmusings/public_html/.env.production
+chmod 600 /home/admin.paranormalmusings.com/public_html/.env.production
+
+
+📌 STEP 7: RESTART APPLICATIONS (Hostinger Dashboard)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Hosting → Advanced → Node.js
+2. Find "paranormal-musings" → Restart
+3. Find "paranormal-musings-admin" → Restart
+
+
+📌 STEP 8: VERIFY SETUP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Test frontend:     https://paranormalmusings.com
+✅ Test admin:        https://admin.paranormalmusings.com
+✅ Test contact form: Fill form on homepage → Should receive email
+✅ Test newsletter:   Subscribe on footer → Check admin subscribers page
+✅ Check logs:        Monitor for errors
+
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                         CRITICAL REMINDERS                                    ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+⚠️  REVALIDATE_SECRET must be IDENTICAL in both frontend and admin
+⚠️  Never commit .env.production to GitHub
+⚠️  Keep passwords and secrets secure
+⚠️  Use strong passwords (25+ chars with symbols)
+⚠️  Test email functionality before going live
+⚠️  Check all variables are correctly copied (no typos)
+
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                      ENVIRONMENT VARIABLES BY APP                             ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+FRONTEND ONLY:
+  ✓ ADMIN_API_URL
+  ✓ CONTENT_REVALIDATE
+  ✓ NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_KEY
+  ✓ CLOUDFLARE_TURNSTILE_SECRET_KEY
+  ✓ NEXT_PUBLIC_GA_ID
+
+ADMIN ONLY:
+  ✓ ADMIN_PASSWORD
+  ✓ ADMIN_API_KEY
+  ✓ UPLOAD_DIR
+  ✓ DATA_DIR
+
+BOTH (MUST MATCH):
+  ✓ REVALIDATE_SECRET (identical!)
+  ✓ SMTP_HOST
+  ✓ SMTP_PORT
+  ✓ SMTP_USER
+  ✓ SMTP_PASSWORD
+  ✓ SMTP_FROM
+  ✓ CONTACT_EMAIL_TO
+  ✓ SITE_URL (frontend URL)
+
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    TROUBLESHOOTING QUICK LINKS                                ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+See PRODUCTION-ENV-SETUP.md for:
+  • Detailed variable explanations
+  • How to get Cloudflare Turnstile keys
+  • How to get Google Analytics ID
+  • SMTP troubleshooting
+  • Permission and directory setup
+  • Security best practices
+  • Common errors and solutions
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Created: 2026-09-03
+Last Updated: 2026-09-03
+Status: Ready for Production
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-mist text-body;
+  }
+
+  /* Focus is load-bearing in a form-heavy app — never remove it, only restyle it. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold-500/60 ring-offset-2 ring-offset-paper;
+  }
+}
+
+@layer components {
+  /* ── The small caps label used above every field group and card ────── */
+  .label {
+    @apply text-[11px] font-bold uppercase tracking-label text-muted;
+  }
+
+  /* ── Form controls ─────────────────────────────────────────────────── */
+  .field {
+    @apply w-full rounded-lg border border-rule bg-paper px-3 py-2 text-[14px] text-ink
+           placeholder:text-muted/70 transition-colors;
+  }
+
+  .field:hover {
+    @apply border-bark-100;
+  }
+
+  .field:focus {
+    @apply border-gold-500 outline-none ring-2 ring-gold-500/25 ring-offset-0;
+  }
+
+  .field[aria-invalid='true'] {
+    @apply border-red-400 ring-red-400/20;
+  }
+
+  textarea.field {
+    @apply leading-relaxed;
+  }
+
+  /* ── Buttons ───────────────────────────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-[13.5px]
+           font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-gold-600 text-paper hover:bg-gold-700;
+  }
+
+  .btn-ghost {
+    @apply btn border border-rule bg-paper text-ink hover:border-bark-100 hover:bg-mist;
+  }
+
+  .btn-danger {
+    @apply btn border border-red-200 bg-paper text-red-700 hover:border-red-300 hover:bg-red-50;
+  }
+
+  .btn-sm {
+    @apply px-2.5 py-1.5 text-[12.5px];
+  }
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  .card {
+    @apply rounded-xl border border-rule bg-paper shadow-soft;
+  }
+
+  /* ── Status pills ──────────────────────────────────────────────────── */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[11.5px] font-semibold;
+  }
+
+  .pill-live {
+    @apply pill bg-emerald-50 text-emerald-700;
+  }
+
+  .pill-draft {
+    @apply pill bg-amber-50 text-amber-700;
+  }
+
+  .pill-muted {
+    @apply pill bg-mist text-muted;
+  }
+}
