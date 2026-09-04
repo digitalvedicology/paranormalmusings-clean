@@ -1,5 +1,6 @@
 import { cache } from 'react'
 import seed from './seed/content.json'
+import staticContent from './static-content.json'
 import type {
   CardData,
   Category,
@@ -63,18 +64,9 @@ export const artwork = (image: string, seedValue: string, w: number, h: number) 
 
 async function fetchDoc(): Promise<ContentDoc> {
   try {
-    const response = await fetch(`${ADMIN_URL}/api/content`, {
-      // `tags` is what the revalidate hook clears; `revalidate` is the backstop
-      // for when the admin cannot reach us to fire it.
-      next: { revalidate: REVALIDATE, tags: ['content'] },
-    })
-
-    if (!response.ok) throw new Error(`admin responded ${response.status}`)
-
-    const doc = (await response.json()) as ContentDoc
-    // A malformed payload is worse than a stale one — fall through to the seed.
+    // Load from static file (no admin dependency)
+    const doc = staticContent as ContentDoc
     if (!Array.isArray(doc.categories) || !Array.isArray(doc.posts)) throw new Error('unexpected payload')
-
     return doc
   } catch (error) {
     console.warn(`[content] falling back to the bundled seed: ${(error as Error).message}`)
