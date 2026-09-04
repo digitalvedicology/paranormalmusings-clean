@@ -31,6 +31,6 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Not authorised' }, { status: 401 })
   }
 
-  await revalidateTag('content', 'purge')
+  await revalidateTag('content')
   return Response.json({ revalidated: true })
 }
