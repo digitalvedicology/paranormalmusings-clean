@@ -1,0 +1,20 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="192" height="192" fill="#1a1a1a"/>
+
+  <!-- Third eye / mystical symbol -->
+  <circle cx="96" cy="60" r="20" fill="none" stroke="#e8d5c4" stroke-width="2"/>
+  <circle cx="96" cy="60" r="12" fill="#e8d5c4"/>
+  <circle cx="96" cy="60" r="8" fill="#1a1a1a"/>
+
+  <!-- Eyes -->
+  <circle cx="70" cy="100" r="16" fill="none" stroke="#e8d5c4" stroke-width="2"/>
+  <circle cx="70" cy="100" r="8" fill="#e8d5c4"/>
+
+  <circle cx="122" cy="100" r="16" fill="none" stroke="#e8d5c4" stroke-width="2"/>
+  <circle cx="122" cy="100" r="8" fill="#e8d5c4"/>
+
+  <!-- Mystical aura waves -->
+  <path d="M 50 140 Q 96 120 142 140" fill="none" stroke="#e8d5c4" stroke-width="2" opacity="0.7"/>
+  <path d="M 45 155 Q 96 135 147 155" fill="none" stroke="#e8d5c4" stroke-width="1.5" opacity="0.5"/>
+</svg>

@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+/* ── Page shell: edge-to-edge, only the gutter grows with the viewport ── */
+.wrap { width: 100%; padding-inline: 20px; }
+@media (min-width: 640px)  { .wrap { padding-inline: 32px; } }
+@media (min-width: 1024px) { .wrap { padding-inline: 48px; } }
+@media (min-width: 1280px) { .wrap { padding-inline: 64px; } }
+@media (min-width: 1536px) { .wrap { padding-inline: 88px; } }
+@media (min-width: 1800px) { .wrap { padding-inline: 120px; } }
+
+/* Photographs run at their natural colour — no grade or tint. */
+.moody      { filter: none; }
+.moody-soft { filter: none; }
+
+.label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+
+/* Accent word in the hero headline — one flat gold, no gradient */
+.grad-word { color: #D9BF89; }
+
+.link-arrow svg { transition: transform .25s ease; }
+.link-arrow:hover svg { transform: translateX(5px); }
+
+.hover-title { transition: color .2s ease; }
+a:hover .hover-title { color: #8A5F1E; }
+
+.card-lift { transition: transform .3s ease, box-shadow .3s ease; }
+.card-lift:hover { transform: translateY(-4px); }
+
+.zoom-wrap { overflow: hidden; }
+.zoom-wrap img { transition: transform .7s cubic-bezier(.2,.7,.3,1); }
+a:hover .zoom-wrap img, .card-lift:hover .zoom-wrap img { transform: scale(1.06); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Chip row — the topic pills */
+.chip { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.chip:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(20,16,9,.10); }
+
+/* Trending rows */
+.trend-row { transition: background-color .2s ease; }
+.trend-row:hover { background: #F8F6F1; }
+.trend-row .go { transition: transform .25s ease, opacity .25s ease; opacity: .35; }
+.trend-row:hover .go { transform: translateX(5px); opacity: 1; }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Sticky header state */
+#siteHeader { transition: box-shadow .25s ease, background-color .25s ease, border-color .25s ease; }
+#siteHeader.stuck { box-shadow: 0 1px 0 rgba(20,16,9,.06), 0 10px 30px rgba(20,16,9,.06); background: rgba(255,255,255,.92); backdrop-filter: blur(10px); }
+
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 100%; bottom: -6px; height: 2px;
+  background: #8A5F1E; transition: right .28s ease;
+}
+.nav-link:hover::after, .nav-link.is-active::after { right: 0; }
+
+/* Search overlay */
+#searchOverlay { opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s; }
+#searchOverlay.open { opacity: 1; visibility: visible; }
+
+/* ── FULL-SCREEN HERO SLIDER ────────────────────────────────────────────
+   The stage fills the viewport below the 74px header. Slides cross-fade,
+   the active photograph drifts (ken burns) and its copy rises in.       */
+.hero-stage {
+  height: calc(100svh - 74px);
+  min-height: 540px;
+}
+@supports not (height: 100svh) { .hero-stage { height: calc(100vh - 74px); } }
+
+.hslide {
+  position: absolute; inset: 0;
+  opacity: 0; visibility: hidden;
+  transition: opacity 1s ease, visibility 1s;
+}
+.hslide.is-active { opacity: 1; visibility: visible; }
+
+.hslide img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transform: scale(1.05);
+  transition: transform 10s ease-out;
+}
+.hslide.is-active img { transform: scale(1.15); }
+
+/* ── Designed backdrops ─────────────────────────────────────────────────
+   Drawn here rather than pulled from a stock service, so the hero is never
+   at the mercy of whatever photo a random seed returns. Each slide has its
+   own atmosphere; a real photograph dropped into /public/images covers it. */
+.art { position: absolute; inset: 0; overflow: hidden; transform: scale(1.04); transition: transform 10s ease-out; }
+.hslide.is-active .art { transform: scale(1.12); }
+
+.art-1 { background:
+    radial-gradient(70% 55% at 74% 22%, rgba(217,191,137,.30) 0%, rgba(217,191,137,.06) 38%, rgba(16,12,7,0) 68%),
+    linear-gradient(180deg, #241B10 0%, #150F09 55%, #0B0805 100%); }
+.art-2 { background:
+    radial-gradient(38% 46% at 62% 52%, rgba(230,205,150,.42) 0%, rgba(200,168,104,.12) 45%, rgba(16,12,7,0) 72%),
+    linear-gradient(180deg, #1B1409 0%, #120D07 60%, #090603 100%); }
+.art-3 { background:
+    radial-gradient(46% 40% at 30% 62%, rgba(217,191,137,.34) 0%, rgba(169,121,31,.10) 46%, rgba(16,12,7,0) 74%),
+    linear-gradient(180deg, #2A2114 0%, #1A1309 58%, #0C0805 100%); }
+.art-4 { background:
+    radial-gradient(52% 62% at 20% 8%, rgba(217,191,137,.22) 0%, rgba(16,12,7,0) 62%),
+    linear-gradient(180deg, #16110A 0%, #100C07 62%, #080502 100%); }
+
+/* slow-drifting mist */
+.fog { position: absolute; left: -30%; right: -30%; height: 60%; pointer-events: none; opacity: .5; }
+.fog-a { bottom: -6%;  background: radial-gradient(60% 100% at 50% 100%, rgba(226,214,190,.20) 0%, rgba(226,214,190,0) 70%); animation: drift 46s ease-in-out infinite; }
+.fog-b { bottom: 12%; background: radial-gradient(50% 100% at 40% 100%, rgba(226,214,190,.13) 0%, rgba(226,214,190,0) 72%); animation: drift 64s ease-in-out infinite reverse; }
+@keyframes drift { 0%,100% { transform: translateX(-4%); } 50% { transform: translateX(6%); } }
+
+.silhouette { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* No image overlay by default. The copy carries its own soft shadow so
+   white type still reads against a bright photograph. Individual slides
+   can opt back into a dark wash with `.is-on`. */
+.hslide-scrim { position: absolute; inset: 0; display: none; }
+.hslide-scrim.is-on {
+  display: block;
+  background:
+    linear-gradient(94deg, rgba(16,12,7,.82) 0%, rgba(16,12,7,.58) 40%, rgba(16,12,7,.12) 72%, rgba(16,12,7,0) 100%),
+    linear-gradient(0deg, rgba(16,12,7,.45) 0%, rgba(16,12,7,0) 40%);
+}
+
+.hslide-copy { text-shadow: 0 2px 14px rgba(0, 0, 0, .55), 0 1px 3px rgba(0, 0, 0, .5); }
+
+.hslide-copy > * {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.3,1);
+}
+.hslide.is-active .hslide-copy > * { opacity: 1; transform: none; }
+.hslide.is-active .hslide-copy > :nth-child(1) { transition-delay: .16s; }
+.hslide.is-active .hslide-copy > :nth-child(2) { transition-delay: .26s; }
+.hslide.is-active .hslide-copy > :nth-child(3) { transition-delay: .36s; }
+.hslide.is-active .hslide-copy > :nth-child(4) { transition-delay: .46s; }
+.hslide.is-active .hslide-copy > :nth-child(5) { transition-delay: .56s; }
+
+/* glass surfaces for the floating chips and controls */
+.glass {
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+}
+.glass-btn { transition: background-color .25s ease, border-color .25s ease, transform .25s ease; }
+.glass-btn:hover { background: #A9791F; border-color: #A9791F; transform: translateY(-2px); }
+
+/* progress bar that fills across the active dot */
+.hdot span { display: block; height: 3px; border-radius: 999px; background: rgba(255,255,255,.28); overflow: hidden; }
+.hdot i    { display: block; height: 100%; width: 100%; border-radius: 999px; transform-origin: left; transform: scaleX(0);
+             background: #D9BF89; }
+.hero-playing .hdot.is-active i { animation: hfill 7s linear forwards; }
+@keyframes hfill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@keyframes scrollcue { 0%,100% { transform: translateY(0); opacity: .55; } 50% { transform: translateY(6px); opacity: 1; } }
+.scroll-cue svg { animation: scrollcue 1.8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fog { animation: none; }
+  .hslide.is-active .art { transform: scale(1.04); }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hslide, .hslide img, .hslide-copy > * { transition-duration: .01ms; }
+  .hslide.is-active img { transform: scale(1.05); }
+  .hero-playing .hdot.is-active i { animation: none; transform: scaleX(1); }
+  .scroll-cue svg { animation: none; }
+  .zoom-wrap img, .card-lift { transition: none; }
+}
+
+/* Hub FAQ: hide the native disclosure triangle, we draw our own control */
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }

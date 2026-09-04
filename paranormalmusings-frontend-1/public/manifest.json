@@ -1,0 +1,72 @@
+{
+  "name": "Paranormal Musings with Praveen Saanker",
+  "short_name": "Paranormal Musings",
+  "description": "Paranormal explorations and perspectives on life after death from Indian (Eastern) and Western viewpoints",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "categories": ["lifestyle", "news"],
+  "screenshots": [
+    {
+      "src": "/images/paranormalmusings-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/paranormalmusings-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Eastern Views",
+      "short_name": "Eastern Views",
+      "description": "Explore Eastern perspectives on the paranormal and afterlife",
+      "url": "/eastern-views",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Western Views",
+      "short_name": "Western Views",
+      "description": "Explore Western perspectives on the paranormal",
+      "url": "/western-views",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Investigation",
+      "short_name": "Investigation",
+      "description": "Paranormal investigation techniques and methods",
+      "url": "/investigation",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

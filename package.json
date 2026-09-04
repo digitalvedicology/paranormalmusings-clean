@@ -6,6 +6,7 @@
     "install:frontend": "npm --prefix paranormalmusings-frontend install",
     "install:admin": "npm --prefix paranormalmusings-admin install",
     "build:frontend": "npm --prefix paranormalmusings-frontend install && npm --prefix paranormalmusings-frontend run build",
+    "build:frontend-1": "npm --prefix paranormalmusings-frontend-1 install && npm --prefix paranormalmusings-frontend-1 run build",
     "build:admin": "npm --prefix paranormalmusings-admin install && npm --prefix paranormalmusings-admin run build",
     "start:frontend": "npm --prefix paranormalmusings-frontend run start",
     "start:admin": "npm --prefix paranormalmusings-admin run start"
