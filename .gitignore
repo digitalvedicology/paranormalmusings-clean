@@ -24,4 +24,3 @@ Thumbs.db
 # Keep the seed file (content.json) but ignore runtime data
 paranormalmusings-admin/data/contact-messages.json
 paranormalmusings-admin/data/newsletter-subscribers.json
-paranormalmusings-frontend/public/images/
