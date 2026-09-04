@@ -16,9 +16,15 @@ export async function GET(request: Request) {
     const preview = new URL(request.url).searchParams.get('preview') === '1'
     const doc = await readDoc()
 
-    if (!preview) return json(publishedView(doc))
+    if (preview) {
+      await requireAuth(request)
+      const response = json(doc)
+      response.headers.set('Cache-Control', 'private, no-store')
+      return response
+    }
 
-    await requireAuth(request)
-    return json(doc)
+    const response = json(publishedView(doc))
+    response.headers.set('Cache-Control', 'public, s-maxage=30, stale-while-revalidate=60')
+    return response
   })
 }
