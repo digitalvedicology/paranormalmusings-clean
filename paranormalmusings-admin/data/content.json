@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-04T04:48:35.174Z",
+  "updatedAt": "2026-09-04T05:19:12.662Z",
   "site": {
     "name": "Paranormal Musings",
     "tagline": "Notes from beyond the veil",
@@ -13324,6 +13324,11 @@
           "text": "Story of Possession: Session 4"
         },
         {
+          "type": "image",
+          "src": "/images/story-of-possession-session-4-2.png",
+          "alt": ""
+        },
+        {
           "type": "p",
           "text": "The fourth session was the last session for Anamika. When she came to my office, she was looking great and I felt as if she had no problems anymore. But we still hadn’t ascertained the reason for why Amit had taken the drastic step in the past life. Anamika was curious, therefore, we decided to conduct another session. Once under hypnosis, she drifted back to the instance of fire. She saw Amit over there. Once the fire had died down, he went inside and saw the body and the open safe. He immediately had his doubts. Although we were raised together, he knew Anamika well enough to not doubt."
         },
@@ -13344,16 +13349,7 @@
           "text": "Remember, you need to be a sceptic first to develop into a paranormal investigator. You need to rule out every single scientific possibility that is known to mankind to identify anything that is paranormal. Hence travel through the path of modern science, explore and unravel all facts using data and what cannot be explained through science is what we need to explore more through the paranormal arena. Most of your clients may feel desperate due to whatever they are going through. It’s your duty to act responsibly. Guide them through the path of modern science. Refrain from being a doctor or healer. There are qualified medical practitioners out there who can do their job well. Avoid any forms of advice on religious or cultural rituals or for that matter any ritualistic practices."
         }
       ],
-      "status": "published",
-      "seo": {
-        "metaTitle": "Story of Possession: A Case Study of Anamika - paranormalmusings.com",
-        "metaDescription": "As a psychotherapist and paranormal explorer in Chennai, India, here is a story of possession, of my client, Ananmika. Lets start",
-        "keyword": "story possession case study anamika",
-        "ogTitle": "Story of Possession: A Case Study of Anamika",
-        "ogDescription": "As a psychotherapist and paranormal explorer in Chennai, India, here is a story of possession, of my client, Ananmika. Lets start",
-        "ogImage": "/images/og-anamika-case.jpg",
-        "canonical": "https://paranormalmusings.com/story-of-possession-a-case-study-of-anamika/"
-      }
+      "status": "published"
     }
   ],
   "home": {
