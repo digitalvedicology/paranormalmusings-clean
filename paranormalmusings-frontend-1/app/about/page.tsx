@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { getContent } from '@/lib/content'
-import { personSchema } from '@/lib/structured-data'
 import WriteToUs from '@/components/sections/WriteToUs'
+import aboutSchema from '@/lib/schema/about.json'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { site } = await getContent()
@@ -37,11 +37,9 @@ function CopySection({ title, children, dark = false }: { title: string; childre
 
 export default async function AboutPage() {
   const portrait = '/images/about/study.webp'
-  const content = await getContent()
-  const schema = personSchema(content.site)
 
   return <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
     <section className="relative isolate flex min-h-[360px] items-center overflow-hidden bg-night-900 text-white lg:min-h-[400px]">
       {/* The banner behind the title — this page's LCP element, so it is the one
           picture here that is preloaded rather than lazily fetched. */}

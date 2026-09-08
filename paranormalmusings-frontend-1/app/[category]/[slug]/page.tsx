@@ -3,6 +3,10 @@ import { notFound } from 'next/navigation'
 import ArticlePage from '@/components/ArticlePage'
 import { getContent } from '@/lib/content'
 import { articleSchema, breadcrumbSchema, formatDateToISO8601 } from '@/lib/structured-data'
+import { investigationArticleSchemas } from '@/lib/investigation-schema'
+import { easternArticleSchemas } from '@/lib/eastern-schema'
+import { westernArticleSchemas } from '@/lib/western-schema'
+import { casesArticleSchemas } from '@/lib/cases-schema'
 
 type Params = { category: string; slug: string }
 
@@ -94,23 +98,44 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   const content = await getContent()
   const categoryMeta = content.categoryMeta(post.category)
-  const articleSchemaData = articleSchema(post, categoryMeta, content.site.author)
-  const breadcrumbSchemaData = breadcrumbSchema(categoryMeta, post)
+
+  // Select the hand-authored @graph schema by category (Organization, Person,
+  // WebSite, BlogPosting, WebPage, BreadcrumbList) or fall back to generated.
+  const schemaLookups: Record<string, Record<string, object>> = {
+    investigation: investigationArticleSchemas,
+    eastern: easternArticleSchemas,
+    western: westernArticleSchemas,
+    cases: casesArticleSchemas,
+  }
+  const handAuthoredSchema = schemaLookups[post.category]?.[post.slug]
+
+  const articleSchemaData = handAuthoredSchema ? undefined : articleSchema(post, categoryMeta, content.site.author)
+  const breadcrumbSchemaData = handAuthoredSchema ? undefined : breadcrumbSchema(categoryMeta, post)
 
   return (
     <>
       <ArticlePage post={post} />
       {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchemaData) }}
-        suppressHydrationWarning
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchemaData) }}
-        suppressHydrationWarning
-      />
+      {handAuthoredSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(handAuthoredSchema) }}
+          suppressHydrationWarning
+        />
+      ) : (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchemaData) }}
+            suppressHydrationWarning
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchemaData) }}
+            suppressHydrationWarning
+          />
+        </>
+      )}
     </>
   )
 }

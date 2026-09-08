@@ -1,0 +1,267 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://paranormalmusings.com/#organization",
+      "name": "Paranormal Musings",
+      "alternateName": "Paranormal Musings with Praveen Saanker",
+      "url": "https://paranormalmusings.com/",
+      "description": "Paranormal explorations and perspectives on life after death from Indian (Eastern) and Western viewpoints — including encounters with inhuman energies and the paranormal energy spectrum.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://paranormalmusings.com/#logo",
+        "url": "https://paranormalmusings.com/images/paranormalmusings-logo.png",
+        "contentUrl": "https://paranormalmusings.com/images/paranormalmusings-logo.png",
+        "caption": "Paranormal Musings logo featuring mystical third eye symbol"
+      },
+      "image": {
+        "@id": "https://paranormalmusings.com/#logo"
+      },
+      "founder": {
+        "@id": "https://paranormalmusings.com/#praveen-saanker"
+      },
+      "foundingDate": "2021",
+      "knowsAbout": [
+        "Paranormal investigation",
+        "Life after death",
+        "Spirit possession",
+        "Depossession",
+        "Electronic Voice Phenomena",
+        "Reincarnation",
+        "Hauntings",
+        "Vedic scriptures",
+        "Sanatana Dharma"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://paranormalmusings.com/#contact",
+        "availableLanguage": [
+          "English"
+        ]
+      },
+      "sameAs": [
+        "https://twitter.com/paranormalmusings"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://paranormalmusings.com/#praveen-saanker",
+      "name": "Praveen Saanker",
+      "givenName": "Praveen",
+      "familyName": "Saanker",
+      "url": "https://paranormalmusings.com/about",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://paranormalmusings.com/images/paranormalmusings.png",
+        "caption": "Praveen Saanker paranormal investigator and author portrait"
+      },
+      "jobTitle": [
+        "Paranormal Investigator",
+        "Psychotherapist",
+        "Family Business Advisor",
+        "Life Coach"
+      ],
+      "description": "Paranormal investigator with more than twenty-five years of experience, psychotherapist and founder of Vedicology. Writes on life after death from both Indian (Eastern) and Western perspectives.",
+      "knowsAbout": [
+        "Paranormal investigation",
+        "Spirit possession and depossession",
+        "Electronic Voice Phenomena (EVP)",
+        "Reincarnation",
+        "Past life regression therapy",
+        "Vedic scriptures",
+        "Astrology",
+        "Vastu Shastra",
+        "Clinical hypnotherapy",
+        "Counselling psychology"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Canterbury",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Christchurch",
+            "addressCountry": "NZ"
+          }
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "IMD Business School",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lausanne",
+            "addressCountry": "CH"
+          }
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Madras",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressCountry": "IN"
+          }
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Doctor of Philosophy (PhD), Clinical, Counselling and Allied Psychology",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Canterbury"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Master of Counselling, Counselling Psychology",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Canterbury"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Executive MBA, Business Administration and Management",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "IMD Business School"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Clinical Hypnotherapist and Past Life Regression Therapist",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "National Guild of Hypnotists, Inc."
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Advanced Hatha Yoga Practitioner and Teacher Trainer (Therapeutic)",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Yoga Alliance USA"
+          }
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "New England Society for Psychic Research",
+          "foundingDate": "1952"
+        },
+        {
+          "@type": "Organization",
+          "name": "The Ghost Club",
+          "foundingDate": "1862",
+          "description": "The oldest organisation in the world associated with psychical research."
+        },
+        {
+          "@type": "Organization",
+          "name": "The Ed and Lorraine Warren Inner Group"
+        }
+      ],
+      "worksFor": {
+        "@id": "https://paranormalmusings.com/#organization"
+      },
+      "sameAs": [
+        "https://twitter.com/paranormalmusings"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://paranormalmusings.com/#website",
+      "url": "https://paranormalmusings.com/",
+      "name": "Paranormal Musings",
+      "alternateName": "Paranormal Musings with Praveen Saanker",
+      "description": "Paranormal explorations and perspectives on life after death from Indian (Eastern) and Western viewpoints — by Praveen Saanker, paranormal investigator for over twenty-five years.",
+      "publisher": {
+        "@id": "https://paranormalmusings.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://paranormalmusings.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://paranormalmusings.com/investigation/what-are-spirit-orbs/#article",
+      "isPartOf": {
+        "@id": "https://paranormalmusings.com/investigation/what-are-spirit-orbs/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://paranormalmusings.com/investigation/what-are-spirit-orbs/#webpage"
+      },
+      "headline": "What are Spirit Orbs?",
+      "description": "Do you know what are spirit orbs or their meanings? Well, in this expert, we will discuss spirit orbs in detail and also try to understand why they are more common than the full-body manifestations in the paranormal world?",
+      "url": "https://paranormalmusings.com/investigation/what-are-spirit-orbs",
+      "articleSection": "Paranormal Investigation",
+      "datePublished": "2021-01-29T00:00:00+05:30",
+      "dateModified": "2021-01-29T00:00:00+05:30",
+      "author": {
+        "@id": "https://paranormalmusings.com/#praveen-saanker"
+      },
+      "publisher": {
+        "@id": "https://paranormalmusings.com/#organization"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://paranormalmusings.com/media/what-are-spirit-orbs-n.png"
+      },
+      "wordCount": 969,
+      "timeRequired": "PT5M",
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://paranormalmusings.com/investigation/what-are-spirit-orbs/#webpage",
+      "url": "https://paranormalmusings.com/investigation/what-are-spirit-orbs",
+      "name": "What are Spirit Orbs?",
+      "isPartOf": {
+        "@id": "https://paranormalmusings.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://paranormalmusings.com/media/what-are-spirit-orbs-n.png"
+      },
+      "datePublished": "2021-01-29T00:00:00+05:30",
+      "dateModified": "2021-01-29T00:00:00+05:30",
+      "breadcrumb": {
+        "@id": "https://paranormalmusings.com/investigation/what-are-spirit-orbs/#breadcrumb"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://paranormalmusings.com/investigation/what-are-spirit-orbs/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://paranormalmusings.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Paranormal Investigation",
+          "item": "https://paranormalmusings.com/investigation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What are Spirit Orbs?"
+        }
+      ]
+    }
+  ]
+}

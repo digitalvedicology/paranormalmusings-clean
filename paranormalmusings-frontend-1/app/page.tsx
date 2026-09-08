@@ -10,12 +10,14 @@ import LatestPosts from '@/components/sections/LatestPosts'
 import WriteToUs from '@/components/sections/WriteToUs'
 import Spotlight from '@/components/sections/Spotlight'
 import { getContent } from '@/lib/content'
+import homeSchema from '@/lib/schema/home.json'
 
 export default async function Home() {
   const content = await getContent()
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
       <Hero author={content.site.author} />
       <Highlights />
       {/* Which section leads the page and which takes the card band are both

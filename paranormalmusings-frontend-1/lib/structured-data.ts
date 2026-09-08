@@ -53,32 +53,6 @@ export function articleSchema(
 }
 
 /**
- * Person schema for the author/investigator.
- * Helps establish author authority and E-E-A-T.
- */
-export function personSchema(
-  site: SiteSettings,
-) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: site.author,
-    description: 'Paranormal investigator and researcher',
-    url: baseUrl,
-    email: site.email.href,
-    telephone: site.phone.href,
-    jobTitle: 'Paranormal Investigator',
-    image: site.authorImage || `${baseUrl}/images/paranormalmusings-logo.png`,
-    knowsAbout: ['paranormal investigation', 'spirit possession', 'afterlife research', 'hindu philosophy'],
-    sameAs: [
-      // Add social profiles as they become available
-      // 'https://twitter.com/paranormalmusings',
-      // 'https://linkedin.com/in/praveensaanker',
-    ],
-  }
-}
-
-/**
  * WebSite schema with SearchAction for site-wide search box.
  * Enables sitelinks search box in Google results.
  */
